@@ -5,37 +5,38 @@ require_once( trailingslashit( get_template_directory() ) . 'library/hybrid.php'
 new Hybrid();
 
 // theme setup
-function ct_founder_theme_setup() {
-	
-    /* Get action/filter hook prefix. */
-	$prefix = hybrid_get_prefix();
-    
-	// add Hybrid core functionality
-    add_theme_support( 'hybrid-core-template-hierarchy' );
-    add_theme_support( 'loop-pagination' );
-	add_theme_support( 'cleaner-gallery' );
+if( ! function_exists( ( 'ct_founder_theme_setup' ) ) ) {
+	function ct_founder_theme_setup() {
 
-    // add functionality from WordPress core
-    add_theme_support( 'post-thumbnails' );
-    add_theme_support( 'automatic-feed-links' );
-    add_theme_support( 'title-tag' );
+		/* Get action/filter hook prefix. */
+		$prefix = hybrid_get_prefix();
 
-	// load theme options page
-	require_once( trailingslashit( get_template_directory() ) . 'theme-options.php' );
+		// add Hybrid core functionality
+		add_theme_support( 'hybrid-core-template-hierarchy' );
+		add_theme_support( 'loop-pagination' );
+		add_theme_support( 'cleaner-gallery' );
 
-	// add inc folder files
-	foreach (glob(trailingslashit( get_template_directory() ) . 'inc/*') as $filename)
-	{
-		include $filename;
+		// add functionality from WordPress core
+		add_theme_support( 'post-thumbnails' );
+		add_theme_support( 'automatic-feed-links' );
+		add_theme_support( 'title-tag' );
+
+		// load theme options page
+		require_once( trailingslashit( get_template_directory() ) . 'theme-options.php' );
+
+		// add inc folder files
+		foreach ( glob( trailingslashit( get_template_directory() ) . 'inc/*' ) as $filename ) {
+			include $filename;
+		}
+
+		// load text domain
+		load_theme_textdomain( 'founder', get_template_directory() . '/languages' );
+
+		// register Primary menu
+		register_nav_menus( array(
+			'primary' => __( 'Primary', 'founder' )
+		) );
 	}
-
-	// load text domain
-	load_theme_textdomain('founder', get_template_directory() . '/languages');
-
-	// register Primary menu
-    register_nav_menus(array(
-        'primary' => __('Primary', 'founder')
-    ));
 }
 add_action( 'after_setup_theme', 'ct_founder_theme_setup', 10 );
 
