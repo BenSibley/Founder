@@ -5,6 +5,14 @@ add_action( 'customize_register', 'ct_founder_add_customizer_content' );
 
 function ct_founder_add_customizer_content( $wp_customize ) {
 
+	/***** Reorder default sections *****/
+
+	$wp_customize->get_section('title_tagline')->priority     = 1;
+	$wp_customize->get_section('static_front_page')->priority = 5;
+	$wp_customize->get_section('static_front_page')->title = __('Front Page', 'founder');
+	$wp_customize->get_section('nav')->priority = 10;
+	$wp_customize->get_section('nav')->title = __('Menus', 'founder');
+
 	/***** Add PostMessage Support *****/
 	
 	// Add postMessage support for site title and description.
