@@ -8,8 +8,8 @@
     <div class="design-credit">
         <span>
             <?php
-                $site_url = 'https://www.competethemes.com/unlimited/';
-                $footer_text = sprintf( __( '<a target="_blank" href="%s">Unlimited WordPress Theme</a> by Compete Themes.', 'unlimited' ), esc_url( $site_url ) );
+                $site_url = 'https://www.competethemes.com/founder/';
+                $footer_text = sprintf( __( '<a target="_blank" href="%s">Founder WordPress Theme</a> by Compete Themes.', 'founder' ), esc_url( $site_url ) );
                 echo $footer_text;
             ?>
         </span>

@@ -1,9 +1,9 @@
 <?php
 
 /* Add customizer panels, sections, settings, and controls */
-add_action( 'customize_register', 'ct_unlimited_add_customizer_content' );
+add_action( 'customize_register', 'ct_founder_add_customizer_content' );
 
-function ct_unlimited_add_customizer_content( $wp_customize ) {
+function ct_founder_add_customizer_content( $wp_customize ) {
 
 	/***** Add PostMessage Support *****/
 	
@@ -14,7 +14,7 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 	/***** Add Custom Controls *****/
 
 	// create url input control
-	class ct_unlimited_url_input_control extends WP_Customize_Control {
+	class ct_founder_url_input_control extends WP_Customize_Control {
 		// create new type called 'url'
 		public $type = 'url';
 		// the content to be output in the Customizer
@@ -31,8 +31,8 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 	/***** Logo Upload *****/
 
 	// section
-	$wp_customize->add_section( 'ct_unlimited_logo_upload', array(
-		'title'      => __( 'Logo Upload', 'unlimited' ),
+	$wp_customize->add_section( 'ct_founder_logo_upload', array(
+		'title'      => __( 'Logo Upload', 'founder' ),
 		'priority'   => 30,
 		'capability' => 'edit_theme_options'
 	) );
@@ -47,8 +47,8 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 	// control
 	$wp_customize->add_control( new WP_Customize_Image_Control(
 		$wp_customize, 'logo_image', array(
-			'label'    => __( 'Upload custom logo.', 'unlimited' ),
-			'section'  => 'ct_unlimited_logo_upload',
+			'label'    => __( 'Upload custom logo.', 'founder' ),
+			'section'  => 'ct_founder_logo_upload',
 			'settings' => 'logo_upload',
 		)
 	) );
@@ -56,14 +56,14 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 	/***** Social Media Icons *****/
 
 	// get the social sites array
-	$social_sites = ct_unlimited_social_array();
+	$social_sites = ct_founder_social_array();
 
 	// set a priority used to order the social sites
 	$priority = 5;
 
 	// section
-	$wp_customize->add_section( 'ct_unlimited_social_media_icons', array(
-		'title'          => __('Social Media Icons', 'unlimited'),
+	$wp_customize->add_section( 'ct_founder_social_media_icons', array(
+		'title'          => __('Social Media Icons', 'founder'),
 		'priority'       => 25,
 	) );
 
@@ -75,13 +75,13 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 			$wp_customize->add_setting( "$social_site", array(
 				'type'              => 'theme_mod',
 				'capability'        => 'edit_theme_options',
-				'sanitize_callback' => 'ct_unlimited_sanitize_email',
+				'sanitize_callback' => 'ct_founder_sanitize_email',
 				'transport'         => 'postMessage'
 			) );
 			// control
 			$wp_customize->add_control( $social_site, array(
-				'label'   => $social_site . ' ' . __('address:', 'unlimited' ),
-				'section' => 'ct_unlimited_social_media_icons',
+				'label'   => $social_site . ' ' . __('address:', 'founder' ),
+				'section' => 'ct_founder_social_media_icons',
 				'priority'=> $priority,
 			) );
 		} else {
@@ -93,10 +93,10 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 				'transport'         => 'postMessage'
 			) );
 			// control
-			$wp_customize->add_control( new ct_unlimited_url_input_control(
+			$wp_customize->add_control( new ct_founder_url_input_control(
 				$wp_customize, $social_site, array(
-					'label'   => $social_site . ' ' . __('url:', 'unlimited' ),
-					'section' => 'ct_unlimited_social_media_icons',
+					'label'   => $social_site . ' ' . __('url:', 'founder' ),
+					'section' => 'ct_founder_social_media_icons',
 					'priority'=> $priority,
 				)
 			) );
@@ -108,8 +108,8 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 	/***** Search Bar *****/
 
 	// section
-	$wp_customize->add_section( 'ct_unlimited_search_bar', array(
-		'title'      => __( 'Search Bar', 'unlimited' ),
+	$wp_customize->add_section( 'ct_founder_search_bar', array(
+		'title'      => __( 'Search Bar', 'founder' ),
 		'priority'   => 40,
 		'capability' => 'edit_theme_options'
 	) );
@@ -118,25 +118,25 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 		'default'           => 'show',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'ct_unlimited_sanitize_all_show_hide_settings'
+		'sanitize_callback' => 'ct_founder_sanitize_all_show_hide_settings'
 	) );
 	// control
 	$wp_customize->add_control( 'search_bar', array(
 		'type' => 'radio',
-		'label' => __('Show search bar at top of site?', 'unlimited'),
-		'section' => 'ct_unlimited_search_bar',
+		'label' => __('Show search bar at top of site?', 'founder'),
+		'section' => 'ct_founder_search_bar',
 		'setting' => 'search_bar',
 		'choices' => array(
-			'show' => __('Show', 'unlimited'),
-			'hide' => __('Hide', 'unlimited')
+			'show' => __('Show', 'founder'),
+			'hide' => __('Hide', 'founder')
 		),
 	) );
 
 	/***** Comment Display *****/
 
 	// section
-	$wp_customize->add_section( 'ct_unlimited_comments_display', array(
-		'title'      => __( 'Comment Display', 'unlimited' ),
+	$wp_customize->add_section( 'ct_founder_comments_display', array(
+		'title'      => __( 'Comment Display', 'founder' ),
 		'priority'   => 65,
 		'capability' => 'edit_theme_options'
 	) );
@@ -145,20 +145,20 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 		'default'           => 'none',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'ct_unlimited_sanitize_comments_setting',
+		'sanitize_callback' => 'ct_founder_sanitize_comments_setting',
 	) );
 	// control
-	$wp_customize->add_control( new ct_unlimited_Multi_Checkbox_Control(
+	$wp_customize->add_control( new ct_founder_Multi_Checkbox_Control(
 		$wp_customize, 'comments_display', array(
-			'label'          => __( 'Show comments on:', 'unlimited' ),
-			'section'        => 'ct_unlimited_comments_display',
+			'label'          => __( 'Show comments on:', 'founder' ),
+			'section'        => 'ct_founder_comments_display',
 			'settings'       => 'comments_display',
 			'type'           => 'multi-checkbox',
 			'choices'        => array(
-				'post'   => __('Posts', 'unlimited'),
-				'page'  => __('Pages', 'unlimited'),
-				'attachment'  => __('Attachments', 'unlimited'),
-				'none'  => __('Do not show', 'unlimited')
+				'post'   => __('Posts', 'founder'),
+				'page'  => __('Pages', 'founder'),
+				'attachment'  => __('Attachments', 'founder'),
+				'none'  => __('Do not show', 'founder')
 			)
 		)
 	) );
@@ -170,11 +170,11 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
  * Sanitize settings with show/hide as options
  * Used in: search bar
  */
-function ct_unlimited_sanitize_all_show_hide_settings($input){
+function ct_founder_sanitize_all_show_hide_settings($input){
 	// create array of valid values
 	$valid = array(
-		'show' => __('Show', 'unlimited'),
-		'hide' => __('Hide', 'unlimited')
+		'show' => __('Show', 'founder'),
+		'hide' => __('Hide', 'founder')
 	);
 	// if returned data is in array use it, else return nothing
 	if ( array_key_exists( $input, $valid ) ) {
@@ -188,20 +188,20 @@ function ct_unlimited_sanitize_all_show_hide_settings($input){
  * sanitize email address
  * Used in: Social Media Icons
  */
-function ct_unlimited_sanitize_email( $input ) {
+function ct_founder_sanitize_email( $input ) {
 
 	return sanitize_email( $input );
 }
 
 // sanitize comment display multi-check
-function ct_unlimited_sanitize_comments_setting($input){
+function ct_founder_sanitize_comments_setting($input){
 
 	// valid data
 	$valid = array(
-		'post'   => __('Posts', 'unlimited'),
-		'page'  => __('Pages', 'unlimited'),
-		'attachment'  => __('Attachments', 'unlimited'),
-		'none'  => __('Do not show', 'unlimited')
+		'post'   => __('Posts', 'founder'),
+		'page'  => __('Pages', 'founder'),
+		'attachment'  => __('Attachments', 'founder'),
+		'none'  => __('Do not show', 'founder')
 	);
 
 	// loop through array

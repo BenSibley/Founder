@@ -1,22 +1,22 @@
 -------------------------------------------------------
-    Thank you for downloading Unlimited!
+    Thank you for downloading Founder!
 -------------------------------------------------------
 If you need help getting setup, you can find
 documentation here:
-https://www.competethemes.com/documentation/unlimited-support-center/
+https://www.competethemes.com/documentation/founder-support-center/
 
 
 -------------------------------------------------------
     Licenses:
 -------------------------------------------------------
 
-Unlimited WordPress Theme, Copyright 2014 Compete Themes
-Unlimited is distributed under the terms of the GNU GPL
+Founder WordPress Theme, Copyright 2014 Compete Themes
+Founder is distributed under the terms of the GNU GPL
 
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Unlimited also uses:
+Founder also uses:
 
 * Hybrid Core by Justin Tadlock, http://themehybrid.com/hybrid-core, licensed under the GPL license.
 * Fitvids, by Chris Coyier & Dave Ruper, https://github.com/davatron5000/FitVids.js/, licensed under the WTFPL license.

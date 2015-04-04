@@ -4,7 +4,7 @@ if( is_category() ){ ?>
 	<div class='archive-header'>
 		<i class="fa fa-folder-open"></i>
 		<h2>
-			<?php _e('Category archive for:', 'unlimited'); ?>
+			<?php _e('Category archive for:', 'founder'); ?>
 			<?php single_cat_title(); ?>
 		</h2>
 	</div>
@@ -15,7 +15,7 @@ elseif( is_tag() ){ ?>
 	<div class='archive-header'>
 		<i class="fa fa-tag"></i>
 		<h2>
-			<?php _e('Tag archive for:', 'unlimited'); ?>
+			<?php _e('Tag archive for:', 'founder'); ?>
 			<?php single_tag_title(); ?>
 		</h2>
 	</div>
@@ -27,7 +27,7 @@ elseif( is_author() ){
 	<div class='archive-header'>
 		<i class="fa fa-user"></i>
 		<h2>
-			<?php _e('Author archive for:', 'unlimited'); ?>
+			<?php _e('Author archive for:', 'founder'); ?>
 			<?php echo $author->nickname; ?>
 		</h2>
 	</div>
@@ -38,7 +38,7 @@ elseif( is_date() ){ ?>
 	<div class='archive-header'>
 		<i class="fa fa-calendar"></i>
 		<h2>
-			<?php _e('Date archive for:', 'unlimited'); ?>
+			<?php _e('Date archive for:', 'founder'); ?>
 			<?php single_month_title(' '); ?>
 		</h2>
 	</div>
