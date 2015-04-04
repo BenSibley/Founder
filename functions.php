@@ -284,40 +284,41 @@ if ( function_exists( 'dsq_options' ) ) {
 }
 
 // associative array of social media sites
-function ct_founder_social_array(){
+function ct_founder_social_array() {
 
 	$social_sites = array(
-		'twitter' => 'founder_twitter_profile',
-		'facebook' => 'founder_facebook_profile',
-		'google-plus' => 'founder_googleplus_profile',
-		'pinterest' => 'founder_pinterest_profile',
-		'linkedin' => 'founder_linkedin_profile',
-		'youtube' => 'founder_youtube_profile',
-		'vimeo' => 'founder_vimeo_profile',
-		'tumblr' => 'founder_tumblr_profile',
-		'instagram' => 'founder_instagram_profile',
-		'flickr' => 'founder_flickr_profile',
-		'dribbble' => 'founder_dribbble_profile',
-		'rss' => 'founder_rss_profile',
-		'reddit' => 'founder_reddit_profile',
-		'soundcloud' => 'founder_soundcloud_profile',
-		'spotify' => 'founder_spotify_profile',
-		'vine' => 'founder_vine_profile',
-		'yahoo' => 'founder_yahoo_profile',
-		'behance' => 'founder_behance_profile',
-		'codepen' => 'founder_codepen_profile',
-		'delicious' => 'founder_delicious_profile',
-		'stumbleupon' => 'founder_stumbleupon_profile',
-		'deviantart' => 'founder_deviantart_profile',
-		'digg' => 'founder_digg_profile',
-		'git' => 'founder_git_profile',
-		'hacker-news' => 'founder_hacker-news_profile',
-		'steam' => 'founder_steam_profile',
-		'vk' => 'founder_vk_profile',
-		'weibo' => 'founder_weibo_profile',
+		'twitter'       => 'founder_twitter_profile',
+		'facebook'      => 'founder_facebook_profile',
+		'google-plus'   => 'founder_googleplus_profile',
+		'pinterest'     => 'founder_pinterest_profile',
+		'linkedin'      => 'founder_linkedin_profile',
+		'youtube'       => 'founder_youtube_profile',
+		'vimeo'         => 'founder_vimeo_profile',
+		'tumblr'        => 'founder_tumblr_profile',
+		'instagram'     => 'founder_instagram_profile',
+		'flickr'        => 'founder_flickr_profile',
+		'dribbble'      => 'founder_dribbble_profile',
+		'rss'           => 'founder_rss_profile',
+		'reddit'        => 'founder_reddit_profile',
+		'soundcloud'    => 'founder_soundcloud_profile',
+		'spotify'       => 'founder_spotify_profile',
+		'vine'          => 'founder_vine_profile',
+		'yahoo'         => 'founder_yahoo_profile',
+		'behance'       => 'founder_behance_profile',
+		'codepen'       => 'founder_codepen_profile',
+		'delicious'     => 'founder_delicious_profile',
+		'stumbleupon'   => 'founder_stumbleupon_profile',
+		'deviantart'    => 'founder_deviantart_profile',
+		'digg'          => 'founder_digg_profile',
+		'git'           => 'founder_git_profile',
+		'hacker-news'   => 'founder_hacker-news_profile',
+		'steam'         => 'founder_steam_profile',
+		'vk'            => 'founder_vk_profile',
+		'weibo'         => 'founder_weibo_profile',
 		'tencent-weibo' => 'founder_tencent_weibo_profile',
-		'email' => 'founder_email_profile'
+		'email'         => 'founder_email_profile'
 	);
+
 	return $social_sites;
 }
 
