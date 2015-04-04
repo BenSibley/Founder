@@ -48,6 +48,9 @@ add_action('admin_enqueue_scripts',	'ct_founder_enqueue_admin_styles' );
  */
 function ct_founder_enqueue_customizer_scripts(){
 
+	// stylesheet for customizer
+	wp_enqueue_style('ct-founder-customizer-styles', get_template_directory_uri() . '/styles/customizer.min.css');
+
 	// JS for hiding/showing Customizer options
 	wp_enqueue_script('ct-founder-customizer-js', get_template_directory_uri() . '/js/build/customizer.min.js',array('jquery'),'',true);
 
