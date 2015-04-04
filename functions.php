@@ -472,7 +472,7 @@ function ct_founder_set_date_format() {
 		add_option('ct_founder_date_format_origin', 'updated');
 	}
 }
-add_action( 'init', 'ct_founder_set_date_format' );
+add_action( 'after_setup_theme', 'ct_founder_set_date_format' );
 
 if ( ! function_exists( '_wp_render_title_tag' ) ) :
     function founder_add_title_tag() {
