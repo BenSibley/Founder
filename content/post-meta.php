@@ -2,7 +2,7 @@
 	<div class="post-date">
 		<i class="fa fa-calendar"></i>
 		<a href="<?php echo get_month_link( get_the_date('Y'), get_the_date('n') ); ?>">
-			<?php echo date_i18n( get_option( 'date_format' ), strtotime( get_the_date( 'n/j/Y' ) ) ); ?>
+			<?php echo date_i18n( get_option( 'date_format' ), strtotime( get_the_date( 'n/j/Y g:i a' ) ) ); ?>
 		</a>
 	</div>
 	<div class="post-author">
