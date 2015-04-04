@@ -73,37 +73,43 @@ function ct_founder_register_widget_areas(){
 add_action('widgets_init','ct_founder_register_widget_areas');
 
 /* added to customize the comments. Same as default except -> added use of gravatar images for comment authors */
-function ct_founder_customize_comments( $comment, $args, $depth ) {
-    $GLOBALS['comment'] = $comment;
-    global $post;
-    ?>
-    <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-        <article id="comment-<?php comment_ID(); ?>" class="comment">
-            <div class="comment-author">
-                <?php
-                // if is post author
-                if( $comment->user_id === $post->post_author ) {
-                    ct_founder_profile_image_output();
-                } else {
-                    echo get_avatar( get_comment_author_email(), 48 );
-                }
-                ?>
-                <div>
-                    <div class="author-name"><?php comment_author_link(); ?></div>
-                    <div class="comment-date"><?php comment_date('n/j/Y'); ?></div>
-                    <?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'founder' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
-                    <?php edit_comment_link( 'edit' ); ?>
-                </div>    
-            </div>
-            <div class="comment-content">
-                <?php if ($comment->comment_approved == '0') : ?>
-                    <em><?php _e('Your comment is awaiting moderation.', 'founder') ?></em>
-                    <br />
-                <?php endif; ?>
-                <?php comment_text(); ?>
-            </div>
-        </article>
-    <?php
+if( ! function_exists( ( 'ct_founder_customize_comments' ) ) ) {
+	function ct_founder_customize_comments( $comment, $args, $depth ) {
+		$GLOBALS['comment'] = $comment;
+		global $post;
+		?>
+		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+		<article id="comment-<?php comment_ID(); ?>" class="comment">
+			<div class="comment-author">
+				<?php
+				// if is post author
+				if ( $comment->user_id === $post->post_author ) {
+					ct_founder_profile_image_output();
+				} else {
+					echo get_avatar( get_comment_author_email(), 48 );
+				}
+				?>
+				<div>
+					<div class="author-name"><?php comment_author_link(); ?></div>
+					<div class="comment-date"><?php comment_date( 'n/j/Y' ); ?></div>
+					<?php comment_reply_link( array_merge( $args, array(
+						'reply_text' => __( 'Reply', 'founder' ),
+						'depth'      => $depth,
+						'max_depth'  => $args['max_depth']
+					) ) ); ?>
+					<?php edit_comment_link( 'edit' ); ?>
+				</div>
+			</div>
+			<div class="comment-content">
+				<?php if ( $comment->comment_approved == '0' ) : ?>
+					<em><?php _e( 'Your comment is awaiting moderation.', 'founder' ) ?></em>
+					<br/>
+				<?php endif; ?>
+				<?php comment_text(); ?>
+			</div>
+		</article>
+	<?php
+	}
 }
 
 /* added HTML5 placeholders for each default field and aria-required to required */
@@ -167,92 +173,105 @@ if( ! function_exists( 'founder_update_comment_field' ) ) {
 add_filter('comment_form_field_comment','founder_update_comment_field');
 
 // remove allowed tags text after comment form
-function ct_founder_remove_comments_notes_after($defaults){
+if( ! function_exists( 'ct_founder_remove_comments_notes_after' ) ) {
+	function ct_founder_remove_comments_notes_after( $defaults ) {
 
-    $defaults['comment_notes_after']='';
-    return $defaults;
+		$defaults['comment_notes_after'] = '';
+
+		return $defaults;
+	}
 }
-
 add_action('comment_form_defaults', 'ct_founder_remove_comments_notes_after');
 
 // excerpt handling
-function ct_founder_excerpt() {
+if( ! function_exists( 'ct_founder_excerpt' ) ) {
+	function ct_founder_excerpt() {
 
-    // make post variable available
-    global $post;
+		// make post variable available
+		global $post;
 
-    // make 'read more' setting available
-    global $more;
+		// make 'read more' setting available
+		global $more;
 
-    // check for the more tag
-    $ismore = strpos( $post->post_content, '<!--more-->');
+		// check for the more tag
+		$ismore = strpos( $post->post_content, '<!--more-->' );
 
-    // use the read more link if present
-    if($ismore) {
-        the_content( __('Read More', 'founder') . "<span class='screen-reader-text'>" . get_the_title() . "</span>");
-    }
-    // otherwise the excerpt is automatic, so output it
-    else {
-        the_excerpt();
-    }
+		// use the read more link if present
+		if ( $ismore ) {
+			the_content( __( 'Read More', 'founder' ) . "<span class='screen-reader-text'>" . get_the_title() . "</span>" );
+		} // otherwise the excerpt is automatic, so output it
+		else {
+			the_excerpt();
+		}
+	}
 }
 
 // filter the link on excerpts
-function ct_founder_excerpt_read_more_link($output) {
-	global $post;
-	return $output . "<p><a class='more-link' href='". get_permalink() ."'>" . __('Read More', 'founder') . "<span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
-}
+if( ! function_exists( 'ct_founder_excerpt_read_more_link' ) ) {
+	function ct_founder_excerpt_read_more_link( $output ) {
+		global $post;
 
+		return $output . "<p><a class='more-link' href='" . get_permalink() . "'>" . __( 'Read More', 'founder' ) . "<span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
+	}
+}
 add_filter('the_excerpt', 'ct_founder_excerpt_read_more_link');
 
 // change the length of the excerpts
-function founder_custom_excerpt_length( $length ) {
-    return 25;
+if( ! function_exists( 'founder_custom_excerpt_length' ) ) {
+	function founder_custom_excerpt_length( $length ) {
+		return 25;
+	}
 }
 add_filter( 'excerpt_length', 'founder_custom_excerpt_length', 99 );
 
 // switch [...] to ellipsis on automatic excerpt
-function ct_founder_new_excerpt_more( $more ) {
-	return '&#8230;';
+if( ! function_exists( 'ct_founder_new_excerpt_more' ) ) {
+	function ct_founder_new_excerpt_more( $more ) {
+		return '&#8230;';
+	}
 }
 add_filter('excerpt_more', 'ct_founder_new_excerpt_more');
 
-// turns of the automatic scrolling to the read more link 
-function ct_founder_remove_more_link_scroll( $link ) {
-	$link = preg_replace( '|#more-[0-9]+|', '', $link );
-	return $link;
+// turns of the automatic scrolling to the read more link
+if( ! function_exists( 'ct_founder_remove_more_link_scroll' ) ) {
+	function ct_founder_remove_more_link_scroll( $link ) {
+		$link = preg_replace( '|#more-[0-9]+|', '', $link );
+
+		return $link;
+	}
 }
 add_filter( 'the_content_more_link', 'ct_founder_remove_more_link_scroll' );
 
 // for displaying featured images
-function ct_founder_featured_image() {
+if( ! function_exists( 'ct_founder_featured_image' ) ) {
+	function ct_founder_featured_image() {
 
-	// get post object
-	global $post;
-	// default to no featured image
-	$has_image = false;
+		// get post object
+		global $post;
+		// default to no featured image
+		$has_image = false;
 
-	// if post has an image
-	if (has_post_thumbnail( $post->ID ) ) {
-		// get the full-size version of the image
-		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
-		// set $image = the url
-		$image = $image[0];
-		$has_image = true;
-	}
-	if ($has_image == true) {
-
-		// on posts/pages display the featued image
-		if(is_singular()){
-			echo "<div class='featured-image' style=\"background-image: url('".$image."')\"></div>";
+		// if post has an image
+		if ( has_post_thumbnail( $post->ID ) ) {
+			// get the full-size version of the image
+			$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+			// set $image = the url
+			$image     = $image[0];
+			$has_image = true;
 		}
-		// on blog/archives display with a link
-		else {
-			echo "
-                <div class='featured-image' style=\"background-image: url('".$image."')\">
-                    <a href='" . get_permalink() ."'>" . get_the_title() . "</a>
+		if ( $has_image == true ) {
+
+			// on posts/pages display the featued image
+			if ( is_singular() ) {
+				echo "<div class='featured-image' style=\"background-image: url('" . $image . "')\"></div>";
+			} // on blog/archives display with a link
+			else {
+				echo "
+                <div class='featured-image' style=\"background-image: url('" . $image . "')\">
+                    <a href='" . get_permalink() . "'>" . get_the_title() . "</a>
                 </div>
                 ";
+			}
 		}
 	}
 }
