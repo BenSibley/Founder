@@ -162,6 +162,29 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 			)
 		)
 	) );
+
+	/***** Custom CSS *****/
+
+	// section
+	$wp_customize->add_section( 'founder_custom_css', array(
+		'title'      => __( 'Custom CSS', 'founder' ),
+		'priority'   => 70,
+		'capability' => 'edit_theme_options'
+	) );
+	// setting
+	$wp_customize->add_setting( 'custom_css', array(
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'wp_filter_nohtml_kses',
+	) );
+	// control
+	$wp_customize->add_control( new ct_founder_textarea_control(
+		$wp_customize, 'custom_css', array(
+			'label'          => __( 'Add Custom CSS Here:', 'founder' ),
+			'section'        => 'founder_custom_css',
+			'settings'       => 'custom_css',
+		)
+	) );
 }
 
 /***** Custom Sanitization Functions *****/
