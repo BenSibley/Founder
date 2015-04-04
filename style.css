@@ -1,6 +1,6 @@
 /*
-Theme Name: CT Starter
-Theme URI: https://competethemes.com/unlimited/
+Theme Name: Founder
+Theme URI: https://competethemes.com/founder/
 Author: Compete Themes
 Author URI: https://competethemes.com/
 Description: Fast, responsive, and accessible. What does this mean? It means your content will reach more people, on more devices, around the world. It means your site will look beautiful, load quickly, and perform professionally. As one of just 16 accessibility-ready themes on wordpress.org, you can rest assured that anyone and everyone will be able to appreciate your content. This is the product of experience and ambition. We call it, Unlimited.
@@ -8,11 +8,16 @@ Version: 0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: gray, silver, white, light, dark, two-columns, right-sidebar, left-sidebar, responsive-layout, custom-menu, featured-images, sticky-post, theme-options, threaded-comments, translation-ready
-Text Domain: unlimited
+Text Domain: founder
 
-Unlimited WordPress Theme, Copyright 2014 Compete Themes
-Unlimited is distributed under the terms of the GNU GPL
+Founder WordPress Theme, Copyright 2015 Compete Themes
+Founder is distributed under the terms of the GNU GPL
 */
+/*===== Variables =====*/
+/* Theme Colors */
+/* Social Media Brand Colors */
+/*===== Mixins =====*/
+/***** Silent Classes *****/
 /*===== Basic Styles =====*/
 /* apply a natural box layout model to all elements */
 *, *:before, *:after {
@@ -29,7 +34,7 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
   word-wrap: break-word;
   -ms-word-wrap: break-word;
   -webkit-hyphens: auto;
@@ -39,6 +44,7 @@ body {
 }
 
 .overflow-container {
+  position: relative;
   overflow: hidden;
   height: auto;
   min-height: 100%;
@@ -186,4 +192,202 @@ a img {
     -webkit-text-size-adjust: none;
     /* none for no scaling */
   }
+}
+.screen-reader-text {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+}
+
+.skip-content {
+  position: absolute;
+  top: -4.5em;
+  width: 100%;
+  left: 0;
+  display: block;
+  text-align: center;
+  color: white !important;
+  z-index: 99;
+  padding: 1.5em;
+  -webkit-transition: top 0.2s ease;
+  transition: top 0.2s ease;
+}
+.skip-content:focus {
+  top: 0;
+  outline: none;
+}
+
+.admin-bar .skip-content:focus {
+  top: 32px;
+}
+
+/* gallery styles copied from Hybrid Core */
+/**
+ * Cleaner Gallery Stylesheet
+ * @version 20130526
+ */
+.gallery {
+  display: block;
+  clear: both;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.gallery-row {
+  display: block;
+  clear: both;
+  overflow: hidden;
+  margin: 0;
+}
+
+.gallery-item {
+  overflow: hidden;
+  float: left;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+  border: none;
+  background: transparent;
+}
+
+.gallery-icon img {
+  width: auto;
+  max-width: 89%;
+  height: auto;
+  margin: 0 auto;
+  padding: 1%;
+}
+
+.gallery-caption {
+  margin-left: 0;
+}
+
+/* Gallery item sizes depending on the number of columns */
+.gallery-col-0 .gallery-item {
+  width: 100%;
+}
+
+.gallery-col-1 .gallery-item {
+  width: 100%;
+}
+
+.gallery-col-2 .gallery-item {
+  width: 50%;
+}
+
+.gallery-col-3 .gallery-item {
+  width: 33.33%;
+}
+
+.gallery-col-4 .gallery-item {
+  width: 25%;
+}
+
+.gallery-col-5 .gallery-item {
+  width: 20%;
+}
+
+.gallery-col-6 .gallery-item {
+  width: 16.66%;
+}
+
+.gallery-col-7 .gallery-item {
+  width: 14.28%;
+}
+
+.gallery-col-8 .gallery-item {
+  width: 12.5%;
+}
+
+.gallery-col-9 .gallery-item {
+  width: 11.11%;
+}
+
+.gallery-col-10 .gallery-item {
+  width: 10%;
+}
+
+.gallery-col-11 .gallery-item {
+  width: 9.09%;
+}
+
+.gallery-col-12 .gallery-item {
+  width: 8.33%;
+}
+
+.gallery-col-13 .gallery-item {
+  width: 7.69%;
+}
+
+.gallery-col-14 .gallery-item {
+  width: 7.14%;
+}
+
+.gallery-col-15 .gallery-item {
+  width: 6.66%;
+}
+
+.gallery-col-16 .gallery-item {
+  width: 6.25%;
+}
+
+.gallery-col-17 .gallery-item {
+  width: 5.88%;
+}
+
+.gallery-col-18 .gallery-item {
+  width: 5.55%;
+}
+
+.gallery-col-19 .gallery-item {
+  width: 5.26%;
+}
+
+.gallery-col-20 .gallery-item {
+  width: 5%;
+}
+
+.gallery-col-21 .gallery-item {
+  width: 4.76%;
+}
+
+.gallery-col-22 .gallery-item {
+  width: 4.54%;
+}
+
+.gallery-col-23 .gallery-item {
+  width: 4.34%;
+}
+
+.gallery-col-24 .gallery-item {
+  width: 4.16%;
+}
+
+.gallery-col-25 .gallery-item {
+  width: 4%;
+}
+
+.gallery-col-26 .gallery-item {
+  width: 3.84%;
+}
+
+.gallery-col-27 .gallery-item {
+  width: 3.7%;
+}
+
+.gallery-col-28 .gallery-item {
+  width: 3.57%;
+}
+
+.gallery-col-29 .gallery-item {
+  width: 3.44%;
+}
+
+.gallery-col-30 .gallery-item {
+  width: 3.33%;
 }
