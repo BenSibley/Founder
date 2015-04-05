@@ -1,20 +1,17 @@
 /*===== Variables =====*/
 
-$primary-font-stack: 'Open Sans', sans-serif;
+$primary-font-stack: 'Noto Sans', sans-serif;
 $baseline-height: 1.5em;
-$column: 3.125%;
+$column: 4.167%;
 
 /* Theme Colors */
 
-$gray-93: #EDEDED;
-$gray-87: #DEDEDE;
-$gray-85: #D9D9D9;
-$gray-70: #B3B3B3;
-$gray-67: #ABABAB;
-$gray-40: #666666;
-$gray-33: #545454;
-$gray-23: #3a3a3a;
-$gray-17: #2B2B2B;
+$color-gray-10: #1A1A1A;
+$color-gray-40: #666666;
+$color-gray-63: #A1A1A1;
+$color-gray-83: #D4D4D4;
+$color-gray-93: #EDEDED;
+$color-gray-97: #F7F7F7;
 
 /* Social Media Brand Colors */
 
@@ -68,59 +65,34 @@ $tencent-weibo: #20b8e5;
 
 /***** Silent Classes *****/
 
-// 28px font
-%twenty-eight-pixels {
-  font-size: 1.75em; /* 28px / 16px */
-  line-height: 1.321; /* 37px */
+// 36px font
+%thirty-six-pixels {
+  font-size: 2.25em; /* 36px / 16px */
+  line-height: 1.5; /* 54px */
 }
-// 21px font
-%twenty-one-pixels {
-  font-size: 1.3125em; /* 21px / 16px */
-  line-height: 1.143; /* 24px */
+// 24px font
+%twenty-four-pixels {
+  font-size: 1.5em; /* 24px / 16px */
+  line-height: 1.5; /* 36px */
 }
-// 13px font
-%thirteen-pixels {
-  font-size: 0.8125em; /* 13px / 16px */
-  line-height: 1.385; /* 18px */
+// 11px font
+%eleven-pixels {
+  font-size: 0.6875em; /* 11px / 16px */
+  line-height: 1.4545; /* 16px */
 }
 // uppercase
 %uppercase {
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-weight: 400;
 }
 %dark-link {
-  color: $gray-23;
+  color: $color-gray-10;
 
   &:link,
   &:visited,
   &:hover,
   &:active,
   &:focus {
-    color: $gray-23;
-  }
-}
-%light-link {
-  color: white;
-
-  &:link,
-  &:visited,
-  &:hover,
-  &:active,
-  &:focus {
-    color: white;
-  }
-}
-%gray-link {
-  color: $gray-85;
-
-  &:link,
-  &:visited {
-    color: $gray-85;
-  }
-  &:hover,
-  &:active,
-  &:focus {
-    color: white;
+    color: $color-gray-10;
   }
 }
