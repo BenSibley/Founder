@@ -5,7 +5,6 @@
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 
-
 html {
   height: 100%;
 }
@@ -14,10 +13,10 @@ body {
   font-size: 100%;
   margin: 0;
   padding: 0;
-//  font-family: $body-font-stack;
+  font-family: $primary-font-stack;
   line-height: 1.5;
-//  background: $background;
-//  color: $gray;
+  font-weight: 400;
+  color: $color-gray-40;
   -webkit-font-smoothing: subpixel-antialiased;
   word-wrap: break-word;
   -ms-word-wrap: break-word;
@@ -29,63 +28,59 @@ body {
   min-height: 100%;
 }
 .main {
-//  background: $background;
   margin: 0 auto;
 }
 p {
-//  margin: $baseline-height 0;
+  margin: $baseline-height 0;
 }
 a {
-//  color: $orange;
+  text-decoration: none;
+  color: $color-gray-10;
+  border-bottom: solid 1px $color-gray-10;
+  transition: border-color 0.1s ease-in-out;
 
   &:link {
-//    color: $orange;
+    color: $color-gray-10;
   }
-  &:visited,
+  &:visited {
+    color: $color-gray-10;
+    border-color: $color-gray-83;
+  }
   &:hover,
-  &:active {
-//    color: $orange-dark;
+  &:active,
+  &:focus {
+    color: $color-gray-10;
+    border-color: $color-orange;
   }
 }
-
 h1,h2,h3,h4,h5,h6 {
-//  font-family: $body-font-stack;
+  font-family: $primary-font-stack;
   margin: 0;
   padding: 0;
-  font-weight: 400;
+  font-weight: 700;
 }
-
 h1 {
-  font-size: 2.625em; /* 42px / 16px */
-  line-height: 1.143;
+  @extend %twenty-four-pixels;
 }
 h2 {
-  font-size: 2.25em; /* 36px / 16px */
-  line-height: 1.34;
+  @extend %twenty-four-pixels;
 }
 h3 {
-  font-size: 1.625em; /* 26px / 16px */
-  line-height: 1.85;
-}
-h4 {
-  font-size: 1.313em; /* 21px / 16px */
+  font-size: 1.3125em; /* 21px / 16px */
   line-height: 1.143;
 }
-h5 {
-  font-size: 1.125em; /* 18px / 16px */
-  line-height: 1.34;
-}
-h6 {
+h4 {
   font-size: 1em;
+  line-height: 1.5;
 }
 ul,
 ol {
   font-size: 1em;
   padding: 0;
-//  margin: $baseline-height;
+  margin: $baseline-height;
 
   ul,ol {
-//    margin: 0 $baseline-height;
+    margin: 0 $baseline-height;
   }
 }
 ul ul,
@@ -98,33 +93,34 @@ li li {
 
 /* Markup styles */
 
-//pre {
-//  word-wrap: break-word;
-//  background: $off-white;
-//  padding: $baseline-height / 2;
-//}
-//code {
-//  background: $off-white;
-//  padding: 0 $baseline-height / 4;
-//}
-//blockquote {
-//  margin: $baseline-height $baseline-height $baseline-height 0;
-//  padding-left: $baseline-height;
-//  border-left: solid 3px $orange;
-//
-//  cite {
-//    display: block;
-//    text-align: right;
-//  }
-//}
-//hr {
-//  margin: $baseline-height * 0.46 0;
-//}
+pre {
+  word-wrap: break-word;
+  background: $color-gray-93;
+  padding: $baseline-height / 2;
+}
+code {
+  background: $color-gray-93;
+  padding: 0 $baseline-height / 4;
+}
+blockquote {
+  margin: $baseline-height $baseline-height $baseline-height 0;
+  padding-left: $baseline-height;
+  border-left: solid 3px $color-orange;
+
+  cite {
+    display: block;
+    text-align: right;
+  }
+}
+hr {
+  margin: $baseline-height * 0.46 0;
+}
+
 /* Table styles */
 table {
   border-spacing: 0;
   border-collapse: collapse;
-//  margin: $baseline-height 0;
+  margin: $baseline-height 0;
 }
 td {
   padding: 0.5em 0.75em;
@@ -137,22 +133,22 @@ th {
 
 /* Images */
 
-//.alignleft {
-//  float: left;
-//  margin: 0 $baseline-height $baseline-height 0;
-//}
-//.alignright {
-//  float: right;
-//  margin: 0 0 $baseline-height $baseline-height;
-//}
-//.aligncenter {
-//  text-align: center;
-//  margin: $baseline-height auto;
-//  display: block;
-//}
-//.alignnone {
-//  margin: $baseline-height;
-//}
+.alignleft {
+  float: left;
+  margin: 0 $baseline-height $baseline-height 0;
+}
+.alignright {
+  float: right;
+  margin: 0 0 $baseline-height $baseline-height;
+}
+.aligncenter {
+  text-align: center;
+  margin: $baseline-height auto;
+  display: block;
+}
+.alignnone {
+  margin: $baseline-height;
+}
 img,
 .alignright,
 .alignleft,
@@ -167,73 +163,62 @@ img,
   height: auto;
 }
 .wp-caption-text {
-//  margin: 0 0 $baseline-height / 0.813;
-  font-size: 0.813em;
-  line-height: 1.85;
-//  color: $gray-medium;
+  @extend %eleven-pixels;
+  margin: 0 0 $baseline-height / 0.813;
 }
 
 /* Form styles */
 
 input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
 textarea {
-  padding: 0.8em;
+  @extend %eleven-pixels;
+  font-family: $primary-font-stack;
+  padding: $baseline-height / 4 $baseline-height / 2;
   width: 100%;
-//  max-width: $baseline-height * 10 * 1.85;
-//  background: $background;
-//  color: $gray-medium;
-//  outline: solid 1px $gray-light;
-  border: none;
-//  font-family: $body-font-stack;
-  font-size: 0.813em;
-  line-height: 1.85;
+  max-width: $baseline-height * 10;
+  background: $color-gray-97;
+  color: $color-gray-40;
+  outline: solid 1px $color-gray-93;
   -webkit-appearance: none;
 }
 textarea {
-//  max-width: $baseline-height * 15 * 1.85;
+  max-width: $baseline-height * 10;
   overflow: auto; /* to hide scrollbar in IE */
 }
 input[type="submit"] {
-  padding: 0.8em;
+  @extend %eleven-pixels;
+  font-family: $primary-font-stack;
+  padding: $baseline-height / 4 $baseline-height / 2;
   width: 100%;
   color: white;
-//  background: $orange;
+  background: $color-gray-10;
   outline: none;
   border: none;
-//  max-width: $baseline-height * 5 * 1.85;
-//  font-family: $body-font-stack;
-  font-size: 0.813em;
-  line-height: 1.85;
+  max-width: $baseline-height * 5;
   -webkit-appearance: none;
 }
 input[type="submit"]:hover {
   cursor: pointer;
-//  background: $orange-dark;
+  background: $color-orange;
 }
 input[type="search"] {
-//  margin-right: $baseline-height;
-//  padding-right: $baseline-height / 4; /* so safari 'x' doesn't get cut off */
+  margin-right: $baseline-height;
+  padding-right: $baseline-height / 4; /* so safari 'x' doesn't get cut off */
 }
-//::-webkit-input-placeholder {
-//  color: $gray-medium;
-//}
-//:-moz-placeholder /* Firefox 18- */ {
-//  color: $gray-medium;
-//}
-//::-moz-placeholder /* Firefox 19+ */ {
-//  color: $gray-medium;
-//}
-//:-ms-input-placeholder {
-//  color: $gray-medium;
-//}
-//
-///* sticky */
-//.excerpt.sticky {
-//  outline: solid 3px $orange;
-//}
+::-webkit-input-placeholder {
+  color: $color-gray-40;
+}
+:-moz-placeholder /* Firefox 18- */ {
+  color: $color-gray-40;
+}
+::-moz-placeholder /* Firefox 19+ */ {
+  color: $color-gray-40;
+}
+:-ms-input-placeholder {
+  color: $color-gray-40;
+}
 
-/* ie image border fix */
-
+// ie image border fix
 a img {
   border: none;
 }
@@ -273,8 +258,8 @@ a img {
   color: white !important;
   z-index: 99;
   padding: $baseline-height;
-//  background: $gray-17;
-  transition: top 0.2s ease;
+  background: $color-gray-10;
+  transition: top 0.2s ease-in-out;
 
   &:focus {
     top: 0;
