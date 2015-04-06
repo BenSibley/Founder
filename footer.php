@@ -15,7 +15,7 @@
         </span>
     </div>
 </footer>
-
+</div>
 </div><!-- .overflow-container -->
 
 <?php wp_footer(); ?>
