@@ -318,6 +318,10 @@ a img {
   top: 32px;
 }
 
+.site-title a {
+  border: none;
+}
+
 /* gallery styles copied from Hybrid Core */
 /**
  * Cleaner Gallery Stylesheet

@@ -27,7 +27,9 @@
 
 		<div id="title-container" class="title-container">
 			<?php get_template_part('logo')  ?>
-			<p class="site-description"><?php bloginfo('description'); ?></p>
+			<?php if ( get_bloginfo( 'description' ) ) {
+				echo '<p class="site-description">' . get_bloginfo( 'description' ) .'</p>';
+			} ?>
 		</div>
 
 		<button id="toggle-navigation" class="toggle-navigation">
