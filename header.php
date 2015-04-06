@@ -24,18 +24,17 @@
 	<header class="site-header" id="site-header" role="banner">
 
 		<?php ct_founder_social_icons_output('header'); ?>
-		<?php get_template_part('content/search-bar'); ?>
 
 		<div id="title-container" class="title-container">
 			<?php get_template_part('logo')  ?>
 			<p class="site-description"><?php bloginfo('description'); ?></p>
 		</div>
 
-		<?php get_template_part( 'menu', 'primary' ); ?>
-
 		<button id="toggle-navigation" class="toggle-navigation">
 			<i class="fa fa-bars"></i>
 		</button>
+
+		<?php get_template_part( 'menu', 'primary' ); ?>
 
 	</header>
 	<section id="main" class="main" role="main">
