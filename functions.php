@@ -443,7 +443,8 @@ function ct_founder_profile_image_output(){
  */
 function ct_founder_wp_page_menu() {
     wp_page_menu(array(
-            "menu_class" => "menu-unset"
+            "menu_class" => "menu-unset",
+            "depth"      => -1
         )
     );
 }
@@ -482,3 +483,16 @@ if ( ! function_exists( '_wp_render_title_tag' ) ) :
     }
     add_action( 'wp_head', 'founder_add_title_tag' );
 endif;
+
+function ct_founder_nav_dropdown_buttons( $item_output, $item, $depth, $args ) {
+
+	if ( 'primary' == $args->theme_location) {
+
+		if( in_array('menu-item-has-children', $item->classes ) || in_array('page_item_has_children', $item->classes ) ) {
+			$item_output = str_replace( $args->link_after . '</a>', $args->link_after . '</a><button class="toggle-dropdown" aria-expanded="false"><span class="screen-reader-text">open child menu</span></button>', $item_output );
+		}
+	}
+
+	return $item_output;
+}
+add_filter( 'walker_nav_menu_start_el', 'ct_founder_nav_dropdown_buttons', 10, 4 );

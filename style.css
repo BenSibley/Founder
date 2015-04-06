@@ -18,7 +18,7 @@ Founder is distributed under the terms of the GNU GPL
 /* Social Media Brand Colors */
 /*===== Mixins =====*/
 /***** Silent Classes *****/
-h1, h2 {
+h1, h2, .toggle-navigation {
   font-size: 1.5em;
   /* 24px / 16px */
   line-height: 1.5;
@@ -26,11 +26,18 @@ h1, h2 {
 }
 
 .wp-caption-text, input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
-textarea, input[type="submit"] {
+textarea, input[type="submit"], .menu-primary-items a,
+.menu-unset ul a {
   font-size: 0.6875em;
   /* 11px / 16px */
   line-height: 1.4545;
   /* 16px */
+}
+
+.menu-primary-items a,
+.menu-unset ul a {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 /*===== Basic Styles =====*/
@@ -318,8 +325,70 @@ a img {
   top: 32px;
 }
 
+.site-header {
+  padding: 1.5em 0;
+  border-bottom: solid 1px #d4d4d4;
+  margin-bottom: 1.5em;
+}
+
+.title-container {
+  display: inline-block;
+  margin-left: 8.334%;
+}
+
 .site-title a {
   border: none;
+}
+
+.toggle-navigation {
+  float: right;
+  background: none;
+  border: none;
+  margin: 0 8.334% 0 0;
+  padding: 0;
+  color: #1a1a1a;
+}
+
+.menu-primary-items,
+.menu-unset ul {
+  position: absolute;
+  left: -999px;
+  list-style: none;
+  margin: 1.5em 0 0;
+  border-top: solid 1px #d4d4d4;
+}
+.menu-primary-items a,
+.menu-unset ul a {
+  display: inline-block;
+  padding: 12px 0 12px 8.334%;
+  border: none;
+}
+.menu-primary-items li,
+.menu-unset ul li {
+  position: relative;
+  border-bottom: solid 1px #ededed;
+}
+.menu-primary-items li.current-menu-item:after, .menu-primary-items li.current_page_item:after,
+.menu-unset ul li.current-menu-item:after,
+.menu-unset ul li.current_page_item:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #e37d39;
+}
+.menu-primary-items li:last-child,
+.menu-unset ul li:last-child {
+  border: none;
+  margin-bottom: -1.5em;
+}
+
+.open .menu-primary-items,
+.open .menu-unset ul {
+  position: relative;
+  left: 0;
 }
 
 /* gallery styles copied from Hybrid Core */
