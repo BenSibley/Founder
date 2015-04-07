@@ -54,10 +54,48 @@
         background: $color-orange;
       }
     }
+  }
+  > li {
+
     &:last-child {
-      border: none;
       margin-bottom: -$baseline-height;
+      border: none;
     }
+  }
+  // tier 2
+  ul {
+    position: absolute;
+    list-style: none;
+    left: -999px;
+
+    li {
+      border: none;
+    }
+    a {
+      padding-left: $baseline-height * 2;
+    }
+  }
+}
+.toggle-dropdown {
+  float: right;
+  font-size: 1em;
+  line-height: 1.5;
+  height: $baseline-height;
+  width: $baseline-height;
+  margin: 7px $column * 2 0 0;
+  padding: 0;
+  color: $color-gray-10;
+  background: none;
+  border: solid 1px $color-gray-10;
+
+  &:focus {
+    outline: none;
+    border-color: $color-orange;
+  }
+  &:after {
+    content: '\f107';
+    font-family: 'FontAwesome';
+    transition: all 0.1s ease-in-out;
   }
 }
 // menu primary open
