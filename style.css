@@ -15,6 +15,7 @@ Founder is distributed under the terms of the GNU GPL
 */
 /*===== Variables =====*/
 /* Theme Colors */
+/* Media Query widths */
 /* Social Media Brand Colors */
 /*===== Mixins =====*/
 /***** Silent Classes *****/
@@ -353,6 +354,10 @@ a img {
   padding: 0;
   color: #1a1a1a;
 }
+.toggle-navigation:focus, .toggle-navigation.open {
+  outline: none;
+  color: #e37d39;
+}
 
 .menu-primary-items,
 .menu-unset ul {
@@ -451,6 +456,93 @@ a img {
   display: block;
 }
 
+@media all and (min-width: 37.5em) {
+  .site-title {
+    font-size: 1.5em;
+    /* 24px / 16px */
+    line-height: 1.5;
+    /* 36px */
+  }
+
+  .toggle-navigation {
+    line-height: 1.5;
+  }
+}
+@media all and (min-width: 56.25em) {
+  .site-header {
+    padding: 1.5em 8.334%;
+  }
+
+  .title-container {
+    margin-left: 0;
+    margin-right: 3em;
+  }
+
+  .toggle-navigation {
+    display: none;
+  }
+
+  .menu-primary {
+    display: inline-block;
+    margin-left: 0;
+    vertical-align: text-bottom;
+  }
+
+  .menu-primary-items,
+  .menu-unset ul {
+    display: block;
+    border: none;
+    margin: 0;
+  }
+  .menu-primary-items li,
+  .menu-unset ul li {
+    display: inline-block;
+    border: none;
+    margin-right: 20px;
+  }
+  .menu-primary-items li.current-menu-item a, .menu-primary-items li.current_page_item a,
+  .menu-unset ul li.current-menu-item a,
+  .menu-unset ul li.current_page_item a {
+    border-color: #e37d39;
+  }
+  .menu-primary-items li.current-menu-item:after, .menu-primary-items li.current_page_item:after,
+  .menu-unset ul li.current-menu-item:after,
+  .menu-unset ul li.current_page_item:after {
+    display: none;
+  }
+  .menu-primary-items li.menu-item-has-children a:hover ~ ul, .menu-primary-items li.menu-item-has-children a:active ~ ul, .menu-primary-items li.menu-item-has-children a:focus ~ ul,
+  .menu-unset ul li.menu-item-has-children a:hover ~ ul,
+  .menu-unset ul li.menu-item-has-children a:active ~ ul,
+  .menu-unset ul li.menu-item-has-children a:focus ~ ul {
+    display: block;
+  }
+  .menu-primary-items a,
+  .menu-unset ul a {
+    padding: 0;
+    border-bottom: solid 1px transparent;
+  }
+  .menu-primary-items a:hover, .menu-primary-items a:active, .menu-primary-items a:focus,
+  .menu-unset ul a:hover,
+  .menu-unset ul a:active,
+  .menu-unset ul a:focus {
+    border-color: #d4d4d4;
+  }
+  .menu-primary-items ul,
+  .menu-unset ul ul {
+    position: absolute;
+    top: 100%;
+    background: white;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  }
+  .menu-primary-items ul:hover,
+  .menu-unset ul ul:hover {
+    display: block;
+  }
+
+  .toggle-dropdown {
+    display: none;
+  }
+}
 /* gallery styles copied from Hybrid Core */
 /**
  * Cleaner Gallery Stylesheet

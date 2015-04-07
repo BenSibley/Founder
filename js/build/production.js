@@ -94,8 +94,10 @@ jQuery(document).ready(function($){
 
         if( menuPrimary.hasClass('open') ) {
             menuPrimary.removeClass('open');
+            $(this).removeClass('open');
         } else {
             menuPrimary.addClass('open');
+            $(this).addClass('open');
         }
     }
 
