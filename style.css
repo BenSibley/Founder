@@ -336,11 +336,16 @@ a img {
   margin-left: 8.334%;
 }
 
+.site-title {
+  font-size: 1em;
+  line-height: 1.5;
+}
 .site-title a {
   border: none;
 }
 
 .toggle-navigation {
+  line-height: 1;
   float: right;
   background: none;
   border: none;
@@ -428,6 +433,7 @@ a img {
   color: #1a1a1a;
   background: none;
   border: solid 1px #1a1a1a;
+  text-align: center;
 }
 .toggle-dropdown:focus {
   outline: none;
