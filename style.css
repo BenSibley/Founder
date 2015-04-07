@@ -351,8 +351,7 @@ a img {
 
 .menu-primary-items,
 .menu-unset ul {
-  position: absolute;
-  left: -999px;
+  display: none;
   list-style: none;
   margin: 1.5em 0 0;
   border-top: solid 1px #d4d4d4;
@@ -379,6 +378,17 @@ a img {
   width: 3px;
   background: #e37d39;
 }
+.menu-primary-items li.open > button,
+.menu-unset ul li.open > button {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  border-color: #e37d39;
+}
+.menu-primary-items li.open > ul,
+.menu-unset ul li.open > ul {
+  display: block;
+}
 .menu-primary-items > li:last-child,
 .menu-unset ul > li:last-child {
   margin-bottom: -1.5em;
@@ -386,13 +396,16 @@ a img {
 }
 .menu-primary-items ul,
 .menu-unset ul ul {
-  position: absolute;
+  display: none;
   list-style: none;
-  left: -999px;
 }
 .menu-primary-items ul li,
 .menu-unset ul ul li {
   border: none;
+}
+.menu-primary-items ul li:last-child,
+.menu-unset ul ul li:last-child {
+  margin-bottom: 0.75em;
 }
 .menu-primary-items ul a,
 .menu-unset ul ul a {
@@ -418,14 +431,13 @@ a img {
 .toggle-dropdown:after {
   content: '\f107';
   font-family: 'FontAwesome';
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
+  display: inline-block;
+  vertical-align: text-bottom;
 }
 
 .open .menu-primary-items,
 .open .menu-unset ul {
-  position: relative;
-  left: 0;
+  display: block;
 }
 
 /* gallery styles copied from Hybrid Core */

@@ -24,8 +24,7 @@
 }
 .menu-primary-items,
 .menu-unset ul {
-  position: absolute;
-  left: -999px;
+  display: none; // b/c i want it hidden from screen readers too
   list-style: none;
   margin: $baseline-height 0 0;
   border-top: solid 1px $color-gray-83;
@@ -54,6 +53,17 @@
         background: $color-orange;
       }
     }
+    // tier 2
+    &.open {
+
+      > button {
+        transform: rotate(180deg);
+        border-color: $color-orange;
+      }
+      > ul {
+        display: block;
+      }
+    }
   }
   > li {
 
@@ -64,12 +74,15 @@
   }
   // tier 2
   ul {
-    position: absolute;
+    display: none; // b/c i want it hidden from screen readers too
     list-style: none;
-    left: -999px;
 
     li {
       border: none;
+
+      &:last-child {
+        margin-bottom: $baseline-height / 2;
+      }
     }
     a {
       padding-left: $baseline-height * 2;
@@ -95,7 +108,8 @@
   &:after {
     content: '\f107';
     font-family: 'FontAwesome';
-    transition: all 0.1s ease-in-out;
+    display: inline-block;
+    vertical-align: text-bottom;
   }
 }
 // menu primary open
@@ -103,7 +117,6 @@
 
   .menu-primary-items,
   .menu-unset ul {
-    position: relative;
-    left: 0;
+    display: block;
   }
 }
