@@ -138,13 +138,24 @@
       &.menu-item-has-children {
 
         a {
+          margin: 0;
 
           &:hover,
           &:active,
           &:focus {
 
+            // cover the space between the link and the list to keep the hover going
+            &:after {
+              content: '';
+              position: absolute;
+              left: 0;
+              right: 0;
+              top: 16px;
+              height: 48px;
+            }
             ~ ul {
-              display: block;
+              opacity: 1;
+              visibility: visible;
             }
           }
         }
@@ -162,12 +173,57 @@
     }
     // tier 2
     ul {
+      display: block;
       position: absolute;
       top: 100%;
+      top: calc(100% + 14px);
+      visibility: hidden;
+      overflow: visible;
+      z-index: 9;
+      left: 0;
+      opacity: 0;
       background: white;
-      box-shadow: 0 0 4px 0 rgba(0,0,0,0.2);
+      padding: $baseline-height / 4 $baseline-height / 2 $baseline-height / 2;
+      box-shadow: 0 0 2px 0 rgba(0,0,0,0.3);
+      text-align: center;
+      backface-visibility: hidden; // fixed keyboard focus z-index issue
 
-      &:hover {
+      &:hover,
+      &.focused {
+        opacity: 1;
+        visibility: visible;
+      }
+      // :after and :before used to add triangle at top of menu popup
+      &:after {
+        content: '';
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        left: calc( 50% - 12px);
+        border-bottom: solid 12px white;
+        border-left: solid 12px transparent;
+        border-right: solid 12px transparent;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        top: -13px;
+        left: 50%;
+        left: calc( 50% - 13px);
+        border-bottom: solid 13px $color-gray-83;
+        border-left: solid 13px transparent;
+        border-right: solid 13px transparent;
+      }
+      li {
+        white-space: nowrap;
+        margin: 6px 12px;
+        backface-visibility: hidden; // fixed keyboard focus z-index issue
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      a {
         display: block;
       }
     }
