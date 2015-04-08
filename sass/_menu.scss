@@ -156,6 +156,7 @@
             ~ ul {
               opacity: 1;
               visibility: visible;
+              top: calc(100% + 18px);
             }
           }
         }
@@ -184,7 +185,7 @@
       display: block;
       position: absolute;
       top: 100%;
-      top: calc(100% + 18px);
+      top: calc(100% + 24px);
       visibility: hidden;
       overflow: visible;
       z-index: 9;
@@ -195,11 +196,13 @@
       box-shadow: 0 0 2px 0 rgba(0,0,0,0.3);
       text-align: center;
       backface-visibility: hidden; // fixed keyboard focus z-index issue
+      transition: all 0.2s ease-in-out;
 
       &:hover,
       &.focused {
         opacity: 1;
         visibility: visible;
+        top: calc(100% + 18px);
       }
       // :after and :before used to add triangle at top of menu popup
       &:after {

@@ -532,6 +532,7 @@ a img {
   .menu-unset ul li.menu-item-has-children a:focus ~ ul {
     opacity: 1;
     visibility: visible;
+    top: calc(100% + 18px);
   }
   .menu-primary-items li.menu-item-has-children > a:after,
   .menu-unset ul li.menu-item-has-children > a:after {
@@ -555,7 +556,7 @@ a img {
     display: block;
     position: absolute;
     top: 100%;
-    top: calc(100% + 18px);
+    top: calc(100% + 24px);
     visibility: hidden;
     overflow: visible;
     z-index: 9;
@@ -567,12 +568,15 @@ a img {
     text-align: center;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
   .menu-primary-items ul:hover, .menu-primary-items ul.focused,
   .menu-unset ul ul:hover,
   .menu-unset ul ul.focused {
     opacity: 1;
     visibility: visible;
+    top: calc(100% + 18px);
   }
   .menu-primary-items ul:after,
   .menu-unset ul ul:after {
