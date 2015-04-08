@@ -83,10 +83,12 @@
 })( window.jQuery || window.Zepto );
 jQuery(document).ready(function($){
 
-
     var toggleNavigation = $('#toggle-navigation');
     var menuPrimary = $('#menu-primary');
     var toggleDropdown = $('.toggle-dropdown');
+
+    // centers 2nd tier menus with their parent menu items
+    centerDropdownMenus();
 
     toggleNavigation.on('click', openPrimaryMenu);
 
@@ -130,6 +132,25 @@ jQuery(document).ready(function($){
 
             // change aria text
             $(this).attr('aria-expanded', 'true');
+        }
+    }
+
+    // centers 2nd tier menus with their parent menu items
+    function centerDropdownMenus() {
+
+        if( $(window).width() > 899 ) {
+
+            var parentMenuItems = $('#menu-primary-items').find('.menu-item-has-children');
+
+            parentMenuItems.each(function(){
+                var parentWidth = $(this).width();
+                var childWidth = $(this).children('ul').outerWidth();
+                if( childWidth > parentWidth ) {
+                    var difference = childWidth - parentWidth;
+                    difference = difference / 2;
+                    $(this).children('ul').css('left', -difference);
+                }
+            });
         }
     }
 });
