@@ -515,10 +515,10 @@ a img {
   .menu-unset ul li.menu-item-has-children a {
     margin: 0;
   }
-  .menu-primary-items li.menu-item-has-children a:hover:after, .menu-primary-items li.menu-item-has-children a:active:after, .menu-primary-items li.menu-item-has-children a:focus:after,
-  .menu-unset ul li.menu-item-has-children a:hover:after,
-  .menu-unset ul li.menu-item-has-children a:active:after,
-  .menu-unset ul li.menu-item-has-children a:focus:after {
+  .menu-primary-items li.menu-item-has-children a:hover:before, .menu-primary-items li.menu-item-has-children a:active:before, .menu-primary-items li.menu-item-has-children a:focus:before,
+  .menu-unset ul li.menu-item-has-children a:hover:before,
+  .menu-unset ul li.menu-item-has-children a:active:before,
+  .menu-unset ul li.menu-item-has-children a:focus:before {
     content: '';
     position: absolute;
     left: 0;
@@ -532,6 +532,12 @@ a img {
   .menu-unset ul li.menu-item-has-children a:focus ~ ul {
     opacity: 1;
     visibility: visible;
+  }
+  .menu-primary-items li.menu-item-has-children > a:after,
+  .menu-unset ul li.menu-item-has-children > a:after {
+    content: '+';
+    padding-left: 4px;
+    border-bottom: solid 1px white;
   }
   .menu-primary-items a,
   .menu-unset ul a {
@@ -604,6 +610,10 @@ a img {
   .menu-primary-items ul a,
   .menu-unset ul ul a {
     display: block;
+  }
+  .menu-primary-items ul .menu-item-has-children > a,
+  .menu-unset ul ul .menu-item-has-children > a {
+    margin-right: -8px;
   }
 
   .toggle-dropdown {

@@ -145,7 +145,7 @@
           &:focus {
 
             // cover the space between the link and the list to keep the hover going
-            &:after {
+            &:before {
               content: '';
               position: absolute;
               left: 0;
@@ -157,6 +157,14 @@
               opacity: 1;
               visibility: visible;
             }
+          }
+        }
+        > a {
+
+          &:after {
+            content: '+';
+            padding-left: 4px;
+            border-bottom: solid 1px white;
           }
         }
       }
@@ -225,6 +233,13 @@
       }
       a {
         display: block;
+      }
+      // tier 3
+      .menu-item-has-children {
+
+        > a {
+          margin-right: -8px;
+        }
       }
     }
   }
