@@ -359,6 +359,32 @@ a img {
   color: #e37d39;
 }
 
+@media all and (min-width: 37.5em) {
+  .site-title {
+    font-size: 1.5em;
+    /* 24px / 16px */
+    line-height: 1.5;
+    /* 36px */
+  }
+
+  .toggle-navigation {
+    line-height: 1.5;
+  }
+}
+@media all and (min-width: 56.25em) {
+  .site-header {
+    padding: 1.5em 8.334%;
+  }
+
+  .title-container {
+    margin-left: 0;
+    margin-right: 3em;
+  }
+
+  .toggle-navigation {
+    display: none;
+  }
+}
 .menu-primary-items,
 .menu-unset ul {
   display: none;
@@ -456,32 +482,7 @@ a img {
   display: block;
 }
 
-@media all and (min-width: 37.5em) {
-  .site-title {
-    font-size: 1.5em;
-    /* 24px / 16px */
-    line-height: 1.5;
-    /* 36px */
-  }
-
-  .toggle-navigation {
-    line-height: 1.5;
-  }
-}
 @media all and (min-width: 56.25em) {
-  .site-header {
-    padding: 1.5em 8.334%;
-  }
-
-  .title-container {
-    margin-left: 0;
-    margin-right: 3em;
-  }
-
-  .toggle-navigation {
-    display: none;
-  }
-
   .menu-primary {
     display: inline-block;
     margin-left: 0;
