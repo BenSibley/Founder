@@ -602,8 +602,10 @@ a img {
   }
   .menu-primary-items ul li,
   .menu-unset ul ul li {
+    display: block;
     white-space: nowrap;
-    margin: 6px 12px;
+    margin: 12px;
+    line-height: 16px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
@@ -611,13 +613,57 @@ a img {
   .menu-unset ul ul li:last-child {
     margin-bottom: 0;
   }
+  .menu-primary-items ul li:first-child,
+  .menu-unset ul ul li:first-child {
+    margin-top: 6px;
+  }
   .menu-primary-items ul a,
   .menu-unset ul ul a {
-    display: block;
+    display: inline-block;
   }
   .menu-primary-items ul .menu-item-has-children > a,
   .menu-unset ul ul .menu-item-has-children > a {
     margin-right: -8px;
+  }
+  .menu-primary-items ul .menu-item-has-children > a:hover ~ ul, .menu-primary-items ul .menu-item-has-children > a:active ~ ul, .menu-primary-items ul .menu-item-has-children > a:focus ~ ul,
+  .menu-unset ul ul .menu-item-has-children > a:hover ~ ul,
+  .menu-unset ul ul .menu-item-has-children > a:active ~ ul,
+  .menu-unset ul ul .menu-item-has-children > a:focus ~ ul {
+    top: 0;
+    left: calc(100% + 24px);
+  }
+  .menu-primary-items ul .menu-item-has-children ul,
+  .menu-unset ul ul .menu-item-has-children ul {
+    left: 100%;
+    left: calc(100% + 30px);
+    top: 0;
+  }
+  .menu-primary-items ul .menu-item-has-children ul:hover,
+  .menu-unset ul ul .menu-item-has-children ul:hover {
+    top: 0;
+    left: calc(100% + 24px);
+  }
+  .menu-primary-items ul .menu-item-has-children ul:after,
+  .menu-unset ul ul .menu-item-has-children ul:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    top: calc(50% - 12px);
+    left: -24px;
+    border-right: solid 12px white;
+    border-top: solid 12px transparent;
+    border-bottom: solid 12px transparent;
+  }
+  .menu-primary-items ul .menu-item-has-children ul:before,
+  .menu-unset ul ul .menu-item-has-children ul:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    top: calc(50% - 13px);
+    left: -26px;
+    border-right: solid 13px #d4d4d4;
+    border-top: solid 13px transparent;
+    border-bottom: solid 13px transparent;
   }
 
   .toggle-dropdown {

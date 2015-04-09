@@ -2,6 +2,7 @@ jQuery(document).ready(function($){
 
     var toggleNavigation = $('#toggle-navigation');
     var menuPrimary = $('#menu-primary');
+    var menuPrimaryItems = $('#menu-primary-items');
     var toggleDropdown = $('.toggle-dropdown');
 
     // centers 2nd tier menus with their parent menu items
@@ -57,9 +58,10 @@ jQuery(document).ready(function($){
 
         if( $(window).width() > 899 ) {
 
-            var parentMenuItems = $('#menu-primary-items').find('.menu-item-has-children');
 
-            parentMenuItems.each(function(){
+            var parentMenuItemsTier2 = menuPrimaryItems.children('.menu-item-has-children');
+
+            parentMenuItemsTier2.each(function(){
                 var parentWidth = $(this).width();
                 var childWidth = $(this).children('ul').outerWidth();
                 if( childWidth > parentWidth ) {
@@ -67,6 +69,17 @@ jQuery(document).ready(function($){
                     difference = difference / 2;
                     $(this).children('ul').css('left', -difference);
                 }
+            });
+
+            var parentMenuItemsTier3 = menuPrimaryItems.find('ul ul');
+
+            parentMenuItemsTier3.each(function(){
+                var height = $(this).outerHeight();
+                height = height / 2;
+                var parentLink = $(this).parent().children('a');
+                var parentLinkHeight = parentLink.height();
+                parentLinkHeight = parentLinkHeight / 2;
+                $(this).css('top', -height + parentLinkHeight);
             });
         }
     }
