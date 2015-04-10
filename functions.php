@@ -67,7 +67,7 @@ function ct_founder_register_widget_areas(){
     /* register after post content widget area */
     hybrid_register_sidebar( array(
         'name'         => __( 'Primary Sidebar', 'founder' ),
-        'id'           => 'primary-sidebar',
+        'id'           => 'primary',
         'description'  => __( 'Widgets in this area will be shown in the sidebar.', 'founder' )
     ) );
 }

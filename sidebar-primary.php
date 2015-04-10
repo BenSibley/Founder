@@ -6,4 +6,8 @@
 
     </aside><!-- #sidebar-primary -->
 
+	<button id="toggle-sidebar" class="toggle-sidebar">
+		<i class="fa fa-angle-down"></i>
+	</button>
+
 <?php endif; ?>
