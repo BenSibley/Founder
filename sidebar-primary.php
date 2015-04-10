@@ -6,8 +6,10 @@
 		    <i class="fa fa-angle-down"></i>
 	    </button>
 
-	    <div class="sidebar-primary-content">
-            <?php dynamic_sidebar( 'primary' ); ?>
+	    <div id="sidebar-primary-content" class="sidebar-primary-content">
+		    <div id="sidebar-primary-widgets" class="sidebar-primary-widgets">
+                <?php dynamic_sidebar( 'primary' ); ?>
+		    </div>
 	    </div>
 
     </aside><!-- #sidebar-primary -->

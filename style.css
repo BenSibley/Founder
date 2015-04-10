@@ -859,10 +859,15 @@ a img {
 }
 .toggle-sidebar i {
   color: #a1a1a1;
+  -webkit-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 
 .sidebar-primary-content {
   display: none;
+}
+
+.sidebar-primary-widgets {
   padding: 1.5em 8.334%;
 }
 
@@ -883,4 +888,21 @@ a img {
 }
 .sidebar-primary.open .sidebar-primary-content {
   display: block;
+}
+
+@media all and (min-width: 56.25em) {
+  .toggle-sidebar:hover, .toggle-sidebar:active {
+    cursor: pointer;
+  }
+  .toggle-sidebar:hover i, .toggle-sidebar:active i {
+    color: #e37d39;
+  }
+
+  .sidebar-primary-content {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height 0.2s ease-in-out;
+    transition: max-height 0.2s ease-in-out;
+  }
 }

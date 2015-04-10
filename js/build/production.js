@@ -89,6 +89,8 @@ jQuery(document).ready(function($){
     var toggleDropdown = $('.toggle-dropdown');
     var toggleSidebar = $('#toggle-sidebar');
     var sidebarPrimary = $('#sidebar-primary');
+    var sidebarPrimaryContent = $('#sidebar-primary-content');
+    var sidebarWidgets = $('#sidebar-primary-widgets');
 
     // centers 2nd tier menus with their parent menu items
     centerDropdownMenus();
@@ -145,8 +147,16 @@ jQuery(document).ready(function($){
 
         if( sidebarPrimary.hasClass('open') ) {
             sidebarPrimary.removeClass('open');
+
+            if( $(window).width() > 899 ) {
+                sidebarPrimaryContent.css('max-height', '' );
+            }
         } else {
             sidebarPrimary.addClass('open');
+
+            if( $(window).width() > 899 ) {
+                sidebarPrimaryContent.css('max-height', sidebarWidgets.outerHeight() );
+            }
         }
     }
 

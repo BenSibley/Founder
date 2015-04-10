@@ -19,10 +19,13 @@
   i {
     @extend %twenty-four-pixels;
     color: $color-gray-63;
+    transition: color 0.2s ease-in-out;
   }
 }
 .sidebar-primary-content {
   display: none;
+}
+.sidebar-primary-widgets {
   padding: $baseline-height $column * 2;
 }
 .sidebar-primary {
@@ -44,5 +47,34 @@
   }
   .sidebar-primary-content {
     display: block;
+  }
+}
+
+@media all and (min-width: $nine-hundred) {
+
+  .toggle-sidebar {
+
+    &:hover,
+    &:active {
+      cursor: pointer;
+
+      i {
+        color: $color-orange;
+      }
+    }
+  }
+  .sidebar-primary-content {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+  }
+  // sidebar open
+  .sidebar-primary.open {
+
+    .sidebar-primary-content {
+      // max-height added precisely with JS
+//      max-height: none;
+    }
   }
 }
