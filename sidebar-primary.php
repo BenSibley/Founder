@@ -2,12 +2,14 @@
 
     <aside class="sidebar sidebar-primary" id="sidebar-primary" role="complementary">
 
-        <?php dynamic_sidebar( 'primary' ); ?>
+	    <div class="sidebar-primary-content">
+            <?php dynamic_sidebar( 'primary' ); ?>
+	    </div>
+
+	    <button id="toggle-sidebar" class="toggle-sidebar">
+		    <i class="fa fa-angle-down"></i>
+	    </button>
 
     </aside><!-- #sidebar-primary -->
-
-	<button id="toggle-sidebar" class="toggle-sidebar">
-		<i class="fa fa-angle-down"></i>
-	</button>
 
 <?php endif; ?>

@@ -19,7 +19,7 @@ Founder is distributed under the terms of the GNU GPL
 /* Social Media Brand Colors */
 /*===== Mixins =====*/
 /***** Silent Classes *****/
-h1, h2, .toggle-navigation {
+h1, h2, .toggle-navigation, .toggle-sidebar i {
   font-size: 1.5em;
   /* 24px / 16px */
   line-height: 1.5;
@@ -838,4 +838,26 @@ a img {
 
 .gallery-col-30 .gallery-item {
   width: 3.33%;
+}
+
+.toggle-sidebar {
+  font-size: 1em;
+  background: #ededed;
+  border: solid 1px #d4d4d4;
+  border-top: none;
+  margin: 0 0 0 8.334%;
+  padding: 0 0.75em;
+  border-radius: 0 0 12px 12px;
+}
+.toggle-sidebar i {
+  color: #a1a1a1;
+}
+
+.sidebar-primary-content {
+  display: none;
+}
+
+.sidebar-primary {
+  margin-top: -1.5em;
+  margin-bottom: 1.5em;
 }

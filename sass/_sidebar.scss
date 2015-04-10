@@ -1,0 +1,21 @@
+.toggle-sidebar {
+  font-size: 1em;
+  background: $color-gray-93;
+  border: solid 1px $color-gray-83;
+  border-top: none;
+  margin: 0 0 0 $column * 2;
+  padding: 0 $baseline-height / 2;
+  border-radius: 0 0 12px 12px;
+
+  i {
+    @extend %twenty-four-pixels;
+    color: $color-gray-63;
+  }
+}
+.sidebar-primary-content {
+  display: none;
+}
+.sidebar-primary {
+  margin-top: -$baseline-height;
+  margin-bottom: $baseline-height;
+}
