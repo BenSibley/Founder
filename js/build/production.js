@@ -87,6 +87,8 @@ jQuery(document).ready(function($){
     var menuPrimary = $('#menu-primary');
     var menuPrimaryItems = $('#menu-primary-items');
     var toggleDropdown = $('.toggle-dropdown');
+    var toggleSidebar = $('#toggle-sidebar');
+    var sidebarPrimary = $('#sidebar-primary');
 
     // centers 2nd tier menus with their parent menu items
     centerDropdownMenus();
@@ -133,6 +135,18 @@ jQuery(document).ready(function($){
 
             // change aria text
             $(this).attr('aria-expanded', 'true');
+        }
+    }
+
+    // display the sidebar
+    toggleSidebar.on('click', openSidebar);
+
+    function openSidebar() {
+
+        if( sidebarPrimary.hasClass('open') ) {
+            sidebarPrimary.removeClass('open');
+        } else {
+            sidebarPrimary.addClass('open');
         }
     }
 
