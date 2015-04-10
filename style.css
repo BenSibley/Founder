@@ -28,7 +28,7 @@ h1, h2, .toggle-navigation, .toggle-sidebar i {
 
 .wp-caption-text, input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
 textarea, input[type="submit"], .menu-primary-items a,
-.menu-unset ul a {
+.menu-unset ul a, .widget {
   font-size: 0.6875em;
   /* 11px / 16px */
   line-height: 1.4545;
@@ -36,7 +36,7 @@ textarea, input[type="submit"], .menu-primary-items a,
 }
 
 .menu-primary-items a,
-.menu-unset ul a {
+.menu-unset ul a, .widget-title {
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -105,6 +105,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
   font-weight: 700;
+  color: #1a1a1a;
 }
 
 h3 {
@@ -905,4 +906,24 @@ a img {
     -webkit-transition: max-height 0.2s ease-in-out;
     transition: max-height 0.2s ease-in-out;
   }
+}
+.widget {
+  margin: 1.5em 0;
+}
+.widget ul {
+  list-style: none;
+  margin: 1.5em 0 0;
+}
+.widget ul a {
+  border-bottom: none;
+}
+.widget ul a:hover, .widget ul a:active, .widget ul a:focus {
+  border-bottom: solid 1px #e37d39;
+}
+.widget ul li {
+  line-height: 2.25em;
+}
+
+.widget-title {
+  font-size: 1em;
 }

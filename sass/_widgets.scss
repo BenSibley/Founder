@@ -1,0 +1,30 @@
+// widgets in all widget areas
+
+.widget {
+  @extend %eleven-pixels;
+  margin: $baseline-height 0;
+
+  ul {
+    list-style: none;
+    margin: $baseline-height 0 0;
+
+    a {
+      border-bottom: none;
+
+      &:hover,
+      &:active,
+      &:focus {
+        border-bottom: solid 1px $color-orange;
+      }
+    }
+    li {
+      line-height: $baseline-height * 1.5;
+    }
+  }
+}
+.widget-title {
+  @extend %uppercase;
+  font-size: 1em;
+}
+
+// sidebar-primary
