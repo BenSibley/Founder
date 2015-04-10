@@ -844,12 +844,18 @@ a img {
   position: absolute;
   top: 100%;
   font-size: 1em;
-  background: #ededed;
+  background: none;
   border: solid 1px #d4d4d4;
   border-top: none;
   margin: 0 0 0 8.334%;
   padding: 0 0.75em;
   border-radius: 0 0 12px 12px;
+}
+.toggle-sidebar:focus {
+  outline: none;
+}
+.toggle-sidebar:focus i {
+  color: #e37d39;
 }
 .toggle-sidebar i {
   color: #a1a1a1;
@@ -857,14 +863,24 @@ a img {
 
 .sidebar-primary-content {
   display: none;
+  padding: 1.5em 8.334%;
 }
 
 .sidebar-primary {
+  position: relative;
   margin-top: -1.5em;
-  margin-bottom: 1.5em;
-  border-bottom: solid 1px #d4d4d4;
+  margin-bottom: 5.25em;
 }
 
+.sidebar-primary.open {
+  border-bottom: solid 1px #d4d4d4;
+}
+.sidebar-primary.open .toggle-sidebar {
+  border-top: solid 1px #d4d4d4;
+}
+.sidebar-primary.open .toggle-sidebar i {
+  color: #e37d39;
+}
 .sidebar-primary.open .sidebar-primary-content {
   display: block;
 }
