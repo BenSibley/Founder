@@ -6,6 +6,7 @@
 .title-container {
   display: inline-block;
   margin-left: $column * 2;
+  max-width: 75%; // prevent looong site titles from pushing menu toggle out of place
 }
 .site-title {
   font-size: 1em;
@@ -51,6 +52,7 @@
   .title-container {
     margin-left: 0;
     margin-right: $baseline-height * 2;
+    max-width: none; // allow title to span full site width again
   }
   .toggle-navigation {
     display: none;

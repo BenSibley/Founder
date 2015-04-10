@@ -60,6 +60,7 @@ body {
   line-height: 1.5;
   font-weight: 400;
   color: #666666;
+  background: white;
   -webkit-font-smoothing: subpixel-antialiased;
   word-wrap: break-word;
   -ms-word-wrap: break-word;
@@ -335,6 +336,7 @@ a img {
 .title-container {
   display: inline-block;
   margin-left: 8.334%;
+  max-width: 75%;
 }
 
 .site-title {
@@ -379,6 +381,7 @@ a img {
   .title-container {
     margin-left: 0;
     margin-right: 3em;
+    max-width: none;
   }
 
   .toggle-navigation {
