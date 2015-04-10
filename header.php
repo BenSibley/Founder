@@ -22,21 +22,16 @@
 <div id="overflow-container" class="overflow-container">
 	<div id="max-width" class="max-width">
 	<header class="site-header" id="site-header" role="banner">
-
-		<?php ct_founder_social_icons_output('header'); ?>
-
 		<div id="title-container" class="title-container">
 			<?php get_template_part('logo')  ?>
 			<?php if ( get_bloginfo( 'description' ) ) {
 				echo '<p class="site-description">' . get_bloginfo( 'description' ) .'</p>';
 			} ?>
 		</div>
-
 		<button id="toggle-navigation" class="toggle-navigation">
 			<i class="fa fa-bars"></i>
 		</button>
-
 		<?php get_template_part( 'menu', 'primary' ); ?>
-
 	</header>
+	<?php get_sidebar( 'primary' ); ?>
 	<section id="main" class="main" role="main">
