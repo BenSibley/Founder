@@ -1,4 +1,6 @@
 .toggle-sidebar {
+  position: absolute;
+  top: 100%;
   font-size: 1em;
   background: $color-gray-93;
   border: solid 1px $color-gray-83;
@@ -18,4 +20,13 @@
 .sidebar-primary {
   margin-top: -$baseline-height;
   margin-bottom: $baseline-height;
+  border-bottom: solid 1px $color-gray-83;
+}
+
+// sidebar open
+.sidebar-primary.open {
+
+  .sidebar-primary-content {
+    display: block;
+  }
 }

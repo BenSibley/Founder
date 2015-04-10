@@ -841,6 +841,8 @@ a img {
 }
 
 .toggle-sidebar {
+  position: absolute;
+  top: 100%;
   font-size: 1em;
   background: #ededed;
   border: solid 1px #d4d4d4;
@@ -860,4 +862,9 @@ a img {
 .sidebar-primary {
   margin-top: -1.5em;
   margin-bottom: 1.5em;
+  border-bottom: solid 1px #d4d4d4;
+}
+
+.sidebar-primary.open .sidebar-primary-content {
+  display: block;
 }
