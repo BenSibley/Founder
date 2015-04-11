@@ -32,6 +32,21 @@
     color: $color-orange;
   }
 }
+.social-media-icons {
+  list-style: none;
+  margin: $baseline-height 0 0; // li:last-child in menu has negative margin-bottom
+  padding: $baseline-height / 2 $column * 2 0;
+  border-top: solid 1px $color-gray-93;
+
+  li {
+    display: inline-block;
+  }
+  a {
+    @extend %twenty-four-pixels;
+    border-bottom: none;
+    margin-right: 8px;
+  }
+}
 
 @media all and (min-width: $six-hundred) {
 
