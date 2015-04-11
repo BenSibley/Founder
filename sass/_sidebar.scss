@@ -129,7 +129,7 @@
   }
 }
 
-@media all and (min-width: 1200px) {
+@media all and (min-width: $twelve-hundred) {
 
   // 4 in a row unless only 1, 2, or 3 widgets
   .sidebar-primary-widgets:not(.active-1):not(.active-2):not(.active-3) {

@@ -981,7 +981,7 @@ a img {
     clear: left;
   }
 }
-@media all and (min-width: 1200px) {
+@media all and (min-width: 75em) {
   .sidebar-primary-widgets:not(.active-1):not(.active-2):not(.active-3) .widget {
     width: 22%;
     margin-right: 0;
