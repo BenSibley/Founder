@@ -389,9 +389,12 @@ a img {
     display: none;
   }
 }
+.menu-primary-container {
+  display: none;
+}
+
 .menu-primary-items,
 .menu-unset ul {
-  display: none;
   list-style: none;
   margin: 1.5em 0 0;
   border-top: solid 1px #d4d4d4;
@@ -481,12 +484,15 @@ a img {
   vertical-align: text-bottom;
 }
 
-.open .menu-primary-items,
-.open .menu-unset ul {
+.menu-primary-container.open {
   display: block;
 }
 
 @media all and (min-width: 56.25em) {
+  .menu-primary-container {
+    display: inline-block;
+  }
+
   .menu-primary {
     display: inline-block;
     margin-left: 0;
@@ -495,7 +501,6 @@ a img {
 
   .menu-primary-items,
   .menu-unset ul {
-    display: block;
     border: none;
     margin: 0;
   }

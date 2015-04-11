@@ -84,6 +84,7 @@
 jQuery(document).ready(function($){
 
     var toggleNavigation = $('#toggle-navigation');
+    var menuPrimaryContainer = $('#menu-primary-container');
     var menuPrimary = $('#menu-primary');
     var menuPrimaryItems = $('#menu-primary-items');
     var toggleDropdown = $('.toggle-dropdown');
@@ -99,11 +100,11 @@ jQuery(document).ready(function($){
 
     function openPrimaryMenu() {
 
-        if( menuPrimary.hasClass('open') ) {
-            menuPrimary.removeClass('open');
+        if( menuPrimaryContainer.hasClass('open') ) {
+            menuPrimaryContainer.removeClass('open');
             $(this).removeClass('open');
         } else {
-            menuPrimary.addClass('open');
+            menuPrimaryContainer.addClass('open');
             $(this).addClass('open');
         }
     }

@@ -1,6 +1,8 @@
+.menu-primary-container {
+  display: none;
+}
 .menu-primary-items,
 .menu-unset ul {
-  display: none; // b/c i want it hidden from screen readers too
   list-style: none;
   margin: $baseline-height 0 0;
   border-top: solid 1px $color-gray-83;
@@ -98,16 +100,15 @@
   }
 }
 // menu primary open
-.open {
-
-  .menu-primary-items,
-  .menu-unset ul {
-    display: block;
-  }
+.menu-primary-container.open {
+  display: block;
 }
 
 @media all and (min-width: $nine-hundred) {
 
+  .menu-primary-container {
+    display: inline-block;
+  }
   .menu-primary {
     display: inline-block;
     margin-left: 0;
@@ -115,7 +116,6 @@
   }
   .menu-primary-items,
   .menu-unset ul {
-    display: block;
     border: none;
     margin: 0;
 
