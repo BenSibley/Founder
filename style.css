@@ -402,6 +402,15 @@ a img {
   .toggle-navigation {
     display: none;
   }
+
+  .social-media-icons {
+    position: absolute;
+    right: 8.334%;
+    top: 1.5em;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
 }
 .menu-primary-container {
   display: none;

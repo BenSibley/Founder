@@ -72,4 +72,12 @@
   .toggle-navigation {
     display: none;
   }
+  .social-media-icons {
+    position: absolute;
+    right: $column * 2;
+    top: $baseline-height;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
 }

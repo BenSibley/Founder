@@ -83,6 +83,36 @@
 })( window.jQuery || window.Zepto );
 jQuery(document).ready(function($){
 
+    (function($,sr){
+
+        // debouncing function from John Hann
+        // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
+        var debounce = function (func, threshold, execAsap) {
+            var timeout;
+
+            return function debounced () {
+                var obj = this, args = arguments;
+                function delayed () {
+                    if (!execAsap)
+                        func.apply(obj, args);
+                    timeout = null;
+                };
+
+                if (timeout)
+                    clearTimeout(timeout);
+                else if (execAsap)
+                    func.apply(obj, args);
+
+                timeout = setTimeout(delayed, threshold || 100);
+            };
+        }
+        // smartresize
+        jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
+
+    })(jQuery,'smartresize');
+
+    var siteHeader = $('#site-header');
+    var titleContainer = $('#title-container');
     var toggleNavigation = $('#toggle-navigation');
     var menuPrimaryContainer = $('#menu-primary-container');
     var menuPrimary = $('#menu-primary');
@@ -92,9 +122,17 @@ jQuery(document).ready(function($){
     var sidebarPrimary = $('#sidebar-primary');
     var sidebarPrimaryContent = $('#sidebar-primary-content');
     var sidebarWidgets = $('#sidebar-primary-widgets');
+    var socialMediaIcons = siteHeader.find('.social-media-icons');
 
     // centers 2nd tier menus with their parent menu items
     centerDropdownMenus();
+
+    // put menu into new line if touching social icons
+    socialIconAdjustment();
+
+    $(window).resize(function(){
+        socialIconAdjustment();
+    });
 
     toggleNavigation.on('click', openPrimaryMenu);
 
@@ -190,5 +228,28 @@ jQuery(document).ready(function($){
                 $(this).css('top', -height + parentLinkHeight);
             });
         }
+    }
+
+    function socialIconAdjustment(){
+
+        if( $(window).width() > 899 && socialMediaIcons.length > 0 ) {
+
+            console.log('doing it');
+            // if site header - site title + menu + social icons
+            var space = siteHeader.width();
+            var titleWidth = titleContainer.width() + parseInt(titleContainer.css('margin-right'));
+            var menuWidth = menuPrimary.width();
+            var iconsWidth = socialMediaIcons.width();
+
+            // 24 extra space between menu and icons
+            if( space - titleWidth - menuWidth - iconsWidth - 24 < 0 ) {
+                menuPrimaryContainer.css('display', 'block');
+            } else {
+                menuPrimaryContainer.css('display', 'inline-block');
+            }
+        } else {
+            menuPrimaryContainer.css('display', '');
+        }
+
     }
 });
