@@ -930,6 +930,25 @@ a img {
   display: block;
 }
 
+@media all and (min-width: 43.75em) {
+  .sidebar-primary-widgets:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+  }
+
+  .sidebar-primary-widgets:not(.active-1) .widget {
+    width: 47%;
+    float: left;
+  }
+  .sidebar-primary-widgets:not(.active-1) .widget:nth-child(odd) {
+    margin-right: 3%;
+    clear: left;
+  }
+}
 @media all and (min-width: 56.25em) {
   .toggle-sidebar:hover, .toggle-sidebar:active {
     cursor: pointer;
@@ -944,6 +963,38 @@ a img {
     overflow: hidden;
     -webkit-transition: max-height 0.2s ease-in-out;
     transition: max-height 0.2s ease-in-out;
+  }
+}
+@media all and (min-width: 62.5em) {
+  .sidebar-primary-widgets:not(.active-1):not(.active-2) .widget {
+    width: 31%;
+    margin-right: 0;
+    margin-top: 1.5em;
+  }
+  .sidebar-primary-widgets:not(.active-1):not(.active-2) .widget:nth-child(odd) {
+    clear: none;
+  }
+  .sidebar-primary-widgets:not(.active-1):not(.active-2) .widget:nth-child(3n - 2), .sidebar-primary-widgets:not(.active-1):not(.active-2) .widget:nth-child(3n - 1) {
+    margin-right: 3%;
+  }
+  .sidebar-primary-widgets:not(.active-1):not(.active-2) .widget:nth-child(3n + 4) {
+    clear: left;
+  }
+}
+@media all and (min-width: 1200px) {
+  .sidebar-primary-widgets:not(.active-1):not(.active-2):not(.active-3) .widget {
+    width: 22%;
+    margin-right: 0;
+    margin-top: 1.5em;
+  }
+  .sidebar-primary-widgets:not(.active-1):not(.active-2):not(.active-3) .widget:nth-child(4n - 3), .sidebar-primary-widgets:not(.active-1):not(.active-2):not(.active-3) .widget:nth-child(4n - 2), .sidebar-primary-widgets:not(.active-1):not(.active-2):not(.active-3) .widget:nth-child(4n - 1) {
+    margin-right: 4%;
+  }
+  .sidebar-primary-widgets:not(.active-1):not(.active-2):not(.active-3) .widget:nth-child(3n + 4) {
+    clear: none;
+  }
+  .sidebar-primary-widgets:not(.active-1):not(.active-2):not(.active-3) .widget:nth-child(3n + 5) {
+    clear: left;
   }
 }
 .widget {
@@ -965,4 +1016,5 @@ a img {
 
 .widget-title {
   font-size: 1em;
+  margin-bottom: 1.5em;
 }

@@ -51,6 +51,29 @@
   }
 }
 
+@media all and (min-width: $seven-hundred) {
+
+  .sidebar-primary-widgets {
+
+    &:after {
+      @include clearfix;
+    }
+  }
+  // 2 in a row unless only 1 widget
+  .sidebar-primary-widgets:not(.active-1) {
+
+    .widget {
+      width: 47%;
+      float: left;
+
+      &:nth-child(odd) {
+        margin-right: 3%;
+        clear: left;
+      }
+    }
+  }
+}
+
 @media all and (min-width: $nine-hundred) {
 
   .toggle-sidebar {
@@ -76,6 +99,59 @@
     .sidebar-primary-content {
       // max-height added precisely with JS
 //      max-height: none;
+    }
+  }
+}
+
+@media all and (min-width: $one-thousand) {
+
+  // 3 in a row unless only 1 or 2 widgets
+  .sidebar-primary-widgets:not(.active-1):not(.active-2) {
+
+    .widget {
+      width: 31%;
+      margin-right: 0;
+      margin-top: $baseline-height;
+
+      &:nth-child(odd) {
+        clear: none;
+      }
+      // apply margin right to every third from 1st and 2nd
+      &:nth-child(3n - 2),
+      &:nth-child(3n - 1) {
+        margin-right: 3%;
+      }
+      // every 3rd starting with #4 clears left, so layout doesn't get messed up in FF
+      &:nth-child(3n + 4) {
+        clear: left;
+      }
+    }
+  }
+}
+
+@media all and (min-width: 1200px) {
+
+  // 4 in a row unless only 1, 2, or 3 widgets
+  .sidebar-primary-widgets:not(.active-1):not(.active-2):not(.active-3) {
+
+    .widget {
+      width: 22%;
+      margin-right: 0;
+      margin-top: $baseline-height;
+
+      // apply margin right to every fourth from 1st, 2nd, and 3rd
+      &:nth-child(4n - 3),
+      &:nth-child(4n - 2),
+      &:nth-child(4n - 1) {
+        margin-right: 4%;
+      }
+      // every 3rd starting with #5 clears left, so layout doesn't get messed up in FF
+      &:nth-child(3n + 4) {
+        clear: none;
+      }
+      &:nth-child(3n + 5) {
+        clear: left;
+      }
     }
   }
 }

@@ -25,6 +25,7 @@
 .widget-title {
   @extend %uppercase;
   font-size: 1em;
+  margin-bottom: $baseline-height;
 }
 
 // sidebar-primary
