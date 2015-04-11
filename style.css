@@ -27,7 +27,7 @@ h1, h2, .toggle-navigation, .social-media-icons a, .toggle-sidebar i {
 }
 
 .wp-caption-text, input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
-textarea, input[type="submit"], .menu-primary-items a,
+textarea, input[type="submit"], .tagline, .menu-primary-items a,
 .menu-unset ul a, .widget {
   font-size: 0.6875em;
   /* 11px / 16px */
@@ -348,6 +348,10 @@ a img {
   border: none;
 }
 
+.tagline {
+  margin: 0;
+}
+
 .toggle-navigation {
   line-height: 1;
   float: right;
@@ -514,6 +518,8 @@ a img {
 @media all and (min-width: 56.25em) {
   .menu-primary-container {
     display: inline-block;
+    vertical-align: top;
+    margin-top: 8px;
   }
 
   .menu-primary {

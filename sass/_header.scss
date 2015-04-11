@@ -16,6 +16,10 @@
     border: none;
   }
 }
+.tagline {
+  @extend %eleven-pixels;
+  margin: 0;
+}
 .toggle-navigation {
   @extend %twenty-four-pixels;
   line-height: 1;
