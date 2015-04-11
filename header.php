@@ -32,6 +32,7 @@
 			<i class="fa fa-bars"></i>
 		</button>
 		<?php get_template_part( 'menu', 'primary' ); ?>
+		<?php ct_founder_social_icons_output( 'header' ); ?>
 	</header>
 	<?php get_sidebar( 'primary' ); ?>
 	<section id="main" class="main" role="main">
