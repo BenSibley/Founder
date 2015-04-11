@@ -147,18 +147,19 @@ jQuery(document).ready(function($){
         }
     }
 
+    // if menu doesn't fit next to social icons, move to next line
     function socialIconAdjustment(){
 
+        // if at non-mobile menu width and social icons exist
         if( $(window).width() > 899 && socialMediaIcons.length > 0 ) {
 
-            console.log('doing it');
-            // if site header - site title + menu + social icons
+            // get the width of all the header elements
             var space = siteHeader.width();
             var titleWidth = titleContainer.width() + parseInt(titleContainer.css('margin-right'));
             var menuWidth = menuPrimary.width();
             var iconsWidth = socialMediaIcons.width();
 
-            // 24 extra space between menu and icons
+            // is there enough space? (24 extra space between menu and icons)
             if( space - titleWidth - menuWidth - iconsWidth - 24 < 0 ) {
                 menuPrimaryContainer.css('display', 'block');
             } else {
