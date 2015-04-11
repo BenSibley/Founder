@@ -982,6 +982,26 @@ a img {
   }
 }
 @media all and (min-width: 75em) {
+  /*
+   * Applying 3-column CSS to widget are even if only 2 active
+   * At this width, having both widgets 50% looks bad, so defaulting to 31%
+   * wide at most
+  */
+  .sidebar-primary-widgets:not(.active-1) .widget {
+    width: 31%;
+    margin-right: 0;
+    margin-top: 1.5em;
+  }
+  .sidebar-primary-widgets:not(.active-1) .widget:nth-child(odd) {
+    clear: none;
+  }
+  .sidebar-primary-widgets:not(.active-1) .widget:nth-child(3n - 2), .sidebar-primary-widgets:not(.active-1) .widget:nth-child(3n - 1) {
+    margin-right: 3%;
+  }
+  .sidebar-primary-widgets:not(.active-1) .widget:nth-child(3n + 4) {
+    clear: left;
+  }
+
   .sidebar-primary-widgets:not(.active-1):not(.active-2):not(.active-3) .widget {
     width: 22%;
     margin-right: 0;

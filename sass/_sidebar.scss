@@ -131,6 +131,32 @@
 
 @media all and (min-width: $twelve-hundred) {
 
+  /*
+   * Applying 3-column CSS to widget are even if only 2 active
+   * At this width, having both widgets 50% looks bad, so defaulting to 31%
+   * wide at most
+  */
+  .sidebar-primary-widgets:not(.active-1) {
+
+    .widget {
+      width: 31%;
+      margin-right: 0;
+      margin-top: $baseline-height;
+
+      &:nth-child(odd) {
+        clear: none;
+      }
+      // apply margin right to every third from 1st and 2nd
+      &:nth-child(3n - 2),
+      &:nth-child(3n - 1) {
+        margin-right: 3%;
+      }
+      // every 3rd starting with #4 clears left, so layout doesn't get messed up in FF
+      &:nth-child(3n + 4) {
+        clear: left;
+      }
+    }
+  }
   // 4 in a row unless only 1, 2, or 3 widgets
   .sidebar-primary-widgets:not(.active-1):not(.active-2):not(.active-3) {
 
