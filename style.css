@@ -453,6 +453,7 @@ a img {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
+  color: #e37d39;
   border-color: #e37d39;
 }
 .menu-primary-items li.open > ul,
@@ -502,6 +503,7 @@ a img {
 }
 .toggle-dropdown:focus {
   outline: none;
+  color: #e37d39;
   border-color: #e37d39;
 }
 .toggle-dropdown:after {
@@ -920,6 +922,9 @@ a img {
 }
 .sidebar-primary.open .toggle-sidebar i {
   color: #e37d39;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 .sidebar-primary.open .sidebar-primary-content {
   display: block;

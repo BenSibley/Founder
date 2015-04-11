@@ -36,6 +36,7 @@
 
       > button {
         transform: rotate(180deg);
+        color: $color-orange;
         border-color: $color-orange;
       }
       > ul {
@@ -90,6 +91,7 @@
 
   &:focus {
     outline: none;
+    color: $color-orange;
     border-color: $color-orange;
   }
   &:after {
