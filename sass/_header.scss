@@ -38,7 +38,7 @@
 }
 .social-media-icons {
   list-style: none;
-  margin: $baseline-height 0 0; // li:last-child in menu has negative margin-bottom
+  margin: $baseline-height  0 -10px; // li:last-child in menu has negative margin-bottom and needs to remove extra space below it
   padding: $baseline-height / 2 $column * 2 0;
   border-top: solid 1px $color-gray-93;
 
