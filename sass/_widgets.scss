@@ -20,6 +20,10 @@
     li {
       line-height: $baseline-height * 1.5;
     }
+    // push sub-menus to the side to show hierarchy
+    ul {
+      margin: 0 $baseline-height;
+    }
   }
 }
 .widget-title {
@@ -28,4 +32,70 @@
   margin-bottom: $baseline-height;
 }
 
-// sidebar-primary
+// specific widgets
+
+.widget_calendar {
+
+  #calendar_wrap {
+    margin-top: $baseline-height;
+  }
+  caption {
+    margin-bottom: $baseline-height;
+    text-align: left;
+  }
+  #today {
+    background: $color-gray-10;
+    color: white;
+  }
+  tfoot {
+
+    td {
+      padding: 0;
+    }
+    a {
+      display: inline-block;
+      padding: $baseline-height / 2 $baseline-height * 2;
+      border: none;
+      transition: background 0.2s ease-in-out;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background: $color-gray-93;
+      }
+    }
+  }
+}
+
+.widget_nav_menu {
+
+  // for when there is no title
+  > div {
+    margin-top: $baseline-height * 2;
+  }
+  // keeps menu from pushing down if title
+  h3 + div {
+    margin-top: 0;
+  }
+}
+
+.widget_recent_comments {
+
+  ul a {
+    border-bottom: solid 1px $color-gray-10;
+
+    &:link {
+      color: $color-gray-10;
+    }
+    &:visited {
+      color: $color-gray-10;
+      border-color: $color-gray-83;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-gray-10;
+      border-color: $color-orange;
+    }
+  }
+}

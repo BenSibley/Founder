@@ -1033,8 +1033,58 @@ a img {
 .widget ul li {
   line-height: 2.25em;
 }
+.widget ul ul {
+  margin: 0 1.5em;
+}
 
 .widget-title {
   font-size: 1em;
   margin-bottom: 1.5em;
+}
+
+.widget_calendar #calendar_wrap {
+  margin-top: 1.5em;
+}
+.widget_calendar caption {
+  margin-bottom: 1.5em;
+  text-align: left;
+}
+.widget_calendar #today {
+  background: #1a1a1a;
+  color: white;
+}
+.widget_calendar tfoot td {
+  padding: 0;
+}
+.widget_calendar tfoot a {
+  display: inline-block;
+  padding: 0.75em 3em;
+  border: none;
+  -webkit-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
+}
+.widget_calendar tfoot a:hover, .widget_calendar tfoot a:active, .widget_calendar tfoot a:focus {
+  background: #ededed;
+}
+
+.widget_nav_menu > div {
+  margin-top: 3em;
+}
+.widget_nav_menu h3 + div {
+  margin-top: 0;
+}
+
+.widget_recent_comments ul a {
+  border-bottom: solid 1px #1a1a1a;
+}
+.widget_recent_comments ul a:link {
+  color: #1a1a1a;
+}
+.widget_recent_comments ul a:visited {
+  color: #1a1a1a;
+  border-color: #d4d4d4;
+}
+.widget_recent_comments ul a:hover, .widget_recent_comments ul a:active, .widget_recent_comments ul a:focus {
+  color: #1a1a1a;
+  border-color: #e37d39;
 }
