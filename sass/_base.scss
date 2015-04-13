@@ -175,13 +175,19 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type=
 textarea {
   @extend %eleven-pixels;
   font-family: $primary-font-stack;
-  padding: $baseline-height / 4 $baseline-height / 2;
+  padding: 9px 12px;
   width: 100%;
   max-width: $baseline-height * 10;
   background: $color-gray-97;
   color: $color-gray-40;
   outline: solid 1px $color-gray-93;
+  border: none;
   -webkit-appearance: none;
+  transition: background 0.2s ease-in-out;
+
+  &:focus {
+    background: white;
+  }
 }
 textarea {
   max-width: $baseline-height * 10;
@@ -190,22 +196,21 @@ textarea {
 input[type="submit"] {
   @extend %eleven-pixels;
   font-family: $primary-font-stack;
-  padding: $baseline-height / 4 $baseline-height / 2;
-  width: 100%;
+  padding: 9px 12px;
   color: white;
   background: $color-gray-10;
+  min-width: 96px;
   outline: none;
   border: none;
-  max-width: $baseline-height * 5;
   -webkit-appearance: none;
+  transition: background 0.2s ease-in-out;
 }
 input[type="submit"]:hover {
   cursor: pointer;
   background: $color-orange;
 }
 input[type="search"] {
-  margin-right: $baseline-height;
-  padding-right: $baseline-height / 4; /* so safari 'x' doesn't get cut off */
+  margin-right: 2px;
 }
 ::-webkit-input-placeholder {
   color: $color-gray-40;
