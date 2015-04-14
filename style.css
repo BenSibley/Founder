@@ -421,6 +421,13 @@ a img {
     padding: 0;
     border: none;
   }
+  .social-media-icons a {
+    -webkit-transition: color 0.1s ease-in-out;
+    transition: color 0.1s ease-in-out;
+  }
+  .social-media-icons a:hover, .social-media-icons a:active, .social-media-icons a:focus {
+    color: #e37d39;
+  }
 }
 .menu-primary-container {
   display: none;
