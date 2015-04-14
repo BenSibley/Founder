@@ -9,9 +9,11 @@
 	        <?php the_content(); ?>
 	        <?php wp_link_pages(array('before' => '<p class="singular-pagination">' . __('Pages:','founder'), 'after' => '</p>', ) ); ?>
 	    </div>
-		<?php get_template_part('content/post-categories'); ?>
-		<?php get_template_part('content/post-tags'); ?>
-		<?php get_template_part('content/post-nav'); ?>
+		<div class="post-after">
+			<?php get_template_part('content/post-categories'); ?>
+			<?php get_template_part('content/post-tags'); ?>
+			<?php get_template_part('content/post-nav'); ?>
+		</div>
 	</article>
 	<?php comments_template(); ?>
 </div>
