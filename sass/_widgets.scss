@@ -22,7 +22,7 @@
     }
     // push sub-menus to the side to show hierarchy
     ul {
-      margin: 0 $baseline-height;
+      margin: $baseline-height / 2 $baseline-height;
     }
   }
 }
@@ -71,10 +71,10 @@
 
   // for when there is no title
   > div {
-    margin-top: $baseline-height * 2;
+    margin-top:  2.636em; // 29px // if no title
   }
   // keeps menu from pushing down if title
-  h3 + div {
+  .widget-title + div {
     margin-top: 0;
   }
 }
@@ -161,7 +161,17 @@
   .search-form-container {
     font-size: 1.4545em; // return to 16px
     line-height: 1.5;
-    margin-top: 28px; // if no title
+    margin-top:  2.636em; // 29px // if no title
+  }
+  .widget-title + div {
+    margin-top: 0;
+  }
+}
+
+.widget_text {
+
+  .textwidget {
+    margin-top:  2.636em; // 29px // if no title
   }
   .widget-title + div {
     margin-top: 0;
