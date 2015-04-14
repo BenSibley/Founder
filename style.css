@@ -28,7 +28,7 @@ h1, h2, .toggle-navigation, .social-media-icons a, .toggle-sidebar i {
 
 .wp-caption-text, input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
 textarea, input[type="submit"], .tagline, .menu-primary-items a,
-.menu-unset ul a, .widget, .post-header p, .more-link {
+.menu-unset ul a, .widget, .post-header p, .more-link, .post-comments {
   font-size: 0.6875em;
   /* 11px / 16px */
   line-height: 1.4545;
@@ -1164,6 +1164,10 @@ a img {
   margin-bottom: 0.75em;
 }
 
+.post {
+  margin: 4.5em 0;
+}
+
 .post-header {
   text-align: center;
   margin-bottom: 3em;
@@ -1194,16 +1198,18 @@ a img {
   bottom: 0;
   left: 0;
   font-size: 0;
+  border: none;
 }
 
 .more-link {
   display: inline-block;
-  padding: 0.75em 1.5em;
+  padding: 1em 1.5em;
   color: white;
   background: #1a1a1a;
   border: none;
   -webkit-transition: background 0.1s ease-in-out;
   transition: background 0.1s ease-in-out;
+  margin: 0 1.5em 0 0;
 }
 .more-link:link, .more-link:visited {
   color: white;
@@ -1211,6 +1217,24 @@ a img {
 .more-link:hover, .more-link:active, .more-link:focus {
   color: white;
   background: #4d4d4d;
+}
+
+.post-comments i {
+  font-size: 1.4545em;
+  color: #1a1a1a;
+  margin-right: 2px;
+  vertical-align: text-top;
+}
+.post-comments a {
+  border-color: transparent;
+}
+.post-comments a:hover, .post-comments a:active, .post-comments a:focus {
+  border-color: #1a1a1a;
+}
+
+.post-content p:last-of-type {
+  display: inline-block;
+  margin: 0.75em 0 0;
 }
 
 .main {

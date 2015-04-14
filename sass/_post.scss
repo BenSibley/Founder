@@ -1,9 +1,13 @@
+.post {
+  margin: $baseline-height * 3 0;
+}
 .post-header {
   text-align: center;
   margin-bottom: $baseline-height * 2;
 
   a {
     border-color: $color-gray-83;
+
 
     &:hover,
     &:active,
@@ -33,17 +37,19 @@
     bottom: 0;
     left: 0;
     font-size: 0;
+    border: none;
   }
 }
 .more-link {
   @extend %eleven-pixels;
   @extend %uppercase;
   display: inline-block;
-  padding: $baseline-height / 2 $baseline-height;
+  padding: $baseline-height / 1.5 $baseline-height;
   color: white;
   background: $color-gray-10;
   border: none;
   transition: background 0.1s ease-in-out;
+  margin: 0 $baseline-height 0 0;
 
   &:link,
   &:visited {
@@ -54,5 +60,32 @@
   &:focus {
     color: white;
     background: $color-gray-30;
+  }
+}
+.post-comments {
+  @extend %eleven-pixels;
+
+  i {
+    font-size: 1.4545em; // 16px
+    color: $color-gray-10;
+    margin-right: 2px;
+    vertical-align: text-top;
+  }
+  a {
+    border-color: transparent;
+
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: $color-gray-10;
+    }
+  }
+}
+.post-content {
+
+  // allow comments to sit next to button
+  p:last-of-type {
+    display: inline-block;
+    margin: $baseline-height / 2 0 0;
   }
 }
