@@ -23,6 +23,7 @@ $six-hundred: 37.5em;
 $seven-hundred: 43.75em;
 $nine-hundred: 56.25em;
 $one-thousand: 62.5em;
+$eleven-hundred: 68.75em;
 $twelve-hundred: 75em;
 
 /* Social Media Brand Colors */
@@ -95,7 +96,7 @@ $tencent-weibo: #20b8e5;
 // uppercase
 %uppercase {
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
 }
 %dark-link {
   color: $color-gray-10;

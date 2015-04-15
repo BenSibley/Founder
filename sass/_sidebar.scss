@@ -31,7 +31,7 @@
 .sidebar-primary {
   position: relative;
   margin-top: -$baseline-height;
-  margin-bottom: $baseline-height * 4;
+  margin-bottom: $baseline-height * 3;
 }
 
 // sidebar open
@@ -76,6 +76,9 @@
 
 @media all and (min-width: $nine-hundred) {
 
+  .sidebar-primary {
+    margin-bottom: $baseline-height * 2;
+  }
   .toggle-sidebar {
 
     &:hover,

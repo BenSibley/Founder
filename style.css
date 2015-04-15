@@ -38,7 +38,7 @@ textarea, input[type="submit"], .tagline, .menu-primary-items a,
 .menu-primary-items a,
 .menu-unset ul a, .widget-title, .post-header p, .more-link {
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
 }
 
 /*===== Basic Styles =====*/
@@ -924,7 +924,7 @@ a img {
 .sidebar-primary {
   position: relative;
   margin-top: -1.5em;
-  margin-bottom: 6em;
+  margin-bottom: 4.5em;
 }
 
 .sidebar-primary.open {
@@ -963,6 +963,10 @@ a img {
   }
 }
 @media all and (min-width: 56.25em) {
+  .sidebar-primary {
+    margin-bottom: 3em;
+  }
+
   .toggle-sidebar:hover, .toggle-sidebar:active {
     cursor: pointer;
   }
@@ -1167,6 +1171,9 @@ a img {
 .post {
   margin: 4.5em 0;
 }
+.post:first-child {
+  margin-top: 3em;
+}
 
 .post-header {
   text-align: center;
@@ -1185,7 +1192,7 @@ a img {
 .featured-image {
   position: relative;
   height: 0;
-  padding-bottom: 50%;
+  padding-bottom: 60%;
   background-size: cover;
   background-position: 50%;
   left: -10%;
@@ -1232,11 +1239,71 @@ a img {
   border-color: #1a1a1a;
 }
 
-.post-content p:last-of-type {
+.blog .post-content,
+.archive .post-content,
+.search .post-content {
+  text-align: center;
+}
+.blog .post-content ul,
+.blog .post-content p:not(:last-of-type),
+.archive .post-content ul,
+.archive .post-content p:not(:last-of-type),
+.search .post-content ul,
+.search .post-content p:not(:last-of-type) {
+  text-align: left;
+}
+.blog .post-content p:last-of-type,
+.archive .post-content p:last-of-type,
+.search .post-content p:last-of-type {
   display: inline-block;
   margin: 0.75em 0 0;
 }
 
+@media all and (min-width: 43.75em) {
+  .post {
+    margin-bottom: 6em;
+  }
+
+  .featured-image {
+    padding-bottom: 62.5%;
+    width: 125%;
+    left: -12.5%;
+  }
+}
+@media all and (min-width: 68.75em) {
+  .post-title {
+    font-size: 2.25em;
+    /* 36px / 16px */
+    line-height: 1.5;
+    /* 54px */
+  }
+
+  .post-header {
+    margin: 3.75em 0;
+  }
+}
+@media all and (min-width: 75em) {
+  .featured-image {
+    width: 133.5%;
+    left: -16.75%;
+  }
+}
 .main {
   padding: 0 8.334%;
+}
+
+@media all and (min-width: 43.75em) {
+  .main {
+    padding: 0 16.668%;
+  }
+}
+@media all and (min-width: 62.5em) {
+  .main {
+    padding: 0 20.835%;
+  }
+}
+@media all and (min-width: 75em) {
+  .main {
+    padding: 0 25.002%;
+  }
 }

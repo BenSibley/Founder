@@ -1,5 +1,9 @@
 .post {
   margin: $baseline-height * 3 0;
+
+  &:first-child {
+    margin-top: $baseline-height * 2;
+  }
 }
 .post-header {
   text-align: center;
@@ -24,7 +28,7 @@
 .featured-image {
   position: relative;
   height: 0;
-  padding-bottom: 50%;
+  padding-bottom: 60%;
   background-size: cover;
   background-position: 50%;
   left: -10%;
@@ -81,11 +85,55 @@
     }
   }
 }
-.post-content {
+.blog,
+.archive,
+.search {
 
-  // allow comments to sit next to button
-  p:last-of-type {
-    display: inline-block;
-    margin: $baseline-height / 2 0 0;
+  // center all content
+  .post-content {
+    text-align: center;
+
+    // so i can un-center everything except the p containing more-link
+    // this allows the more-link and comments link to both be centered next to each other
+    ul,
+    p:not(:last-of-type) {
+      text-align: left;
+    }
+
+    // allow comments to sit next to button
+    p:last-of-type {
+      display: inline-block;
+      margin: $baseline-height / 2 0 0;
+    }
+  }
+}
+
+@media all and (min-width: $seven-hundred) {
+
+  .post {
+    margin-bottom: $baseline-height * 4;
+  }
+  .featured-image {
+    padding-bottom: 62.5%;
+    width: 125%;
+    left: -12.5%;
+  }
+}
+@media all and (min-width: $eleven-hundred) {
+
+  .post-title {
+    font-size: 2.25em; /* 36px / 16px */
+    line-height: 1.5; /* 54px */
+  }
+  .post-header {
+    margin: $baseline-height * 2.5 0;
+  }
+}
+
+@media all and (min-width: $twelve-hundred) {
+
+  .featured-image {
+    width: 133.5%;
+    left: -16.75%;
   }
 }

@@ -1,3 +1,24 @@
 .main {
   padding: 0 $column * 2;
 }
+
+@media all and (min-width: $seven-hundred) {
+
+  .main {
+    padding: 0 $column * 4;
+  }
+}
+
+@media all and (min-width: $one-thousand) {
+
+  .main {
+    padding: 0 $column * 5;
+  }
+}
+
+@media all and (min-width: $twelve-hundred) {
+
+  .main {
+    padding: 0 $column * 6;
+  }
+}
