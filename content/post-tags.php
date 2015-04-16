@@ -9,6 +9,7 @@ if($tags){
 ?>
 
 <div class="post-tags">
+	<span><?php _e('Tagged in', 'founder') ?> </span>
 	<ul>
 		<?php echo $output; ?>
 	</ul>

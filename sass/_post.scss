@@ -108,6 +108,103 @@
     }
   }
 }
+.post-after {
+  position: relative;
+  padding-top: $baseline-height;
+  margin-top: $baseline-height * 2;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $baseline-height * 3;
+    height: 1px;
+    background: $color-gray-83;
+  }
+}
+.post-categories {
+  margin: $baseline-height 0;
+
+  a {
+    color: $color-gray-10;
+
+    &:link,
+    &:visited {
+      color: $color-gray-10;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-gray-10;
+    }
+  }
+}
+.post-tags {
+  margin: $baseline-height 0;
+
+  span {
+    @extend %eleven-pixels;
+    @extend %uppercase;
+  }
+  ul {
+    list-style: none;
+    display: inline-block;
+    margin: 0 0 0 $baseline-height / 2;
+  }
+  li {
+    @extend %eleven-pixels;
+    display: inline-block;
+    margin-right: 12px;
+  }
+  a {
+    display: inline-block;
+    background: $color-gray-97;
+    border: solid 1px $color-gray-93;
+    padding: 4px 12px;
+    transition: all 0.1s ease-in-out;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: $color-gray-93;
+      border-color: $color-gray-83;
+    }
+  }
+}
+.further-reading {
+  position: relative;
+  margin: $baseline-height * 2 0;
+  padding: $baseline-height * 2 0;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -999px;
+    right: -999px;
+    height: 1px;
+    background: $color-gray-83;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -999px;
+    right: -999px;
+    height: 1px;
+    background: $color-gray-83;
+  }
+  span {
+    @extend %eleven-pixels;
+    @extend %uppercase;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .previous {
+    margin-bottom: $baseline-height;
+  }
+}
 
 @media all and (min-width: $four-hundred) {
 
@@ -129,6 +226,21 @@
     padding-bottom: 62.5%;
     width: 125%;
     left: -12.5%;
+  }
+  .further-reading {
+
+    div {
+      width: 46%;
+      display: inline-block;
+      vertical-align: top;
+    }
+    .previous {
+      margin-right: 4%;
+      margin-bottom: 0;
+    }
+    .next {
+      text-align: right;
+    }
   }
 }
 @media all and (min-width: $eleven-hundred) {
