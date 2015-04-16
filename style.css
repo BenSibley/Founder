@@ -28,7 +28,7 @@ h1, h2, .toggle-navigation, .social-media-icons a, .toggle-sidebar i {
 
 .wp-caption-text, input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
 textarea, input[type="submit"], .tagline, .menu-primary-items a,
-.menu-unset ul a, .widget, .post-header p, .more-link, .post-comments {
+.menu-unset ul a, .widget, .post-header p, .more-link, .post-comments, .archive-header h2 {
   font-size: 0.6875em;
   /* 11px / 16px */
   line-height: 1.4545;
@@ -1348,4 +1348,18 @@ a img {
   .loop-pagination .next {
     margin: 0 0 0 3em;
   }
+}
+.archive-header {
+  text-align: center;
+  margin-bottom: -1.5em;
+}
+.archive-header h2 {
+  display: inline-block;
+}
+.archive-header i {
+  color: #1a1a1a;
+  vertical-align: text-bottom;
+}
+.archive-header span {
+  font-weight: 400;
 }

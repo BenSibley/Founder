@@ -1,0 +1,16 @@
+.archive-header {
+  text-align: center;
+  margin-bottom: -$baseline-height;
+
+  h2 {
+    display: inline-block;
+    @extend %eleven-pixels;
+  }
+  i {
+    color: $color-gray-10;
+    vertical-align: text-bottom;
+  }
+  span {
+    font-weight: 400;
+  }
+}
