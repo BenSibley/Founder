@@ -1,0 +1,39 @@
+.loop-pagination {
+  text-align: center;
+  margin-bottom: $baseline-height * 2;
+
+  a,
+  span {
+    margin: 0 $baseline-height / 3;
+  }
+  .prev {
+    margin-left: 0;
+  }
+  .next {
+    margin-right: 0;
+  }
+}
+
+@media all and (min-width: $four-hundred) {
+
+  .loop-pagination {
+
+    a,
+    span {
+      margin: 0 $baseline-height / 2;
+    }
+  }
+}
+
+@media all and (min-width: $five-hundred) {
+
+  .loop-pagination {
+
+    .prev {
+      margin: 0 $baseline-height * 2 0 0;
+    }
+    .next {
+      margin: 0 0 0 $baseline-height * 2;
+    }
+  }
+}

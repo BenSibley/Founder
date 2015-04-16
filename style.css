@@ -1216,7 +1216,6 @@ a img {
   border: none;
   -webkit-transition: background 0.1s ease-in-out;
   transition: background 0.1s ease-in-out;
-  margin: 0 1.5em 0 0;
 }
 .more-link:link, .more-link:visited {
   color: white;
@@ -1226,6 +1225,10 @@ a img {
   background: #4d4d4d;
 }
 
+.post-comments {
+  display: block;
+  margin-top: 1.5em;
+}
 .post-comments i {
   font-size: 1.4545em;
   color: #1a1a1a;
@@ -1259,6 +1262,16 @@ a img {
   margin: 0.75em 0 0;
 }
 
+@media all and (min-width: 25em) {
+  .more-link {
+    margin: 0 1.5em 0 0;
+  }
+
+  .post-comments {
+    display: inline-block;
+    margin-top: 0;
+  }
+}
 @media all and (min-width: 43.75em) {
   .post {
     margin-bottom: 6em;
@@ -1305,5 +1318,34 @@ a img {
 @media all and (min-width: 75em) {
   .main {
     padding: 0 25.002%;
+  }
+}
+.loop-pagination {
+  text-align: center;
+  margin-bottom: 3em;
+}
+.loop-pagination a,
+.loop-pagination span {
+  margin: 0 0.5em;
+}
+.loop-pagination .prev {
+  margin-left: 0;
+}
+.loop-pagination .next {
+  margin-right: 0;
+}
+
+@media all and (min-width: 25em) {
+  .loop-pagination a,
+  .loop-pagination span {
+    margin: 0 0.75em;
+  }
+}
+@media all and (min-width: 31.25em) {
+  .loop-pagination .prev {
+    margin: 0 3em 0 0;
+  }
+  .loop-pagination .next {
+    margin: 0 0 0 3em;
   }
 }
