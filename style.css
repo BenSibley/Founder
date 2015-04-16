@@ -19,7 +19,7 @@ Founder is distributed under the terms of the GNU GPL
 /* Social Media Brand Colors */
 /*===== Mixins =====*/
 /***** Silent Classes *****/
-h1, h2, .toggle-navigation, .social-media-icons a, .toggle-sidebar i {
+h1, h2, .toggle-navigation, .social-media-icons a, .toggle-sidebar i, .comments-number h3 {
   font-size: 1.5em;
   /* 24px / 16px */
   line-height: 1.5;
@@ -28,7 +28,8 @@ h1, h2, .toggle-navigation, .social-media-icons a, .toggle-sidebar i {
 
 .wp-caption-text, input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
 textarea, input[type="submit"], .tagline, .menu-primary-items a,
-.menu-unset ul a, .widget, .post-header p, .more-link, .post-comments, .post-tags span, .post-tags li, .further-reading span, .archive-header h2 {
+.menu-unset ul a, .widget, .post-header p, .more-link, .post-comments, .post-tags span, .post-tags li, .further-reading span, .archive-header h2, .comment-footer span,
+.comment-footer a {
   font-size: 0.6875em;
   /* 11px / 16px */
   line-height: 1.4545;
@@ -36,7 +37,8 @@ textarea, input[type="submit"], .tagline, .menu-primary-items a,
 }
 
 .menu-primary-items a,
-.menu-unset ul a, .widget-title, .post-header p, .more-link, .post-tags span, .further-reading span {
+.menu-unset ul a, .widget-title, .post-header p, .more-link, .post-tags span, .further-reading span, .comment-footer span,
+.comment-footer a {
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
@@ -1345,6 +1347,12 @@ a img {
 .further-reading .previous {
   margin-bottom: 1.5em;
 }
+.further-reading a {
+  border-color: #d4d4d4;
+}
+.further-reading a:hover, .further-reading a:active, .further-reading a:focus {
+  border-color: #e37d39;
+}
 
 @media all and (min-width: 25em) {
   .more-link {
@@ -1459,4 +1467,81 @@ a img {
 }
 .archive-header span {
   font-weight: 400;
+}
+
+.comments-number {
+  margin-bottom: 3em;
+}
+
+.comment-list {
+  list-style: none;
+  margin: 3em 0;
+}
+.comment-list li {
+  margin: 3em 0;
+}
+.comment-list ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 3em;
+  border-left: solid 1px #d4d4d4;
+}
+
+.comment-content li {
+  margin: 0;
+}
+.comment-content ul {
+  list-style: disc;
+  margin: 1.5em 0;
+  padding-left: 0;
+  border: none;
+}
+.comment-content ul ul {
+  margin: 0 0 0 1.5em;
+}
+
+.comment-author {
+  margin-bottom: 1.5em;
+  color: #1a1a1a;
+}
+.comment-author:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.comment-author img {
+  float: left;
+  margin-right: 0.75em;
+  height: 36px;
+  width: 36px;
+}
+
+.comment-footer {
+  margin-top: 1.5em;
+}
+
+.comment-reply-link,
+.comment-edit-link {
+  position: relative;
+  margin-left: 12px;
+  border-color: transparent;
+}
+.comment-reply-link:hover, .comment-reply-link:active, .comment-reply-link:focus,
+.comment-edit-link:hover,
+.comment-edit-link:active,
+.comment-edit-link:focus {
+  border-color: #e37d39;
+}
+.comment-reply-link:after,
+.comment-edit-link:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: -10px;
+  height: 100%;
+  width: 1px;
+  background: #d4d4d4;
 }

@@ -87,19 +87,10 @@ if( ! function_exists( ( 'ct_founder_customize_comments' ) ) ) {
 				if ( $comment->user_id === $post->post_author ) {
 					ct_founder_profile_image_output();
 				} else {
-					echo get_avatar( get_comment_author_email(), 48 );
+					echo get_avatar( get_comment_author_email(), 36 );
 				}
 				?>
-				<div>
-					<div class="author-name"><?php comment_author_link(); ?></div>
-					<div class="comment-date"><?php comment_date( 'n/j/Y' ); ?></div>
-					<?php comment_reply_link( array_merge( $args, array(
-						'reply_text' => __( 'Reply', 'founder' ),
-						'depth'      => $depth,
-						'max_depth'  => $args['max_depth']
-					) ) ); ?>
-					<?php edit_comment_link( 'edit' ); ?>
-				</div>
+				<div class="author-name"><?php comment_author_link(); ?></div>
 			</div>
 			<div class="comment-content">
 				<?php if ( $comment->comment_approved == '0' ) : ?>
@@ -107,6 +98,15 @@ if( ! function_exists( ( 'ct_founder_customize_comments' ) ) ) {
 					<br/>
 				<?php endif; ?>
 				<?php comment_text(); ?>
+			</div>
+			<div class="comment-footer">
+				<span class="comment-date"><?php comment_date( 'n/j/Y' ); ?></span>
+				<?php comment_reply_link( array_merge( $args, array(
+					'reply_text' => __( 'Reply', 'founder' ),
+					'depth'      => $depth,
+					'max_depth'  => $args['max_depth']
+				) ) ); ?>
+				<?php edit_comment_link( 'edit' ); ?>
 			</div>
 		</article>
 	<?php
@@ -433,7 +433,7 @@ function ct_founder_profile_image_output(){
         echo $image_thumb;
 
     } else {
-        echo get_avatar( get_the_author_meta( 'ID' ), 60 );
+        echo get_avatar( get_the_author_meta( 'ID' ), 36 );
     }
 }
 

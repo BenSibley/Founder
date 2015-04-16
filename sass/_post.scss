@@ -12,7 +12,6 @@
   a {
     border-color: $color-gray-83;
 
-
     &:hover,
     &:active,
     &:focus {
@@ -203,6 +202,15 @@
   }
   .previous {
     margin-bottom: $baseline-height;
+  }
+  a {
+    border-color: $color-gray-83;
+
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: $color-orange;
+    }
   }
 }
 
