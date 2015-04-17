@@ -1284,6 +1284,7 @@ a img {
 }
 .post-categories a {
   color: #1a1a1a;
+  margin-left: 1.5em;
 }
 .post-categories a:link, .post-categories a:visited {
   color: #1a1a1a;
@@ -1298,7 +1299,7 @@ a img {
 .post-tags ul {
   list-style: none;
   display: inline-block;
-  margin: 0 0 0 0.75em;
+  margin: 0 0 0 1.5em;
 }
 .post-tags li {
   display: inline-block;
@@ -1398,6 +1399,10 @@ a img {
 
   .post-header {
     margin: 3.75em 0;
+  }
+
+  .singular .post-content {
+    margin-top: 3em;
   }
 }
 @media all and (min-width: 75em) {

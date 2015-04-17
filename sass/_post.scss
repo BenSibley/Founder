@@ -127,6 +127,7 @@
 
   a {
     color: $color-gray-10;
+    margin-left: $baseline-height;
 
     &:link,
     &:visited {
@@ -149,7 +150,7 @@
   ul {
     list-style: none;
     display: inline-block;
-    margin: 0 0 0 $baseline-height / 2;
+    margin: 0 0 0 $baseline-height;
   }
   li {
     @extend %eleven-pixels;
@@ -259,6 +260,12 @@
   }
   .post-header {
     margin: $baseline-height * 2.5 0;
+  }
+  .singular {
+
+    .post-content {
+      margin-top: $baseline-height * 2;
+    }
   }
 }
 

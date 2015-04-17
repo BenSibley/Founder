@@ -6,7 +6,7 @@ if($tags){
 		echo '<span>' . __("Tagged in", "founder") . '</span>';
 		echo '<ul>';
 			foreach($tags as $tag) {
-				$output .= '<li><a href="'.get_tag_link( $tag->term_id ).'" title="' . esc_attr( sprintf( __( "View all posts tagged %s", 'founder' ), $tag->name ) ) . '">'.$tag->name.'</a></li>';
+				echo '<li><a href="'.get_tag_link( $tag->term_id ).'" title="' . esc_attr( sprintf( __( "View all posts tagged %s", 'founder' ), $tag->name ) ) . '">'.$tag->name.'</a></li>';
 			}
 		echo '</ul>';
 	echo '</div>';
