@@ -80,6 +80,24 @@
   }
 }
 
+.comment-pagination {
+  margin: $baseline-height * 2 0;
+}
+
+@media all and (min-width: $five-hundred) {
+
+  .comment-pagination {
+
+    p {
+      display: inline-block;
+      width: 50%;
+    }
+    .next-comment {
+      text-align: right;
+    }
+  }
+}
+
 @media all and (min-width: $one-thousand) {
 
   .comments-number {

@@ -1545,3 +1545,17 @@ a img {
   width: 1px;
   background: #d4d4d4;
 }
+
+.comment-pagination {
+  margin: 3em 0;
+}
+
+@media all and (min-width: 31.25em) {
+  .comment-pagination p {
+    display: inline-block;
+    width: 50%;
+  }
+  .comment-pagination .next-comment {
+    text-align: right;
+  }
+}
