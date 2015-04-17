@@ -227,16 +227,16 @@ img,
 input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
 textarea {
   font-family: "Noto Sans", sans-serif;
-  padding: 9px 12px;
+  padding: 10px 12px;
   width: 100%;
-  max-width: 15em;
-  background: #f7f7f7;
+  max-width: 30em;
+  background: #ededed;
   color: #666666;
-  outline: solid 1px #ededed;
+  outline: solid 1px #d4d4d4;
   border: none;
   -webkit-appearance: none;
-  -webkit-transition: background 0.2s ease-in-out;
-  transition: background 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]):focus,
 textarea:focus {
@@ -244,14 +244,14 @@ textarea:focus {
 }
 
 textarea {
-  max-width: 15em;
+  max-width: 45em;
   overflow: auto;
   /* to hide scrollbar in IE */
 }
 
 input[type="submit"] {
   font-family: "Noto Sans", sans-serif;
-  padding: 9px 12px;
+  padding: 10px 12px;
   color: white;
   background: #1a1a1a;
   min-width: 96px;
@@ -264,7 +264,7 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   cursor: pointer;
-  background: #e37d39;
+  background: #4d4d4d;
 }
 
 input[type="search"] {
@@ -1558,4 +1558,11 @@ a img {
   .comment-pagination .next-comment {
     text-align: right;
   }
+}
+.comment-respond {
+  margin: 4.5em 0;
+}
+.comment-respond label {
+  display: block;
+  margin-bottom: 0.75em;
 }

@@ -175,28 +175,28 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type=
 textarea {
   @extend %eleven-pixels;
   font-family: $primary-font-stack;
-  padding: 9px 12px;
+  padding: 10px 12px;
   width: 100%;
-  max-width: $baseline-height * 10;
-  background: $color-gray-97;
+  max-width: $baseline-height * 20;
+  background: $color-gray-93;
   color: $color-gray-40;
-  outline: solid 1px $color-gray-93;
+  outline: solid 1px $color-gray-83;
   border: none;
   -webkit-appearance: none;
-  transition: background 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 
   &:focus {
     background: white;
   }
 }
 textarea {
-  max-width: $baseline-height * 10;
+  max-width: $baseline-height * 30;
   overflow: auto; /* to hide scrollbar in IE */
 }
 input[type="submit"] {
   @extend %eleven-pixels;
   font-family: $primary-font-stack;
-  padding: 9px 12px;
+  padding: 10px 12px;
   color: white;
   background: $color-gray-10;
   min-width: 96px;
@@ -207,7 +207,7 @@ input[type="submit"] {
 }
 input[type="submit"]:hover {
   cursor: pointer;
-  background: $color-orange;
+  background: $color-gray-30;
 }
 input[type="search"] {
   margin-right: 2px;
