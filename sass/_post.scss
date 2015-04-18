@@ -1,4 +1,4 @@
-.post {
+.entry {
   margin: $baseline-height * 3 0;
 
   &:first-child {
@@ -228,7 +228,7 @@
 
 @media all and (min-width: $seven-hundred) {
 
-  .post {
+  .entry {
     margin-bottom: $baseline-height * 4;
   }
   .featured-image {

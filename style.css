@@ -40,7 +40,7 @@ textarea, input[type="submit"], .tagline, .menu-primary-items a,
 .menu-unset ul a, .widget-title, .post-header p, .more-link, .post-tags span, .further-reading span, .comment-footer span,
 .comment-footer a {
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.07em;
 }
 
 /*===== Basic Styles =====*/
@@ -1173,10 +1173,10 @@ a img {
   margin-bottom: 0.75em;
 }
 
-.post {
+.entry {
   margin: 4.5em 0;
 }
-.post:first-child {
+.entry:first-child {
   margin-top: 3em;
 }
 
@@ -1369,7 +1369,7 @@ a img {
   }
 }
 @media all and (min-width: 43.75em) {
-  .post {
+  .entry {
     margin-bottom: 6em;
   }
 
@@ -1456,10 +1456,10 @@ a img {
 }
 @media all and (min-width: 31.25em) {
   .loop-pagination .prev {
-    margin: 0 3em 0 0;
+    margin: 0 1.5em 0 0;
   }
   .loop-pagination .next {
-    margin: 0 0 0 3em;
+    margin: 0 0 0 1.5em;
   }
 }
 .archive-header {
@@ -1585,4 +1585,9 @@ a img {
 .error-404 .search-form-container {
   text-align: center;
   margin: 3em 0;
+}
+
+.search-bottom {
+  text-align: center;
+  margin: 4.5em 0;
 }
