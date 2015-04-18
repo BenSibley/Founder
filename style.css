@@ -1037,7 +1037,7 @@ a img {
   }
 }
 .widget {
-  margin: 1.5em 0;
+  margin: 3em 0;
 }
 .widget ul {
   list-style: none;
@@ -1165,6 +1165,9 @@ a img {
   margin-top: 0;
 }
 
+.search-form-container {
+  margin: 1.5em 0;
+}
 .search-form-container .search-field {
   max-width: 300px !important;
   margin-bottom: 0.75em;
@@ -1577,4 +1580,9 @@ a img {
   padding: 1.5em;
   border-top: solid 1px #d4d4d4;
   margin-top: 4.5em;
+}
+
+.error-404 .search-form-container {
+  text-align: center;
+  margin: 3em 0;
 }
