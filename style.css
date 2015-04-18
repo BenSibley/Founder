@@ -1571,3 +1571,10 @@ a img {
   display: block;
   margin-bottom: 0.75em;
 }
+
+.site-footer {
+  text-align: center;
+  padding: 1.5em;
+  border-top: solid 1px #d4d4d4;
+  margin-top: 4.5em;
+}

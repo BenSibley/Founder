@@ -1,8 +1,6 @@
 </section> <!-- .main -->
 
 <footer class="site-footer" role="contentinfo">
-    <h4><a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo('title'); ?></a> <?php bloginfo('description'); ?></h4>
-    <div class="design-credit">
         <span>
             <?php
                 $site_url = 'https://www.competethemes.com/founder/';
@@ -10,7 +8,6 @@
                 echo $footer_text;
             ?>
         </span>
-    </div>
 </footer>
 </div>
 </div><!-- .overflow-container -->
