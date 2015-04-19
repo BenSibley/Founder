@@ -28,7 +28,7 @@ h1, h2, .toggle-navigation, .social-media-icons a, .toggle-sidebar i, .comments-
 
 .wp-caption-text, input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
 textarea, input[type="submit"], .tagline, .menu-primary-items a,
-.menu-unset ul a, .widget, .post-header p, .more-link, .post-comments, .post-tags span, .post-tags li, .further-reading span, .archive-header h2, .comment-footer span,
+.menu-unset ul a, .widget, .post-header p, .more-link, .post-comments, .post-tags span, .post-tags li, .further-reading span, .sticky-status span, .archive-header h2, .comment-footer span,
 .comment-footer a {
   font-size: 0.6875em;
   /* 11px / 16px */
@@ -37,7 +37,7 @@ textarea, input[type="submit"], .tagline, .menu-primary-items a,
 }
 
 .menu-primary-items a,
-.menu-unset ul a, .widget-title, .post-header p, .more-link, .post-tags span, .further-reading span, .comment-footer span,
+.menu-unset ul a, .widget-title, .post-header p, .more-link, .post-tags span, .further-reading span, .sticky-status span, .comment-footer span,
 .comment-footer a {
   text-transform: uppercase;
   letter-spacing: 0.07em;
@@ -1402,6 +1402,15 @@ a img {
 }
 .further-reading a:hover, .further-reading a:active, .further-reading a:focus {
   border-color: #e37d39;
+}
+
+.sticky-status {
+  margin-bottom: 0.75em;
+  text-align: center;
+}
+.sticky-status span {
+  padding: 6px 24px;
+  background: #ededed;
 }
 
 @media all and (min-width: 25em) {

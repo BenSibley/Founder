@@ -220,6 +220,17 @@
     }
   }
 }
+.sticky-status {
+  margin-bottom: $baseline-height / 2;
+  text-align: center;
+
+  span {
+    @extend %eleven-pixels;
+    @extend %uppercase;
+    padding: 6px 24px;
+    background: $color-gray-93;
+  }
+}
 
 @media all and (min-width: $four-hundred) {
 
