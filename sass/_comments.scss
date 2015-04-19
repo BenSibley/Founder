@@ -1,5 +1,5 @@
 .comments-number {
-  margin-bottom: $baseline-height * 2;
+  margin: $baseline-height * 2 0;
 
   h3 {
     @extend %twenty-four-pixels;
@@ -94,16 +94,6 @@
     }
     .next-comment {
       text-align: right;
-    }
-  }
-}
-
-@media all and (min-width: $one-thousand) {
-
-  .comments-number {
-
-    h3 {
-//      font-weight: 400;
     }
   }
 }

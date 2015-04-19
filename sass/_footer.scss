@@ -4,3 +4,21 @@
   border-top: solid 1px $color-gray-83;
   margin-top: $baseline-height * 3;
 }
+
+@media all and (min-width: $fourteen-hundred) {
+
+  .site-footer {
+    position: relative;
+    border: none;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0px;
+      left: -999px;
+      right: -999px;
+      height: 1px;
+      background: $color-gray-83;
+    }
+  }
+}

@@ -95,3 +95,21 @@
     }
   }
 }
+
+@media all and (min-width: $fourteen-hundred) {
+
+  .site-header {
+    position: relative;
+    border: none;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: -999px;
+      right: -999px;
+      height: 1px;
+      background: $color-gray-83;
+    }
+  }
+}

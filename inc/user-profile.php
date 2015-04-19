@@ -11,7 +11,7 @@ function ct_founder_user_profile_image_setting( $user ) {
 	?>
 	<table id="profile-image-table" class="form-table">
 		<tr>
-			<th><label for="founder_user_profile_image"><?php _e( 'Profile image', 'founder' ); ?></label></th>
+			<th><label for="founder_user_profile_image"><?php _e( 'Avatar', 'founder' ); ?></label></th>
 			<td>
 				<!-- Outputs the image after save -->
 				<img id="image-preview" src="<?php echo esc_url( get_the_author_meta( 'founder_user_profile_image', $user->ID ) ); ?>" style="width:100px;"><br />
@@ -19,7 +19,7 @@ function ct_founder_user_profile_image_setting( $user ) {
 				<input type="text" name="founder_user_profile_image" id="founder_user_profile_image" value="<?php echo esc_url( get_the_author_meta( 'founder_user_profile_image', $user->ID ) ); ?>" class="regular-text" />
 				<!-- Outputs the save button -->
 				<input type='button' id="founder-user-profile-upload" class="button-primary" value="<?php _e( 'Upload Image', 'founder' ); ?>"/><br />
-				<span class="description"><?php _e( 'Upload an image here to use instead of your Gravatar.', 'founder' ); ?></span>
+				<span class="description"><?php _e( 'Used in comments instead of your Gravatar.', 'founder' ); ?></span>
 			</td>
 		</tr>
 	</table><!-- end form-table -->

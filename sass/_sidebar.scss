@@ -96,14 +96,6 @@
     overflow: hidden;
     transition: max-height 0.2s ease-in-out;
   }
-  // sidebar open
-  .sidebar-primary.open {
-
-    .sidebar-primary-content {
-      // max-height added precisely with JS
-//      max-height: none;
-    }
-  }
 }
 
 @media all and (min-width: $one-thousand) {
@@ -180,6 +172,26 @@
       }
       &:nth-child(3n + 5) {
         clear: left;
+      }
+    }
+  }
+}
+
+@media all and (min-width: $fourteen-hundred) {
+
+  .sidebar-primary {
+
+    &.open {
+      border: none;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: -999px;
+        right: -999px;
+        height: 1px;
+        background: $color-gray-83;
       }
     }
   }
