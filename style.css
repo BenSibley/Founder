@@ -1247,6 +1247,15 @@ a img {
   border: none;
 }
 
+.post-content:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
 .more-link {
   display: inline-block;
   padding: 1em 1.5em;

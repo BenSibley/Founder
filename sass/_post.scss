@@ -43,6 +43,12 @@
     border: none;
   }
 }
+.post-content {
+
+  &:after {
+    @include clearfix;
+  }
+}
 .more-link {
   @extend %eleven-pixels;
   @extend %uppercase;
