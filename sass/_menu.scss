@@ -200,7 +200,7 @@
       box-shadow: 0 0 2px 0 rgba(0,0,0,0.3);
       text-align: center;
       backface-visibility: hidden; // fixed keyboard focus z-index issue
-      transition: all 0.2s ease-in-out;
+      transition: all 0.1s ease-in-out;
 
       &:hover,
       &.focused {

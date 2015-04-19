@@ -183,7 +183,7 @@ textarea {
   outline: solid 1px $color-gray-83;
   border: none;
   -webkit-appearance: none;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
 
   &:focus {
     background: white;
@@ -203,7 +203,7 @@ input[type="submit"] {
   outline: none;
   border: none;
   -webkit-appearance: none;
-  transition: background 0.2s ease-in-out;
+  transition: background 0.1s ease-in-out;
 }
 input[type="submit"]:hover {
   cursor: pointer;
@@ -266,7 +266,7 @@ a img {
   z-index: 99;
   padding: $baseline-height;
   background: $color-gray-10;
-  transition: top 0.2s ease-in-out;
+  transition: top 0.1s ease-in-out;
 
   &:focus {
     top: 0;

@@ -14,6 +14,12 @@
 
   a {
     border: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-gray-30;
+    }
   }
 }
 .tagline {

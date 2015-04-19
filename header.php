@@ -17,7 +17,7 @@
 <body id="<?php print get_stylesheet(); ?>" <?php body_class(); ?>>
 
 <!--skip to content link-->
-<a class="skip-content" href="#main"><?php _e('Skip to content', 'founder'); ?></a>
+<a class="skip-content" href="#main"><?php _e('Skip to content', 'founder'); ?> &rarr;</a>
 
 <div id="overflow-container" class="overflow-container">
 	<div id="max-width" class="max-width">
