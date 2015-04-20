@@ -10,8 +10,8 @@ function ct_founder_load_scripts_styles() {
 	// main JS file
 	wp_enqueue_script('ct-founder-js', get_template_directory_uri() . '/js/build/production.min.js#ct_founder_asyncload', array('jquery'),'', true);
 	wp_localize_script( 'ct-founder-js', 'objectL10n', array(
-		'open'  => __( 'open child menu', 'founder' ),
-		'close' => __( 'close child menu', 'founder' ),
+		'open'  => __( 'open menu', 'founder' ),
+		'close' => __( 'close menu', 'founder' ),
 	) );
 
 	// Google Fonts

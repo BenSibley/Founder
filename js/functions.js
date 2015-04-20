@@ -32,9 +32,22 @@ jQuery(document).ready(function($){
         if( menuPrimaryContainer.hasClass('open') ) {
             menuPrimaryContainer.removeClass('open');
             $(this).removeClass('open');
+
+            // change screen reader text
+            $(this).children('span').text(objectL10n.open);
+
+            // change aria text
+            $(this).attr('aria-expanded', 'false');
+
         } else {
             menuPrimaryContainer.addClass('open');
             $(this).addClass('open');
+
+            // change screen reader text
+            $(this).children('span').text(objectL10n.close);
+
+            // change aria text
+            $(this).attr('aria-expanded', 'true');
         }
     }
 
