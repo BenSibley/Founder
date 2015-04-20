@@ -96,6 +96,8 @@ jQuery(document).ready(function($){
 
         if( sidebarPrimary.hasClass('open') && $(window).width() > 899 ) {
             sidebarPrimaryContent.css('max-height', sidebarWidgets.outerHeight() );
+        } else {
+            sidebarPrimaryContent.css('max-height', '');
         }
     }
 
@@ -103,7 +105,6 @@ jQuery(document).ready(function($){
     function centerDropdownMenus() {
 
         if( $(window).width() > 899 ) {
-
 
             var parentMenuItemsTier2 = menuPrimaryItems.children('.menu-item-has-children');
 
