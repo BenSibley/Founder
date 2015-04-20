@@ -28,7 +28,8 @@
 				echo '<p class="tagline">' . get_bloginfo( 'description' ) .'</p>';
 			} ?>
 		</div>
-		<button id="toggle-navigation" class="toggle-navigation" name="toggle-navigation">
+		<button id="toggle-navigation" class="toggle-navigation" name="toggle-navigation" aria-expanded="false">
+			<span class="screen-reader-text"><?php _e('open menu', 'founder'); ?></span>
 			<i class="fa fa-bars" title="<?php _e('primary menu icon', 'founder'); ?>"></i>
 		</button>
 		<div id="menu-primary-container" class="menu-primary-container">
