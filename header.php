@@ -29,7 +29,7 @@
 			} ?>
 		</div>
 		<button id="toggle-navigation" class="toggle-navigation" name="toggle-navigation">
-			<i class="fa fa-bars"></i>
+			<i class="fa fa-bars" title="<?php _e('primary menu icon', 'founder'); ?>"></i>
 		</button>
 		<div id="menu-primary-container" class="menu-primary-container">
 			<?php get_template_part( 'menu', 'primary' ); ?>
