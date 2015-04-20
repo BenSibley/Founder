@@ -6,7 +6,7 @@
 
     <aside class="sidebar sidebar-primary" id="sidebar-primary" role="complementary">
 
-	    <button id="toggle-sidebar" class="toggle-sidebar">
+	    <button id="toggle-sidebar" class="toggle-sidebar" name="toggle-sidebar">
 		    <i class="fa fa-angle-down" title="<?php _e('sidebar icon', 'founder'); ?>"></i>
 	    </button>
 
