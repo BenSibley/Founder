@@ -487,3 +487,40 @@ function ct_founder_sticky_post_marker() {
 	}
 }
 add_action( 'sticky_post_status', 'ct_founder_sticky_post_marker' );
+
+function ct_founder_reset_customizer_options() {
+
+	// validate name and value
+	if( empty( $_POST['founder_reset_customizer'] ) || 'founder_reset_customizer_settings' !== $_POST['founder_reset_customizer'] )
+		return;
+
+	// validate nonce
+	if( ! wp_verify_nonce( $_POST['founder_reset_customizer_nonce'], 'founder_reset_customizer_nonce' ) )
+		return;
+
+	// validate user permissions
+	if( ! current_user_can( 'manage_options' ) )
+		return;
+
+	// delete customizer mods
+	remove_theme_mods();
+
+	$redirect = admin_url( 'themes.php?page=founder-options' );
+	$redirect = add_query_arg( 'founder_status', 'deleted', $redirect );
+
+	// safely redirect
+	wp_safe_redirect( $redirect ); exit;
+}
+add_action( 'admin_init', 'ct_founder_reset_customizer_options' );
+
+function ct_founder_delete_settings_notice() {
+
+	if ( isset( $_GET['founder_status'] ) ) {
+		?>
+		<div class="updated">
+			<p><?php _e( 'Customizer settings deleted', 'founder' ); ?>.</p>
+		</div>
+	<?php
+	}
+}
+add_action( 'admin_notices', 'ct_founder_delete_settings_notice' );
