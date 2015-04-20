@@ -33,7 +33,7 @@
     if($total_results) {
         ?>
         <div class="search-bottom">
-            <p><?php _e('Can't find what you're looking for? Try refining your search:', 'founder'); ?></p>
+            <p><?php _e("Can't find what you're looking for? Try refining your search:", "founder"); ?></p>
             <?php get_search_form(); ?>
         </div>
     <?php } ?>
