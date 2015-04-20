@@ -161,6 +161,21 @@ jQuery(document).ready(function($){
         if( sidebarPrimary.hasClass('open') ) {
             sidebarPrimary.removeClass('open');
 
+            // if viewport is lower than top of sidebar, scroll up that distance
+            var viewportTop = $(window).scrollTop();
+            var sidebarTop = sidebarPrimary.offset().top;
+
+            // if visitor has scrolled down so top of sidebar is out of view
+            if( viewportTop > sidebarTop  ) {
+                var distance = sidebarTop - 24;
+                if( $(window).width() > 899 ) {
+                    $('html, body').animate({scrollTop: distance}, 200);
+                } else {
+                    $('html, body').scrollTop(distance);
+                }
+
+            }
+
             if( $(window).width() > 899 ) {
                 sidebarPrimaryContent.css('max-height', '' );
             }
@@ -169,7 +184,6 @@ jQuery(document).ready(function($){
 
             if( $(window).width() > 899 ) {
                 sidebarPrimaryContent.css('max-height', sidebarWidgets.outerHeight() );
-                //sidebarPrimaryContent.css('max-height', '999px' );
             }
         }
     }
