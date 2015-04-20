@@ -249,26 +249,40 @@ if( ! function_exists( 'ct_founder_featured_image' ) ) {
 
 		// get post object
 		global $post;
+
 		// default to no featured image
 		$has_image = false;
 
 		// if post has an image
 		if ( has_post_thumbnail( $post->ID ) ) {
+
+			// get the featured image ID
+			$image_id = get_post_thumbnail_id( $post->ID );
+
+			// get the image's alt text
+			$image_alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+
 			// get the full-size version of the image
 			$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+
 			// set $image = the url
-			$image     = $image[0];
+			$image = $image[0];
+
+			// if alt text is empty, nothing else equal to title string
+			$title = empty($image_alt_text) ? '' : "title='$image_alt_text'";
+
+			// set to true
 			$has_image = true;
 		}
 		if ( $has_image == true ) {
 
 			// on posts/pages display the featued image
 			if ( is_singular() ) {
-				echo "<div class='featured-image' style=\"background-image: url('" . $image . "')\"></div>";
+				echo "<div class='featured-image' style=\"background-image: url('" . $image . "')\" $title></div>";
 			} // on blog/archives display with a link
 			else {
 				echo "
-                <div class='featured-image' style=\"background-image: url('" . $image . "')\">
+                <div class='featured-image' style=\"background-image: url('" . $image . "')\" $title>
                     <a href='" . get_permalink() . "'>" . get_the_title() . "</a>
                 </div>
                 ";
