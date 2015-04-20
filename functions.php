@@ -276,7 +276,7 @@ if( ! function_exists( 'ct_founder_featured_image' ) ) {
 		}
 		if ( $has_image == true ) {
 
-			// on posts/pages display the featued image
+			// on posts/pages display the featured image
 			if ( is_singular() ) {
 				echo "<div class='featured-image' style=\"background-image: url('" . $image . "')\" $title></div>";
 			} // on blog/archives display with a link
@@ -381,22 +381,19 @@ if( ! function_exists('ct_founder_social_icons_output') ) {
                     ?>
                     <li>
                         <a class="email" target="_blank" href="mailto:<?php echo antispambot( is_email( ct_founder_get_social_url( $source, $key ) ) ); ?>">
-                            <span class="screen-reader-text"><?php _e('email icon', 'founder'); ?></span>
-                            <i class="fa fa-envelope"></i>
+                            <i class="fa fa-envelope" title="<?php _e('email icon', 'founder'); ?>"></i>
                         </a>
                     </li>
                 <?php } elseif ( $active_site == "flickr" || $active_site == "dribbble" || $active_site == "instagram" || $active_site == "soundcloud" || $active_site == "spotify" || $active_site == "vine" || $active_site == "yahoo" || $active_site == "codepen" || $active_site == "delicious" || $active_site == "stumbleupon" || $active_site == "deviantart" || $active_site == "digg" || $active_site == "hacker-news" || $active_site == "vk" || $active_site == 'weibo' || $active_site == 'tencent-weibo' ) { ?>
                     <li>
                         <a class="<?php echo $active_site; ?>" target="_blank" href="<?php echo esc_url( ct_founder_get_social_url( $source, $key ) ); ?>">
-                            <span class="screen-reader-text"><?php printf( __('%s icon', 'founder'), $active_site ); ?></span>
-                            <i class="fa fa-<?php echo esc_attr( $active_site ); ?>"></i>
+                            <i class="fa fa-<?php echo esc_attr( $active_site ); ?>" title="<?php printf( __('%s icon', 'founder'), $active_site ); ?>"></i>
                         </a>
                     </li>
                 <?php } else { ?>
                     <li>
                         <a class="<?php echo $active_site; ?>" target="_blank" href="<?php echo esc_url( ct_founder_get_social_url( $source, $key ) ); ?>">
-	                        <span class="screen-reader-text"><?php printf( __('%s icon', 'founder'), $active_site ); ?></span>
-                            <i class="fa fa-<?php echo esc_attr( $active_site ); ?>-square"></i>
+                            <i class="fa fa-<?php echo esc_attr( $active_site ); ?>-square" title="<?php printf( __('%s icon', 'founder'), $active_site ); ?>"></i>
                         </a>
                     </li>
                 <?php
