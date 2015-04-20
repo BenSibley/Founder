@@ -29,7 +29,7 @@ h1, h2, .toggle-navigation, .social-media-icons a, .toggle-sidebar i, .comments-
 .wp-caption-text, input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
 textarea, input[type="submit"], .tagline, .menu-primary-items a,
 .menu-unset ul a, .widget, .post-header p, .more-link, .post-comments, .post-tags span, .post-tags li, .further-reading span, .sticky-status span, .archive-header h2, .comment-footer span,
-.comment-footer a {
+.comment-footer a, #cancel-comment-reply-link {
   font-size: 0.6875em;
   /* 11px / 16px */
   line-height: 1.4545;
@@ -144,8 +144,9 @@ li li {
 /* Markup styles */
 pre {
   word-wrap: break-word;
-  background: #ededed;
-  padding: 0.75em;
+  background: #f7f7f7;
+  border: solid 1px #ededed;
+  padding: 0.75em 1.5em;
 }
 
 code {
@@ -154,7 +155,7 @@ code {
 }
 
 blockquote {
-  margin: 1.5em 1.5em 1.5em 0;
+  margin: 1.5em;
   padding-left: 1.5em;
   border-left: solid 3px #e37d39;
 }
@@ -1628,6 +1629,10 @@ a img {
 .comment-respond label {
   display: block;
   margin-bottom: 0.75em;
+}
+
+#cancel-comment-reply-link {
+  margin-left: 12px;
 }
 
 .site-footer {

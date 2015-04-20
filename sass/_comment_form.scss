@@ -6,3 +6,7 @@
     margin-bottom: $baseline-height / 2;
   }
 }
+#cancel-comment-reply-link {
+  @extend %eleven-pixels;
+  margin-left: 12px;
+}
