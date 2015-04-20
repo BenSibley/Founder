@@ -109,7 +109,7 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 	// section
 	$wp_customize->add_section( 'ct_founder_social_media_icons', array(
 		'title'          => __('Social Media Icons', 'founder'),
-		'priority'       => 25,
+		'priority'       => 35,
 	) );
 
 	// create a setting and control for each social site
