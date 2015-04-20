@@ -483,7 +483,7 @@ add_filter( 'walker_nav_menu_start_el', 'ct_founder_nav_dropdown_buttons', 10, 4
 function ct_founder_sticky_post_marker() {
 
 	if( is_sticky() && !is_archive() ) {
-		echo '<div class="sticky-status"><span>Featured Post</span></div>';
+		echo '<div class="sticky-status"><span>' . __("Featured Post", "founder") . '</span></div>';
 	}
 }
 add_action( 'sticky_post_status', 'ct_founder_sticky_post_marker' );

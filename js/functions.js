@@ -53,7 +53,7 @@ jQuery(document).ready(function($){
             menuItem.removeClass('open');
 
             // change screen reader text
-            $(this).children('span').text('open child menu');
+            $(this).children('span').text(objectL10n.open);
 
             // change aria text
             $(this).attr('aria-expanded', 'false');
@@ -63,7 +63,7 @@ jQuery(document).ready(function($){
             menuItem.addClass('open');
 
             // change screen reader text
-            $(this).children('span').text('close child menu');
+            $(this).children('span').text(objectL10n.close);
 
             // change aria text
             $(this).attr('aria-expanded', 'true');
