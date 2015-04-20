@@ -28,7 +28,7 @@
 				echo '<p class="tagline">' . get_bloginfo( 'description' ) .'</p>';
 			} ?>
 		</div>
-		<button id="toggle-navigation" class="toggle-navigation">
+		<button id="toggle-navigation" class="toggle-navigation" name="toggle-navigation">
 			<i class="fa fa-bars"></i>
 		</button>
 		<div id="menu-primary-container" class="menu-primary-container">
