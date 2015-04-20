@@ -20,6 +20,7 @@ jQuery(document).ready(function($){
     socialIconAdjustment();
 
     $(window).resize(function(){
+        centerDropdownMenus();
         socialIconAdjustment();
     });
 
@@ -115,6 +116,11 @@ jQuery(document).ready(function($){
                 var parentLinkHeight = parentLink.height();
                 parentLinkHeight = parentLinkHeight / 2;
                 $(this).css('top', -height + parentLinkHeight);
+            });
+        } else {
+            menuPrimaryItems.find('ul').css({
+                'left': '',
+                'top' : ''
             });
         }
     }
