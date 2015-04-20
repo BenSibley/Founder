@@ -87,7 +87,7 @@ if( ! function_exists( ( 'ct_founder_customize_comments' ) ) ) {
 				if ( $comment->user_id === $post->post_author ) {
 					ct_founder_profile_image_output();
 				} else {
-					echo get_avatar( get_comment_author_email(), 36 );
+					echo get_avatar( get_comment_author_email(), 36, '', get_comment_author() );
 				}
 				?>
 				<div class="author-name"><?php comment_author_link(); ?></div>
@@ -438,13 +438,13 @@ function ct_founder_profile_image_output(){
         $image_id = ct_founder_get_image_id(get_the_author_meta('founder_user_profile_image'));
 
         // retrieve the thumbnail size of profile image
-        $image_thumb = wp_get_attachment_image($image_id, 'thumbnail');
+        $image_thumb = wp_get_attachment_image($image_id, 'thumbnail', false, array('alt' => get_the_author() ) );
 
         // display the image
         echo $image_thumb;
 
     } else {
-        echo get_avatar( get_the_author_meta( 'ID' ), 36 );
+        echo get_avatar( get_the_author_meta( 'ID' ), 36, '', get_the_author() );
     }
 }
 
