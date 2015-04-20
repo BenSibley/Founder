@@ -117,7 +117,7 @@ jQuery(document).ready(function($){
             $(this).removeClass('open');
 
             // change screen reader text
-            $(this).children('span').text(objectL10n.open);
+            $(this).children('span').text(objectL10n.openMenu);
 
             // change aria text
             $(this).attr('aria-expanded', 'false');
@@ -127,7 +127,7 @@ jQuery(document).ready(function($){
             $(this).addClass('open');
 
             // change screen reader text
-            $(this).children('span').text(objectL10n.close);
+            $(this).children('span').text(objectL10n.closeMenu);
 
             // change aria text
             $(this).attr('aria-expanded', 'true');
@@ -149,7 +149,7 @@ jQuery(document).ready(function($){
             menuItem.removeClass('open');
 
             // change screen reader text
-            $(this).children('span').text(objectL10n.open);
+            $(this).children('span').text(objectL10n.openMenu);
 
             // change aria text
             $(this).attr('aria-expanded', 'false');
@@ -159,7 +159,7 @@ jQuery(document).ready(function($){
             menuItem.addClass('open');
 
             // change screen reader text
-            $(this).children('span').text(objectL10n.close);
+            $(this).children('span').text(objectL10n.closeMenu);
 
             // change aria text
             $(this).attr('aria-expanded', 'true');
@@ -189,11 +189,23 @@ jQuery(document).ready(function($){
 
             }
 
+            // change screen reader text
+            $(this).children('span').text(objectL10n.openSidebar);
+
+            // change aria text
+            $(this).attr('aria-expanded', 'false');
+
             if( $(window).width() > 899 ) {
                 sidebarPrimaryContent.css('max-height', '' );
             }
         } else {
             sidebarPrimary.addClass('open');
+
+            // change screen reader text
+            $(this).children('span').text(objectL10n.closeSidebar);
+
+            // change aria text
+            $(this).attr('aria-expanded', 'true');
 
             if( $(window).width() > 899 ) {
                 sidebarPrimaryContent.css('max-height', sidebarWidgets.outerHeight() );
