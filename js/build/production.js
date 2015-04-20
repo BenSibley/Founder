@@ -105,6 +105,7 @@ jQuery(document).ready(function($){
     $(window).resize(function(){
         centerDropdownMenus();
         socialIconAdjustment();
+        sidebarHeightResize();
     });
 
     toggleNavigation.on('click', openPrimaryMenu);
@@ -168,7 +169,16 @@ jQuery(document).ready(function($){
 
             if( $(window).width() > 899 ) {
                 sidebarPrimaryContent.css('max-height', sidebarWidgets.outerHeight() );
+                //sidebarPrimaryContent.css('max-height', '999px' );
             }
+        }
+    }
+    // if screen is resized while sidebar is open, update max-height to keep widgets
+    // from being cut-off. Only necessary b/c of animation (can't do max-height: none;)
+    function sidebarHeightResize() {
+
+        if( sidebarPrimary.hasClass('open') && $(window).width() > 899 ) {
+            sidebarPrimaryContent.css('max-height', sidebarWidgets.outerHeight() );
         }
     }
 
