@@ -20,7 +20,6 @@
     &:active,
     &:focus {
       color: $color-gray-40;
-      outline: none;
     }
   }
 }
@@ -99,7 +98,6 @@
       &:active,
       &:focus {
         color: $color-orange;
-        outline: none;
       }
     }
   }

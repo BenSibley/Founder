@@ -40,6 +40,8 @@
 
   .toggle-sidebar {
     border-top: solid 1px $color-gray-83;
+    border-color: $color-orange;
+    border-top-color: $color-gray-83;
 
     i {
       color: $color-orange;
@@ -80,6 +82,7 @@
     margin-bottom: $baseline-height * 2;
   }
   .toggle-sidebar {
+    transition: border-color 0.1s ease-in-out;
 
     &:hover {
       cursor: pointer;
