@@ -262,9 +262,10 @@ input[type="submit"] {
   -webkit-transition: background 0.1s ease-in-out;
   transition: background 0.1s ease-in-out;
 }
-
 input[type="submit"]:hover {
   cursor: pointer;
+}
+input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus {
   background: #4d4d4d;
 }
 

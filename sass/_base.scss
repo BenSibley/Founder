@@ -205,10 +205,15 @@ input[type="submit"] {
   border: none;
   -webkit-appearance: none;
   transition: background 0.1s ease-in-out;
-}
-input[type="submit"]:hover {
-  cursor: pointer;
-  background: $color-gray-30;
+
+  &:hover {
+    cursor: pointer;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    background: $color-gray-30;
+  }
 }
 input[type="search"] {
   margin-right: 2px;
