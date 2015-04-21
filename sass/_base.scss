@@ -96,7 +96,11 @@ li li {
 /* Markup styles */
 
 pre {
-  word-wrap: break-word;
+  white-space: pre-wrap; /* css-3 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
   background: $color-gray-97;
   border: solid 1px $color-gray-93;
   padding: $baseline-height / 2 $baseline-height;
