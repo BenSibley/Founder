@@ -1659,6 +1659,10 @@ a img {
   margin-bottom: 0.75em;
 }
 
+.comment .comment-respond {
+  margin-top: 3em;
+}
+
 #cancel-comment-reply-link {
   margin-left: 12px;
 }
