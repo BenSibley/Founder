@@ -397,7 +397,7 @@ a img {
 }
 .social-media-icons a {
   border-bottom: none;
-  margin-right: 8px;
+  margin-right: 12px;
 }
 
 @media all and (min-width: 37.5em) {
