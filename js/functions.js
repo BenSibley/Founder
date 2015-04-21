@@ -14,6 +14,9 @@ jQuery(document).ready(function($){
     var socialMediaIcons = siteHeader.find('.social-media-icons');
     var menuLink = $('.menu-item').children('a');
 
+    // add fitvids to all vids in posts/pages
+    $('.post').fitVids();
+
     // centers 2nd tier menus with their parent menu items
     centerDropdownMenus();
 
