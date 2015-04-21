@@ -131,7 +131,7 @@
       &.current-menu-item,
       &.current_page_item {
 
-        a {
+        > a {
           border-color: $color-orange;
         }
         &:after {

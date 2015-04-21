@@ -592,9 +592,9 @@ a img {
     border: none;
     margin-right: 20px;
   }
-  .menu-primary-items li.current-menu-item a, .menu-primary-items li.current_page_item a,
-  .menu-unset ul li.current-menu-item a,
-  .menu-unset ul li.current_page_item a {
+  .menu-primary-items li.current-menu-item > a, .menu-primary-items li.current_page_item > a,
+  .menu-unset ul li.current-menu-item > a,
+  .menu-unset ul li.current_page_item > a {
     border-color: #e37d39;
   }
   .menu-primary-items li.current-menu-item:after, .menu-primary-items li.current_page_item:after,
