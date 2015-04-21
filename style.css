@@ -629,6 +629,7 @@ a img {
   .menu-unset ul li.menu-item-has-children > a:after {
     content: '+';
     padding-left: 4px;
+    padding-right: 1px;
     border-bottom: solid 1px white;
   }
   .menu-primary-items a,
@@ -707,6 +708,22 @@ a img {
   .menu-primary-items ul li:first-child,
   .menu-unset ul ul li:first-child {
     margin-top: 6px;
+  }
+  .menu-primary-items ul li.menu-item-has-children a,
+  .menu-unset ul ul li.menu-item-has-children a {
+    position: relative;
+  }
+  .menu-primary-items ul li.menu-item-has-children a:hover:before, .menu-primary-items ul li.menu-item-has-children a:active:before, .menu-primary-items ul li.menu-item-has-children a:focus:before,
+  .menu-unset ul ul li.menu-item-has-children a:hover:before,
+  .menu-unset ul ul li.menu-item-has-children a:active:before,
+  .menu-unset ul ul li.menu-item-has-children a:focus:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -72px;
+    left: auto;
+    height: 24px;
+    width: 72px;
   }
   .menu-primary-items ul a,
   .menu-unset ul ul a {

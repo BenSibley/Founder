@@ -169,6 +169,7 @@
           &:after {
             content: '+';
             padding-left: 4px;
+            padding-right: 1px; // def cover up border
             border-bottom: solid 1px white;
           }
         }
@@ -241,6 +242,29 @@
         }
         &:first-child {
           margin-top: 6px;
+        }
+
+        &.menu-item-has-children {
+
+          a {
+            position: relative;
+
+            &:hover,
+            &:active,
+            &:focus {
+
+              // cover the space between the link and the list to keep the hover going
+              &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: -72px;
+                left: auto;
+                height: 24px;
+                width: 72px;
+              }
+            }
+          }
         }
       }
       a {
