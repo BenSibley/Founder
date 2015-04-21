@@ -946,6 +946,10 @@ a img {
   width: 3.33%;
 }
 
+.gallery a {
+  border: none;
+}
+
 .toggle-sidebar {
   position: absolute;
   top: 100%;
