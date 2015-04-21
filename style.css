@@ -1097,7 +1097,7 @@ a img {
   }
 }
 .widget {
-  margin: 3em 0;
+  margin: 1.5em 0 3em;
 }
 .widget ul {
   list-style: none;
