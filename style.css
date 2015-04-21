@@ -655,7 +655,7 @@ a img {
     opacity: 0;
     background: white;
     padding: 0.375em 0.75em 0.75em;
-    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);
+    border: solid 1px #d4d4d4;
     text-align: center;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;

@@ -197,7 +197,7 @@
       opacity: 0;
       background: white;
       padding: $baseline-height / 4 $baseline-height / 2 $baseline-height / 2;
-      box-shadow: 0 0 2px 0 rgba(0,0,0,0.3);
+      border: solid 1px $color-gray-83;
       text-align: center;
       backface-visibility: hidden; // fixed keyboard focus z-index issue
       transition: all 0.1s ease-in-out;
