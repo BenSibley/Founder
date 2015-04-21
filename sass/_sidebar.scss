@@ -81,9 +81,13 @@
   }
   .toggle-sidebar {
 
-    &:hover,
-    &:active {
+    &:hover {
       cursor: pointer;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: $color-orange;
 
       i {
         color: $color-orange;

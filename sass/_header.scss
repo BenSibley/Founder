@@ -14,11 +14,13 @@
 
   a {
     border: none;
+    transition: color 0.1s ease-in-out;
 
     &:hover,
     &:active,
     &:focus {
-      color: $color-gray-30;
+      color: $color-gray-40;
+      outline: none;
     }
   }
 }
@@ -97,6 +99,7 @@
       &:active,
       &:focus {
         color: $color-orange;
+        outline: none;
       }
     }
   }

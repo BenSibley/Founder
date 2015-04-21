@@ -95,12 +95,16 @@ jQuery(document).ready(function($){
     var sidebarPrimaryContent = $('#sidebar-primary-content');
     var sidebarWidgets = $('#sidebar-primary-widgets');
     var socialMediaIcons = siteHeader.find('.social-media-icons');
+    var menuLink = $('.menu-item').children('a');
 
     // centers 2nd tier menus with their parent menu items
     centerDropdownMenus();
 
     // put menu into new line if touching social icons
     socialIconAdjustment();
+
+    // make links and inputs inaccessible to keyboards unless sidebar is open
+    sidebarKeyboardNav();
 
     $(window).resize(function(){
         centerDropdownMenus();
@@ -198,6 +202,10 @@ jQuery(document).ready(function($){
             if( $(window).width() > 899 ) {
                 sidebarPrimaryContent.css('max-height', '' );
             }
+
+            // remove access to links/inputs in sidebar
+            sidebarKeyboardNav();
+
         } else {
             sidebarPrimary.addClass('open');
 
@@ -210,6 +218,9 @@ jQuery(document).ready(function($){
             if( $(window).width() > 899 ) {
                 sidebarPrimaryContent.css('max-height', sidebarWidgets.outerHeight() );
             }
+
+            // provide access to links/inputs in sidebar
+            sidebarKeyboardNav();
         }
     }
     // if screen is resized while sidebar is open, update max-height to keep widgets
@@ -279,6 +290,28 @@ jQuery(document).ready(function($){
         } else {
             menuPrimaryContainer.css('display', '');
         }
-
     }
+
+    /* allow keyboard access/visibility for dropdown menu items */
+    menuLink.focus(function(){
+        $(this).parents('ul').addClass('focused');
+    });
+    menuLink.focusout(function(){
+        $(this).parents('ul').removeClass('focused');
+    });
+
+    // make links and inputs inaccessible to keyboards unless sidebar is open
+    function sidebarKeyboardNav() {
+
+        if( sidebarPrimary.hasClass('open') ) {
+            sidebarPrimaryContent.find('a, input').each(function(){
+                $(this).attr('tabindex', '0');
+            });
+        } else {
+            sidebarPrimaryContent.find('a, input').each(function(){
+                $(this).attr('tabindex', '-1');
+            });
+        }
+    }
+
 });

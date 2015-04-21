@@ -181,7 +181,8 @@
       &:hover,
       &:active,
       &:focus {
-        border-color: $color-gray-83;
+        border-color: $color-gray-10;
+        outline: none;
       }
     }
     // tier 2
@@ -267,7 +268,8 @@
           left: calc(100% + 30px);
           top: 0;
 
-          &:hover {
+          &:hover,
+          &.focused {
             top: 0;
             left: calc(100% + 24px);
           }
