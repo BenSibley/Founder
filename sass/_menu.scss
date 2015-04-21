@@ -256,7 +256,7 @@
           &:focus {
 
             ~ ul {
-              top: 0;
+              top: 1px;
               left: calc(100% + 24px);
             }
           }
@@ -265,11 +265,11 @@
         ul {
           left: 100%;
           left: calc(100% + 30px);
-          top: 0;
+          top: 1px;
 
           &:hover,
           &.focused {
-            top: 0;
+            top: 1px;
             left: calc(100% + 24px);
           }
           // move the triangle to the left side

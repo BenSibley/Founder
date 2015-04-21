@@ -720,19 +720,19 @@ a img {
   .menu-unset ul ul .menu-item-has-children > a:hover ~ ul,
   .menu-unset ul ul .menu-item-has-children > a:active ~ ul,
   .menu-unset ul ul .menu-item-has-children > a:focus ~ ul {
-    top: 0;
+    top: 1px;
     left: calc(100% + 24px);
   }
   .menu-primary-items ul .menu-item-has-children ul,
   .menu-unset ul ul .menu-item-has-children ul {
     left: 100%;
     left: calc(100% + 30px);
-    top: 0;
+    top: 1px;
   }
   .menu-primary-items ul .menu-item-has-children ul:hover, .menu-primary-items ul .menu-item-has-children ul.focused,
   .menu-unset ul ul .menu-item-has-children ul:hover,
   .menu-unset ul ul .menu-item-has-children ul.focused {
-    top: 0;
+    top: 1px;
     left: calc(100% + 24px);
   }
   .menu-primary-items ul .menu-item-has-children ul:after,

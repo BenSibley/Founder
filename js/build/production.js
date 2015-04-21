@@ -262,7 +262,8 @@ jQuery(document).ready(function($){
                 var parentLink = $(this).parent().children('a');
                 var parentLinkHeight = parentLink.height();
                 parentLinkHeight = parentLinkHeight / 2;
-                $(this).css('top', -height + parentLinkHeight);
+                // added one px b/c always off by a bit
+                $(this).css('top', -height + parentLinkHeight + 1);
             });
         } else {
             menuPrimaryItems.find('ul').css({
