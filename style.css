@@ -1339,6 +1339,10 @@ a img {
   border-color: #1a1a1a;
 }
 
+.full-post .post-comments {
+  margin-top: 2.25em;
+}
+
 .blog .post-content,
 .archive .post-content,
 .search .post-content {
@@ -1467,6 +1471,11 @@ a img {
   .post-comments {
     display: inline-block;
     margin-top: 0;
+  }
+
+  .full-post .post-comments {
+    display: block;
+    margin-top: 3em;
   }
 }
 @media all and (min-width: 43.75em) {

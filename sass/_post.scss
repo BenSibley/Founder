@@ -91,6 +91,12 @@
     }
   }
 }
+.full-post {
+
+  .post-comments {
+    margin-top: $baseline-height * 1.5;
+  }
+}
 .blog,
 .archive,
 .search {
@@ -240,6 +246,13 @@
   .post-comments {
     display: inline-block;
     margin-top: 0;
+  }
+  .full-post {
+
+    .post-comments {
+      display: block;
+      margin-top: $baseline-height * 2;
+    }
   }
 }
 

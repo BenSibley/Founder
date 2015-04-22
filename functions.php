@@ -550,3 +550,16 @@ function ct_founder_delete_settings_notice() {
 	}
 }
 add_action( 'admin_notices', 'ct_founder_delete_settings_notice' );
+
+function ct_founder_body_class( $classes ) {
+
+	/* get full post setting */
+	$full_post = get_theme_mod('full_post');
+
+	/* if full post setting on */
+	if( $full_post == 'yes' ) {
+		$classes[] = 'full-post';
+	}
+	return $classes;
+}
+add_filter( 'body_class', 'ct_founder_body_class' );
