@@ -235,7 +235,15 @@ add_filter('the_excerpt', 'ct_founder_excerpt_read_more_link');
 // change the length of the excerpts
 if( ! function_exists( 'founder_custom_excerpt_length' ) ) {
 	function founder_custom_excerpt_length( $length ) {
-		return 25;
+
+		$new_excerpt_length = get_theme_mod('excerpt_length');
+
+		// if there is a new length set and it's not 15, change it
+		if( ! empty( $new_excerpt_length ) && $new_excerpt_length != 25 ){
+			return $new_excerpt_length;
+		} else {
+			return 25;
+		}
 	}
 }
 add_filter( 'excerpt_length', 'founder_custom_excerpt_length', 99 );
