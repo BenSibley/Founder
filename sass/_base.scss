@@ -187,6 +187,7 @@ textarea {
   color: $color-gray-40;
   outline: solid 1px $color-gray-83;
   border: none;
+  border-radius: 0;
   -webkit-appearance: none;
   transition: all 0.1s ease-in-out;
 
@@ -207,6 +208,7 @@ input[type="submit"] {
   min-width: 96px;
   outline: none;
   border: none;
+  border-radius: 0;
   -webkit-appearance: none;
   transition: background 0.1s ease-in-out;
 
