@@ -199,8 +199,21 @@ if( ! function_exists( 'ct_founder_excerpt' ) ) {
 		// check for the more tag
 		$ismore = strpos( $post->post_content, '<!--more-->' );
 
+		// get the show full post setting
+		$show_full_post = get_theme_mod( 'full_post' );
+
+		// if show full post is on, show full post unless on search page
+		if ( ( $show_full_post == 'yes' ) && ! is_search() ) {
+
+			// set read more value for all posts to 'off'
+			$more = - 1;
+
+			// output the full content
+			the_content();
+		}
+
 		// use the read more link if present
-		if ( $ismore ) {
+		elseif ( $ismore ) {
 			the_content( __( 'Continue reading', 'founder' ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
 		} // otherwise the excerpt is automatic, so output it
 		else {
