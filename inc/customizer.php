@@ -36,6 +36,20 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 		}
 	}
 
+	// number input control
+	class ct_founder_number_input_control extends WP_Customize_Control {
+		public $type = 'number';
+
+		public function render_content() {
+			?>
+			<label>
+				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+				<input type="number" <?php $this->link(); ?> value="<?php echo $this->value(); ?>" />
+			</label>
+		<?php
+		}
+	}
+
 	// create multi-checkbox/select control
 	class ct_founder_multi_checkbox_control extends WP_Customize_Control {
 		public $type = 'multi-checkbox';
@@ -150,6 +164,49 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 		$priority = $priority + 5;
 	}
 
+	/***** Blog *****/
+
+	// section
+	$wp_customize->add_section( 'founder_blog', array(
+		'title'      => __( 'Blog', 'founder' ),
+		'priority'   => 45,
+		'capability' => 'edit_theme_options'
+	) );
+	// setting
+	$wp_customize->add_setting( 'full_post', array(
+		'default'           => 'no',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'ct_founder_sanitize_yes_no_settings',
+	) );
+	// control
+	$wp_customize->add_control( 'full_post', array(
+		'label'          => __( 'Show full posts on blog?', 'founder' ),
+		'section'        => 'founder_blog',
+		'settings'       => 'full_post',
+		'type'           => 'radio',
+		'choices'        => array(
+			'yes'   => __('Yes', 'founder'),
+			'no'  => __('No', 'founder'),
+		)
+	) );
+	// setting
+	$wp_customize->add_setting( 'excerpt_length', array(
+		'default'           => '25',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'absint',
+	) );
+	// control
+	$wp_customize->add_control( new ct_founder_number_input_control(
+		$wp_customize, 'excerpt_length', array(
+			'label'          => __( 'Excerpt length', 'founder' ),
+			'section'        => 'founder_blog',
+			'settings'       => 'excerpt_length',
+			'type'           => 'number',
+		)
+	) );
+
 	/***** Comment Display *****/
 
 	// section
@@ -254,6 +311,21 @@ function ct_founder_sanitize_comments_setting($input){
 		} else {
 			return '';
 		}
+	}
+}
+
+// sanitize yes/no settings
+function ct_founder_sanitize_yes_no_settings($input){
+
+	$valid = array(
+		'yes'   => __('Yes', 'founder'),
+		'no'  => __('No', 'founder'),
+	);
+
+	if ( array_key_exists( $input, $valid ) ) {
+		return $input;
+	} else {
+		return '';
 	}
 }
 
