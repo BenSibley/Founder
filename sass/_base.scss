@@ -269,7 +269,7 @@ a img {
 }
 .skip-content {
   position: absolute;
-  top: -$baseline-height * 3;
+  top: -100%;
   width: 100%;
   left: 0;
   display: block;
@@ -278,7 +278,7 @@ a img {
   z-index: 99;
   padding: $baseline-height;
   background: $color-gray-10;
-  transition: top 0.1s ease-in-out;
+  transition: top 0.2s ease-in-out;
 
   &:focus {
     top: 0;

@@ -328,7 +328,7 @@ a img {
 
 .skip-content {
   position: absolute;
-  top: -4.5em;
+  top: -100%;
   width: 100%;
   left: 0;
   display: block;
@@ -337,8 +337,8 @@ a img {
   z-index: 99;
   padding: 1.5em;
   background: #1a1a1a;
-  -webkit-transition: top 0.1s ease-in-out;
-  transition: top 0.1s ease-in-out;
+  -webkit-transition: top 0.2s ease-in-out;
+  transition: top 0.2s ease-in-out;
 }
 .skip-content:focus {
   top: 0;
