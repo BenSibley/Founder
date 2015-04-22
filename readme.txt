@@ -10,7 +10,7 @@ https://www.competethemes.com/documentation/founder-support-center/
     Licenses:
 -------------------------------------------------------
 
-Founder WordPress Theme, Copyright 2014 Compete Themes
+Founder WordPress Theme, Copyright 2015 Compete Themes
 Founder is distributed under the terms of the GNU GPL
 
 License: GNU General Public License v2 or later
@@ -25,4 +25,4 @@ Founder also uses:
 * HTML5shiv by Alexander Farkas, Jonathan Neal, Paul Irish, John-David Dalton, and Remy Sharp, licensed under MIT/GPL2, see: https://github.com/aFarkas/html5shiv
 * Multiple Select by zhixin wen, licensed under MIT, see: http://wenzhixin.net.cn/p/multiple-select/
 * Respond.js by Scott Jehl, licensed under MIT, see: https://github.com/scottjehl/Respond
-* Raspberry image in screenshot.png from http://unsplash.com, licensed under Public Domain
+* Golden Gate Bridge image in screenshot.png from http://unsplash.com, licensed under Public Domain
