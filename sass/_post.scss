@@ -137,9 +137,13 @@
 .post-categories {
   margin: $baseline-height 0;
 
+  span {
+    margin-right: $baseline-height;
+  }
   a {
+    display: inline-block;
     color: $color-gray-10;
-    margin-left: $baseline-height;
+    margin-right: $baseline-height;
 
     &:link,
     &:visited {
