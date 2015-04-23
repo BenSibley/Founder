@@ -83,6 +83,7 @@
 })( window.jQuery || window.Zepto );
 jQuery(document).ready(function($){
 
+    var body = $('body');
     var siteHeader = $('#site-header');
     var titleContainer = $('#title-container');
     var toggleNavigation = $('#toggle-navigation');
@@ -250,7 +251,11 @@ jQuery(document).ready(function($){
                 if( childWidth > parentWidth ) {
                     var difference = childWidth - parentWidth;
                     difference = difference / 2;
-                    $(this).children('ul').css('left', -difference);
+                    if( body.hasClass('rtl') ) {
+                        $(this).children('ul').css('right', -difference);
+                    } else {
+                        $(this).children('ul').css('left', -difference);
+                    }
                 }
             });
 
@@ -266,10 +271,17 @@ jQuery(document).ready(function($){
                 $(this).css('top', -height + parentLinkHeight + 1);
             });
         } else {
-            menuPrimaryItems.find('ul').css({
-                'left': '',
-                'top' : ''
-            });
+            if( body.hasClass('rtl') ) {
+                menuPrimaryItems.find('ul').css({
+                    'right': '',
+                    'top' : ''
+                });
+            } else {
+                menuPrimaryItems.find('ul').css({
+                    'left': '',
+                    'top' : ''
+                });
+            }
         }
     }
 
