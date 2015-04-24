@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Founder 1.03\n"
+"Project-Id-Version: Founder 1.04\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-04-23 16:03:28+00:00\n"
+"POT-Creation-Date: 2015-04-24 20:43:10+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -147,11 +147,11 @@ msgstr ""
 msgid "View all posts tagged %s"
 msgstr ""
 
-#: content-page.php:9 content.php:10
+#: content-page.php:10 content.php:11
 msgid "Pages:"
 msgstr ""
 
-#: footer.php:7
+#: footer.php:9
 msgid "<a href=\"%s\">Founder WordPress Theme</a> by Compete Themes."
 msgstr ""
 
@@ -199,23 +199,23 @@ msgstr ""
 msgid "Continue reading"
 msgstr ""
 
-#: functions.php:407
+#: functions.php:417
 msgid "email icon"
 msgstr ""
 
-#: functions.php:413 functions.php:419
+#: functions.php:423 functions.php:429
 msgid "%s icon"
 msgstr ""
 
-#: functions.php:509 header.php:32 inc/scripts.php:13
+#: functions.php:519 header.php:33 inc/scripts.php:13
 msgid "open menu"
 msgstr ""
 
-#: functions.php:520
+#: functions.php:530
 msgid "Featured Post"
 msgstr ""
 
-#: functions.php:555
+#: functions.php:565
 msgid "Customizer settings deleted"
 msgstr ""
 
@@ -223,7 +223,7 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:33
+#: header.php:34
 msgid "primary menu icon"
 msgstr ""
 
