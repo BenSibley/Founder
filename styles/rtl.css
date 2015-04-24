@@ -270,8 +270,8 @@ input[type="submit"] {
   border: none;
   border-radius: 0;
   -webkit-appearance: none;
-  -webkit-transition: background 0.1s ease-in-out;
-  transition: background 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 input[type="submit"]:hover {
   cursor: pointer;
