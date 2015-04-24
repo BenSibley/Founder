@@ -276,6 +276,9 @@ if( ! function_exists( 'ct_founder_featured_image' ) ) {
 		// default to no featured image
 		$has_image = false;
 
+		// establish featured image var
+		$featured_image = '';
+
 		// if post has an image
 		if ( has_post_thumbnail( $post->ID ) ) {
 
@@ -301,15 +304,22 @@ if( ! function_exists( 'ct_founder_featured_image' ) ) {
 
 			// on posts/pages display the featured image
 			if ( is_singular() ) {
-				echo "<div class='featured-image' style=\"background-image: url('" . $image . "')\" $title></div>";
+				$featured_image = "<div class='featured-image' style=\"background-image: url('" . $image . "')\" $title></div>";
 			} // on blog/archives display with a link
 			else {
-				echo "
+				$featured_image = "
                 <div class='featured-image' style=\"background-image: url('" . $image . "')\" $title>
                     <a href='" . get_permalink() . "'>" . get_the_title() . "</a>
                 </div>
                 ";
 			}
+		}
+
+		// allow videos to be added
+		$featured_image = apply_filters( 'ct_founder_featured_image', $featured_image );
+
+		if( $featured_image ) {
+			echo $featured_image;
 		}
 	}
 }
