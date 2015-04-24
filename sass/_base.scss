@@ -38,7 +38,7 @@ a {
   text-decoration: none;
   color: $color-gray-10;
   border-bottom: solid 1px $color-gray-10;
-  transition: border-color 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
 
   &:link {
     color: $color-gray-10;

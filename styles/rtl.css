@@ -87,8 +87,8 @@ a {
   text-decoration: none;
   color: #1a1a1a;
   border-bottom: solid 1px #1a1a1a;
-  -webkit-transition: border-color 0.1s ease-in-out;
-  transition: border-color 0.1s ease-in-out;
+  -webkit-transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
 }
 a:link {
   color: #1a1a1a;
