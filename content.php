@@ -1,4 +1,5 @@
 <div <?php post_class(); ?>>
+	<?php hybrid_do_atomic( 'post_before' ); ?>
 	<article>
 		<div class='post-header'>
 			<h1 class='post-title'><?php the_title(); ?></h1>
@@ -12,6 +13,7 @@
 		<div class="post-after">
 			<?php get_template_part('content/post-categories'); ?>
 			<?php get_template_part('content/post-tags'); ?>
+			<?php hybrid_do_atomic( 'post_after' ); ?>
 			<?php get_template_part('content/post-nav'); ?>
 		</div>
 	</article>
