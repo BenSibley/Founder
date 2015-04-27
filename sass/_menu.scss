@@ -165,11 +165,10 @@
           }
         }
         > a {
+          backface-visibility: hidden;
 
           &:after {
-            content: '+';
-            padding-left: 4px;
-            padding-right: 1px; // def cover up border
+            content: ' + ';
             border-bottom: solid 1px white;
           }
         }

@@ -627,11 +627,14 @@ a img {
     visibility: visible;
     top: calc(100% + 18px);
   }
+  .menu-primary-items li.menu-item-has-children > a,
+  .menu-unset ul li.menu-item-has-children > a {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
   .menu-primary-items li.menu-item-has-children > a:after,
   .menu-unset ul li.menu-item-has-children > a:after {
-    content: '+';
-    padding-right: 4px;
-    padding-left: 1px;
+    content: ' + ';
     border-bottom: solid 1px white;
   }
   .menu-primary-items a,
