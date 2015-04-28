@@ -1289,7 +1289,7 @@ a img {
   left: -10%;
   width: 120%;
 }
-.featured-image a {
+.featured-image > a {
   position: absolute;
   top: 0;
   right: 0;
