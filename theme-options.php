@@ -28,7 +28,7 @@ function ct_founder_options_content(){
 		</div>
 		<div class="content content-premium-upgrade">
 			<h3><?php _e('Upgrade to Founder Pro', 'founder'); ?></h3>
-			<p><?php _e('Founder Pro is the premium upgrade for Founder. It has custom colors, new layouts, background images, and more', 'founder'); ?>...</p>
+			<p><?php _e('Founder Pro is the premium upgrade for Founder. It has custom colors, featured sliders, header images, and more', 'founder'); ?>...</p>
 			<p>
 				<a target="_blank" class="button-primary" href="https://www.competethemes.com/founder-pro/"><?php _e('See Full Feature List', 'founder'); ?></a>
 			</p>
