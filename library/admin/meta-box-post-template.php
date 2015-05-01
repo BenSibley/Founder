@@ -94,7 +94,7 @@ function hybrid_meta_box_post_display_template( $object, $box ) {
 	<p>
 		<?php if ( 0 != count( $templates ) ) { ?>
 			<select name="hybrid-post-template" id="hybrid-post-template" class="widefat">
-				<option value=""></option>
+				<option value="">Default Template</option>
 				<?php foreach ( $templates as $label => $template ) { ?>
 					<option value="<?php echo esc_attr( $template ); ?>" <?php selected( esc_attr( get_post_meta( $object->ID, "_wp_{$post_type_object->name}_template", true ) ), esc_attr( $template ) ); ?>><?php echo esc_html( $label ); ?></option>
 				<?php } ?>
