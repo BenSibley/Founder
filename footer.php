@@ -7,6 +7,7 @@
         <?php
             $site_url = 'https://www.competethemes.com/founder/';
             $footer_text = sprintf( __( '<a href="%s">Founder WordPress Theme</a> by Compete Themes.', 'founder' ), esc_url( $site_url ) );
+            $footer_text = apply_filters( 'ct_founder_footer_text', $footer_text );
             echo $footer_text;
         ?>
     </span>
