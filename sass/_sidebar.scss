@@ -2,7 +2,7 @@
   position: absolute;
   top: 100%;
   font-size: 1em;
-  background: none;
+  background: white;
   border: solid 1px $color-gray-83;
   border-top: none;
   margin: 0 0 0 $column * 2;
@@ -30,6 +30,7 @@
 }
 .sidebar-primary {
   position: relative;
+  z-index: 9;
   margin-top: -$baseline-height;
   margin-bottom: $baseline-height * 3;
 }

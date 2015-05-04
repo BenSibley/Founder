@@ -959,7 +959,7 @@ a img {
   position: absolute;
   top: 100%;
   font-size: 1em;
-  background: none;
+  background: white;
   border: solid 1px #d4d4d4;
   border-top: none;
   margin: 0 0 0 8.334%;
@@ -988,6 +988,7 @@ a img {
 
 .sidebar-primary {
   position: relative;
+  z-index: 9;
   margin-top: -1.5em;
   margin-bottom: 4.5em;
 }
