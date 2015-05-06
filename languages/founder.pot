@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Founder 1.04\n"
+"Project-Id-Version: Founder 1.05\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-04-24 20:43:10+00:00\n"
+"POT-Creation-Date: 2015-05-06 02:28:41+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -407,8 +407,8 @@ msgstr ""
 
 #: theme-options.php:31
 msgid ""
-"Founder Pro is the premium upgrade for Founder. It has custom colors, new "
-"layouts, background images, and more"
+"Founder Pro is the premium upgrade for Founder. It has custom colors, "
+"featured sliders, header images, and more"
 msgstr ""
 
 #: theme-options.php:33
