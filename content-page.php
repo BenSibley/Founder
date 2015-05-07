@@ -9,7 +9,8 @@
 			<?php the_content(); ?>
 			<?php wp_link_pages(array('before' => '<p class="singular-pagination">' . __('Pages:','founder'), 'after' => '</p>', ) ); ?>
 		</div>
+		<?php hybrid_do_atomic( 'page_after' ); ?>
 	</article>
-	<?php hybrid_do_atomic( 'page_after' ); ?>
+
 	<?php comments_template(); ?>
 </div>
