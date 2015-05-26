@@ -15,12 +15,9 @@
 </div>
 </div><!-- .overflow-container -->
 
+<?php hybrid_do_atomic( 'body_bottom' ); ?>
+
 <?php wp_footer(); ?>
 
-<!--[if IE 8 ]>
-<script src="<?php echo get_template_directory_uri() . 'js/build/respond.min.js'; ?>"></script>
-<![endif]-->
-
-<?php hybrid_do_atomic( 'body_bottom' ); ?>
 </body>
 </html>

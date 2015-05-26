@@ -5,13 +5,7 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html <?php language_attributes(); ?>> <!--<![endif]-->
 
 <head>
-
-	<!--[if IE 8 ]>
-	<script src="<?php echo get_template_directory_uri() . 'js/build/html5shiv.min.js'; ?>"></script>
-	<![endif]-->
-
     <?php wp_head(); ?>
-
 </head>
 
 <body id="<?php print get_stylesheet(); ?>" <?php body_class(); ?>>
