@@ -581,3 +581,16 @@ function ct_founder_body_class( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'ct_founder_body_class' );
+
+// custom css output
+function ct_founder_custom_css_output(){
+
+	$custom_css = get_theme_mod('custom_css');
+
+	/* output custom css */
+	if( $custom_css ) {
+		wp_add_inline_style( 'ct-founder-style', $custom_css );
+		wp_add_inline_style( 'ct-founder-style-rtl', $custom_css );
+	}
+}
+add_action('wp_enqueue_scripts', 'ct_founder_custom_css_output', 20);
