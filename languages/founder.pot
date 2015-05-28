@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Founder 1.06\n"
+"Project-Id-Version: Founder 1.09\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-05-08 15:21:23+00:00\n"
+"POT-Creation-Date: 2015-05-28 13:17:54+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -207,7 +207,7 @@ msgstr ""
 msgid "%s icon"
 msgstr ""
 
-#: functions.php:519 header.php:33 inc/scripts.php:13
+#: functions.php:519 header.php:25 inc/scripts.php:13
 msgid "open menu"
 msgstr ""
 
@@ -219,11 +219,11 @@ msgstr ""
 msgid "Customizer settings deleted"
 msgstr ""
 
-#: header.php:20
+#: header.php:12
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:34
+#: header.php:26
 msgid "primary menu icon"
 msgstr ""
 
