@@ -86,6 +86,47 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 		<?php
 		}
 	}
+	/*
+
+	 * display controls
+	 * footer text
+	 */
+	/* Ad Controls */
+	class founder_description_header_image_control extends WP_Customize_Control {
+
+		public function render_content() {
+			$link = 'https://www.competethemes.com/founder-pro/';
+			echo "<p>" . sprintf( __('Activate <a target="_blank" href="%s">Founder Pro</a> for advanced header image functionality.', 'founder'), $link ) . "</p>";
+		}
+	}
+	class founder_description_color_control extends WP_Customize_Control {
+
+		public function render_content() {
+			$link = 'https://www.competethemes.com/founder-pro/';
+			echo "<p>" . sprintf( __('Activate <a target="_blank" href="%s">Founder Pro</a> to change your colors.', 'founder'), $link ) . "</p>";
+		}
+	}
+	class founder_description_font_control extends WP_Customize_Control {
+
+		public function render_content() {
+			$link = 'https://www.competethemes.com/founder-pro/';
+			echo "<p>" . sprintf( __('Activate <a target="_blank" href="%s">Founder Pro</a> to change your font.', 'founder'), $link ) . "</p>";
+		}
+	}
+	class founder_description_display_control_control extends WP_Customize_Control {
+
+		public function render_content() {
+			$link = 'https://www.competethemes.com/founder-pro/';
+			echo "<p>" . sprintf( __('Activate <a target="_blank" href="%s">Founder Pro</a> to get hide/show controls.', 'founder'), $link ) . "</p>";
+		}
+	}
+	class founder_description_footer_text_control extends WP_Customize_Control {
+
+		public function render_content() {
+			$link = 'https://www.competethemes.com/founder-pro/';
+			echo "<p>" . sprintf( __('Activate <a target="_blank" href="%s">Founder Pro</a> to customize the footer text.', 'founder'), $link ) . "</p>";
+		}
+	}
 
 	/***** Logo Upload *****/
 
@@ -258,6 +299,120 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 			'label'          => __( 'Add Custom CSS Here:', 'founder' ),
 			'section'        => 'founder_custom_css',
 			'settings'       => 'custom_css',
+		)
+	) );
+
+	/*
+	 * PRO only sections
+	 */
+
+	/***** Header Image *****/
+
+	// section
+	$wp_customize->add_section( 'founder_header_image', array(
+		'title'      => __( 'Header Image', 'founder' ),
+		'priority'   => 35,
+		'capability' => 'edit_theme_options'
+	) );
+	// setting
+	$wp_customize->add_setting( 'header_image_ad', array(
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'absint',
+	) );
+	// control
+	$wp_customize->add_control( new founder_description_header_image_control(
+		$wp_customize, 'header_image_ad', array(
+			'section'        => 'founder_header_image',
+			'settings'       => 'header_image_ad'
+		)
+	) );
+
+	/***** Colors *****/
+
+	// section
+	$wp_customize->add_section( 'founder_colors', array(
+		'title'      => __( 'Colors', 'founder' ),
+		'priority'   => 50,
+		'capability' => 'edit_theme_options'
+	) );
+	// setting
+	$wp_customize->add_setting( 'colors_ad', array(
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'absint',
+	) );
+	// control
+	$wp_customize->add_control( new founder_description_color_control(
+		$wp_customize, 'colors_ad', array(
+			'section'        => 'founder_colors',
+			'settings'       => 'colors_ad'
+		)
+	) );
+
+	/***** Fonts *****/
+
+	// section
+	$wp_customize->add_section( 'founder_font', array(
+		'title'      => __( 'Font', 'founder' ),
+		'priority'   => 40,
+		'capability' => 'edit_theme_options'
+	) );
+	// setting
+	$wp_customize->add_setting( 'font_ad', array(
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'absint',
+	) );
+	// control
+	$wp_customize->add_control( new founder_description_font_control(
+		$wp_customize, 'font_ad', array(
+			'section'        => 'founder_font',
+			'settings'       => 'font_ad'
+		)
+	) );
+
+	/***** Display Control *****/
+
+	// section
+	$wp_customize->add_section( 'founder_display_control', array(
+		'title'      => __( 'Display Controls', 'founder' ),
+		'priority'   => 70,
+		'capability' => 'edit_theme_options'
+	) );
+	// setting
+	$wp_customize->add_setting( 'display_control_ad', array(
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'absint',
+	) );
+	// control
+	$wp_customize->add_control( new founder_description_display_control_control(
+		$wp_customize, 'display_control_ad', array(
+			'section'        => 'founder_display_control',
+			'settings'       => 'display_control_ad'
+		)
+	) );
+
+	/***** Footer Text *****/
+
+	// section
+	$wp_customize->add_section( 'founder_footer_text', array(
+		'title'      => __( 'Footer Text', 'founder' ),
+		'priority'   => 85,
+		'capability' => 'edit_theme_options'
+	) );
+	// setting
+	$wp_customize->add_setting( 'footer_text_ad', array(
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'absint',
+	) );
+	// control
+	$wp_customize->add_control( new founder_description_footer_text_control(
+		$wp_customize, 'footer_text_ad', array(
+			'section'        => 'founder_footer_text',
+			'settings'       => 'footer_text_ad'
 		)
 	) );
 }
