@@ -333,7 +333,7 @@ function ct_founder_sanitize_yes_no_settings($input){
 
 function ct_founder_customize_preview_js() {
 
-	$content = "<script>jQuery('#customize-info').append('<div class=\"upgrades-ad\"><a href=\"https://www.competethemes.com/founder-pro/\" target=\"_blank\">View the Founder Pro Upgrade <span>&rarr;</span></a></div>')</script>";
+	$content = "<script>jQuery('#customize-info').prepend('<div class=\"upgrades-ad\"><a href=\"https://www.competethemes.com/founder-pro/\" target=\"_blank\">View the Founder Pro Upgrade <span>&rarr;</span></a></div>')</script>";
 	echo apply_filters('ct_founder_customizer_ad', $content);
 }
 add_action('customize_controls_print_footer_scripts', 'ct_founder_customize_preview_js');
