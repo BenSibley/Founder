@@ -11,6 +11,5 @@
 		</div>
 		<?php hybrid_do_atomic( 'page_after' ); ?>
 	</article>
-
 	<?php comments_template(); ?>
 </div>
