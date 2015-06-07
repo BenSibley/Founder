@@ -86,11 +86,6 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 		<?php
 		}
 	}
-	/*
-
-	 * display controls
-	 * footer text
-	 */
 	/* Ad Controls */
 	class founder_description_header_image_control extends WP_Customize_Control {
 
