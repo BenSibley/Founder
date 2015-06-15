@@ -2,7 +2,7 @@
 	<?php hybrid_do_atomic( 'post_before' ); ?>
 	<article>
 		<div class='post-header'>
-			<h1 class='post-title'><?php the_title(); ?></h1>
+			<h2 class='post-title'><?php the_title(); ?></h2>
 			<?php get_template_part('content/post-meta'); ?>
 		</div>
 		<?php ct_founder_featured_image(); ?>
