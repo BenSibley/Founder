@@ -25,7 +25,7 @@
 				<span class="screen-reader-text"><?php _e('open menu', 'founder'); ?></span>
 				<i class="fa fa-bars" title="<?php _e('primary menu icon', 'founder'); ?>" aria-hidden="true"></i>
 			</button>
-			<div id="menu-primary-container" class="menu-primary-container" aria-hidden="true">
+			<div id="menu-primary-container" class="menu-primary-container">
 				<?php get_template_part( 'menu', 'primary' ); ?>
 				<?php ct_founder_social_icons_output( 'header' ); ?>
 			</div>

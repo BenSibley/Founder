@@ -11,7 +11,7 @@
 		    <i class="fa fa-angle-down" title="<?php _e('sidebar icon', 'founder'); ?>" aria-hidden="true"></i>
 	    </button>
 
-	    <div id="sidebar-primary-content" class="sidebar-primary-content" aria-hidden="true">
+	    <div id="sidebar-primary-content" class="sidebar-primary-content">
 		    <div id="sidebar-primary-widgets" class="sidebar-primary-widgets active-<?php echo $widget_count; ?>">
                 <?php dynamic_sidebar( 'primary' ); ?>
 		    </div>

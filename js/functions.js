@@ -27,14 +27,10 @@ jQuery(document).ready(function($){
     // make links and inputs inaccessible to keyboards unless sidebar is open
     sidebarKeyboardNav();
 
-    // turn aria-hidden on/off for primary menu based on current screen width
-    menuPrimaryContainerARIA();
-
     $(window).resize(function(){
         centerDropdownMenus();
         socialIconAdjustment();
         sidebarHeightResize();
-        menuPrimaryContainerARIA();
     });
 
     toggleNavigation.on('click', openPrimaryMenu);
@@ -51,9 +47,6 @@ jQuery(document).ready(function($){
             // change aria expanded
             $(this).attr('aria-expanded', 'false');
 
-            // change aria hidden
-            menuPrimaryContainer.attr('aria-hidden', 'true');
-
         } else {
             menuPrimaryContainer.addClass('open');
             $(this).addClass('open');
@@ -63,9 +56,6 @@ jQuery(document).ready(function($){
 
             // change aria expanded
             $(this).attr('aria-expanded', 'true');
-
-            // change aria hidden
-            menuPrimaryContainer.attr('aria-hidden', 'false');
         }
     }
 
@@ -130,9 +120,6 @@ jQuery(document).ready(function($){
             // change aria expanded
             $(this).attr('aria-expanded', 'false');
 
-            // change aria hidden
-            sidebarPrimaryContent.attr('aria-hidden', 'true');
-
             if( $(window).width() > 899 ) {
                 sidebarPrimaryContent.css('max-height', '' );
             }
@@ -148,9 +135,6 @@ jQuery(document).ready(function($){
 
             // change aria expanded
             $(this).attr('aria-expanded', 'true');
-
-            // change aria hidden
-            sidebarPrimaryContent.attr('aria-hidden', 'false');
 
             if( $(window).width() > 899 ) {
                 sidebarPrimaryContent.css('max-height', sidebarWidgets.outerHeight() );
@@ -260,17 +244,6 @@ jQuery(document).ready(function($){
             sidebarPrimaryContent.find('a, input').each(function(){
                 $(this).attr('tabindex', '-1');
             });
-        }
-    }
-
-    function menuPrimaryContainerARIA(){
-
-        if( $(window).width() > 899 ) {
-            menuPrimaryContainer.attr('aria-hidden', 'false');
-        } else {
-            if( !menuPrimaryContainer.hasClass('open') ) {
-                menuPrimaryContainer.attr('aria-hidden', 'true');
-            }
         }
     }
 });
