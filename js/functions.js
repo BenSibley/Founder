@@ -27,10 +27,14 @@ jQuery(document).ready(function($){
     // make links and inputs inaccessible to keyboards unless sidebar is open
     sidebarKeyboardNav();
 
+    // turn aria-hidden on/off for primary menu based on current screen width
+    menuPrimaryContainerARIA();
+
     $(window).resize(function(){
         centerDropdownMenus();
         socialIconAdjustment();
         sidebarHeightResize();
+        menuPrimaryContainerARIA();
     });
 
     toggleNavigation.on('click', openPrimaryMenu);
@@ -250,6 +254,17 @@ jQuery(document).ready(function($){
             sidebarPrimaryContent.find('a, input').each(function(){
                 $(this).attr('tabindex', '-1');
             });
+        }
+    }
+
+    function menuPrimaryContainerARIA(){
+
+        if( $(window).width() > 899 ) {
+            menuPrimaryContainer.attr('aria-hidden', 'false');
+        } else {
+            if( !menuPrimaryContainer.hasClass('open') ) {
+                menuPrimaryContainer.attr('aria-hidden', 'true');
+            }
         }
     }
 });
