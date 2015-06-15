@@ -210,8 +210,11 @@ jQuery(document).ready(function($){
             // change screen reader text
             $(this).children('span').text(objectL10n.openSidebar);
 
-            // change aria text
+            // change aria expanded
             $(this).attr('aria-expanded', 'false');
+
+            // change aria hidden
+            sidebarPrimaryContent.attr('aria-hidden', 'true');
 
             if( $(window).width() > 899 ) {
                 sidebarPrimaryContent.css('max-height', '' );
@@ -226,8 +229,11 @@ jQuery(document).ready(function($){
             // change screen reader text
             $(this).children('span').text(objectL10n.closeSidebar);
 
-            // change aria text
+            // change aria expanded
             $(this).attr('aria-expanded', 'true');
+
+            // change aria hidden
+            sidebarPrimaryContent.attr('aria-hidden', 'false');
 
             if( $(window).width() > 899 ) {
                 sidebarPrimaryContent.css('max-height', sidebarWidgets.outerHeight() );
