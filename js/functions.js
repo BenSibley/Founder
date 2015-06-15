@@ -44,8 +44,11 @@ jQuery(document).ready(function($){
             // change screen reader text
             $(this).children('span').text(objectL10n.openMenu);
 
-            // change aria text
+            // change aria expanded
             $(this).attr('aria-expanded', 'false');
+
+            // change aria hidden
+            menuPrimaryContainer.attr('aria-hidden', 'true');
 
         } else {
             menuPrimaryContainer.addClass('open');
@@ -54,8 +57,11 @@ jQuery(document).ready(function($){
             // change screen reader text
             $(this).children('span').text(objectL10n.closeMenu);
 
-            // change aria text
+            // change aria expanded
             $(this).attr('aria-expanded', 'true');
+
+            // change aria hidden
+            menuPrimaryContainer.attr('aria-hidden', 'false');
         }
     }
 
