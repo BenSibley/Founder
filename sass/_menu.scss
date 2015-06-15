@@ -148,6 +148,15 @@
           &:active,
           &:focus {
 
+            ~ ul {
+              opacity: 1;
+              visibility: visible;
+              top: calc(100% + 18px);
+            }
+          }
+          &:hover,
+          &:active {
+
             // cover the space between the link and the list to keep the hover going
             &:before {
               content: '';
@@ -156,11 +165,6 @@
               right: 0;
               top: 16px;
               height: 48px;
-            }
-            ~ ul {
-              opacity: 1;
-              visibility: visible;
-              top: calc(100% + 18px);
             }
           }
         }
@@ -248,8 +252,7 @@
             position: relative;
 
             &:hover,
-            &:active,
-            &:focus {
+            &:active {
 
               // cover the space between the link and the list to keep the hover going
               &:before {

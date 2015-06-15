@@ -609,17 +609,6 @@ a img {
   .menu-unset ul li.menu-item-has-children a {
     margin: 0;
   }
-  .menu-primary-items li.menu-item-has-children a:hover:before, .menu-primary-items li.menu-item-has-children a:active:before, .menu-primary-items li.menu-item-has-children a:focus:before,
-  .menu-unset ul li.menu-item-has-children a:hover:before,
-  .menu-unset ul li.menu-item-has-children a:active:before,
-  .menu-unset ul li.menu-item-has-children a:focus:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 16px;
-    height: 48px;
-  }
   .menu-primary-items li.menu-item-has-children a:hover ~ ul, .menu-primary-items li.menu-item-has-children a:active ~ ul, .menu-primary-items li.menu-item-has-children a:focus ~ ul,
   .menu-unset ul li.menu-item-has-children a:hover ~ ul,
   .menu-unset ul li.menu-item-has-children a:active ~ ul,
@@ -627,6 +616,16 @@ a img {
     opacity: 1;
     visibility: visible;
     top: calc(100% + 18px);
+  }
+  .menu-primary-items li.menu-item-has-children a:hover:before, .menu-primary-items li.menu-item-has-children a:active:before,
+  .menu-unset ul li.menu-item-has-children a:hover:before,
+  .menu-unset ul li.menu-item-has-children a:active:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 16px;
+    height: 48px;
   }
   .menu-primary-items li.menu-item-has-children > a,
   .menu-unset ul li.menu-item-has-children > a {
@@ -719,10 +718,9 @@ a img {
   .menu-unset ul ul li.menu-item-has-children a {
     position: relative;
   }
-  .menu-primary-items ul li.menu-item-has-children a:hover:before, .menu-primary-items ul li.menu-item-has-children a:active:before, .menu-primary-items ul li.menu-item-has-children a:focus:before,
+  .menu-primary-items ul li.menu-item-has-children a:hover:before, .menu-primary-items ul li.menu-item-has-children a:active:before,
   .menu-unset ul ul li.menu-item-has-children a:hover:before,
-  .menu-unset ul ul li.menu-item-has-children a:active:before,
-  .menu-unset ul ul li.menu-item-has-children a:focus:before {
+  .menu-unset ul ul li.menu-item-has-children a:active:before {
     content: '';
     position: absolute;
     top: 0;
