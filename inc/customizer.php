@@ -136,8 +136,7 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 		'default'           => '',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'esc_url_raw',
-		'transport'         => 'postMessage'
+		'sanitize_callback' => 'esc_url_raw'
 	) );
 	// control
 	$wp_customize->add_control( new WP_Customize_Image_Control(
@@ -170,8 +169,7 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 			$wp_customize->add_setting( "$social_site", array(
 				'type'              => 'theme_mod',
 				'capability'        => 'edit_theme_options',
-				'sanitize_callback' => 'ct_founder_sanitize_email',
-				'transport'         => 'postMessage'
+				'sanitize_callback' => 'ct_founder_sanitize_email'
 			) );
 			// control
 			$wp_customize->add_control( $social_site, array(
@@ -184,8 +182,7 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 			$wp_customize->add_setting( $social_site, array(
 				'type'              => 'theme_mod',
 				'capability'        => 'edit_theme_options',
-				'sanitize_callback' => 'esc_url_raw',
-				'transport'         => 'postMessage'
+				'sanitize_callback' => 'esc_url_raw'
 			) );
 			// control
 			$wp_customize->add_control( new ct_founder_url_input_control(
