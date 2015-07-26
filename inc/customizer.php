@@ -91,35 +91,35 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 
 		public function render_content() {
 			$link = 'https://www.competethemes.com/founder-pro/';
-			echo "<p>" . sprintf( __('Activate <a target="_blank" href="%s">Founder Pro</a> for advanced header image functionality.', 'founder'), $link ) . "</p>";
+			echo "<p>" . sprintf( __('Activate the <a target="_blank" href="%s">Founder Pro Plugin</a> for advanced header image functionality.', 'founder'), $link ) . "</p>";
 		}
 	}
 	class founder_description_color_control extends WP_Customize_Control {
 
 		public function render_content() {
 			$link = 'https://www.competethemes.com/founder-pro/';
-			echo "<p>" . sprintf( __('Activate <a target="_blank" href="%s">Founder Pro</a> to change your colors.', 'founder'), $link ) . "</p>";
+			echo "<p>" . sprintf( __('Activate the <a target="_blank" href="%s">Founder Pro Plugin</a> to change your colors.', 'founder'), $link ) . "</p>";
 		}
 	}
 	class founder_description_font_control extends WP_Customize_Control {
 
 		public function render_content() {
 			$link = 'https://www.competethemes.com/founder-pro/';
-			echo "<p>" . sprintf( __('Activate <a target="_blank" href="%s">Founder Pro</a> to change your font.', 'founder'), $link ) . "</p>";
+			echo "<p>" . sprintf( __('Activate the <a target="_blank" href="%s">Founder Pro Plugin</a> to change your font.', 'founder'), $link ) . "</p>";
 		}
 	}
 	class founder_description_display_control_control extends WP_Customize_Control {
 
 		public function render_content() {
 			$link = 'https://www.competethemes.com/founder-pro/';
-			echo "<p>" . sprintf( __('Activate <a target="_blank" href="%s">Founder Pro</a> to get hide/show controls.', 'founder'), $link ) . "</p>";
+			echo "<p>" . sprintf( __('Activate the <a target="_blank" href="%s">Founder Pro Plugin</a> to get hide/show controls.', 'founder'), $link ) . "</p>";
 		}
 	}
 	class founder_description_footer_text_control extends WP_Customize_Control {
 
 		public function render_content() {
 			$link = 'https://www.competethemes.com/founder-pro/';
-			echo "<p>" . sprintf( __('Activate <a target="_blank" href="%s">Founder Pro</a> to customize the footer text.', 'founder'), $link ) . "</p>";
+			echo "<p>" . sprintf( __('Activate the <a target="_blank" href="%s">Founder Pro Plugin</a> to customize the footer text.', 'founder'), $link ) . "</p>";
 		}
 	}
 
@@ -480,7 +480,7 @@ function ct_founder_sanitize_yes_no_settings($input){
 
 function ct_founder_customize_preview_js() {
 
-	$content = "<script>jQuery('#customize-info').prepend('<div class=\"upgrades-ad\"><a href=\"https://www.competethemes.com/founder-pro/\" target=\"_blank\">View the Founder Pro Upgrade <span>&rarr;</span></a></div>')</script>";
+	$content = "<script>jQuery('#customize-info').prepend('<div class=\"upgrades-ad\"><a href=\"https://www.competethemes.com/founder-pro/\" target=\"_blank\">View the Founder Pro Plugin <span>&rarr;</span></a></div>')</script>";
 	echo apply_filters('ct_founder_customizer_ad', $content);
 }
 add_action('customize_controls_print_footer_scripts', 'ct_founder_customize_preview_js');
