@@ -70,7 +70,7 @@ function ct_founder_register_widget_areas(){
         'id'           => 'primary',
         'description'  => __( 'Widgets in this area will be shown in the sidebar.', 'founder' ),
 	    'before_title' => '<h2 class="widget-title">',
-	    'after_title' => '</h2>'
+	    'after_title'  => '</h2>'
     ) );
 }
 add_action('widgets_init','ct_founder_register_widget_areas');
