@@ -457,7 +457,6 @@ a img {
 }
 @media all and (min-width: 87.5em) {
   .site-header {
-    position: relative;
     border: none;
   }
   .site-header:after {
