@@ -16,7 +16,9 @@ jQuery(document).ready(function($){
     var menuLink = $('.menu-item').children('a');
 
     // add fitvids to all vids in posts/pages
-    $('.post').fitVids();
+    $('.post').fitVids({
+        customSelector: 'iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="animoto.com"], iframe[src*="blip.tv"], iframe[src*="funnyordie.com"], iframe[src*="hulu.com"], iframe[src*="ted.com"], iframe[src*="wordpress.tv"]'
+    });
 
     // centers 2nd tier menus with their parent menu items
     centerDropdownMenus();
