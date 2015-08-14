@@ -45,6 +45,9 @@
 }
 .post-content {
 
+  iframe {
+    max-width: 100%;
+  }
   &:after {
     @include clearfix;
   }
