@@ -362,7 +362,7 @@ if ( !function_exists( 'ct_founder_social_array' ) ) {
 			'email'         => 'founder_email_profile'
 		);
 
-		return $social_sites;
+		return apply_filters( 'ct_founder_filter_social_sites', $social_sites );
 	}
 }
 
