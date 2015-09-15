@@ -49,10 +49,6 @@ textarea, input[type="submit"], .tagline, .menu-primary-items a,
   box-sizing: border-box;
 }
 
-html {
-  height: 100%;
-}
-
 body {
   height: 100%;
   font-size: 100%;
