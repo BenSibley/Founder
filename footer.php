@@ -1,8 +1,8 @@
-<?php hybrid_do_atomic( 'main_bottom' ); ?>
+<?php do_action( 'main_bottom' ); ?>
 </section> <!-- .main -->
 
 <footer class="site-footer" role="contentinfo">
-	<?php hybrid_do_atomic( 'footer_top' ); ?>
+	<?php do_action( 'footer_top' ); ?>
     <span>
         <?php
             $site_url = 'https://www.competethemes.com/founder/';
@@ -15,7 +15,7 @@
 </div>
 </div><!-- .overflow-container -->
 
-<?php hybrid_do_atomic( 'body_bottom' ); ?>
+<?php do_action( 'body_bottom' ); ?>
 
 <?php wp_footer(); ?>
 

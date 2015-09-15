@@ -19,7 +19,7 @@ function ct_founder_options_content(){
 	?>
 	<div id="founder-dashboard-wrap" class="wrap">
 		<h2><?php _e('Founder Dashboard', 'founder'); ?></h2>
-		<?php hybrid_do_atomic( 'theme_options_before' ); ?>
+		<?php do_action( 'theme_options_before' ); ?>
 		<div class="content content-customization">
 			<h3><?php _e('Customization', 'founder'); ?></h3>
 			<p><?php _e('Click the "Customize" link in your menu, or use the button below to get started customizing Founder', 'founder'); ?>.</p>
@@ -61,6 +61,6 @@ function ct_founder_options_content(){
 				</p>
 			</form>
 		</div>
-		<?php hybrid_do_atomic( 'theme_options_after' ); ?>
+		<?php do_action( 'theme_options_after' ); ?>
 	</div>
 <?php } ?>

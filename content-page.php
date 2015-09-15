@@ -1,5 +1,5 @@
 <div <?php post_class(); ?>>
-	<?php hybrid_do_atomic( 'page_before' ); ?>
+	<?php do_action( 'page_before' ); ?>
 	<article>
 		<div class='post-header'>
 			<h1 class='post-title'><?php the_title(); ?></h1>
@@ -9,7 +9,7 @@
 			<?php the_content(); ?>
 			<?php wp_link_pages(array('before' => '<p class="singular-pagination">' . __('Pages:','founder'), 'after' => '</p>', ) ); ?>
 		</div>
-		<?php hybrid_do_atomic( 'page_after' ); ?>
+		<?php do_action( 'page_after' ); ?>
 	</article>
 	<?php comments_template(); ?>
 </div>
