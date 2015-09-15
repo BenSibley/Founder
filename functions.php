@@ -554,6 +554,14 @@ function ct_founder_body_class( $classes ) {
 }
 add_filter( 'body_class', 'ct_founder_body_class' );
 
+function ct_founder_post_class( $classes ) {
+
+	$classes[] = 'entry';
+
+	return $classes;
+}
+add_filter( 'post_class', 'ct_founder_post_class' );
+
 // custom css output
 function ct_founder_custom_css_output(){
 
