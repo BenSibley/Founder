@@ -543,12 +543,28 @@ add_action( 'admin_notices', 'ct_founder_delete_settings_notice' );
 
 function ct_founder_body_class( $classes ) {
 
+	global $post;
+
 	/* get full post setting */
 	$full_post = get_theme_mod('full_post');
 
 	/* if full post setting on */
 	if( $full_post == 'yes' ) {
 		$classes[] = 'full-post';
+	}
+	// add all historic singular classes
+	if ( is_singular() ) {
+		$classes[] = 'singular';
+		if ( is_singular('page') ) {
+			$classes[] = 'singular-page';
+			$classes[] = 'singular-page-' . $post->ID;
+		} elseif ( is_singular('post') ) {
+			$classes[] = 'singular-post';
+			$classes[] = 'singular-post-' . $post->ID;
+		} elseif ( is_singular('attachment') ) {
+			$classes[] = 'singular-attachment';
+			$classes[] = 'singular-attachment-' . $post->ID;
+		}
 	}
 	return $classes;
 }
