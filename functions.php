@@ -4,6 +4,11 @@
 //require_once( trailingslashit( get_template_directory() ) . 'library/hybrid.php' );
 //new Hybrid();
 
+// set the content width
+if ( ! isset( $content_width ) ) {
+	$content_width = 700;
+}
+
 // theme setup
 if( ! function_exists( ( 'ct_founder_theme_setup' ) ) ) {
 	function ct_founder_theme_setup() {
