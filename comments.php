@@ -23,7 +23,7 @@ if ( comments_open() ) { ?>
     <section id="comments" class="comments">
         <div class="comments-number">
             <h3>
-                <?php comments_number( __( 'Be First to Comment', 'founder' ), __( 'One Comment', 'founder'), __( '% Comments', 'founder' ) ); ?>
+                <?php comments_number( __( 'Comments', 'founder' ), __( 'One Comment', 'founder'), __( '% Comments', 'founder' ) ); ?>
             </h3>
         </div>
         <ol class="comment-list">
@@ -42,7 +42,7 @@ if ( comments_open() ) { ?>
     <section id="comments" class="comments">
         <div class="comments-number">
             <h3>
-                <?php comments_number( __( 'Be First to Comment', 'founder' ), __( 'One Comment', 'founder'), __( '% Comments', 'founder' ) ); ?>
+                <?php comments_number( __( 'Comments', 'founder' ), __( 'One Comment', 'founder'), __( '% Comments', 'founder' ) ); ?>
             </h3>
         </div>
         <ol class="comment-list">
@@ -63,7 +63,7 @@ if ( comments_open() ) { ?>
     <section id="comments" class="comments">
         <div class="comments-number">
             <h3>
-                <?php comments_number( __( 'Be First to Comment', 'founder' ), __( 'One Comment', 'founder'), __( '% Comments', 'founder' ) ); ?>
+                <?php comments_number( __( 'Comments', 'founder' ), __( 'One Comment', 'founder'), __( '% Comments', 'founder' ) ); ?>
             </h3>
         </div>
         <ol class="comment-list">
