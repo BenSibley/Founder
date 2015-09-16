@@ -358,6 +358,15 @@ if ( !function_exists( 'ct_founder_social_array' ) ) {
 			'vk'            => 'founder_vk_profile',
 			'weibo'         => 'founder_weibo_profile',
 			'tencent-weibo' => 'founder_tencent_weibo_profile',
+			'500px'         => 'founder_500px_profile',
+			'foursquare'    => 'founder_foursquare_profile',
+			'slack'         => 'founder_slack_profile',
+			'slideshare'    => 'founder_slideshare_profile',
+			'qq'            => 'founder_qq_profile',
+			'whatsapp'      => 'founder_whatsapp_profile',
+			'skype'         => 'founder_skype_profile',
+			'wechat'        => 'founder_wechat_profile',
+			'xing'          => 'founder_xing_profile',
 			'email'         => 'founder_email_profile'
 		);
 
