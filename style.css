@@ -1649,6 +1649,51 @@ a img {
   margin: 4.5em 0;
 }
 
+@media print {
+  .featured-image {
+    -webkit-print-color-adjust: exact;
+  }
+
+  #menu-primary-container,
+  #toggle-navigation,
+  #sidebar-primary,
+  .more-link,
+  .post-comments,
+  .loop-pagination,
+  .further-reading,
+  .comment-respond {
+    display: none !important;
+  }
+
+  #title-container {
+    text-align: center;
+    display: block;
+    max-width: 100%;
+    margin: 0 !important;
+  }
+
+  #main {
+    padding: 0 16.668%;
+  }
+
+  .entry {
+    margin: 0 auto !important;
+  }
+
+  .blog .entry,
+  .archive .entry,
+  .search .entry {
+    page-break-inside: avoid;
+  }
+
+  .post-after {
+    margin-top: 0;
+  }
+
+  article.comment {
+    page-break-inside: avoid;
+  }
+}
 /*
 
 ATTENTION:
