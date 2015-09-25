@@ -559,6 +559,10 @@ add_action('wp_enqueue_scripts', 'ct_founder_custom_css_output', 20);
 
 function ct_founder_loop_pagination(){
 
+	// don't output if Jetpack infinite scroll is being used
+	if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'infinite-scroll' ) )
+		return;
+
 	global $wp_query;
 
 	// If there's not more than one page, return nothing.
