@@ -1561,6 +1561,10 @@ a img {
   font-weight: 400;
 }
 
+.bypostauthor .comment-author img {
+  outline: solid 4px #ededed;
+}
+
 .comment-footer {
   margin-top: 1.5em;
 }

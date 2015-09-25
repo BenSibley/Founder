@@ -54,6 +54,15 @@
   line-height: 34px;
   font-weight: 400;
 }
+.bypostauthor {
+
+  .comment-author {
+
+    img {
+      outline: solid 4px $color-gray-93;
+    }
+  }
+}
 .comment-footer {
   margin-top: $baseline-height;
 
