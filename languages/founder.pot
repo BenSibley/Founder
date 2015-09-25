@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Founder 1.16\n"
+"Project-Id-Version: Founder 1.18\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-08-17 13:10:15+00:00\n"
+"POT-Creation-Date: 2015-09-25 12:23:30+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 
 #: comments.php:26 comments.php:45 comments.php:66
-msgid "Be First to Comment"
+msgid "Comments"
 msgstr ""
 
 #: comments.php:26 comments.php:45 comments.php:66 content/comments-link.php:5
@@ -155,71 +155,71 @@ msgstr ""
 msgid "<a href=\"%s\">Founder WordPress Theme</a> by Compete Themes."
 msgstr ""
 
-#: functions.php:37
+#: functions.php:45
 msgid "Primary"
 msgstr ""
 
-#: functions.php:69
+#: functions.php:56
 msgid "Primary Sidebar"
 msgstr ""
 
-#: functions.php:71
+#: functions.php:58
 msgid "Widgets in this area will be shown in the sidebar."
 msgstr ""
 
-#: functions.php:94
+#: functions.php:83
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:102
+#: functions.php:91
 msgid "Reply"
 msgstr ""
 
-#: functions.php:106
+#: functions.php:95
 msgid "Edit"
 msgstr ""
 
-#: functions.php:127
+#: functions.php:116
 msgid "optional"
 msgstr ""
 
-#: functions.php:135
+#: functions.php:124
 msgid "Name"
 msgstr ""
 
-#: functions.php:142
+#: functions.php:131
 msgid "Email"
 msgstr ""
 
-#: functions.php:149
+#: functions.php:138
 msgid "Website"
 msgstr ""
 
-#: functions.php:164
+#: functions.php:153
 msgid "Comment"
 msgstr ""
 
-#: functions.php:205 functions.php:212 functions.php:225
+#: functions.php:194 functions.php:201 functions.php:214
 msgid "Continue reading"
 msgstr ""
 
-#: functions.php:414
+#: functions.php:412
 msgid "email icon"
 msgstr ""
 
-#: functions.php:420 functions.php:426
+#: functions.php:418
 msgid "%s icon"
 msgstr ""
 
-#: functions.php:472 header.php:25 inc/scripts.php:13
+#: functions.php:455 header.php:25 inc/scripts.php:13
 msgid "open menu"
 msgstr ""
 
-#: functions.php:484
+#: functions.php:467
 msgid "Featured Post"
 msgstr ""
 
-#: functions.php:519
+#: functions.php:502
 msgid "Customizer settings deleted"
 msgstr ""
 
@@ -235,137 +235,133 @@ msgstr ""
 msgid "Front Page"
 msgstr ""
 
-#: inc/customizer.php:14
-msgid "Menus"
-msgstr ""
-
-#: inc/customizer.php:94
+#: inc/customizer.php:92
 msgid ""
 "Activate the <a target=\"_blank\" href=\"%s\">Founder Pro Plugin</a> for "
 "advanced header image functionality."
 msgstr ""
 
-#: inc/customizer.php:101
+#: inc/customizer.php:99
 msgid ""
 "Activate the <a target=\"_blank\" href=\"%s\">Founder Pro Plugin</a> to "
 "change your colors."
 msgstr ""
 
-#: inc/customizer.php:108
+#: inc/customizer.php:106
 msgid ""
 "Activate the <a target=\"_blank\" href=\"%s\">Founder Pro Plugin</a> to "
 "change your font."
 msgstr ""
 
-#: inc/customizer.php:115
+#: inc/customizer.php:113
 msgid ""
 "Activate the <a target=\"_blank\" href=\"%s\">Founder Pro Plugin</a> to get "
 "hide/show controls."
 msgstr ""
 
-#: inc/customizer.php:122
+#: inc/customizer.php:120
 msgid ""
 "Activate the <a target=\"_blank\" href=\"%s\">Founder Pro Plugin</a> to "
 "customize the footer text."
 msgstr ""
 
-#: inc/customizer.php:130
+#: inc/customizer.php:128
 msgid "Logo"
 msgstr ""
 
-#: inc/customizer.php:144
+#: inc/customizer.php:142
 msgid "Upload custom logo."
 msgstr ""
 
-#: inc/customizer.php:160
+#: inc/customizer.php:158
 msgid "Social Media Icons"
 msgstr ""
 
-#: inc/customizer.php:176
+#: inc/customizer.php:174
 msgid "address:"
 msgstr ""
 
-#: inc/customizer.php:190
+#: inc/customizer.php:188
 msgid "url:"
 msgstr ""
 
-#: inc/customizer.php:204
+#: inc/customizer.php:202
 msgid "Blog"
 msgstr ""
 
-#: inc/customizer.php:217
+#: inc/customizer.php:215
 msgid "Show full posts on blog?"
 msgstr ""
 
-#: inc/customizer.php:222 inc/customizer.php:468
+#: inc/customizer.php:220 inc/customizer.php:466
 msgid "Yes"
 msgstr ""
 
-#: inc/customizer.php:223 inc/customizer.php:469
+#: inc/customizer.php:221 inc/customizer.php:467
 msgid "No"
 msgstr ""
 
-#: inc/customizer.php:236
+#: inc/customizer.php:234
 msgid "Excerpt length"
 msgstr ""
 
-#: inc/customizer.php:247
+#: inc/customizer.php:245
 msgid "Comment Display"
 msgstr ""
 
-#: inc/customizer.php:261
+#: inc/customizer.php:259
 msgid "Show comments on:"
 msgstr ""
 
-#: inc/customizer.php:266 inc/customizer.php:446
+#: inc/customizer.php:264 inc/customizer.php:444
 msgid "Posts"
 msgstr ""
 
-#: inc/customizer.php:267 inc/customizer.php:447
+#: inc/customizer.php:265 inc/customizer.php:445
 msgid "Pages"
 msgstr ""
 
-#: inc/customizer.php:268 inc/customizer.php:448
+#: inc/customizer.php:266 inc/customizer.php:446
 msgid "Attachments"
 msgstr ""
 
-#: inc/customizer.php:269 inc/customizer.php:449
+#: inc/customizer.php:267 inc/customizer.php:447
 msgid "Do not show"
 msgstr ""
 
-#: inc/customizer.php:278
+#: inc/customizer.php:276
 msgid "Custom CSS"
 msgstr ""
 
-#: inc/customizer.php:291
+#: inc/customizer.php:289
 msgid "Add Custom CSS Here:"
 msgstr ""
 
-#: inc/customizer.php:305
+#: inc/customizer.php:303
 msgid "Header Image"
 msgstr ""
 
-#: inc/customizer.php:327
+#: inc/customizer.php:325
 msgid "Colors"
 msgstr ""
 
-#: inc/customizer.php:349
+#: inc/customizer.php:347
 msgid "Font"
 msgstr ""
 
-#: inc/customizer.php:371
+#: inc/customizer.php:369
 msgid "Display Controls"
 msgstr ""
 
-#: inc/customizer.php:393
+#: inc/customizer.php:391
 msgid "Footer Text"
 msgstr ""
 
-#: inc/customizer.php:421
+#: inc/customizer.php:419
 msgid "Show"
 msgstr ""
 
-#: inc/customizer.php:422
+#: inc/customizer.php:420
 msgid "Hide"
 msgstr ""
 
@@ -486,19 +482,19 @@ msgid "Founder"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://competethemes.com/founder/"
+msgid "https://www.competethemes.com/founder/"
 msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Founder's minimalist style presents your content in a way that is both bold "
-"and professional. As a responsive theme, Founder is beautiful on phones, "
+"Founder's minimalist design presents your content in a simple, clean, and "
+"professional manner. As a responsive theme, Founder is beautiful on phones, "
 "tablets, and laptops, and is optimized to load quickly on each. Built with "
 "Google's multilingual font, Noto Sans, it is compatible with hundreds of "
 "languages. Lastly, as an accessibility-ready theme, visitors around the "
 "world can appreciate your content regardless of disability. Get excited to "
-"share your site, and download Founder today. Fully-setup live demo here: "
-"https://www.competethemes.com/founder-live-demo/"
+"share your site, and download Founder today. You can view a fully-setup "
+"live demo here: https://www.competethemes.com/founder-live-demo/"
 msgstr ""
 
 #. Author of the plugin/theme
@@ -506,5 +502,5 @@ msgid "Compete Themes"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://competethemes.com/"
+msgid "https://www.competethemes.com/"
 msgstr ""
