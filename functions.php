@@ -352,7 +352,7 @@ if ( !function_exists( 'ct_founder_social_array' ) ) {
 			'stumbleupon'   => 'founder_stumbleupon_profile',
 			'deviantart'    => 'founder_deviantart_profile',
 			'digg'          => 'founder_digg_profile',
-			'git'           => 'founder_git_profile',
+			'github'        => 'founder_github_profile',
 			'hacker-news'   => 'founder_hacker-news_profile',
 			'steam'         => 'founder_steam_profile',
 			'vk'            => 'founder_vk_profile',
@@ -373,6 +373,22 @@ if ( !function_exists( 'ct_founder_social_array' ) ) {
 		return apply_filters( 'ct_founder_filter_social_sites', $social_sites );
 	}
 }
+
+// git icon was supposed to be for github, this is to transfer users saved data to github
+function ct_founder_switch_git_icon() {
+
+	$git = get_theme_mod( 'git' );
+	$github = get_theme_mod( 'github' );
+
+	// if there is an icon saved for git, but not github
+	if ( !empty( $git ) && empty( $github ) ) {
+		// give the github option the same value as the git option
+		set_theme_mod( 'github', get_theme_mod( 'git' ) );
+		// erase git option
+		remove_theme_mod( 'git' );
+	}
+}
+add_action('admin_init', 'ct_founder_switch_git_icon');
 
 // output social icons
 if( ! function_exists('ct_founder_social_icons_output') ) {
