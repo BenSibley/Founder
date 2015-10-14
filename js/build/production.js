@@ -202,7 +202,7 @@ jQuery(document).ready(function($){
             // if visitor has scrolled down so top of sidebar is out of view
             if( viewportTop > sidebarTop  ) {
                 var distance = sidebarTop - 24;
-                if( $(window).width() > 899 ) {
+                if( window.innerWidth > 899 ) {
                     $('html, body').animate({scrollTop: distance}, 200);
                 } else {
                     $('html, body').scrollTop(distance);
@@ -216,7 +216,7 @@ jQuery(document).ready(function($){
             // change aria expanded
             $(this).attr('aria-expanded', 'false');
 
-            if( $(window).width() > 899 ) {
+            if( window.innerWidth > 899 ) {
                 sidebarPrimaryContent.css('max-height', '' );
             }
 
@@ -232,7 +232,7 @@ jQuery(document).ready(function($){
             // change aria expanded
             $(this).attr('aria-expanded', 'true');
 
-            if( $(window).width() > 899 ) {
+            if( window.innerWidth > 899 ) {
                 sidebarPrimaryContent.css('max-height', sidebarWidgets.outerHeight() );
             }
 
@@ -244,7 +244,7 @@ jQuery(document).ready(function($){
     // from being cut-off. Only necessary b/c of animation (can't do max-height: none;)
     function sidebarHeightResize() {
 
-        if( sidebarPrimary.hasClass('open') && $(window).width() > 899 ) {
+        if( sidebarPrimary.hasClass('open') && window.innerWidth > 899 ) {
             sidebarPrimaryContent.css('max-height', sidebarWidgets.outerHeight() );
         } else {
             sidebarPrimaryContent.css('max-height', '');
@@ -254,7 +254,7 @@ jQuery(document).ready(function($){
     // centers 2nd tier menus with their parent menu items
     function centerDropdownMenus() {
 
-        if( $(window).width() > 899 ) {
+        if( window.innerWidth > 899 ) {
 
             var parentMenuItemsTier2 = menuPrimaryItems.children('.menu-item-has-children');
 
@@ -302,7 +302,7 @@ jQuery(document).ready(function($){
     function socialIconAdjustment(){
 
         // if at non-mobile menu width and social icons exist
-        if( $(window).width() > 899 && socialMediaIcons.length > 0 ) {
+        if( window.innerWidth > 899 && socialMediaIcons.length > 0 ) {
 
             // get the width of all the header elements
             var space = siteHeader.width();
