@@ -166,14 +166,15 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 		// if email icon
 		if( $social_site == 'email' ) {
 			// setting
-			$wp_customize->add_setting( "$social_site", array(
+			$wp_customize->add_setting( $social_site, array(
 				'type'              => 'theme_mod',
 				'capability'        => 'edit_theme_options',
-				'sanitize_callback' => 'ct_founder_sanitize_email'
+				'sanitize_callback' => 'ct_founder_sanitize_email',
+				'transport'         => 'postMessage'
 			) );
 			// control
 			$wp_customize->add_control( $social_site, array(
-				'label'   => __('Email Address:', 'founder' ),
+				'label'   => __('Email Address', 'founder' ),
 				'section' => 'ct_founder_social_media_icons',
 				'priority'=> $priority,
 			) );
@@ -215,7 +216,8 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 			$wp_customize->add_setting( $social_site, array(
 				'type'              => 'theme_mod',
 				'capability'        => 'edit_theme_options',
-				'sanitize_callback' => 'esc_url_raw'
+				'sanitize_callback' => 'esc_url_raw',
+				'transport'         => 'postMessage'
 			) );
 			// control
 			$wp_customize->add_control( new ct_founder_url_input_control(

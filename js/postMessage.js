@@ -70,4 +70,62 @@
         } );
     } );
 
+    // Social Media Icons
+
+    var socialSites = panel.find('#accordion-section-ct_founder_social_media_icons').find('.customize-control-title');
+    var socialSitesArray = [];
+
+    socialSites.each( function() {
+        socialSitesArray.push( $(this).text() );
+    });
+
+    // for each social site setting
+    $.each( socialSitesArray, function(index, name) {
+
+        // replace spaces with hyphens, and conver to lowercase
+        var site = name.replace(/\s+/g, '-').toLowerCase();
+
+        if ( site === 'email-address') site = 'email';
+
+        // icons that should use a special square icon
+        var squareIcons = ['linkedin', 'twitter', 'vimeo', 'youtube', 'pinterest', 'rss', 'reddit', 'tumblr', 'steam', 'xing', 'github', 'google-plus', 'behance', 'facebook'];
+
+        wp.customize( site, function (value) {
+            value.bind(function (to) {
+
+                var socialMediaIcons = $('.social-media-icons');
+
+                if( !socialMediaIcons.length ) {
+                    $('#menu-primary-container').append('<ul class="social-media-icons"></ul>');
+                    var socialMediaIcons = $('.social-media-icons');
+                }
+
+                // empty the social icons list
+                socialMediaIcons.empty();
+
+                // replace all at once to preserve order
+                panel.find('#accordion-section-ct_founder_social_media_icons').find('input').each(function() {
+
+                    if( $(this).val().length > 0 ) {
+
+                        var siteName = $(this).attr('data-customize-setting-link');
+
+                        if ( $.inArray( siteName, squareIcons ) > -1 ) {
+                            var siteClass = 'fa fa-' + siteName + '-square';
+                        } else {
+                            var siteClass = 'fa fa-' + siteName;
+                        }
+
+                        if( siteName == 'email' ) {
+                            socialMediaIcons.append( '<li><a target="_blank" href="mailto:' + $(this).val() + '"><i class="fa fa-envelope"></i></a></li>' );
+                        }
+                        else {
+                            socialMediaIcons.append('<li><a class="' + siteName + '" target="_blank" href="' + $(this).val() + '"><i class="' + siteClass + '"></i></a></li>');
+                        }
+                    }
+                });
+            });
+        });
+    });
+
 } )( jQuery );
