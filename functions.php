@@ -367,6 +367,7 @@ if ( !function_exists( 'ct_founder_social_array' ) ) {
 			'skype'         => 'founder_skype_profile',
 			'wechat'        => 'founder_wechat_profile',
 			'xing'          => 'founder_xing_profile',
+			'paypal'        => 'founder_paypal_profile',
 			'email'         => 'founder_email_profile'
 		);
 
