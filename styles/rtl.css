@@ -4,7 +4,7 @@ Theme URI: https://www.competethemes.com/founder/
 Author: Compete Themes
 Author URI: https://www.competethemes.com/
 Description: Founder's minimalist design presents your content in a simple, clean, and professional manner. As a responsive theme, Founder is beautiful on phones, tablets, and laptops, and is optimized to load quickly on each. Built with Google's multilingual font, Noto Sans, it is compatible with hundreds of languages. Lastly, as an accessibility-ready theme, visitors around the world can appreciate your content regardless of disability. Get excited to share your site, and download Founder today. You can view a fully-setup live demo here: https://www.competethemes.com/founder-live-demo/
-Version: 1.18
+Version: 1.19
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: gray, silver, white, light, fluid-layout, responsive-layout, one-column, accessibility-ready, custom-menu, featured-images, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
@@ -81,21 +81,21 @@ p {
 
 a {
   text-decoration: none;
-  color: #1a1a1a;
-  border-bottom: solid 1px #1a1a1a;
+  color: #1A1A1A;
+  border-bottom: solid 1px #1A1A1A;
   -webkit-transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
   transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
 }
 a:link {
-  color: #1a1a1a;
+  color: #1A1A1A;
 }
 a:visited {
-  color: #1a1a1a;
-  border-color: #d4d4d4;
+  color: #1A1A1A;
+  border-color: #D4D4D4;
 }
 a:hover, a:active, a:focus {
-  color: #1a1a1a;
-  border-color: #e37d39;
+  color: #1A1A1A;
+  border-color: #E37D39;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -103,7 +103,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
   font-weight: 700;
-  color: #1a1a1a;
+  color: #1A1A1A;
 }
 
 h3 {
@@ -149,20 +149,20 @@ pre {
   /* Opera 7 */
   word-wrap: break-word;
   /* Internet Explorer 5.5+ */
-  background: #f7f7f7;
-  border: solid 1px #ededed;
+  background: #F7F7F7;
+  border: solid 1px #EDEDED;
   padding: 0.75em 1.5em;
 }
 
 code {
-  background: #ededed;
+  background: #EDEDED;
   padding: 0 0.375em;
 }
 
 blockquote {
   margin: 1.5em;
   padding-right: 1.5em;
-  border-right: solid 3px #e37d39;
+  border-right: solid 3px #E37D39;
 }
 blockquote cite {
   display: block;
@@ -236,9 +236,9 @@ textarea {
   padding: 10px 12px;
   width: 100%;
   max-width: 30em;
-  background: #ededed;
+  background: #EDEDED;
   color: #666666;
-  outline: solid 1px #d4d4d4;
+  outline: solid 1px #D4D4D4;
   border: none;
   border-radius: 0;
   -webkit-appearance: none;
@@ -260,7 +260,7 @@ input[type="submit"] {
   font-family: "Noto Sans", sans-serif;
   padding: 10px 12px;
   color: white;
-  background: #1a1a1a;
+  background: #1A1A1A;
   min-width: 96px;
   outline: none;
   border: none;
@@ -273,7 +273,7 @@ input[type="submit"]:hover {
   cursor: pointer;
 }
 input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus {
-  background: #4d4d4d;
+  background: #4D4D4D;
 }
 
 input[type="search"] {
@@ -332,7 +332,7 @@ a img {
   color: white !important;
   z-index: 99;
   padding: 1.5em;
-  background: #1a1a1a;
+  background: #1A1A1A;
   -webkit-transition: top 0.2s ease-in-out;
   transition: top 0.2s ease-in-out;
 }
@@ -353,7 +353,7 @@ a img {
 .site-header {
   position: relative;
   padding: 1.5em 0;
-  border-bottom: solid 1px #d4d4d4;
+  border-bottom: solid 1px #D4D4D4;
   margin-bottom: 1.5em;
 }
 
@@ -387,18 +387,18 @@ a img {
   border: none;
   margin: 0 0 0 8.334%;
   padding: 0;
-  color: #1a1a1a;
+  color: #1A1A1A;
 }
 .toggle-navigation:focus, .toggle-navigation.open {
   outline: none;
-  color: #e37d39;
+  color: #E37D39;
 }
 
 .social-media-icons {
   list-style: none;
   margin: 1.5em 0 -10px;
   padding: 0.75em 8.334% 0;
-  border-top: solid 1px #ededed;
+  border-top: solid 1px #EDEDED;
 }
 .social-media-icons li {
   display: inline-block;
@@ -448,7 +448,7 @@ a img {
     transition: color 0.1s ease-in-out;
   }
   .social-media-icons a:hover, .social-media-icons a:active, .social-media-icons a:focus {
-    color: #e37d39;
+    color: #E37D39;
   }
 }
 @media all and (min-width: 87.5em) {
@@ -462,7 +462,7 @@ a img {
     right: -999px;
     left: -999px;
     height: 1px;
-    background: #d4d4d4;
+    background: #D4D4D4;
   }
 }
 .menu-primary-container {
@@ -473,7 +473,7 @@ a img {
 .menu-unset ul {
   list-style: none;
   margin: 1.5em 0 0;
-  border-top: solid 1px #d4d4d4;
+  border-top: solid 1px #D4D4D4;
 }
 .menu-primary-items a,
 .menu-unset ul a {
@@ -484,7 +484,7 @@ a img {
 .menu-primary-items li,
 .menu-unset ul li {
   position: relative;
-  border-bottom: solid 1px #ededed;
+  border-bottom: solid 1px #EDEDED;
 }
 .menu-primary-items li.current-menu-item:after, .menu-primary-items li.current_page_item:after,
 .menu-unset ul li.current-menu-item:after,
@@ -495,15 +495,15 @@ a img {
   top: 0;
   bottom: 0;
   width: 3px;
-  background: #e37d39;
+  background: #E37D39;
 }
 .menu-primary-items li.open > button,
 .menu-unset ul li.open > button {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
-  color: #e37d39;
-  border-color: #e37d39;
+  color: #E37D39;
+  border-color: #E37D39;
 }
 .menu-primary-items li.open > ul,
 .menu-unset ul li.open > ul {
@@ -545,15 +545,15 @@ a img {
   width: 1.5em;
   margin: 7px 0 0 8.334%;
   padding: 0;
-  color: #1a1a1a;
+  color: #1A1A1A;
   background: none;
-  border: solid 1px #1a1a1a;
+  border: solid 1px #1A1A1A;
   text-align: center;
 }
 .toggle-dropdown:focus {
   outline: none;
-  color: #e37d39;
-  border-color: #e37d39;
+  color: #E37D39;
+  border-color: #E37D39;
 }
 .toggle-dropdown:after {
   content: '\f107';
@@ -593,7 +593,7 @@ a img {
   .menu-primary-items li.current-menu-item > a, .menu-primary-items li.current_page_item > a,
   .menu-unset ul li.current-menu-item > a,
   .menu-unset ul li.current_page_item > a {
-    border-color: #e37d39;
+    border-color: #E37D39;
   }
   .menu-primary-items li.current-menu-item:after, .menu-primary-items li.current_page_item:after,
   .menu-unset ul li.current-menu-item:after,
@@ -641,7 +641,7 @@ a img {
   .menu-unset ul a:hover,
   .menu-unset ul a:active,
   .menu-unset ul a:focus {
-    border-color: #1a1a1a;
+    border-color: #1A1A1A;
   }
   .menu-primary-items ul,
   .menu-unset ul ul {
@@ -656,7 +656,7 @@ a img {
     opacity: 0;
     background: white;
     padding: 0.375em 0.75em 0.75em;
-    border: solid 1px #d4d4d4;
+    border: solid 1px #D4D4D4;
     text-align: center;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -676,7 +676,7 @@ a img {
     position: absolute;
     top: -12px;
     right: 50%;
-    right: calc(50% - 12px);
+    right: calc( 50% - 12px);
     border-bottom: solid 12px white;
     border-right: solid 12px transparent;
     border-left: solid 12px transparent;
@@ -687,8 +687,8 @@ a img {
     position: absolute;
     top: -13px;
     right: 50%;
-    right: calc(50% - 13px);
-    border-bottom: solid 13px #d4d4d4;
+    right: calc( 50% - 13px);
+    border-bottom: solid 13px #D4D4D4;
     border-right: solid 13px transparent;
     border-left: solid 13px transparent;
   }
@@ -769,7 +769,7 @@ a img {
     top: 50%;
     top: calc(50% - 13px);
     right: -26px;
-    border-left: solid 13px #d4d4d4;
+    border-left: solid 13px #D4D4D4;
     border-top: solid 13px transparent;
     border-bottom: solid 13px transparent;
   }
@@ -866,7 +866,7 @@ a img {
   top: 100%;
   font-size: 1em;
   background: white;
-  border: solid 1px #d4d4d4;
+  border: solid 1px #D4D4D4;
   border-top: none;
   margin: 0 8.334% 0 0;
   padding: 0 0.75em;
@@ -876,10 +876,10 @@ a img {
   outline: none;
 }
 .toggle-sidebar:focus i {
-  color: #e37d39;
+  color: #E37D39;
 }
 .toggle-sidebar i {
-  color: #a1a1a1;
+  color: #A1A1A1;
   -webkit-transition: color 0.1s ease-in-out;
   transition: color 0.1s ease-in-out;
 }
@@ -900,15 +900,15 @@ a img {
 }
 
 .sidebar-primary.open {
-  border-bottom: solid 1px #d4d4d4;
+  border-bottom: solid 1px #D4D4D4;
 }
 .sidebar-primary.open .toggle-sidebar {
-  border-top: solid 1px #d4d4d4;
-  border-color: #e37d39;
-  border-top-color: #d4d4d4;
+  border-top: solid 1px #D4D4D4;
+  border-color: #E37D39;
+  border-top-color: #D4D4D4;
 }
 .sidebar-primary.open .toggle-sidebar i {
-  color: #e37d39;
+  color: #E37D39;
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
@@ -949,10 +949,10 @@ a img {
     cursor: pointer;
   }
   .toggle-sidebar:hover, .toggle-sidebar:active, .toggle-sidebar:focus {
-    border-color: #e37d39;
+    border-color: #E37D39;
   }
   .toggle-sidebar:hover i, .toggle-sidebar:active i, .toggle-sidebar:focus i {
-    color: #e37d39;
+    color: #E37D39;
   }
 
   .sidebar-primary-content {
@@ -1026,7 +1026,7 @@ a img {
     right: -999px;
     left: -999px;
     height: 1px;
-    background: #d4d4d4;
+    background: #D4D4D4;
   }
 }
 .widget {
@@ -1040,7 +1040,7 @@ a img {
   border-color: transparent;
 }
 .widget ul a:hover, .widget ul a:active, .widget ul a:focus {
-  border-color: #e37d39;
+  border-color: #E37D39;
 }
 .widget ul li {
   margin-bottom: 0.75em;
@@ -1062,7 +1062,7 @@ a img {
   text-align: right;
 }
 .widget_calendar #today {
-  background: #1a1a1a;
+  background: #1A1A1A;
   color: white;
 }
 .widget_calendar tfoot td {
@@ -1076,7 +1076,7 @@ a img {
   transition: background 0.1s ease-in-out;
 }
 .widget_calendar tfoot a:hover, .widget_calendar tfoot a:active, .widget_calendar tfoot a:focus {
-  background: #ededed;
+  background: #EDEDED;
 }
 
 .widget_nav_menu > div {
@@ -1087,18 +1087,18 @@ a img {
 }
 
 .widget_recent_comments ul a {
-  border-bottom: solid 1px #1a1a1a;
+  border-bottom: solid 1px #1A1A1A;
 }
 .widget_recent_comments ul a:link {
-  color: #1a1a1a;
+  color: #1A1A1A;
 }
 .widget_recent_comments ul a:visited {
-  color: #1a1a1a;
-  border-color: #d4d4d4;
+  color: #1A1A1A;
+  border-color: #D4D4D4;
 }
 .widget_recent_comments ul a:hover, .widget_recent_comments ul a:active, .widget_recent_comments ul a:focus {
-  color: #1a1a1a;
-  border-color: #e37d39;
+  color: #1A1A1A;
+  border-color: #E37D39;
 }
 
 .widget_recent_entries .post-date {
@@ -1115,7 +1115,7 @@ a img {
   border-color: transparent;
 }
 .widget_rss .widget-title a:hover, .widget_rss .widget-title a:active, .widget_rss .widget-title a:focus {
-  border-color: #e37d39;
+  border-color: #E37D39;
 }
 .widget_rss .widget-title img {
   margin-left: 4px;
@@ -1178,10 +1178,10 @@ a img {
   margin-bottom: 3em;
 }
 .post-header a {
-  border-color: #d4d4d4;
+  border-color: #D4D4D4;
 }
 .post-header a:hover, .post-header a:active, .post-header a:focus {
-  border-color: #e37d39;
+  border-color: #E37D39;
 }
 .post-header p {
   margin-top: 0;
@@ -1222,7 +1222,7 @@ a img {
   display: inline-block;
   padding: 1em 1.5em;
   color: white;
-  background: #1a1a1a;
+  background: #1A1A1A;
   border: none;
   -webkit-transition: background 0.1s ease-in-out;
   transition: background 0.1s ease-in-out;
@@ -1232,7 +1232,7 @@ a img {
 }
 .more-link:hover, .more-link:active, .more-link:focus {
   color: white;
-  background: #4d4d4d;
+  background: #4D4D4D;
 }
 
 .post-comments {
@@ -1241,7 +1241,7 @@ a img {
 }
 .post-comments i {
   font-size: 1.4545em;
-  color: #1a1a1a;
+  color: #1A1A1A;
   margin-left: 2px;
   vertical-align: text-top;
 }
@@ -1249,7 +1249,7 @@ a img {
   border-color: transparent;
 }
 .post-comments a:hover, .post-comments a:active, .post-comments a:focus {
-  border-color: #1a1a1a;
+  border-color: #1A1A1A;
 }
 
 .full-post .post-comments {
@@ -1288,7 +1288,7 @@ a img {
   right: 0;
   width: 4.5em;
   height: 1px;
-  background: #d4d4d4;
+  background: #D4D4D4;
 }
 
 .post-categories {
@@ -1299,14 +1299,14 @@ a img {
 }
 .post-categories a {
   display: inline-block;
-  color: #1a1a1a;
+  color: #1A1A1A;
   margin-left: 1.5em;
 }
 .post-categories a:link, .post-categories a:visited {
-  color: #1a1a1a;
+  color: #1A1A1A;
 }
 .post-categories a:hover, .post-categories a:active, .post-categories a:focus {
-  color: #1a1a1a;
+  color: #1A1A1A;
 }
 
 .post-tags {
@@ -1323,15 +1323,15 @@ a img {
 }
 .post-tags a {
   display: inline-block;
-  background: #f7f7f7;
-  border: solid 1px #ededed;
+  background: #F7F7F7;
+  border: solid 1px #EDEDED;
   padding: 4px 12px;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
 .post-tags a:hover, .post-tags a:active, .post-tags a:focus {
-  background: #ededed;
-  border-color: #d4d4d4;
+  background: #EDEDED;
+  border-color: #D4D4D4;
 }
 
 .further-reading {
@@ -1346,7 +1346,7 @@ a img {
   right: -999px;
   left: -999px;
   height: 1px;
-  background: #d4d4d4;
+  background: #D4D4D4;
 }
 .further-reading:after {
   content: '';
@@ -1355,7 +1355,7 @@ a img {
   right: -999px;
   left: -999px;
   height: 1px;
-  background: #d4d4d4;
+  background: #D4D4D4;
 }
 .further-reading span {
   display: block;
@@ -1365,10 +1365,10 @@ a img {
   margin-bottom: 1.5em;
 }
 .further-reading a {
-  border-color: #d4d4d4;
+  border-color: #D4D4D4;
 }
 .further-reading a:hover, .further-reading a:active, .further-reading a:focus {
-  border-color: #e37d39;
+  border-color: #E37D39;
 }
 
 .sticky-status {
@@ -1377,7 +1377,7 @@ a img {
 }
 .sticky-status span {
   padding: 6px 24px;
-  background: #ededed;
+  background: #EDEDED;
 }
 
 @media all and (min-width: 25em) {
@@ -1498,7 +1498,7 @@ a img {
   display: inline-block;
 }
 .archive-header i {
-  color: #1a1a1a;
+  color: #1A1A1A;
   vertical-align: text-bottom;
 }
 .archive-header span {
@@ -1520,7 +1520,7 @@ a img {
   list-style: none;
   margin: 0;
   padding-right: 3em;
-  border-right: solid 1px #d4d4d4;
+  border-right: solid 1px #D4D4D4;
 }
 
 .comment-content li {
@@ -1538,7 +1538,7 @@ a img {
 
 .comment-author {
   margin-bottom: 1.5em;
-  color: #1a1a1a;
+  color: #1A1A1A;
 }
 .comment-author:after {
   content: ".";
@@ -1562,7 +1562,7 @@ a img {
 }
 
 .bypostauthor .comment-author img {
-  outline: solid 4px #ededed;
+  outline: solid 4px #EDEDED;
 }
 
 .comment-footer {
@@ -1579,7 +1579,7 @@ a img {
 .comment-edit-link:hover,
 .comment-edit-link:active,
 .comment-edit-link:focus {
-  border-color: #e37d39;
+  border-color: #E37D39;
 }
 .comment-reply-link:after,
 .comment-edit-link:after {
@@ -1589,7 +1589,7 @@ a img {
   right: -10px;
   height: 100%;
   width: 1px;
-  background: #d4d4d4;
+  background: #D4D4D4;
 }
 
 .comment-pagination {
@@ -1624,7 +1624,7 @@ a img {
 .site-footer {
   text-align: center;
   padding: 1.5em;
-  border-top: solid 1px #d4d4d4;
+  border-top: solid 1px #D4D4D4;
   margin-top: 4.5em;
 }
 
@@ -1640,7 +1640,7 @@ a img {
     right: -999px;
     left: -999px;
     height: 1px;
-    background: #d4d4d4;
+    background: #D4D4D4;
   }
 }
 .error404 .main .search-form-container {
@@ -1710,3 +1710,5 @@ If you want to make CSS edits to your site, use the "Custom CSS" section in the 
 If you want more information about customizing Founder with CSS, check out this guide: https://www.competethemes.com/help/custom-css-founder/
 
 */
+
+/*# sourceMappingURL=style.css.map */
