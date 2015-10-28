@@ -24,9 +24,9 @@ if( ! function_exists( ( 'ct_founder_theme_setup' ) ) ) {
 
 		// adds support for Jetpack infinite scroll feature
 		add_theme_support( 'infinite-scroll', array(
-			'container' => 'main',
-			'footer' => 'overflow-container',
-			'render' => 'ct_founder_infinite_scroll_render'
+			'container' => 'loop-container',
+			'footer'    => 'overflow-container',
+			'render'    => 'ct_founder_infinite_scroll_render'
 		) );
 
 		// load theme options page
