@@ -1191,10 +1191,9 @@ a img {
   position: relative;
   height: 0;
   padding-bottom: 60%;
-  background-size: cover;
-  background-position: 50%;
   left: -10%;
   width: 120%;
+  overflow: hidden;
 }
 .featured-image > a {
   position: absolute;
@@ -1204,6 +1203,14 @@ a img {
   left: 0;
   font-size: 0;
   border: none;
+}
+.featured-image > img,
+.featured-image > a > img {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .post-content iframe {
@@ -1710,5 +1717,3 @@ If you want to make CSS edits to your site, use the "Custom CSS" section in the 
 If you want more information about customizing Founder with CSS, check out this guide: https://www.competethemes.com/help/custom-css-founder/
 
 */
-
-/*# sourceMappingURL=style.css.map */
