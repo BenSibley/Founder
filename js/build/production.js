@@ -111,6 +111,7 @@ jQuery(document).ready(function($){
         if ( body.hasClass('search-results') ) {
             $('.search-bottom').detach().appendTo( main );
         }
+        objectFitAdjustment();
 
     } );
 
@@ -123,10 +124,14 @@ jQuery(document).ready(function($){
     // make links and inputs inaccessible to keyboards unless sidebar is open
     sidebarKeyboardNav();
 
+    // fakes object-fit support
+    objectFitAdjustment();
+
     $(window).resize(function(){
         centerDropdownMenus();
         socialIconAdjustment();
         sidebarHeightResize();
+        objectFitAdjustment();
     });
 
     toggleNavigation.on('click', openPrimaryMenu);
@@ -339,6 +344,48 @@ jQuery(document).ready(function($){
         } else {
             sidebarPrimaryContent.find('a, input').each(function(){
                 $(this).attr('tabindex', '-1');
+            });
+        }
+    }
+
+    // mimic cover positioning without using cover
+    function objectFitAdjustment() {
+
+        // if the object-fit property is not supported
+        if( !('object-fit' in document.body.style) ) {
+
+            $('.featured-image').each(function () {
+
+                var image = $(this).children('img').add( $(this).children('a').children('img') );
+
+                image.addClass('no-object-fit');
+
+                // if the image is not tall enough to fill the space
+                if ( image.outerHeight() < $(this).outerHeight()) {
+
+                    // is it also not wide enough?
+                    if ( image.outerWidth() < $(this).outerWidth()) {
+                        image.css({
+                            'min-width': '100%',
+                            'min-height': '100%',
+                            'max-width': 'none',
+                            'max-height': 'none'
+                        });
+                    } else {
+                        image.css({
+                            'height': '100%',
+                            'max-width': 'none'
+                        });
+                    }
+                }
+                // if the image is not wide enough to fill the space
+                else if ( image.outerWidth() < $(this).outerWidth()) {
+
+                    image.css({
+                        'width': '100%',
+                        'max-height': 'none'
+                    });
+                }
             });
         }
     }
