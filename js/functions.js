@@ -23,13 +23,7 @@ jQuery(document).ready(function($){
 
     // Jetpack infinite scroll event that reloads posts.
     $( document.body ).on( 'post-load', function () {
-
-        // on search results page, move search bar to bottom of main when new posts loaded
-        if ( body.hasClass('search-results') ) {
-            $('.search-bottom').detach().appendTo( main );
-        }
         objectFitAdjustment();
-
     } );
 
     // centers 2nd tier menus with their parent menu items
