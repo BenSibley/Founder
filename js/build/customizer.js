@@ -1,5 +1,7 @@
 jQuery(document).ready(function($){
 
+    var commentDisplayDropdown = $('.ms-drop.bottom');
+
     /* Comment Display */
 
     // add multiple select styling
@@ -8,7 +10,7 @@ jQuery(document).ready(function($){
     });
 
     // hide the display none option
-    $.each($('.ms-drop.bottom').find('li'), function () {
+    $.each( commentDisplayDropdown.find('li'), function () {
 
         if ($(this).find('input').val() == 'none') {
             $(this).hide();
@@ -37,7 +39,7 @@ jQuery(document).ready(function($){
 
     ctHideNoneText();
 
-    $('.ms-drop.bottom').find('li').bind('click', ctHideNoneText);
+    commentDisplayDropdown.find('li').bind('click', ctHideNoneText);
 
 });
 /**
