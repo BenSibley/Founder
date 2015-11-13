@@ -381,13 +381,13 @@ if( ! function_exists('ct_founder_social_icons_output') ) {
                     ?>
                     <li>
                         <a class="email" target="_blank" href="mailto:<?php echo antispambot( is_email( get_theme_mod( $key ) ) ); ?>">
-                            <i class="fa fa-envelope" title="<?php _e('email icon', 'founder'); ?>"></i>
+                            <i class="fa fa-envelope" title="<?php esc_attr( _e('email icon', 'founder') ); ?>"></i>
                         </a>
                     </li>
                 <?php } else { ?>
                     <li>
                         <a class="<?php echo esc_attr( $active_site ); ?>" target="_blank" href="<?php echo esc_url( get_theme_mod( $key ) ); ?>">
-                            <i class="<?php echo esc_attr( $class ); ?>" title="<?php printf( __('%s icon', 'founder'), esc_attr( $active_site ) ); ?>"></i>
+                            <i class="<?php echo esc_attr( $class ); ?>" title="<?php esc_attr( $active_site ); ?>"></i>
                         </a>
                     </li>
                 <?php
