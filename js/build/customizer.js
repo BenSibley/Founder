@@ -10,7 +10,7 @@ jQuery(document).ready(function($){
     });
 
     // hide the display none option
-    $.each( commentDisplayDropdown.find('li'), function () {
+    $.each( $('.ms-drop.bottom').find('li'), function () {
 
         if ($(this).find('input').val() == 'none') {
             $(this).hide();
