@@ -1,7 +1,5 @@
 jQuery(document).ready(function($){
 
-    var commentDisplayDropdown = $('.ms-drop.bottom');
-
     /* Comment Display */
 
     // add multiple select styling
@@ -39,7 +37,7 @@ jQuery(document).ready(function($){
 
     ctHideNoneText();
 
-    commentDisplayDropdown.find('li').bind('click', ctHideNoneText);
+    $('.ms-drop.bottom').find('li').bind('click', ctHideNoneText);
 
 });
 /**
