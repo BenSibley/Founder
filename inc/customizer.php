@@ -278,6 +278,20 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 			'type'           => 'number',
 		)
 	) );
+	// Read More text - setting
+	$wp_customize->add_setting( 'read_more_text', array(
+		'default'           => __('Continue reading', 'founder'),
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'ct_founder_sanitize_text'
+	) );
+	// Read More text - control
+	$wp_customize->add_control( 'read_more_text', array(
+		'label'          => __( 'Read More link text', 'founder' ),
+		'section'        => 'founder_blog',
+		'settings'       => 'read_more_text',
+		'type'           => 'text'
+	) );
 
 	/***** Comment Display *****/
 
@@ -514,6 +528,10 @@ function ct_founder_sanitize_yes_no_settings($input){
 	} else {
 		return '';
 	}
+}
+
+function ct_founder_sanitize_text( $input ) {
+	return wp_kses_post( force_balance_tags( $input ) );
 }
 
 /***** Helper Functions *****/
