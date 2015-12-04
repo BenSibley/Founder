@@ -287,7 +287,7 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 	) );
 	// Read More text - control
 	$wp_customize->add_control( 'read_more_text', array(
-		'label'          => __( 'Read More link text', 'founder' ),
+		'label'          => __( 'Read More button text', 'founder' ),
 		'section'        => 'founder_blog',
 		'settings'       => 'read_more_text',
 		'type'           => 'text'
