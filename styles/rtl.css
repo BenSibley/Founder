@@ -398,7 +398,9 @@ a img {
   list-style: none;
   margin: 1.5em 0 -10px;
   padding: 0.75em 8.334% 0;
-  border-top: solid 1px #EDEDED;
+  float: right;
+  -webkit-transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
 }
 .social-media-icons li {
   display: inline-block;
@@ -406,6 +408,51 @@ a img {
 .social-media-icons a {
   border-bottom: none;
   margin-left: 12px;
+}
+.social-media-icons.fade {
+  opacity: 0;
+}
+
+.site-header .search-form-container {
+  position: relative;
+  float: left;
+  text-align: left;
+  margin: 2.25em 0 0 8.334%;
+}
+.site-header .search-form-container button {
+  position: relative;
+  z-index: 9;
+  background: none;
+  border: none;
+  margin: 0 0 0 -10px;
+  padding: 6px 10px;
+  font-size: 1em;
+  line-height: 1.5;
+}
+.site-header .search-form-container button.open + form {
+  opacity: 1;
+}
+.site-header .search-form-container i {
+  color: #1A1A1A;
+  z-index: -1;
+}
+.site-header .search-form-container form {
+  position: absolute;
+  top: 0;
+  left: -12px;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.15s ease-in-out, right 0.15s ease-in-out;
+  transition: opacity 0.15s ease-in-out, right 0.15s ease-in-out;
+}
+.site-header .search-form-container .search-field {
+  max-width: none !important;
+  outline: none !important;
+  padding: 9px 12px !important;
+}
+.site-header .search-form-container .search-field:focus {
+  background: #EDEDED !important;
+  outline: solid 1px #D4D4D4 !important;
 }
 
 @media all and (min-width: 37.5em) {
@@ -440,6 +487,7 @@ a img {
     left: 8.334%;
     top: 1.5em;
     margin: 0;
+    margin-left: 1.5em;
     padding: 0;
     border: none;
   }
@@ -449,6 +497,19 @@ a img {
   }
   .social-media-icons a:hover, .social-media-icons a:active, .social-media-icons a:focus {
     color: #E37D39;
+  }
+
+  .site-header .search-form-container {
+    position: absolute;
+    top: 1.5em;
+    left: 8.334%;
+    margin: 0;
+  }
+  .site-header .search-form-container button:hover {
+    cursor: pointer;
+  }
+  .site-header .search-form-container button.open + form {
+    right: -266px;
   }
 }
 @media all and (min-width: 87.5em) {
@@ -467,6 +528,14 @@ a img {
 }
 .menu-primary-container {
   display: none;
+}
+.menu-primary-container:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
 }
 
 .menu-primary-items,
@@ -510,7 +579,6 @@ a img {
 .menu-primary-items > li:last-child,
 .menu-unset ul > li:last-child {
   margin-bottom: -1.5em;
-  border: none;
 }
 .menu-primary-items ul,
 .menu-unset ul ul {

@@ -236,6 +236,33 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 		$priority = $priority + 5;
 	}
 
+	/***** Search Bar *****/
+
+	// section
+	$wp_customize->add_section( 'founder_search_bar', array(
+		'title'      => __( 'Search Bar', 'founder' ),
+		'priority'   => 37,
+		'capability' => 'edit_theme_options'
+	) );
+	// setting
+	$wp_customize->add_setting( 'search_bar', array(
+		'default'           => 'hide',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'ct_founder_sanitize_all_show_hide_settings'
+	) );
+	// control
+	$wp_customize->add_control( 'search_bar', array(
+		'type' => 'radio',
+		'label' => __('Show search bar at top of site?', 'founder'),
+		'section' => 'founder_search_bar',
+		'setting' => 'search_bar',
+		'choices' => array(
+			'show' => __('Show', 'founder'),
+			'hide' => __('Hide', 'founder')
+		),
+	) );
+
 	/***** Blog *****/
 
 	// section

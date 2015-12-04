@@ -1,5 +1,9 @@
 .menu-primary-container {
   display: none;
+
+  &:after {
+    @include clearfix;
+  }
 }
 .menu-primary-items,
 .menu-unset ul {
@@ -46,7 +50,6 @@
 
     &:last-child {
       margin-bottom: -$baseline-height;
-      border: none;
     }
   }
   // tier 2

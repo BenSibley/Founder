@@ -48,7 +48,8 @@
   list-style: none;
   margin: $baseline-height  0 -10px; // li:last-child in menu has negative margin-bottom and needs to remove extra space below it
   padding: $baseline-height / 2 $column * 2 0;
-  border-top: solid 1px $color-gray-93;
+  float: left;
+  transition: opacity 0.1s ease-in-out;
 
   li {
     display: inline-block;
@@ -57,6 +58,59 @@
     @extend %twenty-four-pixels;
     border-bottom: none;
     margin-right: 12px;
+  }
+
+  &.fade {
+    opacity: 0;
+  }
+}
+.site-header {
+
+  .search-form-container {
+    position: relative;
+    float: right;
+    text-align: right;
+    margin: $baseline-height * 1.5 $column * 2 0 0;
+
+    button {
+      position: relative;
+      z-index: 9;
+      background: none;
+      border: none;
+      margin: 0 -10px 0 0;
+      padding: 6px 10px;
+      font-size: 1em;
+      line-height: 1.5;
+
+      &.open {
+
+        + form {
+          opacity: 1;
+        }
+      }
+    }
+    i {
+      color: $color-gray-10;
+      z-index: -1; // so that the button is clicked, not this icon
+    }
+    form {
+      position: absolute;
+      top: 0;
+      right: -12px;
+      left: 0;
+      opacity: 0;
+      transition: opacity 0.15s ease-in-out, left 0.15s ease-in-out;
+    }
+    .search-field {
+      max-width: none !important;
+      outline: none !important;
+      padding: 9px 12px !important;
+
+      &:focus {
+        background: $color-gray-93 !important;
+        outline: solid 1px $color-gray-83 !important;
+      }
+    }
   }
 }
 
@@ -86,9 +140,10 @@
   }
   .social-media-icons {
     position: absolute;
-    right: $column * 2;
+    right: ($column * 2);
     top: $baseline-height;
     margin: 0;
+    margin-right: $baseline-height;
     padding: 0;
     border: none;
 
@@ -99,6 +154,25 @@
       &:active,
       &:focus {
         color: $color-orange;
+      }
+    }
+  }
+  .site-header .search-form-container {
+    position: absolute;
+    top: $baseline-height;
+    right: $column * 2;
+    margin: 0;
+
+    button {
+
+      &:hover {
+        cursor: pointer;
+      }
+      &.open {
+
+        + form {
+          left: -266px;
+        }
       }
     }
   }

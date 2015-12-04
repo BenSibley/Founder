@@ -156,6 +156,51 @@ jQuery(document).ready(function($){
             sidebarKeyboardNav();
         }
     }
+
+    // open search bar
+    body.on('click', '#search-icon', openSearchBar);
+
+    function openSearchBar(){
+
+        // get the social icons
+        var socialIcons = siteHeader.find('.social-media-icons');
+
+        // if search bar already open
+        if( $(this).hasClass('open') ) {
+
+            // remove styling class
+            $(this).removeClass('open');
+
+            // remove styling class
+            if( socialIcons.hasClass('fade') ) {
+                socialIcons.removeClass('fade');
+            }
+
+            // make search input inaccessible to keyboards
+            siteHeader.find('.search-field').attr('tabindex', -1);
+
+        } else {
+
+            // add styling class
+            $(this).addClass('open');
+
+            socialIcons.addClass('fade');
+
+            // make search input keyboard accessible
+            siteHeader.find('.search-field').attr('tabindex', 0);
+
+            // handle mobile width search bar sizing
+            if( window.innerWidth < 900 ) {
+
+                // distance to other side (35px is width of icon space)
+                var leftDistance = window.innerWidth * 0.83332 - 24;
+
+                siteHeader.find('.search-form').css('left', -leftDistance + 'px')
+            }
+
+        }
+    }
+
     // if screen is resized while sidebar is open, update max-height to keep widgets
     // from being cut-off. Only necessary b/c of animation (can't do max-height: none;)
     function sidebarHeightResize() {

@@ -28,6 +28,7 @@
 			<div id="menu-primary-container" class="menu-primary-container">
 				<?php get_template_part( 'menu', 'primary' ); ?>
 				<?php ct_founder_social_icons_output( 'header' ); ?>
+				<?php if ( get_theme_mod('search_bar') == 'show' ) get_template_part('content/search-bar'); ?>
 			</div>
 		</header>
 		<?php do_action( 'after_header' ); ?>
