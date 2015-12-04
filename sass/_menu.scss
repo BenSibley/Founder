@@ -36,8 +36,6 @@
 
       > button {
         transform: rotate(180deg);
-        color: $color-orange;
-        border-color: $color-orange;
       }
       > ul {
         display: block;
@@ -89,6 +87,8 @@
   border: solid 1px $color-gray-10;
   text-align: center;
 
+  &:hover,
+  &:active,
   &:focus {
     outline: none;
     color: $color-orange;

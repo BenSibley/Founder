@@ -502,8 +502,6 @@ a img {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
-  color: #E37D39;
-  border-color: #E37D39;
 }
 .menu-primary-items li.open > ul,
 .menu-unset ul li.open > ul {
@@ -550,7 +548,7 @@ a img {
   border: solid 1px #1A1A1A;
   text-align: center;
 }
-.toggle-dropdown:focus {
+.toggle-dropdown:hover, .toggle-dropdown:active, .toggle-dropdown:focus {
   outline: none;
   color: #E37D39;
   border-color: #E37D39;
