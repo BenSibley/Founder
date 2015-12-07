@@ -179,6 +179,11 @@ jQuery(document).ready(function($){
             // make search input inaccessible to keyboards
             siteHeader.find('.search-field').attr('tabindex', -1);
 
+            // handle mobile width search bar sizing
+            if( window.innerWidth < 900 ) {
+                siteHeader.find('.search-form').attr('style', '');
+            }
+
         } else {
 
             // add styling class
@@ -197,7 +202,6 @@ jQuery(document).ready(function($){
 
                 siteHeader.find('.search-form').css('left', -leftDistance + 'px')
             }
-
         }
     }
 
