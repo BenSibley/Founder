@@ -58,8 +58,11 @@
     @extend %twenty-four-pixels;
     border-bottom: none;
     margin-right: 12px;
-  }
 
+    &:focus {
+      outline: none;
+    }
+  }
   &.fade {
     opacity: 0;
   }
@@ -82,6 +85,13 @@
       font-size: 1em;
       line-height: 1.5;
 
+      &:focus {
+        outline: none;
+
+        i {
+          color: $color-orange;
+        }
+      }
       &.open {
 
         + form {

@@ -409,6 +409,9 @@ a img {
   border-bottom: none;
   margin-right: 12px;
 }
+.social-media-icons a:focus {
+  outline: none;
+}
 .social-media-icons.fade {
   opacity: 0;
 }
@@ -428,6 +431,12 @@ a img {
   padding: 6px 10px;
   font-size: 1em;
   line-height: 1.5;
+}
+.site-header .search-form-container button:focus {
+  outline: none;
+}
+.site-header .search-form-container button:focus i {
+  color: #E37D39;
 }
 .site-header .search-form-container button.open + form {
   opacity: 1;
