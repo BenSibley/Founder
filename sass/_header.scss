@@ -116,6 +116,12 @@
       outline: none !important;
       padding: 9px 12px !important;
 
+      &::-webkit-search-decoration,
+      &::-webkit-search-cancel-button,
+      &::-webkit-search-results-button,
+      &::-webkit-search-results-decoration {
+        -webkit-appearance: none;
+      }
       &:focus {
         background: $color-gray-93 !important;
         outline: solid 1px $color-gray-83 !important;
