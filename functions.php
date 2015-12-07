@@ -187,11 +187,7 @@ if( ! function_exists( 'ct_founder_excerpt' ) ) {
 		$show_full_post = get_theme_mod( 'full_post' );
 
 		// get user Read More link text
-		$read_more_text = get_theme_mod( 'read_more_text' );
-
-		// use i18n'ed text if empty
-		if ( empty( $read_more_text ) )
-			$read_more_text = __( 'Continue reading', 'founder' );
+		$read_more_text = ct_founder_read_more_text();
 
 		// if show full post is on and not on a search results page
 		if ( ( $show_full_post == 'yes' ) && ! is_search() ) {
@@ -219,11 +215,7 @@ if( ! function_exists( 'ct_founder_excerpt_read_more_link' ) ) {
 		global $post;
 
 		// get user Read More link text
-		$read_more_text = get_theme_mod( 'read_more_text' );
-
-		// use i18n'ed text if empty
-		if ( empty( $read_more_text ) )
-			$read_more_text = __( 'Continue reading', 'founder' );
+		$read_more_text = ct_founder_read_more_text();
 
 		return $output . "<p><a class='more-link' href='" . get_permalink() . "'>" . wp_kses_post( $read_more_text ) . " <span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
 	}
@@ -599,4 +591,16 @@ function ct_founder_infinite_scroll_render(){
 		the_post();
 		get_template_part( 'content', 'archive' );
 	}
+}
+
+function ct_founder_read_more_text(){
+
+	// get user Read More link text
+	$read_more_text = get_theme_mod( 'read_more_text' );
+
+	// use i18n'ed text if empty
+	if ( empty( $read_more_text ) )
+		$read_more_text = __( 'Continue reading', 'founder' );
+
+	return $read_more_text;
 }
