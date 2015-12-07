@@ -253,13 +253,13 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 	) );
 	// control
 	$wp_customize->add_control( 'search_bar', array(
-		'type' => 'radio',
-		'label' => __('Show search bar at top of site?', 'founder'),
+		'type'    => 'radio',
+		'label'   => __( 'Show search bar at top of site?', 'founder' ),
 		'section' => 'founder_search_bar',
 		'setting' => 'search_bar',
 		'choices' => array(
-			'show' => __('Show', 'founder'),
-			'hide' => __('Hide', 'founder')
+			'show' => __( 'Show', 'founder' ),
+			'hide' => __( 'Hide', 'founder' )
 		),
 	) );
 
