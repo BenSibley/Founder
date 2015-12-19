@@ -23,35 +23,6 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 	
 	/***** Add Custom Controls *****/
 
-	// create url input control
-	class ct_founder_url_input_control extends WP_Customize_Control {
-		// create new type called 'url'
-		public $type = 'url';
-		// the content to be output in the Customizer
-		public function render_content() {
-			?>
-			<label>
-				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-				<input type="url" <?php $this->link(); ?> value="<?php echo esc_url_raw( $this->value() ); ?>" />
-			</label>
-		<?php
-		}
-	}
-
-	// number input control
-	class ct_founder_number_input_control extends WP_Customize_Control {
-		public $type = 'number';
-
-		public function render_content() {
-			?>
-			<label>
-				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-				<input type="number" <?php $this->link(); ?> value="<?php echo $this->value(); ?>" />
-			</label>
-		<?php
-		}
-	}
-
 	// create multi-checkbox/select control
 	class ct_founder_multi_checkbox_control extends WP_Customize_Control {
 		public $type = 'multi-checkbox';
@@ -75,19 +46,6 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 		<?php }
 	}
 
-	// create textarea control
-	class ct_founder_textarea_control extends WP_Customize_Control {
-		public $type = 'textarea';
-
-		public function render_content() {
-			?>
-			<label>
-				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-				<textarea rows="8" style="width:100%;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
-			</label>
-		<?php
-		}
-	}
 	/* Ad Controls */
 	class founder_description_header_image_control extends WP_Customize_Control {
 
@@ -216,12 +174,11 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 				'transport'         => 'postMessage'
 			) );
 			// control
-			$wp_customize->add_control( new ct_founder_url_input_control(
-				$wp_customize, $social_site, array(
-					'label'    => $label,
-					'section'  => 'ct_founder_social_media_icons',
-					'priority' => $priority,
-				)
+			$wp_customize->add_control( $social_site, array(
+				'type'     => 'url',
+				'label'    => $label,
+				'section'  => 'ct_founder_social_media_icons',
+				'priority' => $priority
 			) );
 		}
 		// increment the priority for next site
@@ -281,13 +238,11 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 		'sanitize_callback' => 'absint'
 	) );
 	// control
-	$wp_customize->add_control( new ct_founder_number_input_control(
-		$wp_customize, 'excerpt_length', array(
-			'label'          => __( 'Excerpt word count', 'founder' ),
-			'section'        => 'founder_blog',
-			'settings'       => 'excerpt_length',
-			'type'           => 'number'
-		)
+	$wp_customize->add_control( 'excerpt_length', array(
+		'label'          => __( 'Excerpt word count', 'founder' ),
+		'section'        => 'founder_blog',
+		'settings'       => 'excerpt_length',
+		'type'           => 'number'
 	) );
 	// Read More text - setting
 	$wp_customize->add_setting( 'read_more_text', array(
@@ -343,12 +298,11 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 		'transport'         => 'postMessage'
 	) );
 	// control
-	$wp_customize->add_control( new ct_founder_textarea_control(
-		$wp_customize, 'custom_css', array(
-			'label'          => __( 'Add Custom CSS Here:', 'founder' ),
-			'section'        => 'founder_custom_css',
-			'settings'       => 'custom_css'
-		)
+	$wp_customize->add_control( 'custom_css', array(
+		'label'          => __( 'Add Custom CSS Here:', 'founder' ),
+		'section'        => 'founder_custom_css',
+		'settings'       => 'custom_css',
+		'type'           => 'textarea'
 	) );
 
 	/*
