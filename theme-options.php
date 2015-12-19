@@ -12,7 +12,7 @@ function ct_founder_options_content(){
 	$customizer_url = add_query_arg(
 		array(
 			'url'    => site_url(),
-			'return' => admin_url('themes.php?page=founder-options')
+			'return' => add_query_arg( 'page', 'founder-options', admin_url( 'themes.php' ) )
 		),
 		admin_url('customize.php')
 	);
