@@ -130,14 +130,10 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 	// section
 	$wp_customize->add_section( 'ct_founder_logo_upload', array(
 		'title'      => __( 'Logo', 'founder' ),
-		'priority'   => 30,
-		'capability' => 'edit_theme_options'
+		'priority'   => 30
 	) );
 	// setting
 	$wp_customize->add_setting( 'logo_upload', array(
-		'default'           => '',
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
 		'sanitize_callback' => 'esc_url_raw',
 		'transport'         => 'postMessage'
 	) );
@@ -146,7 +142,7 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 		$wp_customize, 'logo_image', array(
 			'label'    => __( 'Upload custom logo.', 'founder' ),
 			'section'  => 'ct_founder_logo_upload',
-			'settings' => 'logo_upload',
+			'settings' => 'logo_upload'
 		)
 	) );
 
@@ -171,8 +167,6 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 		if( $social_site == 'email' ) {
 			// setting
 			$wp_customize->add_setting( $social_site, array(
-				'type'              => 'theme_mod',
-				'capability'        => 'edit_theme_options',
 				'sanitize_callback' => 'ct_founder_sanitize_email',
 				'transport'         => 'postMessage'
 			) );
@@ -218,8 +212,6 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 
 			// setting
 			$wp_customize->add_setting( $social_site, array(
-				'type'              => 'theme_mod',
-				'capability'        => 'edit_theme_options',
 				'sanitize_callback' => 'esc_url_raw',
 				'transport'         => 'postMessage'
 			) );
@@ -241,14 +233,11 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 	// section
 	$wp_customize->add_section( 'founder_search_bar', array(
 		'title'      => __( 'Search Bar', 'founder' ),
-		'priority'   => 37,
-		'capability' => 'edit_theme_options'
+		'priority'   => 37
 	) );
 	// setting
 	$wp_customize->add_setting( 'search_bar', array(
 		'default'           => 'hide',
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
 		'sanitize_callback' => 'ct_founder_sanitize_all_show_hide_settings'
 	) );
 	// control
@@ -268,15 +257,12 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 	// section
 	$wp_customize->add_section( 'founder_blog', array(
 		'title'      => __( 'Blog', 'founder' ),
-		'priority'   => 45,
-		'capability' => 'edit_theme_options'
+		'priority'   => 45
 	) );
 	// setting
 	$wp_customize->add_setting( 'full_post', array(
 		'default'           => 'no',
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'ct_founder_sanitize_yes_no_settings',
+		'sanitize_callback' => 'ct_founder_sanitize_yes_no_settings'
 	) );
 	// control
 	$wp_customize->add_control( 'full_post', array(
@@ -286,15 +272,13 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 		'type'           => 'radio',
 		'choices'        => array(
 			'yes'   => __('Yes', 'founder'),
-			'no'  => __('No', 'founder'),
+			'no'  => __('No', 'founder')
 		)
 	) );
 	// setting
 	$wp_customize->add_setting( 'excerpt_length', array(
 		'default'           => '25',
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'absint',
+		'sanitize_callback' => 'absint'
 	) );
 	// control
 	$wp_customize->add_control( new ct_founder_number_input_control(
@@ -302,14 +286,12 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 			'label'          => __( 'Excerpt word count', 'founder' ),
 			'section'        => 'founder_blog',
 			'settings'       => 'excerpt_length',
-			'type'           => 'number',
+			'type'           => 'number'
 		)
 	) );
 	// Read More text - setting
 	$wp_customize->add_setting( 'read_more_text', array(
 		'default'           => __('Continue reading', 'founder'),
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
 		'sanitize_callback' => 'ct_founder_sanitize_text'
 	) );
 	// Read More text - control
@@ -325,15 +307,12 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 	// section
 	$wp_customize->add_section( 'ct_founder_comments_display', array(
 		'title'      => __( 'Comment Display', 'founder' ),
-		'priority'   => 65,
-		'capability' => 'edit_theme_options'
+		'priority'   => 65
 	) );
 	// setting
 	$wp_customize->add_setting( 'comments_display', array(
 		'default'           => array('post','page','attachment','none'),
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'ct_founder_sanitize_comments_setting',
+		'sanitize_callback' => 'ct_founder_sanitize_comments_setting'
 	) );
 	// control
 	$wp_customize->add_control( new ct_founder_Multi_Checkbox_Control(
@@ -356,13 +335,10 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 	// section
 	$wp_customize->add_section( 'founder_custom_css', array(
 		'title'      => __( 'Custom CSS', 'founder' ),
-		'priority'   => 70,
-		'capability' => 'edit_theme_options'
+		'priority'   => 70
 	) );
 	// setting
 	$wp_customize->add_setting( 'custom_css', array(
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
 		'sanitize_callback' => 'wp_filter_nohtml_kses',
 		'transport'         => 'postMessage'
 	) );
@@ -371,7 +347,7 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 		$wp_customize, 'custom_css', array(
 			'label'          => __( 'Add Custom CSS Here:', 'founder' ),
 			'section'        => 'founder_custom_css',
-			'settings'       => 'custom_css',
+			'settings'       => 'custom_css'
 		)
 	) );
 
@@ -384,14 +360,11 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 	// section
 	$wp_customize->add_section( 'founder_header_image', array(
 		'title'      => __( 'Header Image', 'founder' ),
-		'priority'   => 35,
-		'capability' => 'edit_theme_options'
+		'priority'   => 35
 	) );
 	// setting
 	$wp_customize->add_setting( 'header_image_ad', array(
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'absint',
+		'sanitize_callback' => 'absint'
 	) );
 	// control
 	$wp_customize->add_control( new founder_description_header_image_control(
@@ -406,14 +379,11 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 	// section
 	$wp_customize->add_section( 'founder_colors', array(
 		'title'      => __( 'Colors', 'founder' ),
-		'priority'   => 50,
-		'capability' => 'edit_theme_options'
+		'priority'   => 50
 	) );
 	// setting
 	$wp_customize->add_setting( 'colors_ad', array(
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'absint',
+		'sanitize_callback' => 'absint'
 	) );
 	// control
 	$wp_customize->add_control( new founder_description_color_control(
@@ -428,14 +398,11 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 	// section
 	$wp_customize->add_section( 'founder_font', array(
 		'title'      => __( 'Font', 'founder' ),
-		'priority'   => 40,
-		'capability' => 'edit_theme_options'
+		'priority'   => 40
 	) );
 	// setting
 	$wp_customize->add_setting( 'font_ad', array(
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'absint',
+		'sanitize_callback' => 'absint'
 	) );
 	// control
 	$wp_customize->add_control( new founder_description_font_control(
@@ -450,14 +417,11 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 	// section
 	$wp_customize->add_section( 'founder_display_control', array(
 		'title'      => __( 'Display Controls', 'founder' ),
-		'priority'   => 70,
-		'capability' => 'edit_theme_options'
+		'priority'   => 70
 	) );
 	// setting
 	$wp_customize->add_setting( 'display_control_ad', array(
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'absint',
+		'sanitize_callback' => 'absint'
 	) );
 	// control
 	$wp_customize->add_control( new founder_description_display_control_control(
@@ -472,14 +436,11 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 	// section
 	$wp_customize->add_section( 'founder_footer_text', array(
 		'title'      => __( 'Footer Text', 'founder' ),
-		'priority'   => 85,
-		'capability' => 'edit_theme_options'
+		'priority'   => 85
 	) );
 	// setting
 	$wp_customize->add_setting( 'footer_text_ad', array(
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'absint',
+		'sanitize_callback' => 'absint'
 	) );
 	// control
 	$wp_customize->add_control( new founder_description_footer_text_control(
