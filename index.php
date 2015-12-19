@@ -13,6 +13,6 @@ get_template_part('content/archive-header'); ?>
     ?>
 </div>
 
-<?php echo ct_founder_loop_pagination();
+<?php the_posts_pagination();
 
 get_footer();

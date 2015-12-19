@@ -30,18 +30,16 @@
 
 </div>
 
-<?php echo ct_founder_loop_pagination(); ?>
+<?php the_posts_pagination();
 
-<?php
 // only display bottom search bar if there are search results
 $total_results = $wp_query->found_posts;
 
-if($total_results) {
-    ?>
+if($total_results) { ?>
     <div class="search-bottom">
         <p><?php _e("Can't find what you're looking for? Try refining your search:", "founder"); ?></p>
         <?php get_search_form(); ?>
     </div>
-<?php } ?>
+<?php }
 
-<?php get_footer(); ?>
+get_footer();

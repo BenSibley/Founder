@@ -1,4 +1,4 @@
-.loop-pagination {
+.pagination {
   text-align: center;
   margin-bottom: $baseline-height * 2;
 
@@ -16,7 +16,7 @@
 
 @media all and (min-width: $four-hundred) {
 
-  .loop-pagination {
+  .pagination {
 
     a,
     span {
@@ -27,7 +27,7 @@
 
 @media all and (min-width: $five-hundred) {
 
-  .loop-pagination {
+  .pagination {
 
     .prev {
       margin: 0 $baseline-height 0 0;

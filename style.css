@@ -1561,32 +1561,32 @@ a img {
     padding: 0 25.002%;
   }
 }
-.loop-pagination {
+.pagination {
   text-align: center;
   margin-bottom: 3em;
 }
-.loop-pagination a,
-.loop-pagination span {
+.pagination a,
+.pagination span {
   margin: 0 0.5em;
 }
-.loop-pagination .prev {
+.pagination .prev {
   margin-left: 0;
 }
-.loop-pagination .next {
+.pagination .next {
   margin-right: 0;
 }
 
 @media all and (min-width: 25em) {
-  .loop-pagination a,
-  .loop-pagination span {
+  .pagination a,
+  .pagination span {
     margin: 0 0.75em;
   }
 }
 @media all and (min-width: 31.25em) {
-  .loop-pagination .prev {
+  .pagination .prev {
     margin: 0 1.5em 0 0;
   }
-  .loop-pagination .next {
+  .pagination .next {
     margin: 0 0 0 1.5em;
   }
 }
