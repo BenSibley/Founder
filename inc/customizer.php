@@ -416,15 +416,9 @@ function ct_founder_sanitize_comments_setting($input){
 		'none'  => __('Do not show', 'founder')
 	);
 
-	// loop through array
 	foreach( $input as $selection ) {
 
-		// if it's in the valid data, return it
-		if ( array_key_exists( $selection, $valid ) ) {
-			return $input;
-		} else {
-			return '';
-		}
+		return array_key_exists( $selection, $valid ) ? $input : '';
 	}
 }
 
