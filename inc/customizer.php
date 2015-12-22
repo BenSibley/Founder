@@ -389,17 +389,13 @@ function ct_founder_add_customizer_content( $wp_customize ) {
  * Used in: search bar
  */
 function ct_founder_sanitize_all_show_hide_settings($input){
-	// create array of valid values
+
 	$valid = array(
 		'show' => __('Show', 'founder'),
 		'hide' => __('Hide', 'founder')
 	);
-	// if returned data is in array use it, else return nothing
-	if ( array_key_exists( $input, $valid ) ) {
-		return $input;
-	} else {
-		return '';
-	}
+
+	return array_key_exists( $input, $valid ) ? $input : '';
 }
 
 /*
@@ -407,14 +403,12 @@ function ct_founder_sanitize_all_show_hide_settings($input){
  * Used in: Social Media Icons
  */
 function ct_founder_sanitize_email( $input ) {
-
 	return sanitize_email( $input );
 }
 
 // sanitize comment display multi-check
 function ct_founder_sanitize_comments_setting($input){
 
-	// valid data
 	$valid = array(
 		'post'   => __('Posts', 'founder'),
 		'page'  => __('Pages', 'founder'),
@@ -442,11 +436,7 @@ function ct_founder_sanitize_yes_no_settings($input){
 		'no'  => __('No', 'founder'),
 	);
 
-	if ( array_key_exists( $input, $valid ) ) {
-		return $input;
-	} else {
-		return '';
-	}
+	return array_key_exists( $input, $valid ) ? $input : '';
 }
 
 function ct_founder_sanitize_text( $input ) {
