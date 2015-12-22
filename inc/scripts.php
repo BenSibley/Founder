@@ -72,13 +72,13 @@ add_action('customize_controls_enqueue_scripts','ct_founder_enqueue_customizer_s
  * Script for live updating with customizer options. Has to be loaded separately on customize_preview_init hook
  * transport => postMessage
  */
-function founder_enqueue_customizer_post_message_scripts(){
+function ct_founder_enqueue_customizer_post_message_scripts(){
 
 	// JS for live updating with customizer input
 	wp_enqueue_script('ct-founder-customizer-post-message-js', get_template_directory_uri() . '/js/build/postMessage.min.js',array('jquery'),'',true);
 
 }
-add_action('customize_preview_init','founder_enqueue_customizer_post_message_scripts');
+add_action('customize_preview_init','ct_founder_enqueue_customizer_post_message_scripts');
 
 // load scripts asynchronously
 function ct_founder_add_async_script($url) {

@@ -100,8 +100,8 @@ if( ! function_exists( ( 'ct_founder_customize_comments' ) ) ) {
 }
 
 /* added HTML5 placeholders for each default field and aria-required to required */
-if( ! function_exists( 'founder_update_fields' ) ) {
-    function founder_update_fields( $fields ) {
+if( ! function_exists( 'ct_founder_update_fields' ) ) {
+    function ct_founder_update_fields( $fields ) {
 
         // get commenter object
         $commenter = wp_get_current_commenter();
@@ -143,10 +143,10 @@ if( ! function_exists( 'founder_update_fields' ) ) {
         return $fields;
     }
 }
-add_filter('comment_form_default_fields','founder_update_fields');
+add_filter('comment_form_default_fields','ct_founder_update_fields');
 
-if( ! function_exists( 'founder_update_comment_field' ) ) {
-    function founder_update_comment_field( $comment_field ) {
+if( ! function_exists( 'ct_founder_update_comment_field' ) ) {
+    function ct_founder_update_comment_field( $comment_field ) {
 
         $comment_field =
             '<p class="comment-form-comment">
@@ -157,7 +157,7 @@ if( ! function_exists( 'founder_update_comment_field' ) ) {
         return $comment_field;
     }
 }
-add_filter('comment_form_field_comment','founder_update_comment_field');
+add_filter('comment_form_field_comment','ct_founder_update_comment_field');
 
 // remove allowed tags text after comment form
 if( ! function_exists( 'ct_founder_remove_comments_notes_after' ) ) {
@@ -223,8 +223,8 @@ if( ! function_exists( 'ct_founder_excerpt_read_more_link' ) ) {
 add_filter('the_excerpt', 'ct_founder_excerpt_read_more_link');
 
 // change the length of the excerpts
-if( ! function_exists( 'founder_custom_excerpt_length' ) ) {
-	function founder_custom_excerpt_length( $length ) {
+if( ! function_exists( 'ct_founder_custom_excerpt_length' ) ) {
+	function ct_founder_custom_excerpt_length( $length ) {
 
 		$new_excerpt_length = get_theme_mod('excerpt_length');
 
@@ -241,7 +241,7 @@ if( ! function_exists( 'founder_custom_excerpt_length' ) ) {
 		}
 	}
 }
-add_filter( 'excerpt_length', 'founder_custom_excerpt_length', 99 );
+add_filter( 'excerpt_length', 'ct_founder_custom_excerpt_length', 99 );
 
 // switch [...] to ellipsis on automatic excerpt
 if( ! function_exists( 'ct_founder_new_excerpt_more' ) ) {
@@ -417,12 +417,12 @@ function ct_founder_wp_page_menu() {
 }
 
 if ( ! function_exists( '_wp_render_title_tag' ) ) :
-    function founder_add_title_tag() {
+    function ct_founder_add_title_tag() {
         ?>
         <title><?php wp_title( ' | ' ); ?></title>
     <?php
     }
-    add_action( 'wp_head', 'founder_add_title_tag' );
+    add_action( 'wp_head', 'ct_founder_add_title_tag' );
 endif;
 
 function ct_founder_nav_dropdown_buttons( $item_output, $item, $depth, $args ) {
