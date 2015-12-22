@@ -17,9 +17,7 @@
 </div>
 
 <div id="loop-container" class="loop-container">
-
     <?php
-    // The loop
     if ( have_posts() ) :
         while (have_posts() ) :
             the_post();
@@ -27,7 +25,6 @@
         endwhile;
     endif;
     ?>
-
 </div>
 
 <?php the_posts_pagination();
@@ -35,7 +32,7 @@
 // only display bottom search bar if there are search results
 $total_results = $wp_query->found_posts;
 
-if($total_results) { ?>
+if( $total_results) { ?>
     <div class="search-bottom">
         <p><?php _e("Can't find what you're looking for? Try refining your search:", "founder"); ?></p>
         <?php get_search_form(); ?>

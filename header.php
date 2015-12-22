@@ -8,7 +8,6 @@
 
 <body id="<?php print get_stylesheet(); ?>" <?php body_class(); ?>>
 <?php do_action( 'body_top' ); ?>
-	<!--skip to content link-->
 	<a class="skip-content" href="#main"><?php _e('Skip to content', 'founder'); ?> &rarr;</a>
 
 	<div id="overflow-container" class="overflow-container">
@@ -28,7 +27,7 @@
 			<div id="menu-primary-container" class="menu-primary-container">
 				<?php get_template_part( 'menu', 'primary' ); ?>
 				<?php ct_founder_social_icons_output( 'header' ); ?>
-				<?php if ( get_theme_mod('search_bar') == 'show' ) get_template_part('content/search-bar'); ?>
+				<?php get_template_part('content/search-bar'); ?>
 			</div>
 		</header>
 		<?php do_action( 'after_header' ); ?>

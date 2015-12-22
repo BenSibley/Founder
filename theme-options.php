@@ -62,4 +62,4 @@ function ct_founder_options_content(){
 		</div>
 		<?php do_action( 'theme_options_after' ); ?>
 	</div>
-<?php } ?>
+<?php }

@@ -1,3 +1,9 @@
+<?php
+if ( get_theme_mod('search_bar') != 'show' ) {
+	return;
+}
+?>
+
 <div class='search-form-container'>
 	<button id="search-icon" class="search-icon">
 		<i class="fa fa-search"></i>
