@@ -163,36 +163,29 @@ add_action('comment_form_defaults', 'ct_founder_remove_comments_notes_after');
 if( ! function_exists( 'ct_founder_excerpt' ) ) {
 	function ct_founder_excerpt() {
 
-		// make post variable available
 		global $post;
-
-		// make 'read more' setting available
-		global $more;
-
-		// check for the more tag
 		$ismore = strpos( $post->post_content, '<!--more-->' );
-
-		// get the show full post setting
 		$show_full_post = get_theme_mod( 'full_post' );
+		$read_more_text = get_theme_mod( 'read_more_text' );
 
-		// get user Read More link text
-		$read_more_text = ct_founder_read_more_text();
-
-		// if show full post is on and not on a search results page
 		if ( ( $show_full_post == 'yes' ) && ! is_search() ) {
-
-			// use the read more link if present
 			if ( $ismore ) {
-				the_content( wp_kses_post( $read_more_text ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+				// Has to be written this way because i18n text CANNOT be stored in a variable
+				if ( ! empty( $read_more_text ) ) {
+					the_content( wp_kses_post( $read_more_text ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+				} else {
+					the_content( __( 'Continue reading', 'founder' ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+				}
 			} else {
 				the_content();
 			}
-		}
-		// use the read more link if present
-		elseif ( $ismore ) {
-			the_content( wp_kses_post( $read_more_text ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
-		} // otherwise the excerpt is automatic, so output it
-		else {
+		} elseif ( $ismore ) {
+			if ( ! empty( $read_more_text ) ) {
+				the_content( wp_kses_post( $read_more_text ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+			} else {
+				the_content( __( 'Continue reading', 'founder' ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+			}
+		} else {
 			the_excerpt();
 		}
 	}
@@ -201,12 +194,15 @@ if( ! function_exists( 'ct_founder_excerpt' ) ) {
 // filter the link on excerpts
 if( ! function_exists( 'ct_founder_excerpt_read_more_link' ) ) {
 	function ct_founder_excerpt_read_more_link( $output ) {
+
 		global $post;
+		$read_more_text = get_theme_mod( 'read_more_text' );
 
-		// get user Read More link text
-		$read_more_text = ct_founder_read_more_text();
-
-		return $output . "<p><a class='more-link' href='" . esc_url( get_permalink() ) . "'>" . wp_kses_post( $read_more_text ) . " <span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
+		if ( ! empty( $read_more_text ) ) {
+			return $output . "<p><a class='more-link' href='" . esc_url( get_permalink() ) . "'>" . wp_kses_post( $read_more_text ) . " <span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
+		} else {
+			return $output . "<p><a class='more-link' href='" . esc_url( get_permalink() ) . "'>" . __( 'Continue reading', 'founder' ) . " <span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
+		}
 	}
 }
 add_filter('the_excerpt', 'ct_founder_excerpt_read_more_link');
@@ -562,18 +558,6 @@ function ct_founder_infinite_scroll_render(){
 		the_post();
 		get_template_part( 'content', 'archive' );
 	}
-}
-
-function ct_founder_read_more_text(){
-
-	// get user Read More link text
-	$read_more_text = get_theme_mod( 'read_more_text' );
-
-	// use i18n'ed text if empty
-	if ( empty( $read_more_text ) )
-		$read_more_text = __( 'Continue reading', 'founder' );
-
-	return $read_more_text;
 }
 
 function ct_founder_get_content_template() {
