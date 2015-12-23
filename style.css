@@ -1576,6 +1576,10 @@ a img {
   margin-right: 0;
 }
 
+.infinite-scroll .pagination {
+  display: none;
+}
+
 @media all and (min-width: 25em) {
   .pagination a,
   .pagination span {

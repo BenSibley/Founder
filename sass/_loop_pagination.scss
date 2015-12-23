@@ -13,6 +13,9 @@
     margin-right: 0;
   }
 }
+.infinite-scroll .pagination {
+  display: none;
+}
 
 @media all and (min-width: $four-hundred) {
 
