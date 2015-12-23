@@ -63,16 +63,3 @@ function ct_founder_enqueue_customizer_post_message_scripts() {
 
 }
 add_action( 'customize_preview_init', 'ct_founder_enqueue_customizer_post_message_scripts' );
-
-// load scripts asynchronously
-function ct_founder_add_async_script( $url ) {
-
-	// if async parameter not present, do nothing
-	if ( strpos( $url, '#ct_founder_asyncload' ) === false ) {
-		return $url;
-	}
-
-	// if async parameter present, add async attribute
-	return str_replace( '#ct_founder_asyncload', '', $url ) . "' async='async";
-}
-add_filter( 'clean_url', 'ct_founder_add_async_script', 11, 1 );
