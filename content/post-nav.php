@@ -2,24 +2,16 @@
 
 global $post;
 
-// gets the previous post if it exists
 $previous_post = get_adjacent_post( false, '', true );
+$next_post     = get_adjacent_post( false, '', false );
 
-// if there is a previous post
 if ( $previous_post ) {
-	// text above the link
-	$previous_text = __( 'Previous Post', 'founder' );
-	// if there is a title use it, else call it "The Previous Post"
+	$previous_text  = __( 'Previous Post', 'founder' );
 	$previous_title = get_the_title( $previous_post ) ? get_the_title( $previous_post ) : __( "The Previous Post", 'founder' );
-	// get the post link
-	$previous_link = get_permalink( $previous_post );
-} // if there isn't a previous post
-else {
-	// text above the link
-	$previous_text = __( 'No Older Posts', 'founder' );
-	// set the title to return to the blog
+	$previous_link  = get_permalink( $previous_post );
+} else {
+	$previous_text  = __( 'No Older Posts', 'founder' );
 	$previous_title = __( 'Return to Blog', 'founder' );
-	// link to blog
 	if ( get_option( 'show_on_front' ) == 'page' ) {
 		$previous_link = get_permalink( get_option( 'page_for_posts' ) );
 	} else {
@@ -27,24 +19,13 @@ else {
 	}
 }
 
-// gets the next post if it exists
-$next_post = get_adjacent_post( false, '', false );
-
-// if there is a next post
 if ( $next_post ) {
-	// text above the link
-	$next_text = __( 'Next Post', 'founder' );
-	// if there is a title use it, else call it "The next Post"
+	$next_text  = __( 'Next Post', 'founder' );
 	$next_title = get_the_title( $next_post ) ? get_the_title( $next_post ) : __( "The Next Post", 'founder' );
-	// get the post link
-	$next_link = get_permalink( $next_post );
-} // if there isn't a next post
-else {
-	// text above the link
-	$next_text = __( 'No Newer Posts', 'founder' );
-	// set the title to return to the blog
+	$next_link  = get_permalink( $next_post );
+} else {
+	$next_text  = __( 'No Newer Posts', 'founder' );
 	$next_title = __( 'Return to Blog', 'founder' );
-	// link to blog
 	if ( get_option( 'show_on_front' ) == 'page' ) {
 		$next_link = get_permalink( get_option( 'page_for_posts' ) );
 	} else {

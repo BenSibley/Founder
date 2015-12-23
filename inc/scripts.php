@@ -1,8 +1,6 @@
 <?php
 
-/*
- * Front-end scripts
- */
+// Front-end
 function ct_founder_load_scripts_styles() {
 
 	wp_enqueue_style( 'ct-founder-google-fonts', '//fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic' );
@@ -38,37 +36,22 @@ function ct_founder_load_scripts_styles() {
 		wp_script_add_data( 'ct-founder-respond', 'conditional', 'IE 8' );
 	}
 }
-
 add_action( 'wp_enqueue_scripts', 'ct_founder_load_scripts_styles' );
 
-/*
- * Back-end scripts
- */
+// Back-end
 function ct_founder_enqueue_admin_styles( $hook ) {
 
-	// if theme options page
-	if ( 'appearance_page_founder-options' == $hook ) {
-
-		// Admin styles
+	if ( $hook == 'appearance_page_founder-options' ) {
 		wp_enqueue_style( 'ct-founder-admin-styles', get_template_directory_uri() . '/styles/admin.min.css' );
 	}
 }
-
 add_action( 'admin_enqueue_scripts', 'ct_founder_enqueue_admin_styles' );
 
-/*
- * Customizer scripts
- */
+// Customizer
 function ct_founder_enqueue_customizer_scripts() {
-
-	// stylesheet for customizer
 	wp_enqueue_style( 'ct-founder-customizer-styles', get_template_directory_uri() . '/styles/customizer.min.css' );
-
-	// JS for hiding/showing Customizer options
 	wp_enqueue_script( 'ct-founder-customizer-js', get_template_directory_uri() . '/js/build/customizer.min.js', array( 'jquery' ), '', true );
-
 }
-
 add_action( 'customize_controls_enqueue_scripts', 'ct_founder_enqueue_customizer_scripts' );
 
 /*
@@ -76,12 +59,9 @@ add_action( 'customize_controls_enqueue_scripts', 'ct_founder_enqueue_customizer
  * transport => postMessage
  */
 function ct_founder_enqueue_customizer_post_message_scripts() {
-
-	// JS for live updating with customizer input
 	wp_enqueue_script( 'ct-founder-customizer-post-message-js', get_template_directory_uri() . '/js/build/postMessage.min.js', array( 'jquery' ), '', true );
 
 }
-
 add_action( 'customize_preview_init', 'ct_founder_enqueue_customizer_post_message_scripts' );
 
 // load scripts asynchronously
@@ -95,5 +75,4 @@ function ct_founder_add_async_script( $url ) {
 	// if async parameter present, add async attribute
 	return str_replace( '#ct_founder_asyncload', '', $url ) . "' async='async";
 }
-
 add_filter( 'clean_url', 'ct_founder_add_async_script', 11, 1 );
