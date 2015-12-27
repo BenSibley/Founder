@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Founder 1.21\n"
+"Project-Id-Version: Founder 1.22\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-12-07 13:27:50+00:00\n"
+"POT-Creation-Date: 2015-12-27 16:36:56+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,26 +13,26 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: grunt-wp-i18n 0.4.9\n"
 
-#: 404.php:7
+#: 404.php:6
 msgid "404: Page Not Found"
 msgstr ""
 
-#: 404.php:10
+#: 404.php:9
 msgid ""
 "Looks like nothing was found on this url.  Double-check that the url is "
 "correct or try the search form below to find what you were looking for."
 msgstr ""
 
-#: comments.php:26 comments.php:45 comments.php:66
+#: comments.php:23 comments.php:44 comments.php:66
 msgid "Comments"
 msgstr ""
 
-#: comments.php:26 comments.php:45 comments.php:66 content/comments-link.php:5
+#: comments.php:23 comments.php:44 comments.php:66 content/comments-link.php:5
 #: content/comments-link.php:8
 msgid "One Comment"
 msgstr ""
 
-#: comments.php:26 comments.php:45 comments.php:66 content/comments-link.php:5
+#: comments.php:23 comments.php:44 comments.php:66 content/comments-link.php:5
 #: content/comments-link.php:8
 msgid "% Comments"
 msgstr ""
@@ -43,40 +43,8 @@ msgid ""
 "post\">trackbacks</a> and pingbacks are open."
 msgstr ""
 
-#: comments.php:79 comments.php:85
+#: comments.php:80 comments.php:86
 msgid "Comments are closed."
-msgstr ""
-
-#: content/archive-header.php:5
-msgid "archive icon"
-msgstr ""
-
-#: content/archive-header.php:7
-msgid "Category archive for:"
-msgstr ""
-
-#: content/archive-header.php:17
-msgid "tag icon"
-msgstr ""
-
-#: content/archive-header.php:19
-msgid "Tag archive for:"
-msgstr ""
-
-#: content/archive-header.php:29
-msgid "author icon"
-msgstr ""
-
-#: content/archive-header.php:31
-msgid "Author archive for:"
-msgstr ""
-
-#: content/archive-header.php:41
-msgid "calendar icon"
-msgstr ""
-
-#: content/archive-header.php:43
-msgid "Date archive for:"
 msgstr ""
 
 #: content/comments-link.php:2
@@ -91,11 +59,11 @@ msgstr ""
 msgid "Leave a Comment"
 msgstr ""
 
-#: content/post-categories.php:16
+#: content/post-categories.php:9
 msgid "Published in"
 msgstr ""
 
-#: content/post-categories.php:18
+#: content/post-categories.php:11
 msgid "View all posts in %s"
 msgstr ""
 
@@ -111,31 +79,31 @@ msgstr ""
 msgid "Next Image"
 msgstr ""
 
-#: content/post-nav.php:11
+#: content/post-nav.php:9
 msgid "Previous Post"
 msgstr ""
 
-#: content/post-nav.php:13
+#: content/post-nav.php:10
 msgid "The Previous Post"
 msgstr ""
 
-#: content/post-nav.php:20
+#: content/post-nav.php:13
 msgid "No Older Posts"
 msgstr ""
 
-#: content/post-nav.php:22 content/post-nav.php:48
+#: content/post-nav.php:14 content/post-nav.php:28
 msgid "Return to Blog"
 msgstr ""
 
-#: content/post-nav.php:37
+#: content/post-nav.php:23
 msgid "Next Post"
 msgstr ""
 
-#: content/post-nav.php:39
+#: content/post-nav.php:24
 msgid "The Next Post"
 msgstr ""
 
-#: content/post-nav.php:46
+#: content/post-nav.php:27
 msgid "No Newer Posts"
 msgstr ""
 
@@ -147,95 +115,95 @@ msgstr ""
 msgid "View all posts tagged %s"
 msgstr ""
 
-#: content/search-bar.php:6 searchform.php:3
+#: content/search-bar.php:12 searchform.php:3
 msgid "Search"
 msgstr ""
 
-#: content/search-bar.php:7
+#: content/search-bar.php:13
 msgid "Search..."
 msgstr ""
 
-#: content/search-bar.php:7 searchform.php:4
+#: content/search-bar.php:14 searchform.php:5
 msgid "Search for:"
 msgstr ""
 
-#: content-page.php:10 content.php:11
+#: content-page.php:11 content.php:12
 msgid "Pages:"
 msgstr ""
 
-#: footer.php:9
+#: footer.php:8
 msgid "<a href=\"%s\">Founder WordPress Theme</a> by Compete Themes."
 msgstr ""
 
-#: functions.php:45
+#: functions.php:34
 msgid "Primary"
 msgstr ""
 
-#: functions.php:56
+#: functions.php:43
 msgid "Primary Sidebar"
 msgstr ""
 
-#: functions.php:58
+#: functions.php:45
 msgid "Widgets in this area will be shown in the sidebar."
 msgstr ""
 
-#: functions.php:83
+#: functions.php:69
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:91
+#: functions.php:77
 msgid "Reply"
 msgstr ""
 
-#: functions.php:95
+#: functions.php:81
 msgid "Edit"
 msgstr ""
 
-#: functions.php:116
-msgid "optional"
+#: functions.php:93
+msgid "(optional)"
 msgstr ""
 
-#: functions.php:124
+#: functions.php:98
 msgid "Name"
 msgstr ""
 
-#: functions.php:131
+#: functions.php:105
 msgid "Email"
 msgstr ""
 
-#: functions.php:138
+#: functions.php:112
 msgid "Website"
 msgstr ""
 
-#: functions.php:153
+#: functions.php:127
 msgid "Comment"
 msgstr ""
 
-#: functions.php:390
-msgid "email icon"
-msgstr ""
-
-#: functions.php:433 header.php:25 inc/scripts.php:13
-msgid "open menu"
-msgstr ""
-
-#: functions.php:445
-msgid "Featured Post"
-msgstr ""
-
-#: functions.php:480
-msgid "Customizer settings deleted"
-msgstr ""
-
-#: functions.php:603 inc/customizer.php:310
+#: functions.php:158 functions.php:167 functions.php:184 inc/customizer.php:221
 msgid "Continue reading"
 msgstr ""
 
-#: header.php:12
+#: functions.php:344
+msgid "email"
+msgstr ""
+
+#: functions.php:388 header.php:23 inc/scripts.php:10
+msgid "open menu"
+msgstr ""
+
+#: functions.php:400
+msgid "Featured Post"
+msgstr ""
+
+#: functions.php:456
+msgid "Customizer settings deleted"
+msgstr ""
+
+#: header.php:11
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:26
+#: header.php:24
 msgid "primary menu icon"
 msgstr ""
 
@@ -243,157 +211,161 @@ msgstr ""
 msgid "Front Page"
 msgstr ""
 
-#: inc/customizer.php:96
+#: inc/customizer.php:62
+msgid "Logo"
+msgstr ""
+
+#: inc/customizer.php:73
+msgid "Upload custom logo."
+msgstr ""
+
+#: inc/customizer.php:89
+msgid "Social Media Icons"
+msgstr ""
+
+#: inc/customizer.php:91
+msgid "Add the URL for each of your social profiles."
+msgstr ""
+
+#: inc/customizer.php:105
+msgid "Email Address"
+msgstr ""
+
+#: inc/customizer.php:164
+msgid "Search Bar"
+msgstr ""
+
+#: inc/customizer.php:175
+msgid "Show search bar at top of site?"
+msgstr ""
+
+#: inc/customizer.php:179 inc/customizer.php:394
+msgid "Show"
+msgstr ""
+
+#: inc/customizer.php:180 inc/customizer.php:395
+msgid "Hide"
+msgstr ""
+
+#: inc/customizer.php:188
+msgid "Blog"
+msgstr ""
+
+#: inc/customizer.php:198
+msgid "Show full posts on blog?"
+msgstr ""
+
+#: inc/customizer.php:203 inc/customizer.php:429
+msgid "Yes"
+msgstr ""
+
+#: inc/customizer.php:204 inc/customizer.php:430
+msgid "No"
+msgstr ""
+
+#: inc/customizer.php:214
+msgid "Excerpt word count"
+msgstr ""
+
+#: inc/customizer.php:226
+msgid "Read More button text"
+msgstr ""
+
+#: inc/customizer.php:236
+msgid "Comment Display"
+msgstr ""
+
+#: inc/customizer.php:247
+msgid "Show comments on:"
+msgstr ""
+
+#: inc/customizer.php:252 inc/customizer.php:413
+msgid "Posts"
+msgstr ""
+
+#: inc/customizer.php:253 inc/customizer.php:414
+msgid "Pages"
+msgstr ""
+
+#: inc/customizer.php:254 inc/customizer.php:415
+msgid "Attachments"
+msgstr ""
+
+#: inc/customizer.php:255 inc/customizer.php:416
+msgid "Do not show"
+msgstr ""
+
+#: inc/customizer.php:264
+msgid "Custom CSS"
+msgstr ""
+
+#: inc/customizer.php:274
+msgid "Add Custom CSS Here:"
+msgstr ""
+
+#: inc/customizer.php:288
+msgid "Header Image"
+msgstr ""
+
+#: inc/customizer.php:300
 msgid ""
 "Activate the <a target=\"_blank\" href=\"%s\">Founder Pro Plugin</a> for "
 "advanced header image functionality."
 msgstr ""
 
-#: inc/customizer.php:103
+#: inc/customizer.php:308
+msgid "Colors"
+msgstr ""
+
+#: inc/customizer.php:320
 msgid ""
 "Activate the <a target=\"_blank\" href=\"%s\">Founder Pro Plugin</a> to "
 "change your colors."
 msgstr ""
 
-#: inc/customizer.php:110
+#: inc/customizer.php:328
+msgid "Font"
+msgstr ""
+
+#: inc/customizer.php:340
 msgid ""
 "Activate the <a target=\"_blank\" href=\"%s\">Founder Pro Plugin</a> to "
 "change your font."
 msgstr ""
 
-#: inc/customizer.php:117
+#: inc/customizer.php:348
+msgid "Display Controls"
+msgstr ""
+
+#: inc/customizer.php:360
 msgid ""
 "Activate the <a target=\"_blank\" href=\"%s\">Founder Pro Plugin</a> to get "
 "hide/show controls."
 msgstr ""
 
-#: inc/customizer.php:124
+#: inc/customizer.php:368
+msgid "Footer Text"
+msgstr ""
+
+#: inc/customizer.php:380
 msgid ""
 "Activate the <a target=\"_blank\" href=\"%s\">Founder Pro Plugin</a> to "
 "customize the footer text."
 msgstr ""
 
-#: inc/customizer.php:132
-msgid "Logo"
+#: inc/customizer.php:444
+msgid "View the Founder Pro Plugin"
 msgstr ""
 
-#: inc/customizer.php:147
-msgid "Upload custom logo."
-msgstr ""
-
-#: inc/customizer.php:163
-msgid "Social Media Icons"
-msgstr ""
-
-#: inc/customizer.php:165
-msgid "Add the URL for each of your social profiles."
-msgstr ""
-
-#: inc/customizer.php:181
-msgid "Email Address"
-msgstr ""
-
-#: inc/customizer.php:243
-msgid "Search Bar"
-msgstr ""
-
-#: inc/customizer.php:257
-msgid "Show search bar at top of site?"
-msgstr ""
-
-#: inc/customizer.php:261 inc/customizer.php:502
-msgid "Show"
-msgstr ""
-
-#: inc/customizer.php:262 inc/customizer.php:503
-msgid "Hide"
-msgstr ""
-
-#: inc/customizer.php:270
-msgid "Blog"
-msgstr ""
-
-#: inc/customizer.php:283
-msgid "Show full posts on blog?"
-msgstr ""
-
-#: inc/customizer.php:288 inc/customizer.php:549
-msgid "Yes"
-msgstr ""
-
-#: inc/customizer.php:289 inc/customizer.php:550
-msgid "No"
-msgstr ""
-
-#: inc/customizer.php:302
-msgid "Excerpt word count"
-msgstr ""
-
-#: inc/customizer.php:317
-msgid "Read More button text"
-msgstr ""
-
-#: inc/customizer.php:327
-msgid "Comment Display"
-msgstr ""
-
-#: inc/customizer.php:341
-msgid "Show comments on:"
-msgstr ""
-
-#: inc/customizer.php:346 inc/customizer.php:527
-msgid "Posts"
-msgstr ""
-
-#: inc/customizer.php:347 inc/customizer.php:528
-msgid "Pages"
-msgstr ""
-
-#: inc/customizer.php:348 inc/customizer.php:529
-msgid "Attachments"
-msgstr ""
-
-#: inc/customizer.php:349 inc/customizer.php:530
-msgid "Do not show"
-msgstr ""
-
-#: inc/customizer.php:358
-msgid "Custom CSS"
-msgstr ""
-
-#: inc/customizer.php:372
-msgid "Add Custom CSS Here:"
-msgstr ""
-
-#: inc/customizer.php:386
-msgid "Header Image"
-msgstr ""
-
-#: inc/customizer.php:408
-msgid "Colors"
-msgstr ""
-
-#: inc/customizer.php:430
-msgid "Font"
-msgstr ""
-
-#: inc/customizer.php:452
-msgid "Display Controls"
-msgstr ""
-
-#: inc/customizer.php:474
-msgid "Footer Text"
-msgstr ""
-
-#: inc/scripts.php:14
+#: inc/scripts.php:11
 msgid "close menu"
 msgstr ""
 
-#: inc/scripts.php:15 sidebar-primary.php:10
+#: inc/scripts.php:12 sidebar-primary.php:8
 msgid "open sidebar"
 msgstr ""
 
-#: inc/scripts.php:16
+#: inc/scripts.php:13
 msgid "close sidebar"
 msgstr ""
 
@@ -407,41 +379,41 @@ msgstr[1] ""
 msgid "No search results for \"%s\""
 msgstr ""
 
-#: search.php:42
+#: search.php:36
 msgid "Can't find what you're looking for? Try refining your search:"
 msgstr ""
 
-#: searchform.php:5
+#: searchform.php:6
 msgid "Go"
 msgstr ""
 
-#: sidebar-primary.php:11
+#: sidebar-primary.php:9
 msgid "sidebar icon"
 msgstr ""
 
-#: theme-options.php:21
+#: theme-options.php:4 theme-options.php:19
 msgid "Founder Dashboard"
 msgstr ""
 
-#: theme-options.php:24
+#: theme-options.php:22
 msgid "Customization"
 msgstr ""
 
-#: theme-options.php:25
+#: theme-options.php:23
 msgid ""
 "Click the \"Customize\" link in your menu, or use the button below to get "
 "started customizing Founder"
 msgstr ""
 
-#: theme-options.php:27
+#: theme-options.php:26
 msgid "Use Customizer"
 msgstr ""
 
-#: theme-options.php:31
+#: theme-options.php:30
 msgid "Support"
 msgstr ""
 
-#: theme-options.php:32
+#: theme-options.php:31
 msgid ""
 "You can find the knowledgebase, changelog, support forum, and more in the "
 "Founder Support Center"
@@ -461,32 +433,32 @@ msgid ""
 "header images, and more"
 msgstr ""
 
-#: theme-options.php:41
+#: theme-options.php:42
 msgid "See Full Feature List"
 msgstr ""
 
-#: theme-options.php:45
+#: theme-options.php:46
 msgid "WordPress Resources"
 msgstr ""
 
-#: theme-options.php:46
+#: theme-options.php:47
 msgid ""
 "Save time and money searching for WordPress products by following our "
 "recommendations"
 msgstr ""
 
-#: theme-options.php:48
+#: theme-options.php:50
 msgid "View Resources"
 msgstr ""
 
-#: theme-options.php:52 theme-options.php:60
+#: theme-options.php:54 theme-options.php:62
 msgid "Reset Customizer Settings"
 msgstr ""
 
-#: theme-options.php:54
+#: theme-options.php:56
 msgid ""
-"<strong>Warning:</strong> Clicking this button will erase your current "
-"settings in the <a href=\"%s\">Customizer</a>"
+"<strong>Warning:</strong> Clicking this button will erase the Founder "
+"theme's current settings in the <a href='%s'>Customizer</a>."
 msgstr ""
 
 #. Theme Name of the plugin/theme
