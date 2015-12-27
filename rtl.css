@@ -350,6 +350,10 @@ a img {
   margin: 0 auto;
 }
 
+#breadcrumbs {
+  text-align: center;
+}
+
 .site-header {
   position: relative;
   padding: 1.5em 0;

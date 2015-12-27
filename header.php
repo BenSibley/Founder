@@ -33,4 +33,7 @@
 			<?php get_sidebar( 'primary' ); ?>
 			<?php do_action( 'before_main' ); ?>
 			<section id="main" class="main" role="main">
-				<?php do_action( 'main_top' ); ?>
+				<?php do_action( 'main_top' );
+				if ( function_exists( 'yoast_breadcrumb' ) ) {
+					yoast_breadcrumb( '<p id="breadcrumbs">', '</p>' );
+				}
