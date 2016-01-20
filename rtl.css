@@ -466,6 +466,16 @@ a img {
 .site-header .search-form-container .search-field::-webkit-search-decoration, .site-header .search-form-container .search-field::-webkit-search-cancel-button, .site-header .search-form-container .search-field::-webkit-search-results-button, .site-header .search-form-container .search-field::-webkit-search-results-decoration {
   -webkit-appearance: none;
 }
+.site-header .search-form-container .search-field::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+.site-header .search-form-container .search-field::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
 .site-header .search-form-container .search-field:focus {
   background: #EDEDED !important;
   outline: solid 1px #D4D4D4 !important;
