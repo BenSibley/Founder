@@ -499,7 +499,7 @@ function ct_founder_custom_css_output() {
 	$custom_css = get_theme_mod( 'custom_css' );
 
 	if ( $custom_css ) {
-		$custom_css = wp_filter_nohtml_kses( $custom_css );
+		$custom_css = ct_founder_sanitize_css( $custom_css );
 		wp_add_inline_style( 'ct-founder-style', $custom_css );
 		wp_add_inline_style( 'ct-founder-style-rtl', $custom_css );
 	}
