@@ -3,57 +3,51 @@
 #founder-dashboard-wrap h2 {
   margin-bottom: 24px;
 }
-
-.content {
+#founder-dashboard-wrap .content {
   margin-top: 12px;
   padding: 12px 24px 24px;
   border: solid 1px #e5e5e5;
   background: white;
 }
-.content .button-primary {
+#founder-dashboard-wrap .content .button-primary {
   margin: 12px 0;
 }
-.content ul {
+#founder-dashboard-wrap .content ul {
   list-style: disc;
   margin-left: 36px;
 }
 
 /* 600px */
 @media all and (min-width: 37.5em) {
-  .content {
+  #founder-dashboard-wrap .content {
     width: 39%;
     float: left;
   }
-  .content p {
+  #founder-dashboard-wrap .content p {
     min-height: 57px;
   }
-
-  .content-premium-upgrade p {
+  #founder-dashboard-wrap .content-premium-upgrade p {
     min-height: 0px;
   }
-
-  .content-customization,
-  .content-premium-upgrade {
+  #founder-dashboard-wrap .content-customization,
+  #founder-dashboard-wrap .content-premium-upgrade {
     margin-right: 2%;
   }
 }
 /* 1100px */
 @media all and (min-width: 68.75em) {
-  .content {
+  #founder-dashboard-wrap .content {
     width: 27%;
   }
-
-  .content-resources {
+  #founder-dashboard-wrap .content-resources {
     clear: left;
   }
-
-  .content-customization,
-  .content-support,
-  .content-resources {
+  #founder-dashboard-wrap .content-customization,
+  #founder-dashboard-wrap .content-support,
+  #founder-dashboard-wrap .content-resources {
     margin-right: 1%;
   }
-
-  .content-premium-upgrade {
+  #founder-dashboard-wrap .content-premium-upgrade {
     margin-right: 0;
   }
 }
