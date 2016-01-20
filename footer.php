@@ -1,7 +1,7 @@
 <?php do_action( 'main_bottom' ); ?>
 </section><!-- .main -->
 
-<footer class="site-footer" role="contentinfo">
+<footer id="site-footer" class="site-footer" role="contentinfo">
 	<?php do_action( 'footer_top' ); ?>
 	<span>
         <?php
