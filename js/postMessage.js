@@ -91,6 +91,7 @@
 
         // convert email-address to email
         if ( site === 'email-address') site = 'email';
+        if ( site === 'contact-form') site = 'email-form';
 
         // icons that should use a special square icon
         var squareIcons = ['linkedin', 'twitter', 'vimeo', 'youtube', 'pinterest', 'rss', 'reddit', 'tumblr', 'steam', 'xing', 'github', 'google-plus', 'behance', 'facebook'];
@@ -130,6 +131,9 @@
                         // output the content for the icon
                         if( siteName == 'email' ) {
                             socialMediaIcons.append( '<li><a target="_blank" href="mailto:' + $(this).val() + '"><i class="fa fa-envelope"></i></a></li>' );
+                        }
+                        else if( siteName == 'email-form' ) {
+                            socialMediaIcons.append('<li><a class="' + siteName + '" target="_blank" href="' + $(this).val() + '"><i class="fa fa-envelope-o"></i></a></li>');
                         }
                         else {
                             socialMediaIcons.append('<li><a class="' + siteName + '" target="_blank" href="' + $(this).val() + '"><i class="' + siteClass + '"></i></a></li>');
