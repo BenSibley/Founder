@@ -35,24 +35,6 @@
   }
 }
 
-#accordion-section-founder_colors,
-#accordion-section-founder_header_image,
-#accordion-section-founder_background,
-#accordion-section-founder_font,
-#accordion-section-founder_display_control,
-#accordion-section-founder_footer_text {
-
-  .accordion-section-title,
-  .accordion-section-title:hover {
-    background-image: url('../assets/images/gray-lines.png');
-    background-size: 100%;
-
-    &:after {
-      content: '\f023';
-      font-family: 'FontAwesome';
-    }
-  }
-}
 #accordion-section-colors {
   display: none !important;
 }
