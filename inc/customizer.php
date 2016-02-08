@@ -133,11 +133,17 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 				$label = 'Contact Form';
 			}
 
-			// setting
-			$wp_customize->add_setting( $social_site, array(
-				'sanitize_callback' => 'esc_url_raw',
-				'transport'         => 'postMessage'
-			) );
+			if ( $social_site == 'skype' ) {
+				// setting
+				$wp_customize->add_setting( $social_site, array(
+					'sanitize_callback' => 'ct_founder_sanitize_skype'
+				) );
+			} else {
+				// setting
+				$wp_customize->add_setting( $social_site, array(
+					'sanitize_callback' => 'esc_url_raw'
+				) );
+			}
 			// control
 			$wp_customize->add_control( $social_site, array(
 				'type'     => 'url',
@@ -324,6 +330,10 @@ function ct_founder_sanitize_yes_no_settings( $input ) {
 
 function ct_founder_sanitize_text( $input ) {
 	return wp_kses_post( force_balance_tags( $input ) );
+}
+
+function ct_founder_sanitize_skype( $input ) {
+	return esc_url_raw( $input, array( 'http', 'https', 'skype' ) );
 }
 
 function ct_founder_sanitize_css( $css ) {
