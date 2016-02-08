@@ -35,7 +35,7 @@ function ct_founder_options_content() {
 			</p>
 		</div>
 		<div class="content content-premium-upgrade">
-			<h3><?php _e( 'Get More Features & Flexibility', 'founder' ); ?></h3>
+			<h3><?php _e( 'Founder Pro Plugin', 'founder' ); ?></h3>
 			<p><?php _e( 'Download the Founder Pro plugin and unlock custom colors, featured sliders, header images, and more', 'founder' ); ?>...</p>
 			<p>
 				<a target="_blank" class="button-primary"
