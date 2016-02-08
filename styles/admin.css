@@ -27,10 +27,14 @@
     min-height: 57px;
   }
   #founder-dashboard-wrap .content-premium-upgrade p {
-    min-height: 0px;
+    min-height: 0;
+  }
+  #founder-dashboard-wrap .content-review p {
+    min-height: 75px;
   }
   #founder-dashboard-wrap .content-customization,
-  #founder-dashboard-wrap .content-premium-upgrade {
+  #founder-dashboard-wrap .content-premium-upgrade,
+  #founder-dashboard-wrap .content-review {
     margin-right: 2%;
   }
 }
@@ -44,7 +48,8 @@
   }
   #founder-dashboard-wrap .content-customization,
   #founder-dashboard-wrap .content-support,
-  #founder-dashboard-wrap .content-resources {
+  #founder-dashboard-wrap .content-resources,
+  #founder-dashboard-wrap .content-review {
     margin-right: 1%;
   }
   #founder-dashboard-wrap .content-premium-upgrade {
