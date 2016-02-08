@@ -288,7 +288,8 @@ if ( ! function_exists( 'ct_founder_social_array' ) ) {
 			'wechat'        => 'founder_wechat_profile',
 			'xing'          => 'founder_xing_profile',
 			'paypal'        => 'founder_paypal_profile',
-			'email'         => 'founder_email_profile'
+			'email'         => 'founder_email_profile',
+			'email-form'    => 'founder_email_form_profile'
 		);
 
 		return apply_filters( 'ct_founder_filter_social_sites', $social_sites );
@@ -336,12 +337,18 @@ if ( ! function_exists( 'ct_founder_social_icons_output' ) ) {
 						$class = 'fa fa-' . $active_site;
 					}
 
-					if ( $active_site == 'email' ) {
-						?>
+					if ( $active_site == 'email' ) { ?>
 						<li>
 							<a class="email" target="_blank"
 							   href="mailto:<?php echo antispambot( is_email( get_theme_mod( $key ) ) ); ?>">
 								<i class="fa fa-envelope" title="<?php esc_attr_e( 'email', 'founder' ); ?>"></i>
+							</a>
+						</li>
+					<?php } elseif ( $active_site == 'email-form' ) { ?>
+						<li>
+							<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
+							   href="<?php echo esc_url( get_theme_mod( $key ) ); ?>">
+								<i class="fa fa-envelope-o" title="<?php esc_attr( $active_site ); ?>"></i>
 							</a>
 						</li>
 					<?php } else { ?>
