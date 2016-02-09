@@ -136,12 +136,14 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 			if ( $social_site == 'skype' ) {
 				// setting
 				$wp_customize->add_setting( $social_site, array(
-					'sanitize_callback' => 'ct_founder_sanitize_skype'
+					'sanitize_callback' => 'ct_founder_sanitize_skype',
+					'transport'         => 'postMessage'
 				) );
 			} else {
 				// setting
 				$wp_customize->add_setting( $social_site, array(
-					'sanitize_callback' => 'esc_url_raw'
+					'sanitize_callback' => 'esc_url_raw',
+					'transport'         => 'postMessage'
 				) );
 			}
 			// control
