@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Founder 1.23\n"
+"Project-Id-Version: Founder 1.24\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2016-01-21 14:21:31+00:00\n"
+"POT-Creation-Date: 2016-02-09 15:53:12+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -43,7 +43,7 @@ msgid ""
 "post\">trackbacks</a> and pingbacks are open."
 msgstr ""
 
-#: comments.php:80 comments.php:86
+#: comments.php:80 comments.php:87
 msgid "Comments are closed."
 msgstr ""
 
@@ -179,23 +179,23 @@ msgstr ""
 msgid "Comment"
 msgstr ""
 
-#: functions.php:158 functions.php:167 functions.php:184 inc/customizer.php:221
+#: functions.php:158 functions.php:167 functions.php:184 inc/customizer.php:222
 msgid "Continue reading"
 msgstr ""
 
-#: functions.php:344
+#: functions.php:347
 msgid "email"
 msgstr ""
 
-#: functions.php:388 header.php:23 inc/scripts.php:10
+#: functions.php:398 header.php:23 inc/scripts.php:10
 msgid "open menu"
 msgstr ""
 
-#: functions.php:400
+#: functions.php:410
 msgid "Featured Post"
 msgstr ""
 
-#: functions.php:456
+#: functions.php:466
 msgid "Customizer settings deleted"
 msgstr ""
 
@@ -211,149 +211,99 @@ msgstr ""
 msgid "Front Page"
 msgstr ""
 
-#: inc/customizer.php:62
+#: inc/customizer.php:53
 msgid "Logo"
 msgstr ""
 
-#: inc/customizer.php:73
+#: inc/customizer.php:64
 msgid "Upload custom logo."
 msgstr ""
 
-#: inc/customizer.php:89
+#: inc/customizer.php:80
 msgid "Social Media Icons"
 msgstr ""
 
-#: inc/customizer.php:91
+#: inc/customizer.php:82
 msgid "Add the URL for each of your social profiles."
 msgstr ""
 
-#: inc/customizer.php:105
+#: inc/customizer.php:96
 msgid "Email Address"
 msgstr ""
 
-#: inc/customizer.php:164
+#: inc/customizer.php:165
 msgid "Search Bar"
 msgstr ""
 
-#: inc/customizer.php:175
+#: inc/customizer.php:176
 msgid "Show search bar at top of site?"
 msgstr ""
 
-#: inc/customizer.php:179 inc/customizer.php:394
+#: inc/customizer.php:180 inc/customizer.php:291
 msgid "Show"
 msgstr ""
 
-#: inc/customizer.php:180 inc/customizer.php:395
+#: inc/customizer.php:181 inc/customizer.php:292
 msgid "Hide"
 msgstr ""
 
-#: inc/customizer.php:188
+#: inc/customizer.php:189
 msgid "Blog"
 msgstr ""
 
-#: inc/customizer.php:198
+#: inc/customizer.php:199
 msgid "Show full posts on blog?"
 msgstr ""
 
-#: inc/customizer.php:203 inc/customizer.php:429
+#: inc/customizer.php:204 inc/customizer.php:326
 msgid "Yes"
 msgstr ""
 
-#: inc/customizer.php:204 inc/customizer.php:430
+#: inc/customizer.php:205 inc/customizer.php:327
 msgid "No"
 msgstr ""
 
-#: inc/customizer.php:214
+#: inc/customizer.php:215
 msgid "Excerpt word count"
 msgstr ""
 
-#: inc/customizer.php:226
+#: inc/customizer.php:227
 msgid "Read More button text"
 msgstr ""
 
-#: inc/customizer.php:236
+#: inc/customizer.php:237
 msgid "Comment Display"
 msgstr ""
 
-#: inc/customizer.php:247
+#: inc/customizer.php:248
 msgid "Show comments on:"
 msgstr ""
 
-#: inc/customizer.php:252 inc/customizer.php:413
+#: inc/customizer.php:253 inc/customizer.php:310
 msgid "Posts"
 msgstr ""
 
-#: inc/customizer.php:253 inc/customizer.php:414
+#: inc/customizer.php:254 inc/customizer.php:311
 msgid "Pages"
 msgstr ""
 
-#: inc/customizer.php:254 inc/customizer.php:415
+#: inc/customizer.php:255 inc/customizer.php:312
 msgid "Attachments"
 msgstr ""
 
-#: inc/customizer.php:255 inc/customizer.php:416
+#: inc/customizer.php:256 inc/customizer.php:313
 msgid "Do not show"
 msgstr ""
 
-#: inc/customizer.php:264
+#: inc/customizer.php:265
 msgid "Custom CSS"
 msgstr ""
 
-#: inc/customizer.php:274
+#: inc/customizer.php:275
 msgid "Add Custom CSS Here:"
 msgstr ""
 
-#: inc/customizer.php:288
-msgid "Header Image"
-msgstr ""
-
-#: inc/customizer.php:300
-msgid ""
-"Activate the <a target=\"_blank\" href=\"%s\">Founder Pro Plugin</a> for "
-"advanced header image functionality."
-msgstr ""
-
-#: inc/customizer.php:308
-msgid "Colors"
-msgstr ""
-
-#: inc/customizer.php:320
-msgid ""
-"Activate the <a target=\"_blank\" href=\"%s\">Founder Pro Plugin</a> to "
-"change your colors."
-msgstr ""
-
-#: inc/customizer.php:328
-msgid "Font"
-msgstr ""
-
-#: inc/customizer.php:340
-msgid ""
-"Activate the <a target=\"_blank\" href=\"%s\">Founder Pro Plugin</a> to "
-"change your font."
-msgstr ""
-
-#: inc/customizer.php:348
-msgid "Display Controls"
-msgstr ""
-
-#: inc/customizer.php:360
-msgid ""
-"Activate the <a target=\"_blank\" href=\"%s\">Founder Pro Plugin</a> to get "
-"hide/show controls."
-msgstr ""
-
-#: inc/customizer.php:368
-msgid "Footer Text"
-msgstr ""
-
-#: inc/customizer.php:380
-msgid ""
-"Activate the <a target=\"_blank\" href=\"%s\">Founder Pro Plugin</a> to "
-"customize the footer text."
-msgstr ""
-
-#: inc/customizer.php:451
+#: inc/customizer.php:352
 msgid "View the Founder Pro Plugin"
 msgstr ""
 
@@ -424,7 +374,7 @@ msgid "Visit Support Center"
 msgstr ""
 
 #: theme-options.php:38
-msgid "Get More Features & Flexibility"
+msgid "Founder Pro Plugin"
 msgstr ""
 
 #: theme-options.php:39
@@ -451,22 +401,22 @@ msgstr ""
 msgid "View Resources"
 msgstr ""
 
-#: theme-options.php:54 theme-options.php:62
+#: theme-options.php:54 theme-options.php:56
+msgid "Leave a Review"
+msgstr ""
+
+#: theme-options.php:55
+msgid "Help others find Founder by leaving a review on wordpress.org."
+msgstr ""
+
+#: theme-options.php:59 theme-options.php:67
 msgid "Reset Customizer Settings"
 msgstr ""
 
-#: theme-options.php:56
+#: theme-options.php:61
 msgid ""
 "<strong>Warning:</strong> Clicking this button will erase the Founder "
 "theme's current settings in the <a href='%s'>Customizer</a>."
-msgstr ""
-
-#. Theme Name of the plugin/theme
-msgid "Founder"
-msgstr ""
-
-#. Theme URI of the plugin/theme
-msgid "https://www.competethemes.com/founder/"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -479,12 +429,4 @@ msgid ""
 "world can appreciate your content regardless of disability. Get excited to "
 "share your site, and download Founder today. You can view a fully-setup "
 "live demo here: https://www.competethemes.com/founder-live-demo/"
-msgstr ""
-
-#. Author of the plugin/theme
-msgid "Compete Themes"
-msgstr ""
-
-#. Author URI of the plugin/theme
-msgid "https://www.competethemes.com/"
 msgstr ""
