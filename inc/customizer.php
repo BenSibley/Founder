@@ -350,17 +350,13 @@ function ct_founder_sanitize_css( $css ) {
 function ct_founder_customize_preview_js() {
 
 	$ad_copy = '';
-//	$ad_copy = "<p>Fun and easy.</p>";
-//	$ad_copy .= "<p>How often are those words used to describe WordPress plugins? That’s what’s so different about Founder Pro.</p>";
-	$ad_copy .= "<p>Founder Pro is the first plugin designed specifically for the Founder theme.</p>";
-	$ad_copy .= "<p>It adds powerful customization tools to Founder that are not only easy to use, but fun too.</p>";
-	$ad_copy .= "<p><a target=\"_blank\" href=\"https://www.competethemes.com/founder-pro\">See what Founder Pro has to offer</a>.</p>";
-	$ad_copy .= "<p>Founder Pro installs in seconds and lets you:</p>";
-	$ad_copy .= "<ul><li>Replace any Featured Image with a slider or video</li><li>Change the color of any part of your site</li><li>Add a stylish header image</li><li>Display posts with two beautiful new templates</li><li>and more...</li></ul>";
-	$ad_copy .= "<p>Nothing beats the satisfaction of getting your site <em>just right</em>.</p>";
+	$ad_copy .= "<p><a target=\"_blank\" href=\"https://www.competethemes.com/founder-pro\">Founder Pro</a> adds 12 new features that let you customize every aspect of your site.</p>";
+	$ad_copy .= "<p>It installs in seconds and lets you:</p>";
+	$ad_copy .= "<ul><li>Replace any Featured Image with a slider or video</li><li>Change the color of any part of your site</li><li>Choose from over 700 fonts</li><li>Add new menus</li><li>and more...</li></ul>";
+	$ad_copy .= "<p>Customize any part of your site with Founder Pro.</p>";
 	$ad_copy .= "<p><a target=\"_blank\" href=\"https://www.competethemes.com/founder-pro\">Click here to get your copy now</a>.</p>";
 
-	$content = "<script>jQuery('#customize-info').prepend('<div id=\"upgrade-ad\" class=\"upgrades-ad\"><button id=\"ad-button\">" . __( 'What is Founder Pro?', 'founder' ) . " <span class=\"down-arrow\"></span></button><div class=\"copy-container\">" . $ad_copy . "</div></div>')</script>";
+	$content = "<script>jQuery('#customize-info').prepend('<div id=\"upgrade-ad\" class=\"upgrades-ad\"><button id=\"ad-button\">" . __( 'Get More Customization Features', 'founder' ) . " <span class=\"down-arrow\"></span></button><div class=\"copy-container\">" . $ad_copy . "</div></div>')</script>";
 	echo apply_filters( 'ct_founder_customizer_ad', $content );
 }
 
