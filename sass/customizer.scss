@@ -1,37 +1,61 @@
 @import "variables";
 
 .upgrades-ad {
-  text-align: center;
   border-bottom: solid 1px #eee;
+  height: 36px;
+  overflow: hidden;
+  background: #EEEEEE;
+  transition: all 0.2s;
 
-  a {
-    display: block;
-    padding: 9px 0;
-    color: white;
-    background: #43b3c4;
-    transition: background 0.15s ease-in-out;
+  &.show {
+    height: auto;
 
-    &:link,
-    &:visited,
-    &:hover,
-    &:active,
-    &:focus  {
-      color: white;
-    }
-    &:hover,
-    &:active,
-    &:focus {
-      background: #3ea5b3;
+    .down-arrow {
 
-      span {
-        right: -3px;
+      &:after {
+        content: '\25B2';
       }
     }
   }
-  span {
+  button {
+    display: block;
+    padding: 9px 0;
+    color: white;
+    text-align: center;
+    border: none;
+    margin: 0;
+    width: 100%;
+    background: #43b3c4;
+    transition: background 0.15s ease-in-out;
+
+    &:hover,
+    &:active,
+    &:focus  {
+      cursor: pointer;
+      background: #3ea5b3;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  .down-arrow {
+    font-size: 9px;
     position: relative;
-    right: 0;
-    transition: right 0.15s ease-in-out;
+    margin-left: 3px;
+
+    &:after {
+      content: '\25BC';
+    }
+  }
+  .copy-container {
+    padding: 0.75em 2em;
+  }
+  ul {
+    list-style: disc;
+    margin-left: 16px;
+  }
+  a {
+    font-weight: 600;
   }
 }
 

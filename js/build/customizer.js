@@ -39,6 +39,9 @@ jQuery(document).ready(function($){
 
     $('.ms-drop.bottom').find('li').bind('click', ctHideNoneText);
 
+    $('#ad-button').on('click', function(){
+        $('#upgrade-ad').toggleClass('show');
+    });
 });
 /**
  * @author zhixin wen <wenzhixin2010@gmail.com>
