@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Founder 1.24\n"
+"Project-Id-Version: Founder 1.25\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2016-02-09 15:53:12+00:00\n"
+"POT-Creation-Date: 2016-03-23 18:37:39+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -179,7 +179,7 @@ msgstr ""
 msgid "Comment"
 msgstr ""
 
-#: functions.php:158 functions.php:167 functions.php:184 inc/customizer.php:222
+#: functions.php:158 functions.php:167 functions.php:184 inc/customizer.php:230
 msgid "Continue reading"
 msgstr ""
 
@@ -231,80 +231,86 @@ msgstr ""
 msgid "Email Address"
 msgstr ""
 
-#: inc/customizer.php:165
+#: inc/customizer.php:146
+msgid ""
+"Accepts Skype link protocol (<a href=\"%s\" target=\"_blank\">learn "
+"more</a>)"
+msgstr ""
+
+#: inc/customizer.php:173
 msgid "Search Bar"
 msgstr ""
 
-#: inc/customizer.php:176
+#: inc/customizer.php:184
 msgid "Show search bar at top of site?"
 msgstr ""
 
-#: inc/customizer.php:180 inc/customizer.php:291
+#: inc/customizer.php:188 inc/customizer.php:299
 msgid "Show"
 msgstr ""
 
-#: inc/customizer.php:181 inc/customizer.php:292
+#: inc/customizer.php:189 inc/customizer.php:300
 msgid "Hide"
 msgstr ""
 
-#: inc/customizer.php:189
+#: inc/customizer.php:197
 msgid "Blog"
 msgstr ""
 
-#: inc/customizer.php:199
+#: inc/customizer.php:207
 msgid "Show full posts on blog?"
 msgstr ""
 
-#: inc/customizer.php:204 inc/customizer.php:326
+#: inc/customizer.php:212 inc/customizer.php:334
 msgid "Yes"
 msgstr ""
 
-#: inc/customizer.php:205 inc/customizer.php:327
+#: inc/customizer.php:213 inc/customizer.php:335
 msgid "No"
 msgstr ""
 
-#: inc/customizer.php:215
+#: inc/customizer.php:223
 msgid "Excerpt word count"
 msgstr ""
 
-#: inc/customizer.php:227
+#: inc/customizer.php:235
 msgid "Read More button text"
 msgstr ""
 
-#: inc/customizer.php:237
+#: inc/customizer.php:245
 msgid "Comment Display"
 msgstr ""
 
-#: inc/customizer.php:248
+#: inc/customizer.php:256
 msgid "Show comments on:"
 msgstr ""
 
-#: inc/customizer.php:253 inc/customizer.php:310
+#: inc/customizer.php:261 inc/customizer.php:318
 msgid "Posts"
 msgstr ""
 
-#: inc/customizer.php:254 inc/customizer.php:311
+#: inc/customizer.php:262 inc/customizer.php:319
 msgid "Pages"
 msgstr ""
 
-#: inc/customizer.php:255 inc/customizer.php:312
+#: inc/customizer.php:263 inc/customizer.php:320
 msgid "Attachments"
 msgstr ""
 
-#: inc/customizer.php:256 inc/customizer.php:313
+#: inc/customizer.php:264 inc/customizer.php:321
 msgid "Do not show"
 msgstr ""
 
-#: inc/customizer.php:265
+#: inc/customizer.php:273
 msgid "Custom CSS"
 msgstr ""
 
-#: inc/customizer.php:275
+#: inc/customizer.php:283
 msgid "Add Custom CSS Here:"
 msgstr ""
 
-#: inc/customizer.php:352
-msgid "View the Founder Pro Plugin"
+#: inc/customizer.php:367
+msgid "Get More Customization Features"
 msgstr ""
 
 #: inc/scripts.php:11
