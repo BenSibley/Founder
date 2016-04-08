@@ -29,7 +29,7 @@ h1, h2, .toggle-navigation, .social-media-icons a, .toggle-sidebar i, .comments-
 .wp-caption-text, input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
 textarea, input[type="submit"], .tagline, .menu-primary-items a,
 .menu-unset ul a, .widget, .post-header p, .more-link, .post-comments, .post-tags span, .post-tags li, .further-reading span, .sticky-status span, .archive-header h2, .comment-footer span,
-.comment-footer a, #cancel-comment-reply-link {
+.comment-footer a, #cancel-comment-reply-link, .singular-attachment .attachment-caption {
   font-size: 0.6875em;
   /* 11px / 16px */
   line-height: 1.4545;
@@ -1780,6 +1780,10 @@ a img {
 .search-bottom {
   text-align: center;
   margin: 4.5em 0;
+}
+
+.singular-attachment .attachment-container img {
+  display: block;
 }
 
 @media print {
