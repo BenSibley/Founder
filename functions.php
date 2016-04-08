@@ -352,7 +352,7 @@ if ( ! function_exists( 'ct_founder_social_icons_output' ) ) {
 						<li>
 							<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
 							   href="<?php echo esc_url( get_theme_mod( $key ), array( 'http', 'https', 'skype' ) ); ?>">
-								<i class="<?php echo esc_attr( $class ); ?>" title="<?php esc_attr( $active_site ); ?>"></i>
+								<i class="<?php echo esc_attr( $class ); ?>" title="<?php echo esc_attr( $active_site ); ?>"></i>
 								<span class="screen-reader-text"><?php echo esc_attr( $active_site ); ?></span>
 							</a>
 						</li>
@@ -360,7 +360,7 @@ if ( ! function_exists( 'ct_founder_social_icons_output' ) ) {
 						<li>
 							<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
 							   href="<?php echo esc_url( get_theme_mod( $key ) ); ?>">
-								<i class="<?php echo esc_attr( $class ); ?>" title="<?php esc_attr( $active_site ); ?>"></i>
+								<i class="<?php echo esc_attr( $class ); ?>" title="<?php echo esc_attr( $active_site ); ?>"></i>
 								<span class="screen-reader-text"><?php echo esc_attr( $active_site ); ?></span>
 							</a>
 						</li>
