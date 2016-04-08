@@ -19,7 +19,7 @@ Founder is distributed under the terms of the GNU GPL
 /* Social Media Brand Colors */
 /*===== Mixins =====*/
 /***** Silent Classes *****/
-h1, h2, .toggle-navigation, .social-media-icons a, .toggle-sidebar i, .comments-number h3 {
+h1, h2, .toggle-navigation, .social-media-icons a, .toggle-sidebar i, .comments-number h2 {
   font-size: 1.5em;
   /* 24px / 16px */
   line-height: 1.5;
@@ -28,7 +28,7 @@ h1, h2, .toggle-navigation, .social-media-icons a, .toggle-sidebar i, .comments-
 
 .wp-caption-text, input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
 textarea, input[type="submit"], .tagline, .menu-primary-items a,
-.menu-unset ul a, .widget, .post-header p, .more-link, .post-comments, .post-tags span, .post-tags li, .further-reading span, .sticky-status span, .archive-header h2, .comment-footer span,
+.menu-unset ul a, .widget, .post-header p, .more-link, .post-comments, .post-tags span, .post-tags li, .further-reading span, .sticky-status span, .archive-header h1, .comment-footer span,
 .comment-footer a, #cancel-comment-reply-link, .singular-attachment .attachment-caption {
   font-size: 0.6875em;
   /* 11px / 16px */
@@ -370,6 +370,7 @@ a img {
 .site-title {
   font-size: 1em;
   line-height: 1.5;
+  font-weight: 700;
 }
 .site-title a {
   border: none;
@@ -1622,7 +1623,7 @@ a img {
   text-align: center;
   margin-bottom: -1.5em;
 }
-.archive-header h2 {
+.archive-header h1 {
   display: inline-block;
 }
 .archive-header i {

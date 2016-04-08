@@ -62,7 +62,7 @@ if ( ! function_exists( ( 'ct_founder_customize_comments' ) ) ) {
 				<?php
 				echo get_avatar( get_comment_author_email(), 36, '', get_comment_author() );
 				?>
-				<h2 class="author-name"><?php comment_author_link(); ?></h2>
+				<h3 class="author-name"><?php comment_author_link(); ?></h3>
 			</div>
 			<div class="comment-content">
 				<?php if ( $comment->comment_approved == '0' ) : ?>

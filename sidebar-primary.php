@@ -4,6 +4,7 @@
 	$widget_count = count( $widgets['primary'] );
 	?>
 	<aside class="sidebar sidebar-primary" id="sidebar-primary" role="complementary">
+		<h1 class="screen-reader-text">Sidebar</h1>
 		<button id="toggle-sidebar" class="toggle-sidebar" name="toggle-sidebar" aria-expanded="false">
 			<span class="screen-reader-text"><?php _e( 'open sidebar', 'founder' ); ?></span>
 			<i class="fa fa-angle-down" title="<?php _e( 'sidebar icon', 'founder' ); ?>" aria-hidden="true"></i>
