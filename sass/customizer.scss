@@ -1,61 +1,37 @@
 @import "variables";
 
 .upgrades-ad {
+  text-align: center;
   border-bottom: solid 1px #eee;
-  height: 36px;
-  overflow: hidden;
-  background: #EEEEEE;
-  transition: all 0.2s;
 
-  &.show {
-    height: auto;
-
-    .down-arrow {
-
-      &:after {
-        content: '\25B2';
-      }
-    }
-  }
-  button {
+  a {
     display: block;
     padding: 9px 0;
     color: white;
-    text-align: center;
-    border: none;
-    margin: 0;
-    width: 100%;
     background: #43b3c4;
     transition: background 0.15s ease-in-out;
 
+    &:link,
+    &:visited,
     &:hover,
     &:active,
     &:focus  {
-      cursor: pointer;
-      background: #3ea5b3;
+      color: white;
     }
+    &:hover,
+    &:active,
     &:focus {
-      outline: none;
-    }
-  }
-  .down-arrow {
-    font-size: 9px;
-    position: relative;
-    margin-left: 3px;
+      background: #3ea5b3;
 
-    &:after {
-      content: '\25BC';
+      span {
+        right: -3px;
+      }
     }
   }
-  .copy-container {
-    padding: 0.75em 2em;
-  }
-  ul {
-    list-style: disc;
-    margin-left: 16px;
-  }
-  a {
-    font-weight: 600;
+  span {
+    position: relative;
+    right: 0;
+    transition: right 0.15s ease-in-out;
   }
 }
 
