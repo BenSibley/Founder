@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Founder 1.25\n"
+"Project-Id-Version: Founder 1.26\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2016-03-23 18:37:39+00:00\n"
+"POT-Creation-Date: 2016-04-11 15:07:50+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -45,6 +45,10 @@ msgstr ""
 
 #: comments.php:80 comments.php:87
 msgid "Comments are closed."
+msgstr ""
+
+#: content/archive-header.php:4 inc/customizer.php:261 inc/customizer.php:318
+msgid "Posts"
 msgstr ""
 
 #: content/comments-link.php:2
@@ -183,19 +187,19 @@ msgstr ""
 msgid "Continue reading"
 msgstr ""
 
-#: functions.php:347
+#: functions.php:347 functions.php:348
 msgid "email"
 msgstr ""
 
-#: functions.php:398 header.php:23 inc/scripts.php:10
+#: functions.php:401 header.php:23 inc/scripts.php:10
 msgid "open menu"
 msgstr ""
 
-#: functions.php:410
+#: functions.php:413
 msgid "Featured Post"
 msgstr ""
 
-#: functions.php:466
+#: functions.php:469
 msgid "Customizer settings deleted"
 msgstr ""
 
@@ -285,10 +289,6 @@ msgstr ""
 msgid "Show comments on:"
 msgstr ""
 
-#: inc/customizer.php:261 inc/customizer.php:318
-msgid "Posts"
-msgstr ""
-
 #: inc/customizer.php:262 inc/customizer.php:319
 msgid "Pages"
 msgstr ""
@@ -309,20 +309,28 @@ msgstr ""
 msgid "Add Custom CSS Here:"
 msgstr ""
 
-#: inc/customizer.php:367
-msgid "Get More Customization Features"
+#: inc/customizer.php:360
+msgid "View the Founder Pro Plugin"
 msgstr ""
 
 #: inc/scripts.php:11
 msgid "close menu"
 msgstr ""
 
-#: inc/scripts.php:12 sidebar-primary.php:8
+#: inc/scripts.php:12 sidebar-primary.php:9
 msgid "open sidebar"
 msgstr ""
 
 #: inc/scripts.php:13
 msgid "close sidebar"
+msgstr ""
+
+#: index.php:19
+msgid "Previous"
+msgstr ""
+
+#: index.php:20
+msgid "Next"
 msgstr ""
 
 #: search.php:10
@@ -343,7 +351,7 @@ msgstr ""
 msgid "Go"
 msgstr ""
 
-#: sidebar-primary.php:9
+#: sidebar-primary.php:10
 msgid "sidebar icon"
 msgstr ""
 
