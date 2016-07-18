@@ -140,14 +140,11 @@
   .post-content {
     text-align: center;
 
-    // so i can un-center everything except the p containing more-link
-    // this allows the more-link and comments link to both be centered next to each other
     ul,
     p {
       text-align: left;
     }
 
-    // allow comments to sit next to button
     p:last-of-type {
       display: block;
       margin: $baseline-height / 2 0 0;
