@@ -1387,11 +1387,17 @@ a img {
   text-align: center;
 }
 .blog .post-content ul,
+.blog .post-content ol,
 .blog .post-content p,
+.blog .post-content pre,
 .archive .post-content ul,
+.archive .post-content ol,
 .archive .post-content p,
+.archive .post-content pre,
 .search .post-content ul,
-.search .post-content p {
+.search .post-content ol,
+.search .post-content p,
+.search .post-content pre {
   text-align: right;
 }
 .blog .post-content p:last-of-type,
