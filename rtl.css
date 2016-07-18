@@ -1403,8 +1403,14 @@ a img {
 .blog .post-content p:last-of-type,
 .archive .post-content p:last-of-type,
 .search .post-content p:last-of-type {
-  display: block;
   margin: 0.75em 0 0;
+}
+
+.blog:not(.full-post) .post-content p:last-of-type,
+.archive:not(.full-post) .post-content p:last-of-type,
+.search:not(.full-post) .post-content p:last-of-type {
+  text-align: center;
+  display: inline-block;
 }
 
 .post-after {

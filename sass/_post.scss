@@ -148,8 +148,19 @@
     }
 
     p:last-of-type {
-      display: block;
       margin: $baseline-height / 2 0 0;
+    }
+  }
+}
+.blog:not(.full-post),
+.archive:not(.full-post),
+.search:not(.full-post) {
+
+  .post-content {
+
+    p:last-of-type {
+      text-align: center;
+      display: inline-block;
     }
   }
 }
