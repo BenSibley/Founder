@@ -1,8 +1,13 @@
 <?php
 
-if ( ! isset( $content_width ) ) {
-	$content_width = 700;
+if ( ! function_exists( ( 'ct_founder_set_content_width' ) ) ) {
+	function ct_founder_set_content_width() {
+		if ( ! isset( $content_width ) ) {
+			$content_width = 700;
+		}
+	}
 }
+add_action( 'after_setup_theme', 'ct_founder_set_content_width', 0 );
 
 if ( ! function_exists( ( 'ct_founder_theme_setup' ) ) ) {
 	function ct_founder_theme_setup() {
