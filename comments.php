@@ -24,7 +24,7 @@ if ( comments_open() ) { ?>
 			</h2>
 		</div>
 		<ol class="comment-list">
-			<?php wp_list_comments( array( 'callback' => 'ct_founder_customize_comments', 'max_depth' => '3' ) ); ?>
+			<?php wp_list_comments( array( 'callback' => 'ct_founder_customize_comments' ) ); ?>
 		</ol>
 		<?php
 		if ( ( get_option( 'page_comments' ) == 1 ) && ( get_comment_pages_count() > 1 ) ) { ?>
@@ -45,7 +45,7 @@ if ( comments_open() ) { ?>
 			</h2>
 		</div>
 		<ol class="comment-list">
-			<?php wp_list_comments( array( 'callback' => 'ct_founder_customize_comments', 'max_depth' => '3' ) ); ?>
+			<?php wp_list_comments( array( 'callback' => 'ct_founder_customize_comments' ) ); ?>
 		</ol>
 		<?php
 		if ( ( get_option( 'page_comments' ) == 1 ) && ( get_comment_pages_count() > 1 ) ) { ?>
@@ -67,7 +67,7 @@ if ( comments_open() ) { ?>
 			</h2>
 		</div>
 		<ol class="comment-list">
-			<?php wp_list_comments( array( 'callback' => 'ct_founder_customize_comments', 'max_depth' => '3' ) ); ?>
+			<?php wp_list_comments( array( 'callback' => 'ct_founder_customize_comments' ) ); ?>
 		</ol>
 		<?php
 		if ( ( get_option( 'page_comments' ) == 1 ) && ( get_comment_pages_count() > 1 ) ) { ?>
