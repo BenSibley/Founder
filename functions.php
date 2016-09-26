@@ -389,15 +389,6 @@ function ct_founder_wp_page_menu() {
 	);
 }
 
-if ( ! function_exists( '_wp_render_title_tag' ) ) :
-	function ct_founder_add_title_tag() {
-		?>
-		<title><?php wp_title( ' | ' ); ?></title>
-		<?php
-	}
-	add_action( 'wp_head', 'ct_founder_add_title_tag' );
-endif;
-
 function ct_founder_nav_dropdown_buttons( $item_output, $item, $depth, $args ) {
 
 	if ( $args->theme_location == 'primary' ) {
