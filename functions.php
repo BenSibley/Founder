@@ -45,9 +45,9 @@ add_action( 'after_setup_theme', 'ct_founder_theme_setup', 10 );
 function ct_founder_register_widget_areas() {
 
 	register_sidebar( array(
-		'name'          => __( 'Primary Sidebar', 'founder' ),
+		'name'          => esc_html__( 'Primary Sidebar', 'founder' ),
 		'id'            => 'primary',
-		'description'   => __( 'Widgets in this area will be shown in the sidebar.', 'founder' ),
+		'description'   => esc_html__( 'Widgets in this area will be shown in the sidebar.', 'founder' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -158,18 +158,18 @@ if ( ! function_exists( 'ct_founder_excerpt' ) ) {
 			if ( $ismore ) {
 				// Has to be written this way because i18n text CANNOT be stored in a variable
 				if ( ! empty( $read_more_text ) ) {
-					the_content( wp_kses_post( $read_more_text ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+					the_content( wp_kses_post( $read_more_text ) . " <span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span>" );
 				} else {
-					the_content( __( 'Continue reading', 'founder' ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+					the_content( __( 'Continue reading', 'founder' ) . " <span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span>" );
 				}
 			} else {
 				the_content();
 			}
 		} elseif ( $ismore ) {
 			if ( ! empty( $read_more_text ) ) {
-				the_content( wp_kses_post( $read_more_text ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+				the_content( wp_kses_post( $read_more_text ) . " <span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span>" );
 			} else {
-				the_content( __( 'Continue reading', 'founder' ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+				the_content( __( 'Continue reading', 'founder' ) . " <span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span>" );
 			}
 		} else {
 			the_excerpt();
@@ -184,9 +184,9 @@ if ( ! function_exists( 'ct_founder_excerpt_read_more_link' ) ) {
 		$read_more_text = get_theme_mod( 'read_more_text' );
 
 		if ( ! empty( $read_more_text ) ) {
-			return $output . "<p><a class='more-link' href='" . esc_url( get_permalink() ) . "'>" . wp_kses_post( $read_more_text ) . " <span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
+			return $output . "<p><a class='more-link' href='" . esc_url( get_permalink() ) . "'>" . wp_kses_post( $read_more_text ) . " <span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span></a></p>";
 		} else {
-			return $output . "<p><a class='more-link' href='" . esc_url( get_permalink() ) . "'>" . __( 'Continue reading', 'founder' ) . " <span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
+			return $output . "<p><a class='more-link' href='" . esc_url( get_permalink() ) . "'>" . __( 'Continue reading', 'founder' ) . " <span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span></a></p>";
 		}
 	}
 }
@@ -528,7 +528,7 @@ function ct_founder_add_meta_elements() {
 
 	$meta_elements = '';
 
-	$meta_elements .= sprintf( '<meta charset="%s" />' . "\n", get_bloginfo( 'charset' ) );
+	$meta_elements .= sprintf( '<meta charset="%s" />' . "\n", esc_attr( get_bloginfo( 'charset' ) ) );
 	$meta_elements .= '<meta name="viewport" content="width=device-width, initial-scale=1" />' . "\n";
 
 	$theme    = wp_get_theme( get_template() );

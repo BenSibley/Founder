@@ -1,5 +1,5 @@
 <span class="post-comments">
-	<i class="fa fa-comment" title="<?php _e( 'comment icon', 'founder' ); ?>"></i>
+	<i class="fa fa-comment" title="<?php esc_attr_e( 'comment icon', 'founder' ); ?>"></i>
 	<?php
 	if ( ! comments_open() && get_comments_number() < 1 ) :
 		comments_number( __( 'Comments closed', 'founder' ), __( 'One Comment', 'founder' ), __( '% Comments', 'founder' ) );

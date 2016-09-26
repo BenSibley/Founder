@@ -54,7 +54,7 @@ jQuery(document).ready(function($){
             $(this).removeClass('open');
 
             // change screen reader text
-            $(this).children('span').text(objectL10n.openMenu);
+            $(this).children('span').text(ct_founder_objectL10n.openMenu);
 
             // change aria expanded
             $(this).attr('aria-expanded', 'false');
@@ -64,7 +64,7 @@ jQuery(document).ready(function($){
             $(this).addClass('open');
 
             // change screen reader text
-            $(this).children('span').text(objectL10n.closeMenu);
+            $(this).children('span').text(ct_founder_objectL10n.closeMenu);
 
             // change aria expanded
             $(this).attr('aria-expanded', 'true');
@@ -86,7 +86,7 @@ jQuery(document).ready(function($){
             menuItem.removeClass('open');
 
             // change screen reader text
-            $(this).children('span').text(objectL10n.openMenu);
+            $(this).children('span').text(ct_founder_objectL10n.openMenu);
 
             // change aria text
             $(this).attr('aria-expanded', 'false');
@@ -96,7 +96,7 @@ jQuery(document).ready(function($){
             menuItem.addClass('open');
 
             // change screen reader text
-            $(this).children('span').text(objectL10n.closeMenu);
+            $(this).children('span').text(ct_founder_objectL10n.closeMenu);
 
             // change aria text
             $(this).attr('aria-expanded', 'true');
