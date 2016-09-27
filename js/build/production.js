@@ -210,7 +210,7 @@ jQuery(document).ready(function($){
             }
 
             // change screen reader text
-            $(this).children('span').text(objectL10n.openSidebar);
+            $(this).children('span').text(ct_founder_objectL10n.openSidebar);
 
             // change aria expanded
             $(this).attr('aria-expanded', 'false');
@@ -224,9 +224,9 @@ jQuery(document).ready(function($){
 
         } else {
             sidebarPrimary.addClass('open');
-
+            
             // change screen reader text
-            $(this).children('span').text(objectL10n.closeSidebar);
+            $(this).children('span').text(ct_founder_objectL10n.closeSidebar);
 
             // change aria expanded
             $(this).attr('aria-expanded', 'true');
