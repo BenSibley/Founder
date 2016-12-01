@@ -51,15 +51,16 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 	class ct_founder_pro_ad extends WP_Customize_Control {
 		public function render_content() {
 			$link = 'https://www.competethemes.com/founder-pro/';
-			echo "<p class='bold'>" . sprintf( __('<a target="_blank" href="%s">Founder Pro</a> is the plugin that makes advanced customization simple - and fun too.', 'founder'), $link) . "</p>";
+			echo "<a href='" . $link . "' target='_blank'><img src='" . get_template_directory_uri() . "/assets/images/founder-pro.png' srcset='" . get_template_directory_uri() . "/assets/images/founder-pro-2x.png 2x' /></a>";
+			echo "<p class='bold'>" . sprintf( __('<a target="_blank" href="%s">Founder Pro</a> is the plugin that makes advanced customization simple - and fun too!', 'founder'), $link) . "</p>";
+			echo "<p>" . __('Founder Pro adds the following features to Founder:', 'founder') . "</p>";
 			echo "<ul>
-					<li>" . __('Custom Colors', 'founder') . "</li>
-					<li>" . __('New Fonts', 'founder') . "</li>
-					<li>" . __('Featured Videos', 'founder') . "</li>
-					<li>" . __('+ 9 more features', 'founder') . "</li>
+					<li>" . __('Custom colors', 'founder') . "</li>
+					<li>" . __('New fonts', 'founder') . "</li>
+					<li>" . __('Post & page templates', 'founder') . "</li>
+					<li>" . __('+ 8 more features', 'founder') . "</li>
 				  </ul>";
-			echo "<p>" . __('Download the Founder Pro Plugin to get started now.', 'founder') . "</p>";
-			echo "<p class='button-wrapper'><a target=\"_blank\" class='founder-pro-button' href='" . $link . "'>" . __('Get Founder Pro', 'founder') . "</a></p>";
+			echo "<p class='button-wrapper'><a target=\"_blank\" class='founder-pro-button' href='" . $link . "'>" . __('View Founder Pro', 'founder') . "</a></p>";
 		}
 	}
 
