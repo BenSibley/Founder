@@ -21,7 +21,7 @@ function ct_founder_options_content() {
 		<?php do_action( 'theme_options_before' ); ?>
 		<div class="content content-support">
 			<h3><?php _e( 'Get Started', 'founder' ); ?></h3>
-			<p><?php _e( "Not sure where to start? Our <strong>Getting Started Guide</strong> will take you step-by-step through every feature in Founder.", "founder" ); ?></p>
+			<p><?php _e( "Not sure where to start? The <strong>Founder Getting Started Guide</strong> will take you step-by-step through every feature in Founder.", "founder" ); ?></p>
 			<p>
 				<a target="_blank" class="button-primary"
 				   href="https://www.competethemes.com/help/getting-started-founder/"><?php _e( 'View Guide', 'founder' ); ?></a>
