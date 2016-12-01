@@ -307,23 +307,36 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 
 	/***** Custom CSS *****/
 
-	// section
-	$wp_customize->add_section( 'founder_custom_css', array(
-		'title'    => __( 'Custom CSS', 'founder' ),
-		'priority' => 70
-	) );
-	// setting
-	$wp_customize->add_setting( 'custom_css', array(
-		'sanitize_callback' => 'ct_founder_sanitize_css',
-		'transport'         => 'postMessage'
-	) );
-	// control
-	$wp_customize->add_control( 'custom_css', array(
-		'label'    => __( 'Add Custom CSS Here:', 'founder' ),
-		'section'  => 'founder_custom_css',
-		'settings' => 'custom_css',
-		'type'     => 'textarea'
-	) );
+	if ( function_exists( 'wp_update_custom_css_post' ) ) {
+		// Migrate any existing theme CSS to the core option added in WordPress 4.7.
+		$css = get_theme_mod( 'custom_css' );
+		if ( $css ) {
+			$core_css = wp_get_custom_css(); // Preserve any CSS already added to the core option.
+			$return = wp_update_custom_css_post( $core_css . $css );
+			if ( ! is_wp_error( $return ) ) {
+				// Remove the old theme_mod, so that the CSS is stored in only one place moving forward.
+				remove_theme_mod( 'custom_css' );
+			}
+		}
+	} else {
+		// section
+		$wp_customize->add_section( 'founder_custom_css', array(
+			'title'    => __( 'Custom CSS', 'founder' ),
+			'priority' => 70
+		) );
+		// setting
+		$wp_customize->add_setting( 'custom_css', array(
+			'sanitize_callback' => 'ct_founder_sanitize_css',
+			'transport'         => 'postMessage'
+		) );
+		// control
+		$wp_customize->add_control( 'custom_css', array(
+			'label'    => __( 'Add Custom CSS Here:', 'founder' ),
+			'section'  => 'founder_custom_css',
+			'settings' => 'custom_css',
+			'type'     => 'textarea'
+		) );
+	}
 }
 
 /***** Custom Sanitization Functions *****/

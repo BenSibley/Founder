@@ -523,7 +523,11 @@ add_filter( 'post_class', 'ct_founder_post_class' );
 if ( ! function_exists( ( 'ct_founder_custom_css_output' ) ) ) {
 	function ct_founder_custom_css_output() {
 
-		$custom_css = get_theme_mod( 'custom_css' );
+		if ( function_exists( 'wp_get_custom_css' ) ) {
+			$custom_css = wp_get_custom_css();
+		} else {
+			$custom_css = get_theme_mod( 'custom_css' );
+		}
 
 		if ( $custom_css ) {
 			$custom_css = ct_founder_sanitize_css( $custom_css );
