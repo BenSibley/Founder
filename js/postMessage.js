@@ -73,7 +73,13 @@
     // Social Media Icons
 
     // get all controls for social sites
-    var socialSites = panel.find('#accordion-section-ct_founder_social_media_icons').find('.customize-control-title');
+    // 4.7 changed the markup of the Customizer, so check if new markup being used first
+    var socialSites = panel.find('#sub-accordion-section-ct_founder_social_media_icons').find('.customize-control-title');
+    var WPVersion = 4.7;
+    if ( socialSites.length == false ) {
+        socialSites = panel.find('#accordion-section-ct_founder_social_media_icons').find('.customize-control-title');
+        WPVersion = 4.6;
+    }
 
     // instantiate array
     var socialSitesArray = [];
@@ -113,7 +119,11 @@
                 socialMediaIcons.empty();
 
                 // replace all at once to preserve order
-                panel.find('#accordion-section-ct_founder_social_media_icons').find('input').each(function() {
+                var selector = panel.find('#sub-accordion-section-ct_founder_social_media_icons').find('input');
+                if ( WPVersion != 4.7 ) {
+                    selector = panel.find('#accordion-section-ct_founder_social_media_icons').find('input')
+                }
+                selector.each(function() {
 
                     // if the icon has a URL
                     if( $(this).val().length > 0 ) {
