@@ -19,27 +19,12 @@ function ct_founder_options_content() {
 	<div id="founder-dashboard-wrap" class="wrap">
 		<h2><?php _e( 'Founder Dashboard', 'founder' ); ?></h2>
 		<?php do_action( 'theme_options_before' ); ?>
-		<div class="welcome">
-			<h3><?php _e( 'Thanks for Choosing Founder!', 'founder' ); ?></h3>
-			<p>
-				<?php printf( __( 'If you need help getting started, there are detailed tutorials in the <a target="_blank" href="%s">Founder Support Center</a>.', 'founder' ), $support_url ); ?>
-				<?php printf( __( 'Otherwise, you can dive right in with the <a href="%s">Customizer</a>.', 'founder' ), esc_url( $customizer_url ) ); ?>
-			</p>
-		</div>
-		<div class="content content-customization">
-			<h3><?php _e( 'Customization', 'founder' ); ?></h3>
-			<p><?php _e( 'Click the "Customize" link in your menu, or use the button below to get started customizing Founder', 'founder' ); ?>.</p>
-			<p>
-				<a class="button-primary"
-				   href="<?php echo esc_url( $customizer_url ); ?>"><?php _e( 'Use Customizer', 'founder' ) ?></a>
-			</p>
-		</div>
 		<div class="content content-support">
-			<h3><?php _e( 'Support', 'founder' ); ?></h3>
-			<p><?php _e( "You can find the knowledgebase, changelog, support forum, and more in the Founder Support Center", "founder" ); ?>.</p>
+			<h3><?php _e( 'Get Started', 'founder' ); ?></h3>
+			<p><?php _e( "Not sure where to start? Our <strong>Getting Started Guide</strong> will take you step-by-step through every feature in Founder.", "founder" ); ?></p>
 			<p>
 				<a target="_blank" class="button-primary"
-				   href="https://www.competethemes.com/documentation/founder-support-center/"><?php _e( 'Visit Support Center', 'founder' ); ?></a>
+				   href="https://www.competethemes.com/help/getting-started-founder/"><?php _e( 'View Guide', 'founder' ); ?></a>
 			</p>
 		</div>
 		<div class="content content-premium-upgrade">
@@ -48,14 +33,6 @@ function ct_founder_options_content() {
 			<p>
 				<a target="_blank" class="button-primary"
 				   href="https://www.competethemes.com/founder-pro/"><?php _e( 'See Full Feature List', 'founder' ); ?></a>
-			</p>
-		</div>
-		<div class="content content-resources">
-			<h3><?php _e( 'WordPress Resources', 'founder' ); ?></h3>
-			<p><?php _e( 'Save time and money searching for WordPress products by following our recommendations', 'founder' ); ?>.</p>
-			<p>
-				<a target="_blank" class="button-primary"
-				   href="https://www.competethemes.com/wordpress-resources/"><?php _e( 'View Resources', 'founder' ); ?></a>
 			</p>
 		</div>
 		<div class="content content-review">

@@ -9,18 +9,13 @@
   border: solid 1px #e5e5e5;
   background: white;
 }
-#founder-dashboard-wrap .content .button-primary {
+#founder-dashboard-wrap .content .button-primary,
+#founder-dashboard-wrap .content #delete {
   margin: 12px 0;
 }
 #founder-dashboard-wrap .content ul {
   list-style: disc;
   margin-left: 36px;
-}
-#founder-dashboard-wrap .welcome {
-  margin-top: 12px;
-  padding: 12px 24px 24px;
-  border: solid 1px #e5e5e5;
-  background: #E0FBFF;
 }
 
 /* 600px */
@@ -28,37 +23,25 @@
   #founder-dashboard-wrap .content {
     width: 39%;
     float: left;
+    margin-right: 2%;
+    min-height: 192px;
   }
   #founder-dashboard-wrap .content p {
     min-height: 57px;
   }
-  #founder-dashboard-wrap .content-premium-upgrade p {
-    min-height: 0;
-  }
-  #founder-dashboard-wrap .content-review p {
-    min-height: 75px;
-  }
-  #founder-dashboard-wrap .content-customization,
   #founder-dashboard-wrap .content-premium-upgrade,
-  #founder-dashboard-wrap .content-review {
-    margin-right: 2%;
+  #founder-dashboard-wrap .content-delete-settings {
+    margin-right: 0;
   }
 }
 /* 1100px */
 @media all and (min-width: 68.75em) {
   #founder-dashboard-wrap .content {
-    width: 27%;
+    width: 26.5%;
   }
-  #founder-dashboard-wrap .content-resources {
-    clear: left;
-  }
-  #founder-dashboard-wrap .content-customization,
   #founder-dashboard-wrap .content-support,
-  #founder-dashboard-wrap .content-resources,
+  #founder-dashboard-wrap .content-premium-upgrade,
   #founder-dashboard-wrap .content-review {
     margin-right: 1%;
-  }
-  #founder-dashboard-wrap .content-premium-upgrade {
-    margin-right: 0;
   }
 }
