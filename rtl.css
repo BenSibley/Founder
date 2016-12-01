@@ -84,7 +84,7 @@ a {
   color: #1A1A1A;
   border-bottom: solid 1px #1A1A1A;
   -webkit-transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
-  transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+          transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
 }
 a:link {
   color: #1A1A1A;
@@ -243,7 +243,7 @@ textarea {
   border-radius: 0;
   -webkit-appearance: none;
   -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
+          transition: all 0.1s ease-in-out;
 }
 input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]):focus,
 textarea:focus {
@@ -267,7 +267,7 @@ input[type="submit"] {
   border-radius: 0;
   -webkit-appearance: none;
   -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
+          transition: all 0.1s ease-in-out;
 }
 input[type="submit"]:hover {
   cursor: pointer;
@@ -334,7 +334,7 @@ a img {
   padding: 1.5em;
   background: #1A1A1A;
   -webkit-transition: top 0.2s ease-in-out;
-  transition: top 0.2s ease-in-out;
+          transition: top 0.2s ease-in-out;
 }
 .skip-content:focus {
   top: 0;
@@ -375,7 +375,7 @@ a img {
 .site-title a {
   border: none;
   -webkit-transition: color 0.1s ease-in-out;
-  transition: color 0.1s ease-in-out;
+          transition: color 0.1s ease-in-out;
 }
 .site-title a:hover, .site-title a:active, .site-title a:focus {
   color: #666666;
@@ -405,7 +405,7 @@ a img {
   padding: 0.75em 8.334% 0;
   float: right;
   -webkit-transition: opacity 0.1s ease-in-out;
-  transition: opacity 0.1s ease-in-out;
+          transition: opacity 0.1s ease-in-out;
 }
 .social-media-icons li {
   display: inline-block;
@@ -457,7 +457,7 @@ a img {
   right: 0;
   opacity: 0;
   -webkit-transition: opacity 0.15s ease-in-out, right 0.15s ease-in-out;
-  transition: opacity 0.15s ease-in-out, right 0.15s ease-in-out;
+          transition: opacity 0.15s ease-in-out, right 0.15s ease-in-out;
 }
 .site-header .search-form-container .search-field {
   max-width: none !important;
@@ -520,7 +520,7 @@ a img {
   }
   .social-media-icons a {
     -webkit-transition: color 0.1s ease-in-out;
-    transition: color 0.1s ease-in-out;
+            transition: color 0.1s ease-in-out;
   }
   .social-media-icons a:hover, .social-media-icons a:active, .social-media-icons a:focus {
     color: #E37D39;
@@ -596,8 +596,7 @@ a img {
 .menu-primary-items li.open > button,
 .menu-unset ul li.open > button {
   -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 .menu-primary-items li.open > ul,
 .menu-unset ul li.open > ul {
@@ -718,7 +717,7 @@ a img {
   .menu-primary-items li.menu-item-has-children > a,
   .menu-unset ul li.menu-item-has-children > a {
     -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+            backface-visibility: hidden;
   }
   .menu-primary-items li.menu-item-has-children > a:after,
   .menu-unset ul li.menu-item-has-children > a:after {
@@ -752,9 +751,9 @@ a img {
     border: solid 1px #D4D4D4;
     text-align: center;
     -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+            backface-visibility: hidden;
     -webkit-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
+            transition: all 0.1s ease-in-out;
   }
   .menu-primary-items ul:hover, .menu-primary-items ul.focused,
   .menu-unset ul ul:hover,
@@ -792,7 +791,7 @@ a img {
     margin: 12px;
     line-height: 16px;
     -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+            backface-visibility: hidden;
   }
   .menu-primary-items ul li:last-child,
   .menu-unset ul ul li:last-child {
@@ -974,7 +973,7 @@ a img {
 .toggle-sidebar i {
   color: #A1A1A1;
   -webkit-transition: color 0.1s ease-in-out;
-  transition: color 0.1s ease-in-out;
+          transition: color 0.1s ease-in-out;
 }
 
 .sidebar-primary-content {
@@ -1003,8 +1002,7 @@ a img {
 .sidebar-primary.open .toggle-sidebar i {
   color: #E37D39;
   -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 .sidebar-primary.open .sidebar-primary-content {
   display: block;
@@ -1036,7 +1034,7 @@ a img {
 
   .toggle-sidebar {
     -webkit-transition: border-color 0.1s ease-in-out;
-    transition: border-color 0.1s ease-in-out;
+            transition: border-color 0.1s ease-in-out;
   }
   .toggle-sidebar:hover {
     cursor: pointer;
@@ -1053,7 +1051,7 @@ a img {
     max-height: 0;
     overflow: hidden;
     -webkit-transition: max-height 0.2s ease-in-out;
-    transition: max-height 0.2s ease-in-out;
+            transition: max-height 0.2s ease-in-out;
   }
 }
 @media all and (min-width: 62.5em) {
@@ -1166,7 +1164,7 @@ a img {
   padding: 0.75em 3em;
   border: none;
   -webkit-transition: background 0.1s ease-in-out;
-  transition: background 0.1s ease-in-out;
+          transition: background 0.1s ease-in-out;
 }
 .widget_calendar tfoot a:hover, .widget_calendar tfoot a:active, .widget_calendar tfoot a:focus {
   background: #EDEDED;
@@ -1303,7 +1301,8 @@ a img {
   right: 0;
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .featured-image > img.no-object-fit,
 .featured-image > a > img.no-object-fit {
@@ -1317,8 +1316,7 @@ a img {
   left: 50%;
   right: auto;
   -webkit-transform: translateX(50%) translateY(-50%);
-  -ms-transform: translateX(50%) translateY(-50%);
-  transform: translateX(50%) translateY(-50%);
+          transform: translateX(50%) translateY(-50%);
 }
 .featured-image .ccfic {
   position: absolute;
@@ -1350,7 +1348,7 @@ a img {
   background: #1A1A1A;
   border: none;
   -webkit-transition: background 0.1s ease-in-out;
-  transition: background 0.1s ease-in-out;
+          transition: background 0.1s ease-in-out;
 }
 .more-link:link, .more-link:visited {
   color: white;
@@ -1464,7 +1462,7 @@ a img {
   border: solid 1px #EDEDED;
   padding: 4px 12px;
   -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
+          transition: all 0.1s ease-in-out;
 }
 .post-tags a:hover, .post-tags a:active, .post-tags a:focus {
   background: #EDEDED;
