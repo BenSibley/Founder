@@ -1793,6 +1793,10 @@ a img {
   margin: 4.5em 0;
 }
 
+.search .sticky-status {
+  display: none;
+}
+
 .singular-attachment .attachment-container img {
   display: block;
 }
