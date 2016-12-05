@@ -479,11 +479,20 @@ if ( ! function_exists( ( 'ct_founder_delete_settings_notice' ) ) ) {
 	function ct_founder_delete_settings_notice() {
 
 		if ( isset( $_GET['founder_status'] ) ) {
-			?>
-			<div class="updated">
-				<p><?php _e( 'Customizer settings deleted', 'founder' ); ?>.</p>
-			</div>
-			<?php
+
+			if ( $_GET['founder_status'] == 'deleted' ) {
+				?>
+				<div class="updated">
+					<p><?php _e( 'Customizer settings deleted.', 'founder' ); ?></p>
+				</div>
+				<?php
+			} else if ( $_GET['founder_status'] == 'activated' ) {
+				?>
+				<div class="updated">
+					<p><?php _e( 'Thanks for activating Founder!', 'founder' ); ?></p>
+				</div>
+				<?php
+			}
 		}
 	}
 }
@@ -616,10 +625,11 @@ function ct_founder_welcome_redirect() {
 
 	$welcome_url = add_query_arg(
 		array(
-			'page' => 'founder-options'
+			'page'           => 'founder-options',
+			'founder_status' => 'activated'
 		),
 		admin_url( 'themes.php' )
 	);
-	wp_redirect( esc_url( $welcome_url ) );
+	wp_safe_redirect( esc_url_raw( $welcome_url ) );
 }
 add_action( 'after_switch_theme', 'ct_founder_welcome_redirect' );
