@@ -41,7 +41,7 @@ function ct_founder_options_content() {
 			<div class="content content-review">
 				<h3><?php _e( 'Leave a Review', 'founder' ); ?></h3>
 				<p><?php _e( 'Help others find Founder by leaving a review on wordpress.org.', 'founder' ); ?></p>
-				<a target="_blank" class="button-primary" href="https://wordpress.org/support/view/theme-reviews/founder"><?php _e( 'Leave a Review', 'founder' ); ?></a>
+				<a target="_blank" class="button-primary" href="https://wordpress.org/support/theme/founder/reviews/"><?php _e( 'Leave a Review', 'founder' ); ?></a>
 			</div>
 			<div class="content content-delete-settings">
 				<h3><?php _e( 'Reset Customizer Settings', 'founder' ); ?></h3>
