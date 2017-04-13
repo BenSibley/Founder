@@ -483,7 +483,7 @@ if ( ! function_exists( ( 'ct_founder_delete_settings_notice' ) ) ) {
 			} else if ( $_GET['founder_status'] == 'activated' ) {
 				?>
 				<div class="updated">
-					<p><?php _e( 'Thanks for activating Founder!', 'founder' ); ?></p>
+					<p><?php printf( __( 'Thanks for activating %s!', 'founder' ), wp_get_theme( get_template() ) ); ?></p>
 				</div>
 				<?php
 			}

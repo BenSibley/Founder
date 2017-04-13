@@ -5,7 +5,7 @@
 	<?php do_action( 'footer_top' ); ?>
 	<span>
         <?php
-        $footer_text = sprintf( __( '<a href="%s">Founder WordPress Theme</a> by Compete Themes.', 'founder' ), 'https://www.competethemes.com/founder/' );
+        $footer_text = sprintf( __( '<a href="%1$s">%2$s WordPress Theme</a> by Compete Themes.', 'founder' ), 'https://www.competethemes.com/founder/', wp_get_theme( get_template() ) );
         $footer_text = apply_filters( 'ct_founder_footer_text', $footer_text );
         echo wp_kses_post( $footer_text );
         ?>
