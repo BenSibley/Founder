@@ -5,6 +5,6 @@ $author = get_the_author();
 
 <div class="post-meta">
 	<p>
-		<?php printf( esc_html__( 'Published %1$s by %2$s', 'founder' ), $date, $author ); ?>
+		<?php printf( esc_html_x( 'Published %1$s by %2$s', 'Published date by author', 'founder' ), $date, $author ); ?>
 	</p>
 </div>
