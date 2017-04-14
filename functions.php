@@ -286,6 +286,7 @@ if ( ! function_exists( 'ct_founder_social_array' ) ) {
 			'yelp'          => 'founder_yelp_profile',
 			'amazon'        => 'founder_amazon_profile',
 			'google-wallet' => 'founder_google-wallet_profile',
+			'twitch'        => 'founder_twitch_profile',
 			'steam'         => 'founder_steam_profile',
 			'vk'            => 'founder_vk_profile',
 			'weibo'         => 'founder_weibo_profile',
