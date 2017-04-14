@@ -84,6 +84,11 @@
     @include clearfix;
   }
 }
+.more-link-wrapper {
+  display: inline-block;
+  margin-top: $baseline-height;
+  text-align: center;
+}
 .more-link {
   @extend %eleven-pixels;
   @extend %uppercase;

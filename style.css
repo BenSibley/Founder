@@ -1341,6 +1341,12 @@ a img {
   height: 0;
 }
 
+.more-link-wrapper {
+  display: inline-block;
+  margin-top: 1.5em;
+  text-align: center;
+}
+
 .more-link {
   display: inline-block;
   padding: 1em 1.5em;
