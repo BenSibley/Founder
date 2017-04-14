@@ -86,7 +86,7 @@
 }
 .more-link-wrapper {
   display: inline-block;
-  margin-top: $baseline-height;
+  margin-top: $baseline-height/2;
   text-align: center;
 }
 .more-link {
@@ -150,22 +150,6 @@
     p,
     pre {
       text-align: left;
-    }
-
-    p:last-of-type {
-      margin: $baseline-height / 2 0 0;
-    }
-  }
-}
-.blog:not(.full-post),
-.archive:not(.full-post),
-.search:not(.full-post) {
-
-  .post-content {
-
-    p:last-of-type {
-      text-align: center;
-      display: inline-block;
     }
   }
 }
