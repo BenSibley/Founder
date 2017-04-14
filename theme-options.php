@@ -30,7 +30,7 @@ function ct_founder_options_content() {
 			</div>
 			<?php if ( !function_exists( 'ct_founder_pro_init' ) ) : ?>
 				<div class="content content-premium-upgrade">
-					<h3><?php printf( __( '%sPro Plugin', 'founder' ), wp_get_theme( get_template() ) ); ?></h3>
+					<h3><?php printf( __( '%s Pro Plugin', 'founder' ), wp_get_theme( get_template() ) ); ?></h3>
 					<p><?php printf( __( 'Download the %s Pro plugin and unlock custom colors, featured sliders, header images, and more', 'founder' ), wp_get_theme( get_template() ) ); ?>...</p>
 					<p>
 						<a target="_blank" class="button-primary"
