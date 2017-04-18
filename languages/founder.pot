@@ -1,14 +1,14 @@
-# Copyright (C) 2016 Compete Themes
+# Copyright (C) 2017 Compete Themes
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Founder 1.31\n"
+"Project-Id-Version: Founder 1.32\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2016-12-05 12:31:49+00:00\n"
+"POT-Creation-Date: 2017-04-18 15:26:42+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: grunt-wp-i18n 0.4.9\n"
@@ -23,18 +23,9 @@ msgid ""
 "correct or try the search form below to find what you were looking for."
 msgstr ""
 
-#: comments.php:23 comments.php:44 comments.php:66
-msgid "Comments"
-msgstr ""
-
 #: comments.php:23 comments.php:44 comments.php:66 content/comments-link.php:5
 #: content/comments-link.php:8
 msgid "One Comment"
-msgstr ""
-
-#: comments.php:23 comments.php:44 comments.php:66 content/comments-link.php:5
-#: content/comments-link.php:8
-msgid "% Comments"
 msgstr ""
 
 #: comments.php:58
@@ -47,10 +38,6 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: content/archive-header.php:4 inc/customizer.php:301 inc/customizer.php:371
-msgid "Posts"
-msgstr ""
-
 #: content/comments-link.php:2
 msgid "comment icon"
 msgstr ""
@@ -61,18 +48,6 @@ msgstr ""
 
 #: content/comments-link.php:8
 msgid "Leave a Comment"
-msgstr ""
-
-#: content/post-categories.php:9
-msgid "Published in"
-msgstr ""
-
-#: content/post-categories.php:11
-msgid "View all posts in %s"
-msgstr ""
-
-#: content/post-meta.php:8
-msgid "Published %1$s by %2$s"
 msgstr ""
 
 #: content/post-nav-attachment.php:3
@@ -136,7 +111,7 @@ msgid "Pages:"
 msgstr ""
 
 #: footer.php:8
-msgid "<a href=\"%s\">Founder WordPress Theme</a> by Compete Themes."
+msgid "<a href=\"%1$s\">%2$s WordPress Theme</a> by Compete Themes."
 msgstr ""
 
 #: functions.php:39
@@ -155,56 +130,32 @@ msgstr ""
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:84
-msgid "Reply"
-msgstr ""
-
-#: functions.php:88
-msgid "Edit"
-msgstr ""
-
 #: functions.php:100
 msgid "(optional)"
-msgstr ""
-
-#: functions.php:105
-msgid "Name"
-msgstr ""
-
-#: functions.php:112
-msgid "Email"
 msgstr ""
 
 #: functions.php:119
 msgid "Website"
 msgstr ""
 
-#: functions.php:134
-msgid "Comment"
-msgstr ""
-
-#: functions.php:165 functions.php:174 functions.php:191 inc/customizer.php:270
+#: functions.php:166 inc/customizer.php:272
 msgid "Continue reading"
 msgstr ""
 
-#: functions.php:362 functions.php:363
-msgid "email"
-msgstr ""
-
-#: functions.php:410 header.php:23 inc/scripts.php:16
+#: functions.php:408 header.php:23
 msgid "open menu"
 msgstr ""
 
-#: functions.php:424
+#: functions.php:422
 msgid "Featured Post"
 msgstr ""
 
-#: functions.php:486
+#: functions.php:484
 msgid "Customizer settings deleted."
 msgstr ""
 
-#: functions.php:492
-msgid "Thanks for activating Founder!"
+#: functions.php:490
+msgid "Thanks for activating %s!"
 msgstr ""
 
 #: header.php:11
@@ -221,12 +172,12 @@ msgstr ""
 
 #: inc/customizer.php:55
 msgid ""
-"<a target=\"_blank\" href=\"%s\">Founder Pro</a> is the plugin that makes "
+"<a target=\"_blank\" href=\"%1$s\">%2$s Pro</a> is the plugin that makes "
 "advanced customization simple - and fun too!"
 msgstr ""
 
 #: inc/customizer.php:56
-msgid "Founder Pro adds the following features to Founder:"
+msgid "%1$s Pro adds the following features to %1$s:"
 msgstr ""
 
 #: inc/customizer.php:58
@@ -246,11 +197,11 @@ msgid "+ 8 more features"
 msgstr ""
 
 #: inc/customizer.php:63
-msgid "View Founder Pro"
+msgid "View %s Pro"
 msgstr ""
 
 #: inc/customizer.php:73
-msgid "Founder Pro"
+msgid "%s Pro"
 msgstr ""
 
 #: inc/customizer.php:93
@@ -273,90 +224,78 @@ msgstr ""
 msgid "Email Address"
 msgstr ""
 
-#: inc/customizer.php:186
+#: inc/customizer.php:188
 msgid ""
 "Accepts Skype link protocol (<a href=\"%s\" target=\"_blank\">learn "
 "more</a>)"
 msgstr ""
 
-#: inc/customizer.php:213
+#: inc/customizer.php:215
 msgid "Search Bar"
 msgstr ""
 
-#: inc/customizer.php:224
+#: inc/customizer.php:226
 msgid "Show search bar at top of site?"
 msgstr ""
 
-#: inc/customizer.php:228 inc/customizer.php:352
+#: inc/customizer.php:230 inc/customizer.php:354
 msgid "Show"
 msgstr ""
 
-#: inc/customizer.php:229 inc/customizer.php:353
+#: inc/customizer.php:231 inc/customizer.php:355
 msgid "Hide"
 msgstr ""
 
-#: inc/customizer.php:237
-msgid "Blog"
-msgstr ""
-
-#: inc/customizer.php:247
+#: inc/customizer.php:249
 msgid "Show full posts on blog?"
 msgstr ""
 
-#: inc/customizer.php:252 inc/customizer.php:387
+#: inc/customizer.php:254 inc/customizer.php:389
 msgid "Yes"
 msgstr ""
 
-#: inc/customizer.php:253 inc/customizer.php:388
+#: inc/customizer.php:255 inc/customizer.php:390
 msgid "No"
 msgstr ""
 
-#: inc/customizer.php:263
+#: inc/customizer.php:265
 msgid "Excerpt word count"
 msgstr ""
 
-#: inc/customizer.php:275
+#: inc/customizer.php:277
 msgid "Read More button text"
 msgstr ""
 
-#: inc/customizer.php:285
+#: inc/customizer.php:287
 msgid "Comment Display"
 msgstr ""
 
-#: inc/customizer.php:296
+#: inc/customizer.php:298
 msgid "Show comments on:"
 msgstr ""
 
-#: inc/customizer.php:302 inc/customizer.php:372
-msgid "Pages"
-msgstr ""
-
 #: inc/customizer.php:303 inc/customizer.php:373
-msgid "Attachments"
+msgid "Posts"
 msgstr ""
 
 #: inc/customizer.php:304 inc/customizer.php:374
+msgid "Pages"
+msgstr ""
+
+#: inc/customizer.php:305 inc/customizer.php:375
+msgid "Attachments"
+msgstr ""
+
+#: inc/customizer.php:306 inc/customizer.php:376
 msgid "Do not show"
 msgstr ""
 
-#: inc/customizer.php:325
+#: inc/customizer.php:327
 msgid "Custom CSS"
 msgstr ""
 
-#: inc/customizer.php:335
+#: inc/customizer.php:337
 msgid "Add Custom CSS Here:"
-msgstr ""
-
-#: inc/scripts.php:17
-msgid "close menu"
-msgstr ""
-
-#: inc/scripts.php:18 sidebar-primary.php:9
-msgid "open sidebar"
-msgstr ""
-
-#: inc/scripts.php:19
-msgid "close sidebar"
 msgstr ""
 
 #: index.php:19
@@ -385,12 +324,16 @@ msgstr ""
 msgid "Go"
 msgstr ""
 
+#: sidebar-primary.php:9
+msgid "open sidebar"
+msgstr ""
+
 #: sidebar-primary.php:10
 msgid "sidebar icon"
 msgstr ""
 
 #: theme-options.php:4 theme-options.php:20
-msgid "Founder Dashboard"
+msgid "%s Dashboard"
 msgstr ""
 
 #: theme-options.php:24
@@ -399,8 +342,8 @@ msgstr ""
 
 #: theme-options.php:25
 msgid ""
-"Not sure where to start? The <strong>Founder Getting Started Guide</strong> "
-"will take you step-by-step through every feature in Founder."
+"Not sure where to start? The <strong>%1$s Getting Started Guide</strong> "
+"will take you step-by-step through every feature in %1$s."
 msgstr ""
 
 #: theme-options.php:28
@@ -408,12 +351,12 @@ msgid "View Guide"
 msgstr ""
 
 #: theme-options.php:33
-msgid "Founder Pro Plugin"
+msgid "%s Pro Plugin"
 msgstr ""
 
 #: theme-options.php:34
 msgid ""
-"Download the Founder Pro plugin and unlock custom colors, featured sliders, "
+"Download the %s Pro plugin and unlock custom colors, featured sliders, "
 "header images, and more"
 msgstr ""
 
@@ -426,7 +369,7 @@ msgid "Leave a Review"
 msgstr ""
 
 #: theme-options.php:43
-msgid "Help others find Founder by leaving a review on wordpress.org."
+msgid "Help others find %s by leaving a review on wordpress.org."
 msgstr ""
 
 #: theme-options.php:47 theme-options.php:55
@@ -435,8 +378,8 @@ msgstr ""
 
 #: theme-options.php:49
 msgid ""
-"<strong>Warning:</strong> Clicking this button will erase the Founder "
-"theme's current settings in the <a href='%s'>Customizer</a>."
+"<strong>Warning:</strong> Clicking this button will erase the %2$s theme's "
+"current settings in the <a href=\"%1$s\">Customizer</a>."
 msgstr ""
 
 #. Description of the plugin/theme
@@ -450,4 +393,90 @@ msgid ""
 "share your site, and download Founder today. Preview on desktop, tablets, "
 "and mobile with our interactive live demo: "
 "https://www.competethemes.com/demos/?theme=founder"
+msgstr ""
+
+#: comments.php:23 comments.php:44 comments.php:66
+msgctxt "noun: Comments section"
+msgid "Comments"
+msgstr ""
+
+#: comments.php:23 comments.php:44 comments.php:66 content/comments-link.php:5
+#: content/comments-link.php:8
+msgctxt "noun: 5 comments"
+msgid "% Comments"
+msgstr ""
+
+#: content/archive-header.php:4
+msgctxt "Site Title Posts"
+msgid "Posts"
+msgstr ""
+
+#: content/post-categories.php:9
+msgctxt "Published in post category"
+msgid "Published in"
+msgstr ""
+
+#: content/post-categories.php:11
+msgctxt "View all posts in post category"
+msgid "View all posts in %s"
+msgstr ""
+
+#: content/post-meta.php:8
+msgctxt "Published date by author"
+msgid "Published %1$s by %2$s"
+msgstr ""
+
+#: functions.php:84
+msgctxt "verb: reply to this comment"
+msgid "Reply"
+msgstr ""
+
+#: functions.php:88
+msgctxt "verb: edit this comment"
+msgid "Edit"
+msgstr ""
+
+#: functions.php:105
+msgctxt "noun"
+msgid "Name"
+msgstr ""
+
+#: functions.php:112
+msgctxt "noun"
+msgid "Email"
+msgstr ""
+
+#: functions.php:134
+msgctxt "noun"
+msgid "Comment"
+msgstr ""
+
+#: functions.php:360 functions.php:361
+msgctxt "noun"
+msgid "email"
+msgstr ""
+
+#: inc/customizer.php:239
+msgctxt "noun: the blog section"
+msgid "Blog"
+msgstr ""
+
+#: inc/scripts.php:16
+msgctxt "verb: open the menu"
+msgid "open menu"
+msgstr ""
+
+#: inc/scripts.php:17
+msgctxt "verb: close the menu"
+msgid "close menu"
+msgstr ""
+
+#: inc/scripts.php:18
+msgctxt "verb: open the sidebar"
+msgid "open sidebar"
+msgstr ""
+
+#: inc/scripts.php:19
+msgctxt "verb: close the sidebar"
+msgid "close sidebar"
 msgstr ""
