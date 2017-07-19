@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Founder 1.32\n"
+"Project-Id-Version: Founder 1.33\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2017-04-18 15:26:42+00:00\n"
+"POT-Creation-Date: 2017-07-19 15:34:23+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -114,47 +114,54 @@ msgstr ""
 msgid "<a href=\"%1$s\">%2$s WordPress Theme</a> by Compete Themes."
 msgstr ""
 
-#: functions.php:39
+#: functions.php:12
+msgid ""
+"Hey! Sorry to interrupt, but you've been using Founder for a little while "
+"now. If you're happy with this theme, could you take a minute to leave a "
+"review? <i>You won't see this notice again after closing it.</i>"
+msgstr ""
+
+#: functions.php:47
 msgid "Primary"
 msgstr ""
 
-#: functions.php:49
+#: functions.php:57
 msgid "Primary Sidebar"
 msgstr ""
 
-#: functions.php:51
+#: functions.php:59
 msgid "Widgets in this area will be shown in the sidebar."
 msgstr ""
 
-#: functions.php:76
+#: functions.php:84
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:100
+#: functions.php:108
 msgid "(optional)"
 msgstr ""
 
-#: functions.php:119
+#: functions.php:127
 msgid "Website"
 msgstr ""
 
-#: functions.php:166 inc/customizer.php:272
+#: functions.php:174 inc/customizer.php:272
 msgid "Continue reading"
 msgstr ""
 
-#: functions.php:408 header.php:23
+#: functions.php:416 header.php:23
 msgid "open menu"
 msgstr ""
 
-#: functions.php:422
+#: functions.php:430
 msgid "Featured Post"
 msgstr ""
 
-#: functions.php:484
+#: functions.php:492
 msgid "Customizer settings deleted."
 msgstr ""
 
-#: functions.php:490
+#: functions.php:498
 msgid "Thanks for activating %s!"
 msgstr ""
 
@@ -298,6 +305,10 @@ msgstr ""
 msgid "Add Custom CSS Here:"
 msgstr ""
 
+#: inc/review.php:113
+msgid "Click here to leave your review"
+msgstr ""
+
 #: index.php:19
 msgid "Previous"
 msgstr ""
@@ -372,11 +383,25 @@ msgstr ""
 msgid "Help others find %s by leaving a review on wordpress.org."
 msgstr ""
 
-#: theme-options.php:47 theme-options.php:55
-msgid "Reset Customizer Settings"
+#: theme-options.php:47
+msgid "Turn Founder into a Mobile App"
+msgstr ""
+
+#: theme-options.php:48
+msgid ""
+"%s can be converted into a mobile app and listed on the App Store with the "
+"help of PressPad News. Read our tutorial to learn more."
 msgstr ""
 
 #: theme-options.php:49
+msgid "Read Tutorial"
+msgstr ""
+
+#: theme-options.php:52 theme-options.php:60
+msgid "Reset Customizer Settings"
+msgstr ""
+
+#: theme-options.php:54
 msgid ""
 "<strong>Warning:</strong> Clicking this button will erase the %2$s theme's "
 "current settings in the <a href=\"%1$s\">Customizer</a>."
@@ -426,32 +451,32 @@ msgctxt "Published date by author"
 msgid "Published %1$s by %2$s"
 msgstr ""
 
-#: functions.php:84
+#: functions.php:92
 msgctxt "verb: reply to this comment"
 msgid "Reply"
 msgstr ""
 
-#: functions.php:88
+#: functions.php:96
 msgctxt "verb: edit this comment"
 msgid "Edit"
 msgstr ""
 
-#: functions.php:105
+#: functions.php:113
 msgctxt "noun"
 msgid "Name"
 msgstr ""
 
-#: functions.php:112
+#: functions.php:120
 msgctxt "noun"
 msgid "Email"
 msgstr ""
 
-#: functions.php:134
+#: functions.php:142
 msgctxt "noun"
 msgid "Comment"
 msgstr ""
 
-#: functions.php:360 functions.php:361
+#: functions.php:368 functions.php:369
 msgctxt "noun"
 msgid "email"
 msgstr ""
