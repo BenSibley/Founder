@@ -426,7 +426,7 @@ if ( ! function_exists( ( 'ct_founder_sticky_post_marker' ) ) ) {
 	function ct_founder_sticky_post_marker() {
 
 		// sticky_post_status only included in content-archive, so it will only show on the blog
-		if ( is_sticky() && ! is_archive() ) {
+		if ( is_sticky() && !is_archive() && !is_search() ) {
 			echo '<div class="sticky-status"><span>' . __( "Featured Post", "founder" ) . '</span></div>';
 		}
 	}
