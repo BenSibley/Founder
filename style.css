@@ -1575,6 +1575,10 @@ a img {
   padding: 0 8.334%;
 }
 
+.page-template-full-width .main {
+  padding: 0 8.334%;
+}
+
 @media all and (min-width: 43.75em) {
   .main {
     padding: 0 16.668%;
