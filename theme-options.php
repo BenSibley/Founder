@@ -45,7 +45,7 @@ function ct_founder_options_content() {
 			</div>
 			<div class="content content-presspad">
 				<h3><?php _e( 'Turn Founder into a Mobile App', 'founder' ); ?></h3>
-				<p><?php printf( __( '%s can be converted into a mobile app and listed on the App Store with the help of PressPad News. Read our tutorial to learn more.', 'founder' ), wp_get_theme( get_template() ) ); ?></p>
+				<p><?php printf( __( '%s can be converted into a mobile app and listed on the App Store and Google Play Store with the help of PressPad News. Read our tutorial to learn more.', 'founder' ), wp_get_theme( get_template() ) ); ?></p>
 				<a target="_blank" class="button-primary" href="https://www.competethemes.com/help/convert-mobile-app-founder/"><?php _e( 'Read Tutorial', 'founder' ); ?></a>
 			</div>
 			<div class="content content-delete-settings">
