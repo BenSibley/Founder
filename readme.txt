@@ -1,71 +1,41 @@
-Thanks for downloading Founder!
+=== Founder ===
+Contributors: bensibley
+Tags: two-columns, right-sidebar, accessibility-ready, custom-logo, custom-menu, featured-images, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, blog, education, news
+Requires at least: 4.5
+Tested up to: 4.8
+Stable tag: 1.11
 
--------------------------------------------------------
-    Support
--------------------------------------------------------
+Founder is a sophisticated, minimalist theme.
 
-You can find tutorials and other support resources for Founder in the Founder Support Center:
-https://www.competethemes.com/documentation/founder-support-center/
+== Description ==
 
-Additional support resources:
+Founder is a sophisticated, minimalist theme. It looks great and performs wonderfully on mobile devices, tablets, laptops, and everything in between. Use it to setup a business blog, newspaper website, fashion magazine, or travel blog. Now with WooCommerce support, you can even setup an eCommerce store with Founder. The design of this minimal theme also suits media-rich sites well like food blogs and personal photography portfolios. As a simple, responsive, and SEO optimized theme, you can trust Founder to present your best content to the world.
 
-Support forum: http://wordpress.org/support/theme/founder
-Changelog: https://www.competethemes.com/founder-changelog/
-Founder on Github: https://github.com/BenSibley/founder
+**Live Demo**
 
--------------------------------------------------------
-    Features
--------------------------------------------------------
+View a fully-setup live demo of Founder here: [Live demo](https://www.competethemes.com/demos/?theme=founder)
 
-Founder includes the following features:
+**Features**
 
-    * Custom logo
-    * Social media icons
-    * Comment display controls
-    * Custom excerpt length
-    * Show full posts on Blog
-    * Custom CSS
+Founder comes with the following features:
 
-Founder also has a premium plugin upgrade called Founder Pro that includes the following features:
+* Custom logo
+* Social media icons
+* Comment display controls
+* Custom excerpt length
+* Show full posts on Blog
 
-    * Custom colors
-    * Featured Videos
-    * Featured Sliders
-    * Post & Page Templates
-    * Flexible header image
-    * Google fonts
-    * More widget areas
-    * Additional Menus
-    * Display controls
-    * Custom footer text
+**Founder Pro**
 
-Founder Pro: https://www.competethemes.com/founder-pro/
+Founder also has an upgrade called [Founder Pro](https://www.competethemes.com/founder-pro/) that comes with the following features:
 
--------------------------------------------------------
-    Additional Info:
--------------------------------------------------------
-
-    * All menus in Founder can have 1-3 tiers
-    * Featured Images on Posts and Pages have a 2x1 ratio at all screen sizes
-    * Founder is child theme compatible. Download a starter child theme here:
-        https://www.competethemes.com/help/child-theme-founder/
-
--------------------------------------------------------
-    Licenses:
--------------------------------------------------------
-
-Founder WordPress Theme, Copyright 2015 Compete Themes
-Founder is distributed under the terms of the GNU GPL
-
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-
-Founder also uses:
-
-* Fitvids, by Chris Coyier & Dave Ruper, https://github.com/davatron5000/FitVids.js/, licensed under the WTFPL license.
-* Google Fonts, http://google.com/fonts, licensed under open source licenses, see: https://developers.google.com/fonts/faq#Any_Page_OK.
-* Font Awesome by Dave Gandy, licensed under open source licenses, see: http://fortawesome.github.io/Font-Awesome/license/.
-* HTML5shiv by Alexander Farkas, Jonathan Neal, Paul Irish, John-David Dalton, and Remy Sharp, licensed under MIT/GPL2, see: https://github.com/aFarkas/html5shiv
-* Multiple Select by zhixin wen, licensed under MIT, see: http://wenzhixin.net.cn/p/multiple-select/
-* Respond.js by Scott Jehl, licensed under MIT, see: https://github.com/scottjehl/Respond
-* Golden Gate Bridge image in screenshot.png from http://unsplash.com, licensed under Public Domain
+* Custom colors
+* Featured Videos
+* Featured Sliders
+* Post & Page Templates
+* Flexible header image
+* Google fonts
+* More widget areas
+* Additional Menus
+* Display controls
+* Custom footer text
