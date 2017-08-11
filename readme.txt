@@ -5,11 +5,11 @@ Requires at least: 4.5
 Tested up to: 4.8
 Stable tag: 1.11
 
-Founder is a sophisticated, minimalist theme.
+Founder is a simple, clean, and professional blogging theme.
 
 == Description ==
 
-Founder is a sophisticated, minimalist theme. It looks great and performs wonderfully on mobile devices, tablets, laptops, and everything in between. Use it to setup a business blog, newspaper website, fashion magazine, or travel blog. Now with WooCommerce support, you can even setup an eCommerce store with Founder. The design of this minimal theme also suits media-rich sites well like food blogs and personal photography portfolios. As a simple, responsive, and SEO optimized theme, you can trust Founder to present your best content to the world.
+Founder's minimalist design presents your content in a simple, clean, and professional manner. As a responsive theme, Founder is beautiful on phones, tablets, and laptops, and is optimized to load quickly on each. Built with Google's multilingual font, Noto Sans, it is compatible with hundreds of languages. Lastly, as an accessibility-ready theme, visitors around the world can appreciate your content regardless of disability. Use Founder for a travel blog, business website, photography portfolio, or even a fashion blog. Thanks to the clean, minimal design, Founder can be used for nearly any kind of site. Get excited to share your site, and download Founder today.
 
 **Live Demo**
 
