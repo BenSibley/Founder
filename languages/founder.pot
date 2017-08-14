@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Founder 1.33\n"
+"Project-Id-Version: Founder 1.34\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2017-07-19 15:34:23+00:00\n"
+"POT-Creation-Date: 2017-08-14 14:48:19+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -106,7 +106,7 @@ msgstr ""
 msgid "Search for:"
 msgstr ""
 
-#: content-page.php:11 content.php:12
+#: content-page.php:11 content.php:12 templates/full-width.php:21
 msgid "Pages:"
 msgstr ""
 
@@ -145,23 +145,23 @@ msgstr ""
 msgid "Website"
 msgstr ""
 
-#: functions.php:174 inc/customizer.php:272
+#: functions.php:174 functions.php:238 inc/customizer.php:272
 msgid "Continue reading"
 msgstr ""
 
-#: functions.php:416 header.php:23
+#: functions.php:428 header.php:23
 msgid "open menu"
 msgstr ""
 
-#: functions.php:430
+#: functions.php:442
 msgid "Featured Post"
 msgstr ""
 
-#: functions.php:492
+#: functions.php:504
 msgid "Customizer settings deleted."
 msgstr ""
 
-#: functions.php:498
+#: functions.php:510
 msgid "Thanks for activating %s!"
 msgstr ""
 
@@ -389,8 +389,9 @@ msgstr ""
 
 #: theme-options.php:48
 msgid ""
-"%s can be converted into a mobile app and listed on the App Store with the "
-"help of PressPad News. Read our tutorial to learn more."
+"%s can be converted into a mobile app and listed on the App Store and "
+"Google Play Store with the help of PressPad News. Read our tutorial to "
+"learn more."
 msgstr ""
 
 #: theme-options.php:49
@@ -414,10 +415,16 @@ msgid ""
 "tablets, and laptops, and is optimized to load quickly on each. Built with "
 "Google's multilingual font, Noto Sans, it is compatible with hundreds of "
 "languages. Lastly, as an accessibility-ready theme, visitors around the "
-"world can appreciate your content regardless of disability. Get excited to "
-"share your site, and download Founder today. Preview on desktop, tablets, "
-"and mobile with our interactive live demo: "
-"https://www.competethemes.com/demos/?theme=founder"
+"world can appreciate your content regardless of disability. Use Founder for "
+"a travel blog, business website, photography portfolio, or even a fashion "
+"blog. Thanks to the clean, minimal design, Founder can be used for nearly "
+"any kind of site. Get excited to share your site, and download Founder "
+"today. Preview Founder now on desktop, tablets, and mobile devices with our "
+"interactive live demo: https://www.competethemes.com/demos/?theme=founder"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Full-width"
 msgstr ""
 
 #: comments.php:23 comments.php:44 comments.php:66
@@ -476,7 +483,7 @@ msgctxt "noun"
 msgid "Comment"
 msgstr ""
 
-#: functions.php:368 functions.php:369
+#: functions.php:380 functions.php:381
 msgctxt "noun"
 msgid "email"
 msgstr ""
