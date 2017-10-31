@@ -236,7 +236,7 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 
 	// section
 	$wp_customize->add_section( 'founder_blog', array(
-		'title'    => _x( 'Blog', 'noun: the blog section', 'founder' ),
+		'title'    => __( 'Blog', 'founder' ),
 		'priority' => 45
 	) );
 	// setting

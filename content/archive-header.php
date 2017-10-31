@@ -1,7 +1,7 @@
 <?php
 
 if ( is_home() ) {
-	echo '<h1 class="screen-reader-text">' . esc_html( get_bloginfo("name") ) . ' ' . _x('Posts', 'Site Title Posts', 'founder') . '</h1>';
+	echo '<h1 class="screen-reader-text">' . esc_html( get_bloginfo("name") ) . ' ' . __('Posts', 'founder') . '</h1>';
 }
 if ( ! is_archive() ) {
 	return;
