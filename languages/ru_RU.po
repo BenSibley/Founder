@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Founder 1.20\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2017-11-02 09:55-0400\n"
-"PO-Revision-Date: 2017-11-02 09:56-0400\n"
+"POT-Creation-Date: 2017-11-02 10:02-0400\n"
+"PO-Revision-Date: 2017-11-02 10:02-0400\n"
 "Last-Translator: \n"
 "Language-Team: serenitatis <me@serenitatis.ru>\n"
 "Language: ru_RU\n"
@@ -29,10 +29,18 @@ msgstr ""
 "Похоже, что здесь ничего не найдено. Еще раз проверьте ссылку или попробуйте "
 "воспользоваться поиском для нахождения нужного вам."
 
+#: comments.php:23 comments.php:44 comments.php:66
+msgid "Comments"
+msgstr "Комментарии"
+
 #: comments.php:23 comments.php:44 comments.php:66 content/comments-link.php:5
 #: content/comments-link.php:8
 msgid "One Comment"
 msgstr "Один комментарий"
+
+#: comments.php:23 comments.php:44 comments.php:66
+msgid "% Comments"
+msgstr "% комментариев"
 
 #: comments.php:58
 msgid ""
@@ -488,22 +496,14 @@ msgstr ""
 msgid "Full-width"
 msgstr ""
 
-#: comments.php:23 comments.php:44 comments.php:66
-msgctxt "noun: Comments section"
-msgid "Comments"
-msgstr ""
-
-#: comments.php:23 comments.php:44 comments.php:66 content/comments-link.php:5
-#: content/comments-link.php:8
+#: content/comments-link.php:5 content/comments-link.php:8
 msgctxt "noun: 5 comments"
 msgid "% Comments"
-msgstr ""
+msgstr "% комментариев"
 
+#~ msgctxt "noun: Comments section"
 #~ msgid "Comments"
 #~ msgstr "Комментарии"
-
-#~ msgid "% Comments"
-#~ msgstr "% комментариев"
 
 #~ msgid "archive icon"
 #~ msgstr "иконка архива"
