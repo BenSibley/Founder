@@ -1,7 +1,7 @@
 <?php
 
 if ( is_home() ) {
-	echo '<h1 class="screen-reader-text">' . esc_html( get_bloginfo("name") ) . ' ' . __('Posts', 'founder') . '</h1>';
+	echo '<h1 class="screen-reader-text">' . esc_html( get_bloginfo("name") ) . ' ' . esc_html__('Posts', 'founder') . '</h1>';
 }
 if ( ! is_archive() ) {
 	return;
@@ -19,7 +19,7 @@ if ( is_tag() ) {
 ?>
 
 <div class='archive-header'>
-	<i class="fa fa-<?php echo $icon_class; ?>"></i>
+	<i class="fa fa-<?php echo esc_attr( $icon_class ); ?>"></i>
 	<h1>
 		<?php the_archive_title(); ?>
 	</h1>
