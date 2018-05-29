@@ -40,6 +40,7 @@ if ( ! function_exists( ( 'ct_founder_theme_setup' ) ) ) {
 			'footer'    => 'overflow-container',
 			'render'    => 'ct_founder_infinite_scroll_render'
 		) );
+		add_theme_support( 'woocommerce' );
 
 		load_theme_textdomain( 'founder', get_template_directory() . '/languages' );
 
@@ -140,6 +141,13 @@ add_filter( 'comment_form_default_fields', 'ct_founder_update_fields' );
 
 if ( ! function_exists( 'ct_founder_update_comment_field' ) ) {
 	function ct_founder_update_comment_field( $comment_field ) {
+
+		// don't filter the WooCommerce review form
+		if ( function_exists( 'is_woocommerce' ) ) {
+			if ( is_woocommerce() ) {
+				return $comment_field;
+			}
+		}
 
 		$comment_field =
 			'<p class="comment-form-comment">

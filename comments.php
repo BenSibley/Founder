@@ -81,10 +81,21 @@ if ( comments_open() ) { ?>
 		</p>
 	</section>
 	<?php
-} else { ?>
-	<section id="comments" class="comments">
-		<p class="comments-closed">
-			<?php _e( 'Comments are closed.', 'founder' ); ?>
-		</p>
-	</section>
-<?php }
+} else { 
+	
+	$output = true;
+
+	// don't output on WooCommerce pages like Cart and Checkout
+	if ( function_exists( 'is_woocommerce' ) ) {
+		if ( is_cart() || is_checkout() || is_account_page() ) {
+			$output = false;
+		}
+	}
+	if ( $output ) { ?>
+		<section id="comments" class="comments">
+			<p class="comments-closed">
+				<?php _e( 'Comments are closed.', 'founder' ); ?>
+			</p>
+		</section>
+	<?php }
+}
