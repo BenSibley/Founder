@@ -125,7 +125,7 @@ jQuery(document).ready(function($){
     // fakes object-fit support
     objectFitAdjustment();
 
-    $(window).resize(function(){
+    $(window).on( 'resize', function(){
         centerDropdownMenus();
         socialIconAdjustment();
         sidebarHeightResize();
@@ -374,10 +374,10 @@ jQuery(document).ready(function($){
     }
 
     /* allow keyboard access/visibility for dropdown menu items */
-    menuLink.focus(function(){
+    menuLink.on( 'focus', function(){
         $(this).parents('ul').addClass('focused');
     });
-    menuLink.focusout(function(){
+    menuLink.on( 'focusout', function(){
         $(this).parents('ul').removeClass('focused');
     });
 
