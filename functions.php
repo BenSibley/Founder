@@ -306,6 +306,7 @@ if ( ! function_exists( 'ct_founder_social_array' ) ) {
 			'deviantart'    => 'founder_deviantart_profile',
 			'digg'          => 'founder_digg_profile',
 			'github'        => 'founder_github_profile',
+			'bitbucket'     => 'founder_bitbucket_profile',
 			'hacker-news'   => 'founder_hacker-news_profile',
 			'snapchat'      => 'founder_snapchat_profile',
 			'bandcamp'      => 'founder_bandcamp_profile',
