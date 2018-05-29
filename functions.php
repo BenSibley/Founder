@@ -321,6 +321,7 @@ if ( ! function_exists( 'ct_founder_social_array' ) ) {
 			'twitch'        => 'founder_twitch_profile',
 			'steam'         => 'founder_steam_profile',
 			'vk'            => 'founder_vk_profile',
+			'ok-ru'					=> 'founder_ok_ru_profile',
 			'weibo'         => 'founder_weibo_profile',
 			'tencent-weibo' => 'founder_tencent_weibo_profile',
 			'500px'         => 'founder_500px_profile',
@@ -378,6 +379,8 @@ if ( ! function_exists( 'ct_founder_social_icons_output' ) ) {
 					// get the square or plain class
 					if ( in_array( $active_site, $square_icons ) ) {
 						$class = 'fa fa-' . esc_attr( $active_site ) . '-square';
+					} elseif ( $active_site == 'ok-ru' ) {
+						$class = 'fa fa-odnoklassniki';
 					} else {
 						$class = 'fa fa-' . esc_attr( $active_site );
 					}
