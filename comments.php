@@ -20,7 +20,7 @@ if ( comments_open() ) { ?>
 	<section id="comments" class="comments">
 		<div class="comments-number">
 			<h2>
-				<?php comments_number( __( 'Comments', 'founder' ), __( 'One Comment', 'founder' ), __( '% Comments', 'founder' ) ); ?>
+				<?php comments_number( esc_html__( 'Comments', 'founder' ), esc_html__( 'One Comment', 'founder' ), esc_html__( '% Comments', 'founder' ) ); ?>
 			</h2>
 		</div>
 		<ol class="comment-list">
@@ -41,7 +41,7 @@ if ( comments_open() ) { ?>
 	<section id="comments" class="comments">
 		<div class="comments-number">
 			<h2>
-				<?php comments_number( __( 'Comments', 'founder' ), __( 'One Comment', 'founder' ), __( '% Comments', 'founder' ) ); ?>
+				<?php comments_number( esc_html__( 'Comments', 'founder' ), esc_html__( 'One Comment', 'founder' ), esc_html__( '% Comments', 'founder' ) ); ?>
 			</h2>
 		</div>
 		<ol class="comment-list">
@@ -63,7 +63,7 @@ if ( comments_open() ) { ?>
 	<section id="comments" class="comments">
 		<div class="comments-number">
 			<h2>
-				<?php comments_number( __( 'Comments', 'founder' ), __( 'One Comment', 'founder' ), __( '% Comments', 'founder' ) ); ?>
+				<?php comments_number( esc_html__( 'Comments', 'founder' ), esc_html__( 'One Comment', 'founder' ), esc_html__( '% Comments', 'founder' ) ); ?>
 			</h2>
 		</div>
 		<ol class="comment-list">
@@ -77,7 +77,7 @@ if ( comments_open() ) { ?>
 			</nav>
 		<?php } ?>
 		<p class="comments-closed">
-			<?php _e( 'Comments are closed.', 'founder' ); ?>
+			<?php esc_html_e( 'Comments are closed.', 'founder' ); ?>
 		</p>
 	</section>
 	<?php
@@ -94,7 +94,7 @@ if ( comments_open() ) { ?>
 	if ( $output ) { ?>
 		<section id="comments" class="comments">
 			<p class="comments-closed">
-				<?php _e( 'Comments are closed.', 'founder' ); ?>
+				<?php esc_html_e( 'Comments are closed.', 'founder' ); ?>
 			</p>
 		</section>
 	<?php }

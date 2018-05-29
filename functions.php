@@ -45,7 +45,7 @@ if ( ! function_exists( ( 'ct_founder_theme_setup' ) ) ) {
 		load_theme_textdomain( 'founder', get_template_directory() . '/languages' );
 
 		register_nav_menus( array(
-			'primary' => __( 'Primary', 'founder' )
+			'primary' => esc_html__( 'Primary', 'founder' )
 		) );
 	}
 }
@@ -82,7 +82,7 @@ if ( ! function_exists( ( 'ct_founder_customize_comments' ) ) ) {
 			</div>
 			<div class="comment-content">
 				<?php if ( $comment->comment_approved == '0' ) : ?>
-					<em><?php _e( 'Your comment is awaiting moderation.', 'founder' ) ?></em>
+					<em><?php esc_html_e( 'Your comment is awaiting moderation.', 'founder' ) ?></em>
 					<br/>
 				<?php endif; ?>
 				<?php comment_text(); ?>
@@ -91,13 +91,13 @@ if ( ! function_exists( ( 'ct_founder_customize_comments' ) ) ) {
 				<span class="comment-date"><?php comment_date(); ?></span>
 				<?php comment_reply_link( array_merge( $args, array(
 					// translators: verb: reply to this comment
-					'reply_text' => __( 'Reply', 'founder' ),
+					'reply_text' => esc_html__( 'Reply', 'founder' ),
 					'depth'      => $depth,
 					'max_depth'  => $args['max_depth']
 				) ) ); ?>
 				<?php
 				// translators: verb: edit to this comment
-				edit_comment_link( __( 'Edit', 'founder' ) ); 
+				edit_comment_link( esc_html__( 'Edit', 'founder' ) ); 
 				?>
 			</div>
 		</article>
@@ -110,26 +110,26 @@ if ( ! function_exists( 'ct_founder_update_fields' ) ) {
 
 		$commenter = wp_get_current_commenter();
 		$req       = get_option( 'require_name_email' );
-		$label     = $req ? '*' : ' ' . __( '(optional)', 'founder' );
+		$label     = $req ? '*' : ' ' . esc_html__( '(optional)', 'founder' );
 		$aria_req  = $req ? "aria-required='true'" : '';
 
 		$fields['author'] =
 			'<p class="comment-form-author">
-	            <label for="author">' . __( "Name", "founder" ) . $label . '</label>
+	            <label for="author">' . esc_html__( "Name", "founder" ) . $label . '</label>
 	            <input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
 			'" size="30" ' . $aria_req . ' />
 	        </p>';
 
 		$fields['email'] =
 			'<p class="comment-form-email">
-	            <label for="email">' . __( "Email", "founder" ) . $label . '</label>
+	            <label for="email">' . esc_html__( "Email", "founder" ) . $label . '</label>
 	            <input id="email" name="email" type="email" value="' . esc_attr( $commenter['comment_author_email'] ) .
 			'" size="30" ' . $aria_req . ' />
 	        </p>';
 
 		$fields['url'] =
 			'<p class="comment-form-url">
-	            <label for="url">' . __( "Website", "founder" ) . '</label>
+	            <label for="url">' . esc_html__( "Website", "founder" ) . '</label>
 	            <input id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
 			'" size="30" />
 	            </p>';
@@ -151,7 +151,7 @@ if ( ! function_exists( 'ct_founder_update_comment_field' ) ) {
 
 		$comment_field =
 			'<p class="comment-form-comment">
-	            <label for="comment">' . __( "Comment", "founder" ) . '</label>
+	            <label for="comment">' . esc_html__( "Comment", "founder" ) . '</label>
 	            <textarea required id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
 	        </p>';
 
@@ -183,7 +183,7 @@ if ( ! function_exists( 'ct_founder_filter_read_more_link' ) ) {
 		}
 		// Because i18n text cannot be stored in a variable
 		if ( empty( $read_more_text ) ) {
-			$output .= '<div class="more-link-wrapper"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . __( 'Continue reading', 'founder' ) . '<span class="screen-reader-text">' . esc_html( get_the_title() ) . '</span></a></div>';
+			$output .= '<div class="more-link-wrapper"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'Continue reading', 'founder' ) . '<span class="screen-reader-text">' . esc_html( get_the_title() ) . '</span></a></div>';
 		} else {
 			$output .= '<div class="more-link-wrapper"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html( $read_more_text ) . '<span class="screen-reader-text">' . esc_html( get_the_title() ) . '</span></a></div>';
 		}
@@ -247,7 +247,7 @@ add_filter( 'the_content_more_link', 'ct_founder_remove_more_link_scroll' );
 function ct_founder_update_yoast_og_description( $ogdesc ) {
 	$read_more_text = get_theme_mod( 'read_more_text' );
 	if ( empty( $read_more_text ) ) {
-		$read_more_text = __( 'Continue reading', 'founder' );
+		$read_more_text = esc_html__( 'Continue reading', 'founder' );
 	}
 	$ogdesc = substr( $ogdesc, 0, strpos( $ogdesc, $read_more_text ) );
 
@@ -377,9 +377,9 @@ if ( ! function_exists( 'ct_founder_social_icons_output' ) ) {
 
 					// get the square or plain class
 					if ( in_array( $active_site, $square_icons ) ) {
-						$class = 'fa fa-' . $active_site . '-square';
+						$class = 'fa fa-' . esc_attr( $active_site ) . '-square';
 					} else {
-						$class = 'fa fa-' . $active_site;
+						$class = 'fa fa-' . esc_attr( $active_site );
 					}
 					if ( $active_site == 'email-form' ) {
 						$class = 'fa fa-envelope-o';
@@ -437,7 +437,7 @@ if ( ! function_exists( ( 'ct_founder_nav_dropdown_buttons' ) ) ) {
 		if ( $args->theme_location == 'primary' ) {
 
 			if ( in_array( 'menu-item-has-children', $item->classes ) || in_array( 'page_item_has_children', $item->classes ) ) {
-				$item_output = str_replace( $args->link_after . '</a>', $args->link_after . '</a><button class="toggle-dropdown" aria-expanded="false" name="toggle-dropdown"><span class="screen-reader-text">' . __( "open menu", "founder" ) . '</span></button>', $item_output );
+				$item_output = str_replace( $args->link_after . '</a>', $args->link_after . '</a><button class="toggle-dropdown" aria-expanded="false" name="toggle-dropdown"><span class="screen-reader-text">' . esc_html__( "open menu", "founder" ) . '</span></button>', $item_output );
 			}
 		}
 
@@ -451,7 +451,7 @@ if ( ! function_exists( ( 'ct_founder_sticky_post_marker' ) ) ) {
 
 		// sticky_post_status only included in content-archive, so it will only show on the blog
 		if ( is_sticky() && !is_archive() && !is_search() ) {
-			echo '<div class="sticky-status"><span>' . __( "Featured Post", "founder" ) . '</span></div>';
+			echo '<div class="sticky-status"><span>' . esc_html__( "Featured Post", "founder" ) . '</span></div>';
 		}
 	}
 }
@@ -513,13 +513,13 @@ if ( ! function_exists( ( 'ct_founder_delete_settings_notice' ) ) ) {
 			if ( $_GET['founder_status'] == 'deleted' ) {
 				?>
 				<div class="updated">
-					<p><?php _e( 'Customizer settings deleted.', 'founder' ); ?></p>
+					<p><?php esc_html_e( 'Customizer settings deleted.', 'founder' ); ?></p>
 				</div>
 				<?php
 			} else if ( $_GET['founder_status'] == 'activated' ) {
 				?>
 				<div class="updated">
-					<p><?php printf( __( 'Thanks for activating %s!', 'founder' ), wp_get_theme( get_template() ) ); ?></p>
+					<p><?php printf( esc_html__( 'Thanks for activating %s!', 'founder' ), wp_get_theme( get_template() ) ); ?></p>
 				</div>
 				<?php
 			}
