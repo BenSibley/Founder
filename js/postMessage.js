@@ -68,6 +68,7 @@
         // convert email-address to email
         if ( site === 'email-address') site = 'email';
         if ( site === 'contact-form') site = 'email-form';
+        if ( site === 'ok.ru') site = 'ok-ru';
 
         // icons that should use a special square icon
         var squareIcons = ['linkedin', 'twitter', 'vimeo', 'youtube', 'pinterest', 'rss', 'reddit', 'tumblr', 'steam', 'xing', 'github', 'google-plus', 'behance', 'facebook'];
@@ -104,6 +105,8 @@
                         // get class based on presence in squareicons list
                         if ( $.inArray( siteName, squareIcons ) > -1 ) {
                             var siteClass = 'fa fa-' + siteName + '-square';
+                        } else if ( siteName == 'ok-ru') {
+                            var siteClass = 'fa fa-' + 'odnoklassniki';
                         } else {
                             var siteClass = 'fa fa-' + siteName;
                         }
