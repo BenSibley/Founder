@@ -310,6 +310,30 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 		)
 	) );
 
+	/***** Scroll-to-stop Arrow  *****/
+
+	// section
+	$wp_customize->add_section( 'ct_founder_scroll_to_stop', array(
+		'title'    => __( 'Scroll-to-Top Arrow', 'founder' ),
+		'priority' => 68
+	) );
+	// setting - scroll-to-top arrow
+	$wp_customize->add_setting( 'scroll_to_top', array(
+		'default'           => 'no',
+		'sanitize_callback' => 'ct_founder_sanitize_yes_no_settings'
+	) );
+	// control - scroll-to-top arrow
+	$wp_customize->add_control( 'scroll_to_top', array(
+		'label'    => __( 'Display Scroll-to-top arrow?', 'founder' ),
+		'section'  => 'ct_founder_scroll_to_stop',
+		'settings' => 'scroll_to_top',
+		'type'     => 'radio',
+		'choices'  => array(
+			'yes' => __( 'Yes', 'founder' ),
+			'no'  => __( 'No', 'founder' )
+		)
+	) );
+
 	/***** Custom CSS *****/
 
 	if ( function_exists( 'wp_update_custom_css_post' ) ) {
@@ -389,7 +413,7 @@ function ct_founder_sanitize_yes_no_settings( $input ) {
 
 	$valid = array(
 		'yes' => __( 'Yes', 'founder' ),
-		'no'  => __( 'No', 'founder' ),
+		'no'  => __( 'No', 'founder' )
 	);
 
 	return array_key_exists( $input, $valid ) ? $input : '';

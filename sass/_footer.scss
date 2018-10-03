@@ -4,6 +4,34 @@
   border-top: solid 1px $color-gray-83;
   margin-top: $baseline-height * 3;
 }
+.scroll-to-top {
+  position: fixed;
+  bottom: -45px;
+  right: 0;
+  z-index: 9;
+  background: $color-gray-10;
+  border: none;
+  color: #fff;
+  padding: 12px 0;
+  width: 60px;
+  transition: background 0.2s, transform 0.3s;
+
+  &.visible {
+    transform: translateY(-45px);
+  }
+  &:hover {
+    cursor: pointer;
+    background: $color-gray-30;
+
+    i {
+      transform: translateY(-4px);
+    }
+  }
+  i {
+    font-size: 21px;
+    transition: transform 0.2s;
+  }
+}
 
 @media all and (min-width: $fourteen-hundred) {
 
