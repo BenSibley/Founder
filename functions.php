@@ -292,6 +292,7 @@ if ( ! function_exists( 'ct_founder_social_array' ) ) {
 			'tumblr'        => 'founder_tumblr_profile',
 			'instagram'     => 'founder_instagram_profile',
 			'flickr'        => 'founder_flickr_profile',
+			'discord'				=> 'founder_discord_profile',
 			'dribbble'      => 'founder_dribbble_profile',
 			'rss'           => 'founder_rss_profile',
 			'reddit'        => 'founder_reddit_profile',
