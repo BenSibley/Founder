@@ -308,6 +308,7 @@ if ( ! function_exists( 'ct_founder_social_array' ) ) {
 			'behance'       => 'founder_behance_profile',
 			'codepen'       => 'founder_codepen_profile',
 			'delicious'     => 'founder_delicious_profile',
+			'stack-overflow' => 'founder_stack_overflow_profile',
 			'stumbleupon'   => 'founder_stumbleupon_profile',
 			'deviantart'    => 'founder_deviantart_profile',
 			'digg'          => 'founder_digg_profile',
