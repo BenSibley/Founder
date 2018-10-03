@@ -329,6 +329,7 @@ if ( ! function_exists( 'ct_founder_social_array' ) ) {
 			'quora'         => 'founder_quora_profile',
 			'ravelry'       => 'founder_ravelry_profile',
 			'meetup'        => 'founder_meetup_profile',
+			'mixcloud'      => 'founder_mixcloud_profile',
 			'telegram'      => 'founder_telegram_profile',
 			'podcast'       => 'founder_podcast_profile',
 			'yelp'          => 'founder_yelp_profile',
