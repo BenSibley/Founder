@@ -40,7 +40,12 @@ if ( ! function_exists( ( 'ct_founder_theme_setup' ) ) ) {
 			'footer'    => 'overflow-container',
 			'render'    => 'ct_founder_infinite_scroll_render'
 		) );
+		// Add WooCommerce support
 		add_theme_support( 'woocommerce' );
+		// Support WooCommerce image gallery features 
+		add_theme_support( 'wc-product-gallery-zoom' ); 
+		add_theme_support( 'wc-product-gallery-lightbox' ); 
+		add_theme_support( 'wc-product-gallery-slider' );
 
 		load_theme_textdomain( 'founder', get_template_directory() . '/languages' );
 
