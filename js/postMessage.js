@@ -71,7 +71,7 @@
         if ( site === 'ok.ru') site = 'ok-ru';
 
         // icons that should use a special square icon
-        var squareIcons = ['linkedin', 'twitter', 'vimeo', 'youtube', 'pinterest', 'rss', 'reddit', 'tumblr', 'steam', 'xing', 'github', 'google-plus', 'behance', 'facebook'];
+        var squareIcons = ['twitter', 'vimeo', 'youtube', 'pinterest', 'rss', 'reddit', 'tumblr', 'steam', 'xing', 'github', 'google-plus', 'behance', 'facebook'];
 
         // when a social site value is updated
         wp.customize( site, function (value) {
@@ -104,9 +104,17 @@
 
                         // get class based on presence in squareicons list
                         if ( $.inArray( siteName, squareIcons ) > -1 ) {
-                            var siteClass = 'fab fa-' + siteName + '-square';
+                            if ( siteName == 'rss') {
+                                var siteClass = 'fas fa-rss-square';
+                            } else {
+                                var siteClass = 'fab fa-' + siteName + '-square';
+                            }
                         } else if ( siteName == 'ok-ru') {
-                            var siteClass = 'fab fa-' + 'odnoklassniki';
+                            var siteClass = 'fab fa-odnoklassniki';
+                        } else if ( siteName == 'podcast') {
+                            var siteClass = 'fas fa-podcast';
+                        } else if ( siteName == 'wechat') {
+                            var siteClass = 'fab fa-weixin';
                         } else {
                             var siteClass = 'fab fa-' + siteName;
                         }
@@ -116,7 +124,7 @@
                             socialMediaIcons.append( '<li><a target="_blank" href="mailto:' + $(this).val() + '"><i class="fas fa-envelope"></i></a></li>' );
                         }
                         else if( siteName == 'email-form' ) {
-                            socialMediaIcons.append('<li><a class="' + siteName + '" target="_blank" href="' + $(this).val() + '"><i class="far fa-envelope-o"></i></a></li>');
+                            socialMediaIcons.append('<li><a class="' + siteName + '" target="_blank" href="' + $(this).val() + '"><i class="far fa-envelope"></i></a></li>');
                         }
                         else {
                             socialMediaIcons.append('<li><a class="' + siteName + '" target="_blank" href="' + $(this).val() + '"><i class="' + siteClass + '"></i></a></li>');
