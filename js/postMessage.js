@@ -115,6 +115,8 @@
                             var siteClass = 'fas fa-podcast';
                         } else if ( siteName == 'wechat') {
                             var siteClass = 'fab fa-weixin';
+                        } else if ( siteName == 'phone') {
+                            var siteClass = 'fas fa-phone';
                         } else {
                             var siteClass = 'fab fa-' + siteName;
                         }

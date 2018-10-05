@@ -303,6 +303,7 @@ if ( ! function_exists( 'ct_founder_social_array' ) ) {
 			'youtube'       => 'founder_youtube_profile',
 			'rss'           => 'founder_rss_profile',
 			'email'         => 'founder_email_profile',
+			'phone'         => 'founder_phone_profile',
 			'email-form'    => 'founder_email_form_profile',
 			'amazon'        => 'founder_amazon_profile',
 			'bandcamp'      => 'founder_bandcamp_profile',
@@ -407,6 +408,8 @@ if ( ! function_exists( 'ct_founder_social_icons_output' ) ) {
 						$class = 'fas fa-podcast';
 					} elseif ( $active_site == 'wechat' ) {
 						$class = 'fab fa-weixin';
+					} elseif ( $active_site == 'phone' ) {
+						$class = 'fas fa-phone';
 					} else {
 						$class = 'fab fa-' . esc_attr( $active_site );
 					}
@@ -425,6 +428,14 @@ if ( ! function_exists( 'ct_founder_social_icons_output' ) ) {
 							   href="<?php echo esc_url( get_theme_mod( $key ), array( 'http', 'https', 'skype' ) ); ?>">
 								<i class="<?php echo esc_attr( $class ); ?>" title="<?php echo esc_attr( $active_site ); ?>"></i>
 								<span class="screen-reader-text"><?php echo esc_html( $active_site ); ?></span>
+							</a>
+						</li>
+					<?php } elseif ( $active_site == 'phone' ) { ?>
+						<li>
+							<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
+									href="<?php echo esc_url( get_theme_mod( $active_site ), array( 'tel' ) ); ?>">
+								<i class="<?php echo esc_attr( $class ); ?>"></i>
+								<span class="screen-reader-text"><?php echo esc_html( $active_site );  ?></span>
 							</a>
 						</li>
 					<?php } else { ?>
