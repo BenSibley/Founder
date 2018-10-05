@@ -21,7 +21,7 @@
 				</div>
 				<button id="toggle-navigation" class="toggle-navigation" name="toggle-navigation" aria-expanded="false">
 					<span class="screen-reader-text"><?php _e( 'open menu', 'founder' ); ?></span>
-					<i class="fa fa-bars" title="<?php _e( 'primary menu icon', 'founder' ); ?>" aria-hidden="true"></i>
+					<i class="fas fa-bars" title="<?php _e( 'primary menu icon', 'founder' ); ?>" aria-hidden="true"></i>
 				</button>
 				<div id="menu-primary-container" class="menu-primary-container">
 					<?php get_template_part( 'menu', 'primary' ); ?>

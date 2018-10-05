@@ -19,7 +19,7 @@ if ( is_tag() ) {
 ?>
 
 <div class='archive-header'>
-	<i class="fa fa-<?php echo esc_attr( $icon_class ); ?>"></i>
+	<i class="fas fa-<?php echo esc_attr( $icon_class ); ?>"></i>
 	<h1>
 		<?php the_archive_title(); ?>
 	</h1>

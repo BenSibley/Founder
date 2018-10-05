@@ -104,19 +104,19 @@
 
                         // get class based on presence in squareicons list
                         if ( $.inArray( siteName, squareIcons ) > -1 ) {
-                            var siteClass = 'fa fa-' + siteName + '-square';
+                            var siteClass = 'fab fa-' + siteName + '-square';
                         } else if ( siteName == 'ok-ru') {
-                            var siteClass = 'fa fa-' + 'odnoklassniki';
+                            var siteClass = 'fab fa-' + 'odnoklassniki';
                         } else {
-                            var siteClass = 'fa fa-' + siteName;
+                            var siteClass = 'fab fa-' + siteName;
                         }
 
                         // output the content for the icon
                         if( siteName == 'email' ) {
-                            socialMediaIcons.append( '<li><a target="_blank" href="mailto:' + $(this).val() + '"><i class="fa fa-envelope"></i></a></li>' );
+                            socialMediaIcons.append( '<li><a target="_blank" href="mailto:' + $(this).val() + '"><i class="fas fa-envelope"></i></a></li>' );
                         }
                         else if( siteName == 'email-form' ) {
-                            socialMediaIcons.append('<li><a class="' + siteName + '" target="_blank" href="' + $(this).val() + '"><i class="fa fa-envelope-o"></i></a></li>');
+                            socialMediaIcons.append('<li><a class="' + siteName + '" target="_blank" href="' + $(this).val() + '"><i class="far fa-envelope-o"></i></a></li>');
                         }
                         else {
                             socialMediaIcons.append('<li><a class="' + siteName + '" target="_blank" href="' + $(this).val() + '"><i class="' + siteClass + '"></i></a></li>');
