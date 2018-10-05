@@ -153,7 +153,7 @@ module.exports = function(grunt) {
                     'rm -R /Users/bensibley/Documents/compete-themes/dist/founder || true',
                     'rm -R /Users/bensibley/Documents/compete-themes/dist/founder.zip || true',
                     // copy theme folder without any project/meta files
-                    'rsync -r /Applications/MAMP/htdocs/wordpress/wp-content/themes/founder /Users/bensibley/Documents/compete-themes/dist/ <%= excludeFiles %>',
+                    'rsync -r "/Users/bensibley/Local Sites/founder/app/public/wp-content/themes/founder" /Users/bensibley/Documents/compete-themes/dist/ <%= excludeFiles %>',
                     // open dist folder
                     'cd /Users/bensibley/Documents/compete-themes/dist/',
                     // zip the founder folder
