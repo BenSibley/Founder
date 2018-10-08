@@ -19,7 +19,7 @@ function ct_founder_load_scripts_styles() {
 		'closeSidebar' => esc_html__( 'close sidebar', 'founder' )
 	) );
 
-	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/all.min.css' );
+	wp_enqueue_style( 'ct-founder-font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/all.min.css' );
 
 	wp_enqueue_style( 'ct-founder-style', get_stylesheet_uri() );
 
