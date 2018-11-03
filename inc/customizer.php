@@ -46,46 +46,6 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 		<?php }
 	}
 
-	/***** Founder Pro Control *****/
-
-	class ct_founder_pro_ad extends WP_Customize_Control {
-		public function render_content() {
-			$link = 'https://www.competethemes.com/founder-pro/';
-			echo "<a href='" . $link . "' target='_blank'><img src='" . get_template_directory_uri() . "/assets/images/founder-pro.gif' /></a>";
-			echo "<p class='bold'>" . sprintf( __('<a target="_blank" href="%1$s">%2$s Pro</a> is the plugin that makes advanced customization simple - and fun too!', 'founder'), $link, wp_get_theme( get_template() ) ) . "</p>";
-			echo "<p>" . sprintf( __('%1$s Pro adds the following features to %1$s:', 'founder'), wp_get_theme( get_template() ) ) . "</p>";
-			echo "<ul>
-					<li>" . __('Custom colors', 'founder') . "</li>
-					<li>" . __('New fonts', 'founder') . "</li>
-					<li>" . __('Post & page templates', 'founder') . "</li>
-					<li>" . __('+ 8 more features', 'founder') . "</li>
-				  </ul>";
-			echo "<p class='button-wrapper'><a target=\"_blank\" class='founder-pro-button' href='" . $link . "'>" . sprintf( __('View %s Pro', 'founder'), wp_get_theme( get_template() ) ) . "</a></p>";
-		}
-	}
-
-	/***** Founder Pro Section *****/
-
-	// don't add if Founder Pro is active
-	if ( !function_exists( 'ct_founder_pro_init' ) ) {
-		// section
-		$wp_customize->add_section( 'ct_founder_pro', array(
-			'title'    => sprintf( __( '%s Pro', 'founder' ), wp_get_theme( get_template() ) ),
-			'priority' => 1
-		) );
-		// Upload - setting
-		$wp_customize->add_setting( 'founder_pro', array(
-			'sanitize_callback' => 'absint'
-		) );
-		// Upload - control
-		$wp_customize->add_control( new ct_founder_pro_ad(
-			$wp_customize, 'founder_pro', array(
-				'section'  => 'ct_founder_pro',
-				'settings' => 'founder_pro'
-			)
-		) );
-	}
-
 	/***** Logo Upload *****/
 
 	// section
@@ -456,3 +416,12 @@ function ct_founder_sanitize_phone( $input ) {
 		return '';
 	}
 }
+
+function ct_founder_customize_preview_js() {
+	if ( !function_exists( 'ct_founder_pro_init' ) ) {
+		$url = 'https://www.competethemes.com/founder-pro/?utm_source=wp-dashboard&utm_medium=Customizer&utm_campaign=Founder%20Pro%20-%20Customizer';
+		$content = "<script>jQuery('#customize-info').prepend('<div class=\"upgrades-ad\"><a href=\"". $url ."\" target=\"_blank\">Customize Colors with Founder Pro <span>&rarr;</span></a></div>')</script>";
+		echo apply_filters('ct_founder_customizer_ad', $content);
+	}
+}
+add_action('customize_controls_print_footer_scripts', 'ct_founder_customize_preview_js');
