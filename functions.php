@@ -322,6 +322,7 @@ if ( ! function_exists( 'ct_founder_social_array' ) ) {
 			'google-plus'   => 'founder_googleplus_profile',
 			'google-wallet' => 'founder_google-wallet_profile',
 			'hacker-news'   => 'founder_hacker-news_profile',
+			'medium'        => 'founder_medium_profile',
 			'meetup'        => 'founder_meetup_profile',
 			'mixcloud'      => 'founder_mixcloud_profile',
 			'ok-ru'					=> 'founder_ok_ru_profile',
