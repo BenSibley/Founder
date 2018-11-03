@@ -34,7 +34,7 @@ function ct_founder_options_content() {
 			</div>
 			<div class="pro">
 				<h3>Customize More with Founder Pro</h3>
-				<p>Add 10 new customization features to your site with the <a href="<?php echo $pro_url; ?>" target="_blank">Founder Pro</a> plugin.</p>
+				<p>Add 11 new customization features to your site with the <a href="<?php echo $pro_url; ?>" target="_blank">Founder Pro</a> plugin.</p>
 				<ul class="feature-list">
 					<li>
 						<div class="image">
