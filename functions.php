@@ -326,6 +326,7 @@ if ( ! function_exists( 'ct_founder_social_array' ) ) {
 			'meetup'        => 'founder_meetup_profile',
 			'mixcloud'      => 'founder_mixcloud_profile',
 			'ok-ru'					=> 'founder_ok_ru_profile',
+			'patreon'       => 'founder_patreon_profile',
 			'paypal'        => 'founder_paypal_profile',
 			'podcast'       => 'founder_podcast_profile',
 			'qq'            => 'founder_qq_profile',
