@@ -4,7 +4,7 @@
 function ct_founder_load_scripts_styles() {
 
 	$font_args = array(
-		'family' => urlencode( 'Noto Sans:400,700,400italic' ),
+		'family' => urlencode( 'Noto Sans:400,700,400i' ),
 		'subset' => urlencode( 'latin,latin-ext' )
 	);
 	$fonts_url = add_query_arg( $font_args, '//fonts.googleapis.com/css' );
@@ -49,6 +49,16 @@ function ct_founder_enqueue_admin_styles( $hook ) {
 
 	if ( $hook == 'appearance_page_founder-options' ) {
 		wp_enqueue_style( 'ct-founder-admin-styles', get_template_directory_uri() . '/styles/admin.min.css' );
+	}
+	if ( $hook == 'post.php' || $hook == 'post-new.php' ) {
+
+		$font_args = array(
+			'family' => urlencode( 'Noto Sans:400,700,400i' ),
+			'subset' => urlencode( 'latin,latin-ext' )
+		);
+		$fonts_url = add_query_arg( $font_args, '//fonts.googleapis.com/css' );
+	
+		wp_enqueue_style( 'ct-founder-google-fonts', $fonts_url );
 	}
 }
 add_action( 'admin_enqueue_scripts', 'ct_founder_enqueue_admin_styles' );
