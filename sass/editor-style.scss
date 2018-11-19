@@ -14,15 +14,17 @@ body {
   font-size: 16px;
   line-height: 1.5;
 }
-.editor-block-list__layout {
-  font-size: 1.0625em;
-  line-height: 1.4118;
+.wp-block {
+  max-width: 700px;
 }
 .editor-post-title textarea {
-  font-family: $primary-font-stack;
-  font-weight: 400;
+  @extend h1;
   color: $color-gray-20;
   text-align: center;
+}
+.wp-block[data-align="wide"],
+.wp-block[data-align="full"] {
+  max-width: none;
 }
 .wp-block-quote.is-large {
   padding-left: 0;
@@ -42,4 +44,12 @@ body {
 }
 .has-extra-large-font-size {
   font-size: 36px;
+}
+
+@media all and (min-width: 1100px) {
+
+  .editor-post-title textarea {
+    font-size: 2.25em;
+    line-height: 1.5;
+  }
 }
