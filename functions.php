@@ -67,7 +67,7 @@ if ( ! function_exists( ( 'ct_founder_theme_setup' ) ) ) {
 			array(
 					'name' => __( 'small', 'founder' ),
 					'shortName' => __( 'S', 'founder' ),
-					'size' => 1,
+					'size' => 11,
 					'slug' => 'small'
 			),
 			array(
