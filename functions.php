@@ -62,6 +62,34 @@ if ( ! function_exists( ( 'ct_founder_theme_setup' ) ) ) {
 		// Gutenberg - add support for editor styles
 		add_theme_support('editor-styles');
 
+		// Gutenberg - modify the font sizes
+		add_theme_support( 'editor-font-sizes', array(
+			array(
+					'name' => __( 'small', 'founder' ),
+					'shortName' => __( 'S', 'founder' ),
+					'size' => 1,
+					'slug' => 'small'
+			),
+			array(
+					'name' => __( 'regular', 'founder' ),
+					'shortName' => __( 'M', 'founder' ),
+					'size' => 16,
+					'slug' => 'regular'
+			),
+			array(
+					'name' => __( 'large', 'founder' ),
+					'shortName' => __( 'L', 'founder' ),
+					'size' => 24,
+					'slug' => 'large'
+			),
+			array(
+					'name' => __( 'larger', 'founder' ),
+					'shortName' => __( 'XL', 'founder' ),
+					'size' => 36,
+					'slug' => 'larger'
+			)
+	) );
+
 		load_theme_textdomain( 'founder', get_template_directory() . '/languages' );
 
 		register_nav_menus( array(
