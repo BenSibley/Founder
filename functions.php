@@ -55,6 +55,10 @@ if ( ! function_exists( ( 'ct_founder_theme_setup' ) ) ) {
 		add_theme_support( 'wc-product-gallery-lightbox' ); 
 		add_theme_support( 'wc-product-gallery-slider' );
 
+		// Gutenberg - wide & full images
+		add_theme_support( 'align-wide' );
+		add_theme_support( 'align-full' );
+
 		load_theme_textdomain( 'founder', get_template_directory() . '/languages' );
 
 		register_nav_menus( array(
@@ -63,6 +67,16 @@ if ( ! function_exists( ( 'ct_founder_theme_setup' ) ) ) {
 	}
 }
 add_action( 'after_setup_theme', 'ct_founder_theme_setup', 10 );
+
+//-----------------------------------------------------------------------------
+// Load custom stylesheet for the post editor
+//-----------------------------------------------------------------------------
+if ( ! function_exists( 'ct_founder_add_editor_styles' ) ) {
+	function ct_founder_add_editor_styles() {
+		add_editor_style( 'styles/editor-style.css' );
+	}
+}
+add_action( 'admin_init', 'ct_founder_add_editor_styles' );
 
 if ( ! function_exists( ( 'ct_founder_register_widget_areas' ) ) ) {
 	function ct_founder_register_widget_areas() {
