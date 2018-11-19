@@ -2,9 +2,11 @@
 @import "base";
 
 .mce-content-body.wp-editor {
-  margin: 0 24px;
-  font-size: 1.0625em;
-  line-height: 1.4118;
+  margin: 0 auto;
+  padding: 0 24px !important;
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 748px;
   -webkit-font-smoothing: subpixel-antialiased !important;
 }
 // Gutenberg
