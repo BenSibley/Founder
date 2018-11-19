@@ -21,6 +21,7 @@ body {
   @extend h1;
   color: $color-gray-20;
   text-align: center;
+  outline: none;
 }
 .wp-block[data-align="wide"],
 .wp-block[data-align="full"] {

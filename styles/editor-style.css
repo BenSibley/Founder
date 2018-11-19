@@ -367,6 +367,7 @@ body {
 .editor-post-title textarea {
   color: #333333;
   text-align: center;
+  outline: none;
 }
 
 .wp-block[data-align="wide"],
