@@ -1538,10 +1538,15 @@ a img {
 .wp-block-quote.is-large {
   padding-right: 0;
   border-right: none;
+  margin: 1.5em;
 }
 
 .wp-block-embed {
   margin: 1.5em 0;
+}
+
+.wp-block-code code {
+  background: none;
 }
 
 @media all and (min-width: 25em) {
