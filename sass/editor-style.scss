@@ -1,2 +1,43 @@
 @import "variables";
 @import "base";
+
+.mce-content-body.wp-editor {
+  margin: 0 24px;
+  font-size: 1.0625em;
+  line-height: 1.4118;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+}
+// Gutenberg
+body {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.editor-block-list__layout {
+  font-size: 1.0625em;
+  line-height: 1.4118;
+}
+.editor-post-title textarea {
+  font-family: $primary-font-stack;
+  font-weight: 400;
+  color: $color-gray-20;
+  text-align: center;
+}
+.wp-block-quote.is-large {
+  padding-left: 0;
+  border-left: none;
+}
+.wp-block-embed {
+  margin: $baseline-height 0;
+}
+.has-small-font-size {
+  font-size: 11px;
+}
+.has-regular-font-size {
+  font-size: 16px;
+}
+.has-large-font-size {
+  font-size: 24px;
+}
+.has-extra-large-font-size {
+  font-size: 36px;
+}
