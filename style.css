@@ -1530,6 +1530,9 @@ a img {
 .wp-block-image.alignfull,
 .wp-block-cover {
   position: relative;
+  left: -10%;
+  width: 120%;
+  max-width: none;
 }
 
 .wp-block-quote.is-large {
@@ -1579,6 +1582,31 @@ a img {
   .further-reading .next {
     text-align: right;
   }
+
+  .wp-block-image.alignfull,
+  .wp-block-cover {
+    left: -25%;
+    width: 150%;
+  }
+
+  .wp-block-image.alignwide {
+    position: relative;
+    left: -15%;
+    width: 130%;
+    max-width: none;
+  }
+}
+@media all and (min-width: 62.5em) {
+  .wp-block-image.alignfull,
+  .wp-block-cover {
+    left: -36%;
+    width: 172%;
+  }
+
+  .wp-block-image.alignwide {
+    left: -25%;
+    width: 150%;
+  }
 }
 @media all and (min-width: 68.75em) {
   .post-title {
@@ -1601,6 +1629,17 @@ a img {
     width: 133.5%;
     left: -16.75%;
     padding-bottom: 66.75%;
+  }
+
+  .wp-block-image.alignfull,
+  .wp-block-cover {
+    left: -50%;
+    width: 200%;
+  }
+
+  .wp-block-image.alignwide {
+    left: -30%;
+    width: 160%;
   }
 }
 .main {
