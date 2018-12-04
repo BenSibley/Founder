@@ -1,5 +1,8 @@
 @import "variables";
-@import "base";
+
+//------------------------------------------------------
+// Classic editor styles
+//------------------------------------------------------
 
 .mce-content-body.wp-editor {
   margin: 0 auto;
@@ -9,13 +12,167 @@
   max-width: 748px;
   -webkit-font-smoothing: subpixel-antialiased !important;
 }
-// Gutenberg
+
+//------------------------------------------------------
+// Basic styles for Gutenberg
+//------------------------------------------------------
+
 body {
   font-size: 16px;
   line-height: 1.5;
+  font-family: $primary-font-stack;
+  font-weight: 400;
+  color: $color-gray-40;
+  -webkit-font-smoothing: subpixel-antialiased;
+  word-wrap: break-word;
+  -ms-word-wrap: break-word;
+}
+p {
+  margin: $baseline-height 0;
+}
+a {
+  text-decoration: none;
+  color: $color-gray-10;
+  border-bottom: solid 1px $color-gray-10;
+  transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+
+  &:link {
+    color: $color-gray-10;
+  }
+  &:visited {
+    color: $color-gray-10;
+    border-color: $color-gray-83;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-gray-10;
+    border-color: $color-orange;
+  }
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: $primary-font-stack;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  color: $color-gray-10;
+}
+h1 {
+  @extend %twenty-four-pixels;
+}
+h2 {
+  @extend %twenty-four-pixels;
+}
+h3 {
+  font-size: 1.3125em; /* 21px / 16px */
+  line-height: 1.143;
+}
+h4 {
+  font-size: 1em;
+  line-height: 1.5;
+}
+ul,
+ol {
+  font-size: 1em;
+  padding: 0;
+  margin: $baseline-height;
+
+  ul,ol {
+    margin: 0 $baseline-height;
+  }
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul,
+li li {
+  font-size: 1em;
+}
+
+/* Markup styles */
+
+pre {
+  white-space: pre-wrap; /* css-3 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+  background: $color-gray-97;
+  border: solid 1px $color-gray-93;
+  padding: $baseline-height / 2 $baseline-height;
+}
+code {
+  background: $color-gray-93;
+  padding: 0 $baseline-height / 4;
+}
+blockquote {
+  margin: $baseline-height;
+  padding-left: $baseline-height;
+  border-left: solid 3px $color-orange;
+
+  cite {
+    display: block;
+    text-align: right;
+  }
+}
+hr {
+  margin: $baseline-height * 0.46 0;
+}
+
+/* Table styles */
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin: $baseline-height 0;
+}
+td {
+  padding: 0.5em 0.75em;
+  border: solid 1px black;
+}
+th {
+  padding: 0.5em 0.75em;
+  border: solid 1px black;
+}
+
+/* Images */
+
+.alignleft {
+  float: left;
+  margin: 0 $baseline-height $baseline-height 0;
+}
+.alignright {
+  float: right;
+  margin: 0 0 $baseline-height $baseline-height;
+}
+.aligncenter {
+  text-align: center;
+  margin: $baseline-height auto;
+  display: block;
+}
+.alignnone {
+  margin: $baseline-height;
+}
+.alignright,
+.alignleft,
+.aligncenter,
+.alignnone,
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+.wp-caption-text {
+  @extend %eleven-pixels;
+  margin: 0 0 $baseline-height / 0.813;
 }
 .wp-block {
   max-width: 700px;
+}
+.editor-post-permalink__link {
+  border: none;
 }
 .editor-post-title textarea {
   @extend h1;
