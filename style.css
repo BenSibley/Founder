@@ -665,12 +665,6 @@ a img {
   color: #E37D39;
   border-color: #E37D39;
 }
-.toggle-dropdown:after {
-  content: '\f107';
-  font-family: 'FontAwesome';
-  display: inline-block;
-  vertical-align: text-bottom;
-}
 
 .menu-primary-container.open {
   display: block;

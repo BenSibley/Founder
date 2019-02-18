@@ -97,12 +97,6 @@
     color: $color-orange;
     border-color: $color-orange;
   }
-  &:after {
-    content: '\f107';
-    font-family: 'FontAwesome';
-    display: inline-block;
-    vertical-align: text-bottom;
-  }
 }
 // menu primary open
 .menu-primary-container.open {
