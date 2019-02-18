@@ -309,6 +309,30 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 		)
 	) );
 
+	/***** Additional Options  *****/
+
+	// section
+	$wp_customize->add_section( 'ct_founder_additional_options', array(
+		'title'    => __( 'Additional Options', 'founder' ),
+		'priority' => 75
+	) );
+	// setting - last updated
+	$wp_customize->add_setting( 'last_updated', array(
+		'default'           => 'no',
+		'sanitize_callback' => 'founder_sanitize_yes_no_settings'
+	) );
+	// control - last updated
+	$wp_customize->add_control( 'last_updated', array(
+		'label'    => __( 'Display the date each post was last updated?', 'founder' ),
+		'section'  => 'ct_founder_additional_options',
+		'settings' => 'last_updated',
+		'type'     => 'radio',
+		'choices'  => array(
+			'yes' => __( 'Yes', 'founder' ),
+			'no'  => __( 'No', 'founder' )
+		)
+	) );
+
 	/***** Custom CSS *****/
 
 	if ( function_exists( 'wp_update_custom_css_post' ) ) {
@@ -326,7 +350,7 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 		// section
 		$wp_customize->add_section( 'founder_custom_css', array(
 			'title'    => __( 'Custom CSS', 'founder' ),
-			'priority' => 70
+			'priority' => 80
 		) );
 		// setting
 		$wp_customize->add_setting( 'custom_css', array(

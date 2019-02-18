@@ -1521,6 +1521,10 @@ a img {
   background: #EDEDED;
 }
 
+.last-updated {
+  font-style: italic;
+}
+
 .wp-block-image.alignfull,
 .wp-block-cover {
   position: relative;
