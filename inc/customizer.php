@@ -319,7 +319,7 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 	// setting - last updated
 	$wp_customize->add_setting( 'last_updated', array(
 		'default'           => 'no',
-		'sanitize_callback' => 'founder_sanitize_yes_no_settings'
+		'sanitize_callback' => 'ct_founder_sanitize_yes_no_settings'
 	) );
 	// control - last updated
 	$wp_customize->add_control( 'last_updated', array(
