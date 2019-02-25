@@ -1,5 +1,5 @@
 <?php
-$date   = date_i18n( get_option( 'date_format' ), strtotime( get_the_date( 'r' ) ) );
+$date   = date_i18n( get_option( 'date_format' ), strtotime( get_the_date( 'c' ) ) );
 $author = get_the_author();
 ?>
 
