@@ -318,6 +318,8 @@ jQuery(document).ready(function($){
 
                 if ( !$(this).parent().parent('.entry').hasClass('ratio-natural') ) {
 
+                    if ( body.hasClass('title-overlay-post') && $('.entry').hasClass('ratio-natural') ) return;
+
                     var image = $(this).children('img').add($(this).children('a').children('img'));
 
                     // don't process images twice (relevant when using infinite scroll)
