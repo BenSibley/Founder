@@ -165,6 +165,11 @@ jQuery(document).ready(function($){
         // get the social icons
         var socialIcons = siteHeader.find('.social-media-icons');
 
+        // toggle aria-pressed state
+        // Ref: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/button_role#JavaScript_2
+        var pressed = $(this).attr("aria-pressed") === true;
+        $(this).attr("aria-pressed", !pressed);
+
         // if search bar already open
         if( $(this).hasClass('open') ) {
 
