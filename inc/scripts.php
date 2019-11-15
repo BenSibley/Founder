@@ -5,6 +5,7 @@ function ct_founder_load_scripts_styles() {
 
 	$font_args = array(
 		'family' => urlencode( 'Noto Sans:400,700,400i' ),
+		'display' => 'swap',
 		'subset' => urlencode( 'latin,latin-ext' )
 	);
 	$fonts_url = add_query_arg( $font_args, '//fonts.googleapis.com/css' );
