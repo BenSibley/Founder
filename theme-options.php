@@ -13,13 +13,6 @@ add_action( 'admin_menu', 'ct_founder_register_theme_page' );
 
 function ct_founder_options_content() {
 
-	$customizer_url = add_query_arg(
-		array(
-			'url'    => get_home_url(),
-			'return' => add_query_arg( 'page', 'founder-options', admin_url( 'themes.php' ) )
-		),
-		admin_url( 'customize.php' )
-	);
 	$pro_url = 'https://www.competethemes.com/founder-pro/?utm_source=wp-dashboard&utm_medium=Dashboard&utm_campaign=Founder%20Pro%20-%20Dashboard';
 	?>
 	<div id="founder-dashboard-wrap" class="wrap founder-dashboard-wrap">
