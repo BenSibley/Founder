@@ -352,6 +352,7 @@ if ( ! function_exists( 'ct_founder_social_array' ) ) {
 			'phone'         => 'founder_phone_profile',
 			'email-form'    => 'founder_email_form_profile',
 			'amazon'        => 'founder_amazon_profile',
+			'artstation'    => 'founder_artstation_profile',
 			'bandcamp'      => 'founder_bandcamp_profile',
 			'behance'       => 'founder_behance_profile',
 			'bitbucket'     => 'founder_bitbucket_profile',

@@ -148,6 +148,8 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 				$label = __('PayPal', 'founder');
 			} elseif ( $social_site == 'stack-overflow' ) {
 				$label = __('Stack Overflow', 'founder');
+			} elseif ( $social_site == 'artstation' ) {
+				$label = __('ArtStation', 'founder');
 			} elseif ( $social_site == 'email-form' ) {
 				$label = __('Contact Form', 'founder');
 			}
