@@ -5,7 +5,7 @@ if ( get_theme_mod( 'search_bar' ) != 'show' ) {
 ?>
 
 <div class='search-form-container'>
-	<button id="search-icon" class="search-icon">
+	<button id="search-icon" class="search-icon" aria-label="search" aria-pressed="false">
 		<i class="fas fa-search"></i>
 	</button>
 	<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
