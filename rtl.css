@@ -461,6 +461,9 @@ a img {
 .site-title a:hover, .site-title a:active, .site-title a:focus {
   color: #666666;
 }
+.site-title .logo {
+  max-width: 100%;
+}
 
 .tagline {
   margin: 0;

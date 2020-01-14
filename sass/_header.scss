@@ -24,6 +24,9 @@
       color: $color-gray-40;
     }
   }
+  .logo {
+    max-width: 100%;
+  }
 }
 .tagline {
   @extend %eleven-pixels;
