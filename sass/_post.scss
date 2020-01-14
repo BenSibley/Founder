@@ -298,6 +298,13 @@
 .wp-block-code code {
   background: none;
 }
+.wp-block-button {
+  margin: $baseline-height 0;
+
+  a {
+    color: #fff;
+  }
+}
 
 @media all and (min-width: $four-hundred) {
 

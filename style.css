@@ -1632,6 +1632,13 @@ a img {
   background: none;
 }
 
+.wp-block-button {
+  margin: 1.5em 0;
+}
+.wp-block-button a {
+  color: #fff;
+}
+
 @media all and (min-width: 25em) {
   .more-link {
     margin: 0 1.5em 0 0;
