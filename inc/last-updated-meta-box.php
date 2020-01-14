@@ -25,7 +25,7 @@ function ct_founder_last_updated_callback( $post ) {
 
   ?>
 	<p>
-		<select name="founder-last-updated" id="founder-last-updated" class="widefat">
+		<select name="founder-last-updated" id="founder-last-updated" style="box-sizing: border-box; width: 100%;">
 			<option value="default"><?php esc_html_e( 'Use Customizer setting', 'founder' ); ?></option>
 			<option value="yes" <?php if ( $display == 'yes' ) {
 				echo 'selected';
