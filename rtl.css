@@ -1916,6 +1916,13 @@ a img {
   display: block;
   margin-bottom: 0.75em;
 }
+.comment-respond .comment-form-cookies-consent input {
+  position: relative;
+  top: -2px;
+}
+.comment-respond .comment-form-cookies-consent label {
+  display: inline-block;
+}
 
 .comment .comment-respond {
   margin-top: 3em;
