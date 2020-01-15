@@ -1,7 +1,5 @@
-.bbpress .entry {
-  padding: $baseline-height;
-  background: white;
-  box-shadow: 0 0 2px 0 rgba(58, 58, 58, 0.2);
+.bbpress .main {
+  padding: 0 $column * 2;
 }
 div.bbp-breadcrumb {
   display: inline-block;

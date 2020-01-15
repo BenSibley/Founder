@@ -2205,10 +2205,8 @@ a img {
     padding: 0 20.835%;
   }
 }
-.bbpress .entry {
-  padding: 1.5em;
-  background: white;
-  box-shadow: 0 0 2px 0 rgba(58, 58, 58, 0.2);
+.bbpress .main {
+  padding: 0 8.334%;
 }
 
 div.bbp-breadcrumb {
