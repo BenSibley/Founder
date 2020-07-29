@@ -366,7 +366,6 @@ if ( ! function_exists( 'ct_founder_social_array' ) ) {
 			'foursquare'    => 'founder_foursquare_profile',
 			'github'        => 'founder_github_profile',
 			'goodreads'   	=> 'founder_goodreads_profile',
-			'google-plus'   => 'founder_googleplus_profile',
 			'google-wallet' => 'founder_google-wallet_profile',
 			'hacker-news'   => 'founder_hacker-news_profile',
 			'medium'        => 'founder_medium_profile',
