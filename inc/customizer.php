@@ -331,6 +331,22 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 			'no'  => __( 'No', 'founder' )
 		)
 	) );
+	// setting - featured image captions
+	$wp_customize->add_setting( 'featured_image_captions', array(
+		'default'           => 'no',
+		'sanitize_callback' => 'ct_founder_sanitize_yes_no_settings'
+	) );
+	// control - featured image captions
+	$wp_customize->add_control( 'featured_image_captions', array(
+		'label'    => __( 'Show the Featured Image caption on the post page?', 'founder' ),
+		'section'  => 'ct_founder_additional_options',
+		'settings' => 'featured_image_captions',
+		'type'     => 'radio',
+		'choices' => array(
+			'yes' => __( 'Yes', 'founder' ),
+			'no'  => __( 'No', 'founder' )
+		)
+	) );
 
 	/***** Custom CSS *****/
 

@@ -74,6 +74,12 @@
     padding: 4px 4px 4px 12px;
     font-size: 13px;
   }
+  + .caption {
+    font-size: 13px;
+    color: $color-gray-40;
+    text-align: center;
+    margin: 6px 0 $baseline-height;
+  }
 }
 .post-content {
 

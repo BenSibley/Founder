@@ -1435,6 +1435,12 @@ a img {
   padding: 4px 12px 4px 4px;
   font-size: 13px;
 }
+.featured-image + .caption {
+  font-size: 13px;
+  color: #666666;
+  text-align: center;
+  margin: 6px 0 1.5em;
+}
 
 .post-content iframe {
   max-width: 100%;
