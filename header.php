@@ -12,6 +12,10 @@
 	<div id="overflow-container" class="overflow-container">
 		<div id="max-width" class="max-width">
 			<?php do_action( 'before_header' ); ?>
+			<?php
+			// Elementor `header` location
+			if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'header' ) ) :
+			?>
 			<header class="site-header" id="site-header" role="banner">
 				<div id="title-container" class="title-container">
 					<?php get_template_part( 'logo' ) ?>
@@ -29,6 +33,7 @@
 					<?php get_template_part( 'content/search-bar' ); ?>
 				</div>
 			</header>
+			<?php endif; ?>
 			<?php do_action( 'after_header' ); ?>
 			<?php get_sidebar( 'primary' ); ?>
 			<?php do_action( 'before_main' ); ?>

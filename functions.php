@@ -797,3 +797,12 @@ if ( ! function_exists( ( 'ct_founder_pagination' ) ) ) {
     }
 	}
 }
+
+//----------------------------------------------------------------------------------
+// Add support for Elementor headers & footers
+//----------------------------------------------------------------------------------
+function ct_founder_register_elementor_locations( $elementor_theme_manager ) {
+	$elementor_theme_manager->register_location( 'header' );
+	$elementor_theme_manager->register_location( 'footer' );
+}
+add_action( 'elementor/theme/register_locations', 'ct_founder_register_elementor_locations' ); 
