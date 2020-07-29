@@ -18,6 +18,7 @@ function ct_founder_options_content() {
 	<div id="founder-dashboard-wrap" class="wrap founder-dashboard-wrap">
 		<h2><?php printf( esc_html__( '%s Dashboard', 'founder' ), wp_get_theme() ); ?></h2>
 		<?php do_action( 'theme_options_before' ); ?>
+		<?php do_action( 'ct_founder_theme_options_before' ); ?>
 		<div class="main">
 			<?php if ( function_exists( 'ct_founder_pro_init' ) ) : ?>
 			<div class="thanks-upgrading" style="background-image: url(<?php echo trailingslashit(get_template_directory_uri()) . 'assets/images/bg-texture.png'; ?>)">
@@ -186,5 +187,6 @@ function ct_founder_options_content() {
 			</div>
 		</div>
 		<?php do_action( 'theme_options_after' ); ?>
+		<?php do_action( 'ct_founder_theme_options_after' ); ?>
 	</div>
 <?php }
