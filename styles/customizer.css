@@ -166,7 +166,7 @@
 }
 
 .ms-drop ul > li .disabled {
-  opacity: .35;
+  opacity: 0.35;
   filter: Alpha(Opacity=35);
 }
 
@@ -197,7 +197,7 @@
   font-weight: bold;
 }
 
-.ms-drop input[type="checkbox"] {
+.ms-drop input[type=checkbox] {
   vertical-align: middle;
 }
 

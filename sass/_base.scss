@@ -226,6 +226,10 @@ img {
   @extend %eleven-pixels;
   color: $color-gray-63;
 }
+.wp-block-social-links a,
+.wp-block-social-links a:link {
+  color: #fff;
+}
 
 /* Form styles */
 
