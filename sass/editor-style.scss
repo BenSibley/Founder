@@ -105,6 +105,9 @@ code {
   background: $color-gray-93;
   padding: 0 $baseline-height / 4;
 }
+pre code {
+  padding: 0;
+}
 blockquote {
   margin: $baseline-height;
   padding-left: $baseline-height;
