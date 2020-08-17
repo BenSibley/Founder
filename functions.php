@@ -402,6 +402,7 @@ if ( ! function_exists( 'ct_founder_social_array' ) ) {
 			'tencent-weibo' => 'founder_tencent_weibo_profile',
 			'tumblr'        => 'founder_tumblr_profile',
 			'twitch'        => 'founder_twitch_profile',
+			'untappd'       => 'founder_untappd_profile',
 			'vimeo'         => 'founder_vimeo_profile',
 			'vine'          => 'founder_vine_profile',
 			'vk'            => 'founder_vk_profile',
