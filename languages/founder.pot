@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Founder 1.48\n"
+"Project-Id-Version: Founder 1.49\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2020-07-30 17:08:06+00:00\n"
+"POT-Creation-Date: 2020-08-18 14:38:26+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -230,43 +230,43 @@ msgstr ""
 msgid "Continue reading"
 msgstr ""
 
-#: functions.php:481 functions.php:482
+#: functions.php:482 functions.php:483
 msgid "email"
 msgstr ""
 
-#: functions.php:537 header.php:27 inc/scripts.php:17
+#: functions.php:538 header.php:33 inc/scripts.php:17
 msgid "open menu"
 msgstr ""
 
-#: functions.php:551
+#: functions.php:552
 msgid "Featured Post"
 msgstr ""
 
-#: functions.php:613
+#: functions.php:614
 msgid "Customizer settings deleted."
 msgstr ""
 
-#: functions.php:759
+#: functions.php:756
 msgid "Scroll to the top"
 msgstr ""
 
-#: functions.php:778
+#: functions.php:775
 msgid "Last updated on"
 msgstr ""
 
-#: functions.php:797 functions.php:802
+#: functions.php:794 functions.php:799
 msgid "Previous"
 msgstr ""
 
-#: functions.php:798 functions.php:803
+#: functions.php:795 functions.php:800
 msgid "Next"
 msgstr ""
 
-#: header.php:11
+#: header.php:17
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:28
+#: header.php:34
 msgid "primary menu icon"
 msgstr ""
 
