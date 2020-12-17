@@ -2259,6 +2259,30 @@ span.bbp-admin-links a,
   max-width: none;
 }
 
+.page-template-landing-page-header .max-width,
+.page-template-landing-page .max-width {
+  max-width: none;
+}
+.page-template-landing-page-header .site-header,
+.page-template-landing-page .site-header {
+  max-width: 1466px;
+}
+.page-template-landing-page-header .sidebar-primary,
+.page-template-landing-page .sidebar-primary {
+  max-width: 1400px;
+}
+.page-template-landing-page-header .site-header,
+.page-template-landing-page-header .sidebar-primary,
+.page-template-landing-page .site-header,
+.page-template-landing-page .sidebar-primary {
+  margin-left: auto;
+  margin-right: auto;
+}
+.page-template-landing-page-header #main,
+.page-template-landing-page #main {
+  padding: 0;
+}
+
 /*
 
 ATTENTION:

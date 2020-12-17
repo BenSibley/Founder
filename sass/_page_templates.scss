@@ -1,0 +1,21 @@
+.page-template-landing-page-header,
+.page-template-landing-page {
+
+    .max-width {
+        max-width: none;
+    }
+    .site-header {
+        max-width: 1466px;
+    }
+    .sidebar-primary {
+        max-width: 1400px;
+    }
+    .site-header,
+    .sidebar-primary {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #main {
+        padding: 0;
+    }
+}
