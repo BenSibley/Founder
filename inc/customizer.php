@@ -115,6 +115,8 @@ function ct_founder_add_customizer_content( $wp_customize ) {
 
 			if ( $social_site == 'rss' ) {
 				$label = __('RSS', 'founder');
+			} elseif ( $social_site == 'researchgate' ) {
+				$label = __('ResearchGate', 'founder');
 			} elseif ( $social_site == 'soundcloud' ) {
 				$label = __('SoundCloud', 'founder');
 			} elseif ( $social_site == 'slideshare' ) {
