@@ -147,12 +147,12 @@ module.exports = function(grunt) {
             zip: {
                 command: [
                     // delete existing copies (if they exist)
-                    'rm -R /Users/bensibley/Documents/compete-themes/dist/founder || true',
-                    'rm -R /Users/bensibley/Documents/compete-themes/dist/founder.zip || true',
+                    'rm -R "/Users/bensibley/Dropbox/Compete Themes/Distribution/founder" || true',
+                    'rm -R "/Users/bensibley/Dropbox/Compete Themes/Distribution/founder.zip" || true',
                     // copy theme folder without any project/meta files
-                    'rsync -r "/Users/bensibley/Sites/founder/wp-content/themes/founder" /Users/bensibley/Documents/compete-themes/dist/ <%= excludeFiles %>',
+                    'rsync -r "/Users/bensibley/Sites/founder/wp-content/themes/founder" "/Users/bensibley/Dropbox/Compete Themes/Distribution/" <%= excludeFiles %>',
                     // open dist folder
-                    'cd /Users/bensibley/Documents/compete-themes/dist/',
+                    'cd "/Users/bensibley/Dropbox/Compete Themes/Distribution/"',
                     // zip the founder folder
                     'zip -r founder.zip founder'
                 ].join('&&')
