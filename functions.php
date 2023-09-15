@@ -22,7 +22,7 @@ function ct_founder_register_required_plugins()
             'required'  => false,
         ),
     );
-    
+
     $config = array(
         'id'           => 'ct-founder',
         'default_path' => '',
@@ -499,7 +499,7 @@ if (! function_exists('ct_founder_social_icons_output')) {
 
             foreach ($active_sites as $key => $active_site) {
 
-                    // get the square or plain class
+                // get the square or plain class
                 if (in_array($active_site, $square_icons)) {
                     if ($active_site == 'rss') {
                         $class = 'fas fa-rss-square';
@@ -522,18 +522,20 @@ if (! function_exists('ct_founder_social_icons_output')) {
                     $class = 'fab fa-' . esc_attr($active_site);
                 }
 
-                if ($active_site == 'email') { ?>
+                if ($active_site == 'email') {
+                    $email = antispambot(is_email(get_theme_mod($key))); ?>
 						<li>
 							<a class="email" target="_blank"
-							   href="mailto:<?php echo antispambot(is_email(get_theme_mod($key))); ?>">
-								<i class="fas fa-envelope" title="<?php echo esc_attr__('email', 'founder'); ?>"></i>
-								<span class="screen-reader-text"><?php echo esc_html__('email', 'founder');  ?></span>
+							   href="mailto:<?php echo $email; ?>" aria-label="<?php echo esc_attr__('email', 'founder') . ' ' . $email; ?>">
+								<i class="fas fa-envelope" title="<?php esc_attr_e('email', 'founder'); ?>"></i>
+								<span class="screen-reader-text"><?php esc_html_e('email', 'founder'); ?></span>
 							</a>
 						</li>
-					<?php } elseif ($active_site == 'skype') { ?>
+					<?php
+                } elseif ($active_site == 'skype') { ?>
 						<li>
 							<a class="<?php echo esc_attr($active_site); ?>" target="_blank"
-							   href="<?php echo esc_url(get_theme_mod($key), array( 'http', 'https', 'skype' )); ?>">
+							   href="<?php echo esc_url(get_theme_mod($key), array( 'http', 'https', 'skype' )); ?>" aria-label="<?php esc_attr_e($active_site); ?>">
 								<i class="<?php echo esc_attr($class); ?>" title="<?php echo esc_attr($active_site); ?>"></i>
 								<span class="screen-reader-text"><?php echo esc_html($active_site); ?></span>
 							</a>
@@ -541,7 +543,7 @@ if (! function_exists('ct_founder_social_icons_output')) {
 					<?php } elseif ($active_site == 'phone') { ?>
 						<li>
 							<a class="<?php echo esc_attr($active_site); ?>" target="_blank"
-									href="<?php echo esc_url(get_theme_mod($active_site), array( 'tel' )); ?>">
+									href="<?php echo esc_url(get_theme_mod($active_site), array( 'tel' )); ?>" aria-label="<?php echo esc_html__('Call', 'founder') . ' ' . esc_attr($active_site); ?>">
 								<i class="<?php echo esc_attr($class); ?>"></i>
 								<span class="screen-reader-text"><?php echo esc_html($active_site);  ?></span>
 							</a>
@@ -549,13 +551,13 @@ if (! function_exists('ct_founder_social_icons_output')) {
 					<?php } else { ?>
 						<li>
 							<a class="<?php echo esc_attr($active_site); ?>" target="_blank"
-							   href="<?php echo esc_url(get_theme_mod($key)); ?>">
+							   href="<?php echo esc_url(get_theme_mod($key)); ?>" aria-label="<?php esc_attr_e($active_site); ?>">
 								<i class="<?php echo esc_attr($class); ?>" title="<?php echo esc_attr($active_site); ?>"></i>
 								<span class="screen-reader-text"><?php echo esc_html($active_site); ?></span>
 							</a>
 						</li>
 						<?php
-                    }
+					}
             }
             echo "</ul>";
         }
@@ -804,9 +806,9 @@ add_filter('get_the_archive_description', 'ct_founder_modify_archive_description
 function ct_founder_scroll_to_top_arrow()
 {
     $setting = get_theme_mod('scroll_to_top');
-    
+
     if ($setting == 'yes') {
-        echo '<button id="scroll-to-top" class="scroll-to-top"><span class="screen-reader-text">'. esc_html__('Scroll to the top', 'founder') .'</span><i class="fas fa-arrow-up"></i></button>';
+        echo '<button id="scroll-to-top" class="scroll-to-top" aria-label="'. esc_attr__("Scroll to the top", "founder") .'"><span class="screen-reader-text">'. esc_html__('Scroll to the top', 'founder') .'</span><i class="fas fa-arrow-up"></i></button>';
     }
 }
 add_action('body_bottom', 'ct_founder_scroll_to_top_arrow');
@@ -824,7 +826,7 @@ function ct_founder_output_last_updated_date()
         if (
             ($updated_customizer == 'yes' && ($updated_post != 'no'))
             || $updated_post == 'yes'
-            ) {
+        ) {
             echo '<p class="last-updated">'. __("Last updated on", "founder") . ' ' . get_the_modified_date() . ' </p>';
         }
     }
