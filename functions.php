@@ -461,6 +461,9 @@ if (! function_exists('ct_founder_social_array')) {
             'yahoo'         => 'founder_yahoo_profile',
             'yelp'          => 'founder_yelp_profile',
             '500px'         => 'founder_500px_profile',
+            'social_icon_custom_1' => 'social_icon_custom_1_profile',
+            'social_icon_custom_2' => 'social_icon_custom_2_profile',
+            'social_icon_custom_3' => 'social_icon_custom_3_profile'
         );
 
         return apply_filters('ct_founder_filter_social_sites', $social_sites);
@@ -533,31 +536,39 @@ if (! function_exists('ct_founder_social_icons_output')) {
 						</li>
 					<?php
                 } elseif ($active_site == 'skype') { ?>
-						<li>
-							<a class="<?php echo esc_attr($active_site); ?>" target="_blank"
-							   href="<?php echo esc_url(get_theme_mod($key), array( 'http', 'https', 'skype' )); ?>" aria-label="<?php esc_attr_e($active_site); ?>">
-								<i class="<?php echo esc_attr($class); ?>" title="<?php echo esc_attr($active_site); ?>"></i>
-								<span class="screen-reader-text"><?php echo esc_html($active_site); ?></span>
-							</a>
-						</li>
-					<?php } elseif ($active_site == 'phone') { ?>
-						<li>
-							<a class="<?php echo esc_attr($active_site); ?>" target="_blank"
-									href="<?php echo esc_url(get_theme_mod($active_site), array( 'tel' )); ?>" aria-label="<?php echo esc_html__('Call', 'founder') . ' ' . esc_attr($active_site); ?>">
-								<i class="<?php echo esc_attr($class); ?>"></i>
-								<span class="screen-reader-text"><?php echo esc_html($active_site);  ?></span>
-							</a>
-						</li>
-					<?php } else { ?>
-						<li>
-							<a class="<?php echo esc_attr($active_site); ?>" target="_blank"
-							   href="<?php echo esc_url(get_theme_mod($key)); ?>" aria-label="<?php esc_attr_e($active_site); ?>">
-								<i class="<?php echo esc_attr($class); ?>" title="<?php echo esc_attr($active_site); ?>"></i>
-								<span class="screen-reader-text"><?php echo esc_html($active_site); ?></span>
-							</a>
-						</li>
-						<?php
-					}
+                    <li>
+                        <a class="<?php echo esc_attr($active_site); ?>" target="_blank"
+                            href="<?php echo esc_url(get_theme_mod($key), array( 'http', 'https', 'skype' )); ?>" aria-label="<?php esc_attr_e($active_site); ?>">
+                            <i class="<?php echo esc_attr($class); ?>" title="<?php echo esc_attr($active_site); ?>"></i>
+                            <span class="screen-reader-text"><?php echo esc_html($active_site); ?></span>
+                        </a>
+                    </li>
+                <?php } elseif ($active_site == 'phone') { ?>
+                    <li>
+                        <a class="<?php echo esc_attr($active_site); ?>" target="_blank"
+                                href="<?php echo esc_url(get_theme_mod($active_site), array( 'tel' )); ?>" aria-label="<?php echo esc_html__('Call', 'founder') . ' ' . esc_attr($active_site); ?>">
+                            <i class="<?php echo esc_attr($class); ?>"></i>
+                            <span class="screen-reader-text"><?php echo esc_html($active_site);  ?></span>
+                        </a>
+                    </li>
+                <?php } elseif ($active_site == 'social_icon_custom_1' || $active_site == 'social_icon_custom_2' || $active_site == 'social_icon_custom_3') { ?>
+                    <li>
+                        <a class="<?php echo esc_attr($active_site); ?> custom-icon" target="_blank"
+                            href="<?php echo esc_url(get_theme_mod($key)); ?>" aria-label="<?php esc_attr_e($active_site); ?>">
+                            <img class="icon" src="<?php echo esc_url(get_theme_mod($active_site .'_image')); ?>" style="width: <?php echo absint(get_theme_mod($active_site . '_size', '20')); ?>px;" />
+                            <span class="screen-reader-text"><?php echo esc_html($active_site); ?></span>
+                        </a>
+                    </li>
+                <?php } else { ?>
+                    <li>
+                        <a class="<?php echo esc_attr($active_site); ?>" target="_blank"
+                            href="<?php echo esc_url(get_theme_mod($key)); ?>" aria-label="<?php esc_attr_e($active_site); ?>">
+                            <i class="<?php echo esc_attr($class); ?>" title="<?php echo esc_attr($active_site); ?>"></i>
+                            <span class="screen-reader-text"><?php echo esc_html($active_site); ?></span>
+                        </a>
+                    </li>
+                    <?php
+                }
             }
             echo "</ul>";
         }

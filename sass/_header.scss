@@ -49,6 +49,9 @@
   }
 }
 .social-media-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   list-style: none;
   margin: $baseline-height  0 -10px; // li:last-child in menu has negative margin-bottom and needs to remove extra space below it
   padding: $baseline-height / 2 $column * 2 0;
@@ -69,6 +72,19 @@
   }
   &.fade {
     opacity: 0;
+  }
+  .custom-icon {
+    display: flex;
+    align-items: center;
+
+    img {
+      display: inline-block;
+      vertical-align: sub;
+      line-height: 0;
+      margin: 0;
+      width: 24px;
+      height: auto;
+    }
   }
 }
 .site-header {
