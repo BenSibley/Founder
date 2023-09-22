@@ -413,7 +413,7 @@ if (! function_exists('ct_founder_social_array')) {
             'delicious'     => 'founder_delicious_profile',
             'deviantart'    => 'founder_deviantart_profile',
             'digg'          => 'founder_digg_profile',
-            'discord'				=> 'founder_discord_profile',
+            'discord'		=> 'founder_discord_profile',
             'dribbble'      => 'founder_dribbble_profile',
             'etsy'          => 'founder_etsy_profile',
             'flickr'        => 'founder_flickr_profile',
@@ -422,6 +422,7 @@ if (! function_exists('ct_founder_social_array')) {
             'goodreads'   	=> 'founder_goodreads_profile',
             'google-wallet' => 'founder_google-wallet_profile',
             'hacker-news'   => 'founder_hacker-news_profile',
+            'mastodon'      => 'founder_mastodon_profile',
             'medium'        => 'founder_medium_profile',
             'meetup'        => 'founder_meetup_profile',
             'mixcloud'      => 'founder_mixcloud_profile',
@@ -562,7 +563,10 @@ if (! function_exists('ct_founder_social_icons_output')) {
                 <?php } else { ?>
                     <li>
                         <a class="<?php echo esc_attr($active_site); ?>" target="_blank"
-                            href="<?php echo esc_url(get_theme_mod($key)); ?>" aria-label="<?php esc_attr_e($active_site); ?>">
+                            href="<?php echo esc_url(get_theme_mod($key)); ?>" aria-label="<?php esc_attr_e($active_site); ?>"
+                            <?php if ($active_site == 'mastodon') {
+                                echo 'rel="me"';
+                            } ?>>
                             <i class="<?php echo esc_attr($class); ?>" title="<?php echo esc_attr($active_site); ?>"></i>
                             <span class="screen-reader-text"><?php echo esc_html($active_site); ?></span>
                         </a>
