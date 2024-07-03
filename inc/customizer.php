@@ -156,6 +156,8 @@ function ct_founder_add_customizer_content($wp_customize)
                 $label = __('ArtStation', 'founder');
             } elseif ($social_site == 'email-form') {
                 $label = __('Contact Form', 'founder');
+            } elseif ($social_site == 'twitter') {
+                $label = __('X (Twitter)', 'founder');
             }
 
             if ($social_site == 'skype') {
