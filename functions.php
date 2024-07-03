@@ -7,7 +7,6 @@ require_once(trailingslashit(get_template_directory()) . 'theme-options.php');
 require_once(trailingslashit(get_template_directory()) . 'inc/customizer.php');
 require_once(trailingslashit(get_template_directory()) . 'inc/deprecated.php');
 require_once(trailingslashit(get_template_directory()) . 'inc/last-updated-meta-box.php');
-require_once(trailingslashit(get_template_directory()) . 'inc/review.php');
 require_once(trailingslashit(get_template_directory()) . 'inc/scripts.php');
 // TGMP
 require_once(trailingslashit(get_template_directory()) . 'tgm/class-tgm-plugin-activation.php');
@@ -46,20 +45,6 @@ function ct_founder_register_required_plugins()
     tgmpa($plugins, $config);
 }
 add_action('tgmpa_register', 'ct_founder_register_required_plugins');
-
-
-//----------------------------------------------------------------------------------
-//	Include review request
-//----------------------------------------------------------------------------------
-require_once(trailingslashit(get_template_directory()) . 'dnh/handler.php');
-new WP_Review_Me(
-    array(
-        'days_after' => 14,
-        'type'       => 'theme',
-        'slug'       => 'founder',
-        'message'    => __('Hey! Sorry to interrupt, but you\'ve been using Founder for a little while now. If you\'re happy with this theme, could you take a minute to leave a review? <i>You won\'t see this notice again after closing it.</i>', 'founder')
-    )
-);
 
 if (! function_exists(('ct_founder_set_content_width'))) {
     function ct_founder_set_content_width()
@@ -556,7 +541,7 @@ if (! function_exists('ct_founder_social_icons_output')) {
                     <li>
                         <a class="<?php echo esc_attr($active_site); ?> custom-icon" target="_blank"
                             href="<?php echo esc_url(get_theme_mod($key)); ?>" aria-label="<?php esc_attr_e($active_site); ?>">
-                            <img class="icon" src="<?php echo esc_url(get_theme_mod($active_site .'_image')); ?>" style="width: <?php echo absint(get_theme_mod($active_site . '_size', '20')); ?>px;" />
+                            <img class="icon" src="<?php echo esc_url(get_theme_mod($active_site . '_image')); ?>" style="width: <?php echo absint(get_theme_mod($active_site . '_size', '20')); ?>px;" />
                             <span class="screen-reader-text"><?php echo esc_html($active_site); ?></span>
                         </a>
                     </li>
@@ -823,7 +808,7 @@ function ct_founder_scroll_to_top_arrow()
     $setting = get_theme_mod('scroll_to_top');
 
     if ($setting == 'yes') {
-        echo '<button id="scroll-to-top" class="scroll-to-top" aria-label="'. esc_attr__("Scroll to the top", "founder") .'"><span class="screen-reader-text">'. esc_html__('Scroll to the top', 'founder') .'</span><i class="fas fa-arrow-up"></i></button>';
+        echo '<button id="scroll-to-top" class="scroll-to-top" aria-label="' . esc_attr__("Scroll to the top", "founder") . '"><span class="screen-reader-text">' . esc_html__('Scroll to the top', 'founder') . '</span><i class="fas fa-arrow-up"></i></button>';
     }
 }
 add_action('body_bottom', 'ct_founder_scroll_to_top_arrow');
@@ -842,7 +827,7 @@ function ct_founder_output_last_updated_date()
             ($updated_customizer == 'yes' && ($updated_post != 'no'))
             || $updated_post == 'yes'
         ) {
-            echo '<p class="last-updated">'. __("Last updated on", "founder") . ' ' . get_the_modified_date() . ' </p>';
+            echo '<p class="last-updated">' . __("Last updated on", "founder") . ' ' . get_the_modified_date() . ' </p>';
         }
     }
 }
