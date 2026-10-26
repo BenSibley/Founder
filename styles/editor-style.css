@@ -5,10 +5,8 @@
 /*===== Mixins =====*/
 /***** Silent Classes *****/
 h2, h1, .editor-post-title textarea {
-  font-size: 1.5em;
-  /* 24px / 16px */
-  line-height: 1.5;
-  /* 36px */
+  font-size: 1.5em; /* 24px / 16px */
+  line-height: 1.5; /* 36px */
 }
 
 .wp-caption-text,
@@ -23,10 +21,8 @@ h2, h1, .editor-post-title textarea {
 .size-large figcaption,
 .size-medium figcaption,
 .size-thumbnail figcaption, .wp-block-table figcaption {
-  font-size: 0.6875em;
-  /* 11px / 16px */
-  line-height: 1.4545;
-  /* 16px */
+  font-size: 0.6875em; /* 11px / 16px */
+  line-height: 1.4545; /* 16px */
 }
 
 .mce-content-body.wp-editor {
@@ -80,8 +76,7 @@ h1, .editor-post-title textarea, h2, h3, h4, h5, h6 {
 }
 
 h3 {
-  font-size: 1.3125em;
-  /* 21px / 16px */
+  font-size: 1.3125em; /* 21px / 16px */
   line-height: 1.143;
 }
 
@@ -112,16 +107,11 @@ li li {
 
 /* Markup styles */
 pre {
-  white-space: pre-wrap;
-  /* css-3 */
-  white-space: -moz-pre-wrap;
-  /* Mozilla, since 1999 */
-  white-space: -pre-wrap;
-  /* Opera 4-6 */
-  white-space: -o-pre-wrap;
-  /* Opera 7 */
-  word-wrap: break-word;
-  /* Internet Explorer 5.5+ */
+  white-space: pre-wrap; /* css-3 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
   background: #F7F7F7;
   border: solid 1px #EDEDED;
   padding: 0.75em 1.5em;
@@ -334,5 +324,4 @@ img {
     line-height: 1.5;
   }
 }
-
 /*# sourceMappingURL=editor-style.css.map */
