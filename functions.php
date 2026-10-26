@@ -25,7 +25,7 @@ function ct_founder_register_recommended_plugins()
             array(
                 'name'        => 'Resolver',
                 'slug'        => 'resolver-ai-chatbot',
-                'description' => __('an AI-powered chatbot that trains on your website\'s content in seconds and answers visitor questions intelligently.', 'founder'),
+                'description' => __('an AI-powered chatbot that trains on your website\'s content and answers visitor questions intelligently.', 'founder'),
                 'url'         => 'https://resolverchatbot.com',
             ),
         ),
