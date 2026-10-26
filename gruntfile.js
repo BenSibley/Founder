@@ -97,7 +97,7 @@ module.exports = function(grunt) {
         compress: {
             main: {
                 options: {
-                    archive: '/Users/bensibley/Desktop/ignite.zip'
+                    archive: '/Users/bensibley/Desktop/founder.zip'
                 },
                 files: [
                     {
