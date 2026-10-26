@@ -370,6 +370,8 @@ if (! function_exists('ct_founder_social_array')) {
             'linkedin'      => 'founder_linkedin_profile',
             'pinterest'     => 'founder_pinterest_profile',
             'youtube'       => 'founder_youtube_profile',
+            'tiktok'        => 'founder_tiktok_profile',
+            'threads'       => 'founder_threads_profile',
             'rss'           => 'founder_rss_profile',
             'email'         => 'founder_email_profile',
             'phone'         => 'founder_phone_profile',

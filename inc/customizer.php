@@ -158,6 +158,8 @@ function ct_founder_add_customizer_content($wp_customize)
                 $label = __('Contact Form', 'founder');
             } elseif ($social_site == 'twitter') {
                 $label = __('X (Twitter)', 'founder');
+            } elseif ($social_site == 'tiktok') {
+                $label = __('TikTok', 'founder');
             }
 
             if ($social_site == 'skype') {
